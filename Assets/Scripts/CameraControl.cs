@@ -7,17 +7,30 @@ public class CameraControl : MonoBehaviour
     // Camera Movement:
     public float panSpeed = 5f;
     public float panBorderThickness = 10f;
-
     // Camera Y-movement: 
     public float scrollSpeed = 5f;
     public float minY = 10f;
     public float maxY = 80f;
-
+    // Camera Movement Boolean:
+    private bool doMovement = true;
 
     void Update()
     {
-        CameraScrolling();
-        CameraMovement();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            doMovement = !doMovement;
+        }
+
+        if (!doMovement)
+        {
+            return;
+        }
+        else
+        {
+            CameraScrolling();
+            CameraMovement();
+        }
+
     }
 
     private void CameraScrolling()
