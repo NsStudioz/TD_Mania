@@ -99,5 +99,5 @@ MonoBehaviour:
   panSpeed: 5
   panBorderThickness: 10
   scrollSpeed: 5
-  minY: 10
-  maxY: 80
+  minY: 3
+  maxY: 6
