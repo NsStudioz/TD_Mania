@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class ConstructManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public static ConstructManager instance;
+
+    public GameObject defUnitToBuild;
+
+    public GameObject standardUnitPrefab;
+
+    void Awake()
     {
-        
+        if (instance != null)
+        {
+            Debug.Log("Something went wrong. there are more than 1 buildmanagers in the game!");
+            return;
+        }
+
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void Start()
     {
-        
+        defUnitToBuild = standardUnitPrefab;
+    }
+
+    public GameObject GetDefUnitToBuild()
+    {
+        return defUnitToBuild;
     }
 }
