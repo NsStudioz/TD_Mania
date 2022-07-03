@@ -7,7 +7,7 @@ public class ConstructManager : MonoBehaviour
 
     public static ConstructManager instance;
 
-    public GameObject defUnitToBuild;
+    private GameObject defUnitToBuild;
 
     public GameObject standardUnitPrefab;
 
