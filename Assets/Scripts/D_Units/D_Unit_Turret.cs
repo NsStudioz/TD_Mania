@@ -28,7 +28,7 @@ public class D_Unit_Turret : MonoBehaviour
 
     void Update()
     {
-        if (target = null) { return; }
+        if (target == null) { return; }
 
         Vector3 dir = target.position - transform.position;
 
@@ -43,6 +43,8 @@ public class D_Unit_Turret : MonoBehaviour
             Shoot();
             fireCountDown = 1f / fireRate;
         }
+
+        fireCountDown -= Time.deltaTime;
     }
 
     private void Shoot()
@@ -52,7 +54,7 @@ public class D_Unit_Turret : MonoBehaviour
 
         if(bullet != null)
         {
-            // seek enemy
+            bullet.SeekTarget(target);
         }
     }
 
