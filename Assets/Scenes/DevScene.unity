@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc9d72bcc592ad49a4f707abf5b18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 2
+  movingSpeed: 0.3
 --- !u!135 &513678862
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -935,7 +935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc9d72bcc592ad49a4f707abf5b18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 2
+  movingSpeed: 0.5
 --- !u!135 &709574489
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1363,7 +1363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc9d72bcc592ad49a4f707abf5b18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 2
+  movingSpeed: 0.5
 --- !u!135 &864921725
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc9d72bcc592ad49a4f707abf5b18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 2
+  movingSpeed: 1
 --- !u!135 &880185279
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2304,7 +2304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc9d72bcc592ad49a4f707abf5b18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 2
+  movingSpeed: 0.3
 --- !u!135 &1364272580
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2613,7 +2613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc9d72bcc592ad49a4f707abf5b18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 2
+  movingSpeed: 1
 --- !u!135 &1574917484
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4411,4 +4411,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc9d72bcc592ad49a4f707abf5b18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 2
+  movingSpeed: 1
