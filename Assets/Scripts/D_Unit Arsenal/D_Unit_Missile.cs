@@ -1,9 +1,9 @@
-using System;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class D_Unit_Missile : MonoBehaviour
 {
     private Transform target;
 
@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        if(target == null)
+        if (target == null)
         {
             Destroy(gameObject);
             return; // stop reading the code from here once destroyed.
@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
 
         float distanceThisFrame = speed * Time.deltaTime;
 
-        if(dir.magnitude <= distanceThisFrame)
+        if (dir.magnitude <= distanceThisFrame)
         {
             HitTarget();
             return;

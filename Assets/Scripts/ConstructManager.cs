@@ -11,6 +11,8 @@ public class ConstructManager : MonoBehaviour
 
     public GameObject standardUnitPrefab;
 
+    public GameObject RocketLauncherUnitPrefab;
+
     void Awake()
     {
         if (instance != null)
@@ -23,13 +25,18 @@ public class ConstructManager : MonoBehaviour
     }
 
 
-    void Start()
+/*    void Start()
     {
         defUnitToBuild = standardUnitPrefab;
-    }
+    }*/
 
     public GameObject GetDefUnitToBuild()
     {
         return defUnitToBuild;
+    }
+
+    public void SetTurretToBuild(GameObject turret)
+    {
+        defUnitToBuild = turret;
     }
 }
