@@ -3206,6 +3206,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17208aed087f84458aae3e4c040a222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  d_Unit_StandardTurret:
+    prefab: {fileID: 4151005144259750179, guid: d73c6439e650cc44685a664f7d23b34c, type: 3}
+    cost: 100
+  d_Unit_RocketLauncher:
+    prefab: {fileID: 3481836881444021794, guid: 568214787b2b6f14f979177ee96de490, type: 3}
+    cost: 250
 --- !u!1 &1432409633
 GameObject:
   m_ObjectHideFlags: 0
@@ -3838,7 +3844,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1422359787}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: PurchaseRocketLauncher
+        m_MethodName: SelectRocketLauncher
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4358,33 +4364,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 280162702303440966, guid: d5340d4cce48ad741a939d8173f83c2f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 280162702303440966, guid: d5340d4cce48ad741a939d8173f83c2f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 280162702303440966, guid: d5340d4cce48ad741a939d8173f83c2f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1422359787}
-    - target: {fileID: 280162702303440966, guid: d5340d4cce48ad741a939d8173f83c2f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 280162702303440966, guid: d5340d4cce48ad741a939d8173f83c2f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseStandardTurret
-      objectReference: {fileID: 0}
-    - target: {fileID: 280162702303440966, guid: d5340d4cce48ad741a939d8173f83c2f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ShopManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 280162702303440966, guid: d5340d4cce48ad741a939d8173f83c2f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5340d4cce48ad741a939d8173f83c2f, type: 3}
 --- !u!1001 &305516314839065030
