@@ -25,23 +25,30 @@ public class ConstructManager : MonoBehaviour
         instance = this;
     }
 
-
-/*    void Start()
+    private void Start()
     {
-        defUnitToBuild = standardUnitPrefab;
-    }*/
+        PlayerStats.Gold += 400;
+    }
 
-/*    public GameObject GetDefUnitToBuild()
-    {
-        return defUnitToBuild;
-    }*/
+    /*    void Start()
+        {
+            defUnitToBuild = standardUnitPrefab;
+        }*/
 
-/*    public void SetTurretToBuild(GameObject turret)
-    {
-        defUnitToBuild = turret;
-    }*/
+    /*    public GameObject GetDefUnitToBuild()
+        {
+            return defUnitToBuild;
+        }*/
+
+    /*    public void SetTurretToBuild(GameObject turret)
+        {
+            defUnitToBuild = turret;
+        }*/
 
     public bool CanBuild { get { return defUnitToBuild != null; } } // called a property. we only allow it to actually get something from this variable, if its not equal to null, then the state is true and we can build.
+
+    // called a property. we only allow it to actually get something from this variable, if we have enough money, then the state is true and we can build.
+    public bool HasGold { get { return PlayerStats.Gold >= defUnitToBuild.cost; } }
 
     public void SelectTurretToBuild(D_Unit_Blueprint turretBlueprint)
     {
@@ -53,6 +60,7 @@ public class ConstructManager : MonoBehaviour
         if(PlayerStats.Gold < defUnitToBuild.cost)
         {
             Debug.Log("Not enough gold to build this turret!");
+            Debug.Log("Current Gold: " + PlayerStats.Gold);
             return; 
         }
 

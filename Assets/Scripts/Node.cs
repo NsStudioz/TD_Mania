@@ -9,6 +9,7 @@ public class Node : MonoBehaviour
     // node color:
     private Color startColor;
     public Color hovercolor;
+    public Color notEnoughGoldColor;
     private Renderer rend;
 
     [Header("Optional")]
@@ -41,13 +42,21 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (constructManager.CanBuild) // During this method it makes sure that we will only highlight the different nodes when we hover over them,
-                                       // we will only do the hover animation when we actually have a turret to build.
+        if (!constructManager.CanBuild) // During this method it makes sure that we will only highlight the different nodes when we hover over them,
+                                        // we will only do the hover animation when we actually have a turret to build.
         {
             return;
         }
 
-        rend.material.color = hovercolor;
+        if (constructManager.HasGold)
+        {
+            rend.material.color = hovercolor;
+        }
+        else
+        {
+            rend.material.color = notEnoughGoldColor;
+        }
+  
     }
 
     void OnMouseExit()
