@@ -62,7 +62,7 @@ public class Bullet : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius); // shoot out a sphere, as an explosion. We'll see what it hits.
         foreach (Collider collider in colliders) // loop through all of the things it hits.
         {
-            if (collider.tag == "Enemy") // if the colliders are tagged as Enemy.
+            if (collider.tag == "Attackers") // if the colliders are tagged as Enemy.
             {
                 Damage(collider.transform); // damage the affected colliders
             }

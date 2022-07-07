@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2760893224553425165}
   - component: {fileID: 2760893224553425166}
   - component: {fileID: 2760893224553425167}
-  - component: {fileID: 3843951761882687887}
   - component: {fileID: -7555726659997582292}
   m_Layer: 0
   m_Name: Missile
@@ -98,21 +97,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3843951761882687887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2760893224553425264}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d35fec40a7627d144841f208f2d14d3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  impactEffects: {fileID: 3475494837551559674, guid: 21722fa37b6fdf9488fdc18482f9f160, type: 3}
-  speed: 30
-  explosionRadius: 1
 --- !u!114 &-7555726659997582292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,4 +111,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impactEffects: {fileID: 3475494837551559674, guid: 21722fa37b6fdf9488fdc18482f9f160, type: 3}
   speed: 30
-  explosionRadius: 10
+  explosionRadius: 1.5
