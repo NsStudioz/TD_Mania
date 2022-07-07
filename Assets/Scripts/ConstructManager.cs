@@ -50,8 +50,19 @@ public class ConstructManager : MonoBehaviour
 
     public void BuildDefUnitOn(Node node)
     {
+        if(PlayerStats.Gold < defUnitToBuild.cost)
+        {
+            Debug.Log("Not enough gold to build this turret!");
+            return; 
+        }
+
+        PlayerStats.Gold -= defUnitToBuild.cost;
+
         GameObject turret = Instantiate(defUnitToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
+
         node.defendingUnit = turret;
+
+        Debug.Log("Turret Build! Gold Left: " + PlayerStats.Gold);
 
         /*        GameObject defUnitToBuild = constructManager.GetDefUnitToBuild();
         defendingUnit = Instantiate(defUnitToBuild, transform.position + unitPositionOffset, transform.rotation);*/

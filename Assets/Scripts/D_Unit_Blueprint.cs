@@ -8,6 +8,6 @@ public class D_Unit_Blueprint  // dont want this script as MonoBehaviour, becaus
                                // and that way, Unity will save and load the value inside of this class for us, and that means that they are visible in the inspector, therefore we can edit them.
 
     public GameObject prefab;
-    [SerializeField] public int cost;
+    public int cost;
 
 }
