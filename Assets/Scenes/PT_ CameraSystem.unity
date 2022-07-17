@@ -375,18 +375,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 963194228}
   newPosition: {x: 0, y: 0, z: 0}
-  normalSpeed: 0
-  fastSpeed: 0
-  movementSpeed: 0
-  movementTime: 0
+  normalSpeed: 0.05
+  fastSpeed: 0.1
+  movementSpeed: 0.05
+  movementTime: 8
   panBorderThickness: 10
-  zoomAmount: {x: 0, y: 0, z: 0}
+  zoomAmount: {x: 0, y: -0.015, z: 0.015}
   newZoom: {x: 0, y: 0, z: 0}
   scrollSpeed: 5
   minZoom: 2
   maxZoom: 8
-  newRotation: {x: 0, y: 0, z: 0, w: 0}
-  rotationAmount: 0
+  newRotation: {x: 0, y: 0, z: 0, w: 1}
+  rotationAmount: 0.25
 --- !u!1 &1955565302
 GameObject:
   m_ObjectHideFlags: 0
