@@ -373,6 +373,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2406a359c40ed5740a906492eb27a34a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 963194228}
+  newPosition: {x: 0, y: 0, z: 0}
+  normalSpeed: 0
+  fastSpeed: 0
+  movementSpeed: 0
+  movementTime: 0
+  panBorderThickness: 10
+  zoomAmount: {x: 0, y: 0, z: 0}
+  newZoom: {x: 0, y: 0, z: 0}
+  scrollSpeed: 5
+  minZoom: 2
+  maxZoom: 8
+  newRotation: {x: 0, y: 0, z: 0, w: 0}
+  rotationAmount: 0
 --- !u!1 &1955565302
 GameObject:
   m_ObjectHideFlags: 0
