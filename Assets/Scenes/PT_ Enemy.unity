@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 1048536618}
   - component: {fileID: 1048536617}
   - component: {fileID: 1048536616}
+  - component: {fileID: 1048536620}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -424,6 +425,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1048536620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048536615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 907ba091f2f592846bbbe66e25e0784c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEFX: {fileID: 0}
+  startSpeed: 1
+  movingSpeed: 0
+  enemyHealth: 100
+  goldToEarn: 100
 --- !u!1 &1955565302
 GameObject:
   m_ObjectHideFlags: 0
