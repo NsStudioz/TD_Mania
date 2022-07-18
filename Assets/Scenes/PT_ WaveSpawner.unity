@@ -440,8 +440,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveCountDownText: {fileID: 0}
-  enemyPrefab: {fileID: 0}
-  spawnPoint: {fileID: 0}
+  enemyPrefab: {fileID: 4899215999690629462, guid: 23d8c96a76ca53048867d2678338a2e7, type: 3}
+  spawnPoint: {fileID: 1828493136}
   upcomingWaveDelay: 5
 --- !u!1 &1828493135
 GameObject:
