@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Enemy))] // our EenmyMovement component will not work without Enemy Component.
+[RequireComponent(typeof(Enemy))] // our EnemyMovement component will not work without Enemy Component.
 public class EnemyMovement : MonoBehaviour
 {
     private Enemy enemy;
@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
     {
         enemy = GetComponent<Enemy>();
 
-        //target = Waypoints.waypoints[0]; // pursuing the first waypoint with the index of zero to be equal to target.
+        target = Waypoints.waypoints[0]; // pursuing the first waypoint with the index of zero to be equal to target.
     }
 
     void Update()
@@ -33,14 +33,14 @@ public class EnemyMovement : MonoBehaviour
 
     private void MoveToNextWaypoint()
     {
-        //if (wavepointIndex >= Waypoints.waypoints.Length - 1) // if reached the destination.
+        if (wavepointIndex >= Waypoints.waypoints.Length - 1) // if reached the destination.
         {
             EndPath();
             return;
         }
 
-        //wavepointIndex++;
-        //target = Waypoints.waypoints[wavepointIndex];
+        wavepointIndex++;
+        target = Waypoints.waypoints[wavepointIndex];
     }
 
     private void EndPath()
