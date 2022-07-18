@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4899215999690629460}
   - component: {fileID: 4899215999690629461}
   - component: {fileID: 4899215999690629457}
+  - component: {fileID: 7872477614095370560}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -113,3 +114,15 @@ MonoBehaviour:
   movingSpeed: 0
   enemyHealth: 100
   goldToEarn: 100
+--- !u!114 &7872477614095370560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4899215999690629466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4136b15cfb412f41b17a6ba5cfc1466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
