@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        // PlayerStats.Gold += goldToEarn
+        PlayerStats.Gold += goldToEarn;
 
         GameObject deathEffects = Instantiate(deathEFX, transform.position, Quaternion.identity);
         Destroy(deathEffects, 3f);
