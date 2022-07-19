@@ -8,7 +8,7 @@ using System;
 public class WaveSpawner : MonoBehaviour
 {
     // Objects
-    public TMP_Text waveCountDownText;
+    //public TMP_Text waveCountDownText;
     public Transform enemyPrefab;
     public Transform spawnPoint;
     // Waves & Timers:
@@ -29,7 +29,7 @@ public class WaveSpawner : MonoBehaviour
 
         countDown = Mathf.Clamp(countDown, 0f, Mathf.Infinity);
 
-        waveCountDownText.text = string.Format("{0:00.00}", countDown); // convert to actual watch like, real world time format.
+        //waveCountDownText.text = string.Format("{0:00.00}", countDown); // convert to actual watch like, real world time format.
     }
 
     IEnumerator SpawnWave()
