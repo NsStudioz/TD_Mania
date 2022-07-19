@@ -662,6 +662,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7007495501377291204, guid: 3735ddc74558d2147b0de07b6fd87fae, type: 3}
+      propertyPath: range
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7007495501377291231, guid: 3735ddc74558d2147b0de07b6fd87fae, type: 3}
       propertyPath: m_Name
       value: D_Unit_Turret_Standard
