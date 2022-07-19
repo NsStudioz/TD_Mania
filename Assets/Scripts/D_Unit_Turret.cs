@@ -97,12 +97,12 @@ public class D_Unit_Turret : MonoBehaviour
     private void Shoot()
     {
         GameObject bulletGO = Instantiate(bulletPrefab, firingPosition.position, firingPosition.rotation);
-        // Bullet bullet = bulletGO.GetComponent<Bullet>();
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
 
-/*        if(bullet != null)
+        if (bullet != null)
         {
             bullet.SeekTarget(target);
-        }*/
+        }
     }
 
     private void UseTheLaser()
