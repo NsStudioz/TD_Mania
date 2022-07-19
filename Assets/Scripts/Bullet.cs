@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
 {
     private Transform target;
 
-    public GameObject impactEffects;
+    //public GameObject impactEffects;
 
     public float speed = 50f;
     public float explosionRadius = 0f;
@@ -43,7 +43,7 @@ public class Bullet : MonoBehaviour
 
     private void HitTarget()
     {
-        GameObject effectsIns = Instantiate(impactEffects, transform.position, transform.rotation);
+        // GameObject effectsIns = Instantiate(impactEffects, transform.position, transform.rotation);
 
         if (explosionRadius > 0f)
         {
