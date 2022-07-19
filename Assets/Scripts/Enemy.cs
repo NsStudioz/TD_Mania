@@ -6,7 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public GameObject deathEFX;
+    //public GameObject deathEFX;
     public float startSpeed = 2f;
 
     [HideInInspector]
@@ -33,8 +33,8 @@ public class Enemy : MonoBehaviour
     {
         PlayerStats.Gold += goldToEarn;
 
-        GameObject deathEffects = Instantiate(deathEFX, transform.position, Quaternion.identity);
-        Destroy(deathEffects, 3f);
+/*        GameObject deathEffects = Instantiate(deathEFX, transform.position, Quaternion.identity);
+        Destroy(deathEffects, 3f);*/
 
         Destroy(gameObject);
     }
