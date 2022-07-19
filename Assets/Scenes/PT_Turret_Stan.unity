@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 2114998322}
   - component: {fileID: 2114998321}
   - component: {fileID: 2114998320}
+  - component: {fileID: 2114998324}
   m_Layer: 0
   m_Name: D_Unit_Turret_Standard
   m_TagString: Untagged
@@ -680,3 +681,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2114998324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114998319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34f021525ab9c942b11237c34bfbab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetEnemy: {fileID: 0}
+  enemyTag: Attackers
+  range: 1
+  fireRate: 1
+  fireCountDown: 0.25
+  turnSpeed: 10
+  partToRotate: {fileID: 2114998323}
+  bulletPrefab: {fileID: 7498280192598164724, guid: cd4606a2876234e44b50b4917a085183, type: 3}
+  firingPosition: {fileID: 1726940539}
+  useLaser: 0
