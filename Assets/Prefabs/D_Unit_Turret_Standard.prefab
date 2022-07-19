@@ -240,7 +240,7 @@ MonoBehaviour:
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
   enemyTag: Attackers
-  range: 1
+  range: 2
   fireRate: 1
   fireCountDown: 0.25
   turnSpeed: 10
