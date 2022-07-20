@@ -11,7 +11,7 @@ public class ConstructManager : MonoBehaviour
     public GameObject sellEffects;
     //
     private Node turret_SelectedNode;
-    //public NodeUI nodeUI;
+    public NodeUI nodeUI;
 
     void Awake()
     {
@@ -47,7 +47,7 @@ public class ConstructManager : MonoBehaviour
         turret_SelectedNode = node;
         defUnitToBuild = null; // either have a turret to build or a turret to upgrade
 
-        //nodeUI.SetTarget(node);
+        nodeUI.SetTarget(node);
     }
 
     public void SelectTurretToBuild(D_Unit_Blueprint turretBlueprint) // on turret create
@@ -59,7 +59,7 @@ public class ConstructManager : MonoBehaviour
     public void DeselectNode()
     {
         turret_SelectedNode = null;
-        //nodeUI.Hide();
+        nodeUI.Hide();
     }
 
     public D_Unit_Blueprint GetDefUnitToBuild()
