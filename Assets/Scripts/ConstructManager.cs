@@ -10,7 +10,7 @@ public class ConstructManager : MonoBehaviour
     public GameObject buildEffects;
     public GameObject sellEffects;
     //
-    //private Node turret_SelectedNode;
+    private Node turret_SelectedNode;
     //public NodeUI nodeUI;
 
     void Awake()
@@ -36,7 +36,7 @@ public class ConstructManager : MonoBehaviour
     public bool HasGold { get { return PlayerStats.Gold >= defUnitToBuild.cost; } }
 
     // function that works when we click on a built turret.
-/*    public void Turret_SelectNode(Node node) 
+    public void Turret_SelectNode(Node node)
     {
         if (turret_SelectedNode == node)
         {
@@ -47,8 +47,8 @@ public class ConstructManager : MonoBehaviour
         turret_SelectedNode = node;
         defUnitToBuild = null; // either have a turret to build or a turret to upgrade
 
-        nodeUI.SetTarget(node);
-    }*/
+        //nodeUI.SetTarget(node);
+    }
 
     public void SelectTurretToBuild(D_Unit_Blueprint turretBlueprint) // on turret create
     {
@@ -58,8 +58,8 @@ public class ConstructManager : MonoBehaviour
 
     public void DeselectNode()
     {
-/*        turret_SelectedNode = null;
-        nodeUI.Hide();*/
+        turret_SelectedNode = null;
+        //nodeUI.Hide();
     }
 
     public D_Unit_Blueprint GetDefUnitToBuild()
