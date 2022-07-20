@@ -524,6 +524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConstructManager
       objectReference: {fileID: 0}
+    - target: {fileID: 618146034087625354, guid: 411d5cf36c64bb643a11111afe7f7e72, type: 3}
+      propertyPath: nodeUI
+      value: 
+      objectReference: {fileID: 1866430311}
     - target: {fileID: 618146034087625355, guid: 411d5cf36c64bb643a11111afe7f7e72, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -1642,6 +1646,17 @@ PrefabInstance:
       objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7d4577318058dd428d1806c8933b627, type: 3}
+--- !u!114 &1866430311 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2327102806060922712, guid: e3e0384e53d9c9b45bdb08db77e37c0d, type: 3}
+  m_PrefabInstance: {fileID: 550953691}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30037f6a460f5bb4d8f3a0792d6802ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1955565302
 GameObject:
   m_ObjectHideFlags: 0
