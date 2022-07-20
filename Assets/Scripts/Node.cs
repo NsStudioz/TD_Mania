@@ -12,8 +12,6 @@ public class Node : MonoBehaviour
     public Color notEnoughGoldColor;
     private Renderer rend;
 
-    //[Header("Optional")]
-
     [HideInInspector]
     public GameObject defendingUnit;
     [HideInInspector]
@@ -24,8 +22,8 @@ public class Node : MonoBehaviour
     // On unit Spawn:
     public Vector3 unitPositionOffset;
 
-    //
-    //ConstructManager constructManager;
+    // Instance:
+    ConstructManager constructManager;
 
 
     void Start()
@@ -33,7 +31,7 @@ public class Node : MonoBehaviour
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
 
-        //constructManager = ConstructManager.instance;
+        constructManager = ConstructManager.instance;
     }
 
     public Vector3 GetBuildPosition()
@@ -41,16 +39,16 @@ public class Node : MonoBehaviour
         return transform.position + unitPositionOffset;
     }
 
-
+    // During this method it makes sure that we will only highlight the different nodes when we hover over them,
+    // we will only do the hover animation when we actually have a turret to build.
     void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject()) // if the mouse hovers a gameobject while on a UI Element (Panel in this case)
         {
             return;
         }
-        // During this method it makes sure that we will only highlight the different nodes when we hover over them,
-        // we will only do the hover animation when we actually have a turret to build.
-/*        if (!constructManager.CanBuild) 
+
+        if (!constructManager.CanBuild)
         {
             return;
         }
@@ -62,7 +60,7 @@ public class Node : MonoBehaviour
         else
         {
             rend.material.color = notEnoughGoldColor;
-        }*/
+        }
 
     }
 
@@ -78,7 +76,7 @@ public class Node : MonoBehaviour
             return;
         }
 
-/*        if (defendingUnit != null)
+        if (defendingUnit != null)
         {
             constructManager.Turret_SelectNode(this); // pass in the selected node.
             return;
@@ -88,9 +86,9 @@ public class Node : MonoBehaviour
         {
             return;
         }
-*/
+
         //constructManager.BuildDefUnitOn(this); // this = we pass in this node.
-        /*        BuildTurret(constructManager.GetDefUnitToBuild());*/
+        BuildTurret(constructManager.GetDefUnitToBuild());
     }
 
     void BuildTurret(D_Unit_Blueprint blueprint)
