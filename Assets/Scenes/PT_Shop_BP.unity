@@ -1164,18 +1164,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   d_Unit_Turret_Standard:
-    prefab: {fileID: 0}
-    cost: 0
+    prefab: {fileID: 7007495501377291231, guid: 3735ddc74558d2147b0de07b6fd87fae, type: 3}
+    cost: 100
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Turret_MissileLauncher:
-    prefab: {fileID: 0}
-    cost: 0
+    prefab: {fileID: 6570815144818557120, guid: d6cefedf21ed022458a5d64b0ae2b84b, type: 3}
+    cost: 100
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Turret_WideBeamer:
-    prefab: {fileID: 0}
-    cost: 0
+    prefab: {fileID: 2537815697675475703, guid: 14f7494cc4b2ed448b2fa4982802dca4, type: 3}
+    cost: 100
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
 --- !u!1 &1183469894
