@@ -121,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7723458655555011389}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7723458655838498863}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: SelectTurretWideBeamer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7723458655623470377
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +520,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7723458655993197471}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7723458655838498863}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: SelectTurretMissileLauncher
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7723458656232674959
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +654,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7723458656232674946}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7723458655838498863}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: SelectTurretStandard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7723458656331214805
 GameObject:
   m_ObjectHideFlags: 0
