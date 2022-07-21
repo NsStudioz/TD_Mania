@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public static bool GameIsOver;
+
+    public GameObject gameOverUI;
+
     void Start()
     {
-        
+        GameIsOver = false;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (GameIsOver)
+            return;
+
+        if (Input.GetKeyDown("n"))
+        {
+            EndGame();
+        }
+
+        if (PlayerStats.Lives <= 0)
+        {
+            EndGame();
+        }
     }
+
+    private void EndGame()
+    {
+        GameIsOver = true;
+        gameOverUI.SetActive(true);
+    }
+
 }
