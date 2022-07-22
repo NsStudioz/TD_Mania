@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8146481081411523615}
   - component: {fileID: 8146481081411523614}
   - component: {fileID: 8146481081411523610}
-  - component: {fileID: 6895916138629151755}
   - component: {fileID: -6817946495993910922}
   m_Layer: 0
   m_Name: Enemy_Testing
@@ -114,18 +113,6 @@ MonoBehaviour:
   movingSpeed: 0
   enemyHealth: 100
   goldToEarn: 100
---- !u!114 &6895916138629151755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8146481081411523601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4136b15cfb412f41b17a6ba5cfc1466, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-6817946495993910922
 MonoBehaviour:
   m_ObjectHideFlags: 0
