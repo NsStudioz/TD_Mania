@@ -12,15 +12,17 @@ public class WaveSpawner_Test : MonoBehaviour
     private float enemySpawnDelay = 0.5f; // delay in seconds for each enemy to spawn during wave.
     private int waveIndex = 0;
 
-    public static Transform[] waypoints;
+    //public static Transform[] waypoints;
+
+    public Transform[] waypoints_new;
             
     void Awake()
     {
-        waypoints = new Transform[transform.childCount];
+        waypoints_new = new Transform[transform.childCount];
 
-        for (int i = 0; i < waypoints.Length; i++)
+        for (int i = 0; i < waypoints_new.Length; i++)
         {
-            waypoints[i] = transform.GetChild(i);
+            waypoints_new[i] = transform.GetChild(i);
         }
     }
 

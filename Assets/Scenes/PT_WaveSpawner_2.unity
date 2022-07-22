@@ -2651,8 +2651,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7664e5dbadf8f84db7e601fa135a040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8146481081411523613, guid: 16c6694210578fb4cb2196665c371284, type: 3}
+  enemyPrefab: {fileID: 8146481081411523613, guid: 488da55f4a55ab44980b7f9127b23d34, type: 3}
   upcomingWaveDelay: 5
+  waypoints_new:
+  - {fileID: 4407374677666838802}
 --- !u!1 &4407374679567277638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2769,6 +2771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8146481081411523613, guid: 16c6694210578fb4cb2196665c371284, type: 3}
   upcomingWaveDelay: 6
+  waypoints_new:
+  - {fileID: 4407374679567277642}
 --- !u!1001 &6595141290403452432
 PrefabInstance:
   m_ObjectHideFlags: 0
