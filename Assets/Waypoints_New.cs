@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Waypoints_New : MonoBehaviour
 {
+
     public Transform[] waypoints;
 
     void Awake()
