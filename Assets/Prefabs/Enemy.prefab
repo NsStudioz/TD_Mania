@@ -109,7 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907ba091f2f592846bbbe66e25e0784c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEFX: {fileID: 0}
   startSpeed: 1
   movingSpeed: 0
   enemyHealth: 100
@@ -126,3 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4136b15cfb412f41b17a6ba5cfc1466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
