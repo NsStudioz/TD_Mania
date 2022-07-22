@@ -14,7 +14,7 @@ public class EnemyMovement_Test : MonoBehaviour
     {
         enemy = GetComponent<Enemy>();
 
-        target = Waypoints.waypoints[0]; // pursuing the first waypoint with the index of zero to be equal to target.
+        target = WaveSpawner_Test.waypoints[0]; // pursuing the first waypoint with the index of zero to be equal to target.
     }
 
     void Update()
@@ -33,14 +33,14 @@ public class EnemyMovement_Test : MonoBehaviour
 
     private void MoveToNextWaypoint()
     {
-        if (wavepointIndex >= Waypoints.waypoints.Length - 1) // if reached the destination.
+        if (wavepointIndex >= WaveSpawner_Test.waypoints.Length - 1) // if reached the destination.
         {
             EndPath();
             return;
         }
 
         wavepointIndex++;
-        target = Waypoints.waypoints[wavepointIndex];
+        target = WaveSpawner_Test.waypoints[wavepointIndex];
     }
 
     private void EndPath()
