@@ -6,7 +6,6 @@ public class WaveSpawner_Test : MonoBehaviour
 {
     // Objects
     public Transform enemyPrefab;
-    public Transform spawnPoint;
     // Waves & Timers:
     public float upcomingWaveDelay = 5f;
     private float countDown = 2f;
@@ -53,6 +52,6 @@ public class WaveSpawner_Test : MonoBehaviour
     }
     private void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemyPrefab, transform.position, transform.rotation);
     }
 }
