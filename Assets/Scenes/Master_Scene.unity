@@ -280,6 +280,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5230249739191897216, guid: ad671902d97484f45be58c72d34220ef, type: 3}
   m_PrefabInstance: {fileID: 156612405}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &374667119 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 892927737717022275, guid: b7d4577318058dd428d1806c8933b627, type: 3}
+  m_PrefabInstance: {fileID: 942199814}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &413901814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -335,6 +340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7872477614095370560, guid: 23d8c96a76ca53048867d2678338a2e7, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 374667119}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23d8c96a76ca53048867d2678338a2e7, type: 3}
 --- !u!1001 &422226613
