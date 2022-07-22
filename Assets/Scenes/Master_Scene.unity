@@ -467,6 +467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: D_Unit_Turret_WideBeamer
       objectReference: {fileID: 0}
+    - target: {fileID: 2537815697675475703, guid: 14f7494cc4b2ed448b2fa4982802dca4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2537815697675475707, guid: 14f7494cc4b2ed448b2fa4982802dca4, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -922,6 +926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: D_Unit_Turret_MissileLauncher
       objectReference: {fileID: 0}
+    - target: {fileID: 6570815144818557120, guid: d6cefedf21ed022458a5d64b0ae2b84b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6570815144818557124, guid: d6cefedf21ed022458a5d64b0ae2b84b, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1120,6 +1128,10 @@ PrefabInstance:
     - target: {fileID: 7007495501377291231, guid: 3735ddc74558d2147b0de07b6fd87fae, type: 3}
       propertyPath: m_Name
       value: D_Unit_Turret_Standard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007495501377291231, guid: 3735ddc74558d2147b0de07b6fd87fae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3735ddc74558d2147b0de07b6fd87fae, type: 3}
