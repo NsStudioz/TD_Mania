@@ -563,7 +563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 593331560}
   m_Layer: 0
-  m_Name: Waypoints_3 (1)
+  m_Name: Waypoints_3
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1250,7 +1250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054824980}
   m_Layer: 0
-  m_Name: Waypoints_1 (1)
+  m_Name: Waypoints_1
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1622,7 +1622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1595511955}
   m_Layer: 0
-  m_Name: Waypoints_2 (1)
+  m_Name: Waypoints_2
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1709,7 +1709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1649066323}
   m_Layer: 0
-  m_Name: Waypoints_4 (1)
+  m_Name: Waypoints_4
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1800,7 +1800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1774709492}
   m_Layer: 0
-  m_Name: Waypoints_5 (1)
+  m_Name: Waypoints_5
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2619,7 +2619,7 @@ GameObject:
   - component: {fileID: 4407374677666838815}
   - component: {fileID: 4407374677666838816}
   m_Layer: 0
-  m_Name: WaveSpawner (1)
+  m_Name: WaveSpawner_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2653,8 +2653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8146481081411523613, guid: 488da55f4a55ab44980b7f9127b23d34, type: 3}
   upcomingWaveDelay: 5
-  waypoints_new:
-  - {fileID: 4407374677666838802}
+  waypoints_new: []
 --- !u!1 &4407374679567277638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,6 +2771,10 @@ MonoBehaviour:
   enemyPrefab: {fileID: 8146481081411523613, guid: 16c6694210578fb4cb2196665c371284, type: 3}
   upcomingWaveDelay: 6
   waypoints_new:
+  - {fileID: 4407374679567277642}
+  - {fileID: 4407374679567277642}
+  - {fileID: 4407374679567277642}
+  - {fileID: 4407374679567277642}
   - {fileID: 4407374679567277642}
 --- !u!1001 &6595141290403452432
 PrefabInstance:
