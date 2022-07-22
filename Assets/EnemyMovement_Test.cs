@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,17 +8,14 @@ public class EnemyMovement_Test : MonoBehaviour
 {
     private Enemy enemy;
 
-    public Transform target;
-    public int wavepointIndex = 0;
-
-    Waypoints_New waypoints_new;
+    private Transform target;
+    private int wavepointIndex = 0;
 
     void Start()
     {
         enemy = GetComponent<Enemy>();
 
-        target = target.GetChild(wavepointIndex);
-        //target = waypoints_new.waypoints[wavepointIndex]; // pursuing the first waypoint with the index of zero to be equal to target.
+        target = Waypoints.waypoints[0]; // pursuing the first waypoint with the index of zero to be equal to target.
     }
 
     void Update()
@@ -36,14 +34,14 @@ public class EnemyMovement_Test : MonoBehaviour
 
     private void MoveToNextWaypoint()
     {
-        if (wavepointIndex >= target.childCount) // if reached the destination.
+        if (wavepointIndex >= Waypoints.waypoints.Length - 1) // if reached the destination.
         {
             EndPath();
             return;
         }
 
         wavepointIndex++;
-        target = target.GetChild(wavepointIndex);
+        target = Waypoints.waypoints[wavepointIndex];
     }
 
     private void EndPath()
@@ -52,4 +50,5 @@ public class EnemyMovement_Test : MonoBehaviour
 
         Destroy(gameObject);
     }
+
 }
