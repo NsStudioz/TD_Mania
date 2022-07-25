@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 8146481081411523612}
   - component: {fileID: 8146481081411523615}
   - component: {fileID: 8146481081411523614}
-  - component: {fileID: 8146481081411523610}
-  - component: {fileID: -6817946495993910922}
+  - component: {fileID: 5603174249576035626}
   m_Layer: 0
   m_Name: Enemy_Testing
   m_TagString: Attackers
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8146481081411523601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: 9.5}
+  m_LocalPosition: {x: -1.25, y: 0.25, z: 8.75}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,7 +96,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8146481081411523610
+--- !u!114 &5603174249576035626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,23 +105,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8146481081411523601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 907ba091f2f592846bbbe66e25e0784c, type: 3}
+  m_Script: {fileID: 11500000, guid: 1eef24da81931374daa14e2cd814c23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 1
+  startSpeed: 2
+  waypointIndex: 0
   movingSpeed: 0
   enemyHealth: 100
   goldToEarn: 100
---- !u!114 &-6817946495993910922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8146481081411523601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c053d1d73c9824297f856289647a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 4054640070279950710, guid: 232082fbc21e60140be2c1dfa9f46f2f, type: 3}

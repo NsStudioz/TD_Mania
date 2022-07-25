@@ -13,17 +13,19 @@ public class EnemyMovement_Test : MonoBehaviour
 
     void Start()
     {
+        target = target.GetChild(wavepointIndex);
+
         enemy = GetComponent<Enemy>();
 
-        transform.position = target.GetChild(wavepointIndex).transform.position; // pursuing the first waypoint with the index of zero to be equal to target.
+        transform.position = target.transform.position; // pursuing the first waypoint with the index of zero to be equal to target.
     }
 
     void Update()
     {
-        Vector3 dir = target.GetChild(wavepointIndex).transform.position - transform.position;
+        Vector3 dir = target.transform.position - transform.position;
         transform.Translate(dir.normalized * enemy.movingSpeed * Time.deltaTime, Space.World);
 
-        if (Vector3.Distance(transform.position, target.GetChild(wavepointIndex).transform.position) <= 0.1f)
+        if (Vector3.Distance(transform.position, target.transform.position) <= 0.1f)
         {
             MoveToNextWaypoint();
         }
@@ -41,7 +43,7 @@ public class EnemyMovement_Test : MonoBehaviour
         }
 
         wavepointIndex++;
-        transform.position = target.GetChild(wavepointIndex).transform.position;
+        transform.position = target.transform.position;
     }
 
     /*    private void MoveToNextWaypoint()

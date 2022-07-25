@@ -43,5 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c64fb7d2b1447c49ad70a56095d550b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildEffects: {fileID: 0}
-  sellEffects: {fileID: 0}
+  nodeUI: {fileID: 0}
