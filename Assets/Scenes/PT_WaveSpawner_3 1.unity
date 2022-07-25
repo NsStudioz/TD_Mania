@@ -791,6 +791,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1947579284, guid: 9b43621acd550044ca0f6b7ceb9f07eb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2416374682919358368, guid: 9b43621acd550044ca0f6b7ceb9f07eb, type: 3}
       propertyPath: m_Name
       value: WaveSpawner_new2
