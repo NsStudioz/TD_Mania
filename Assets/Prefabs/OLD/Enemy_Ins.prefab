@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 274634874946929750}
   m_Layer: 0
   m_Name: Enemy_Ins
-  m_TagString: Untagged
+  m_TagString: Attackers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,4 +110,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movingSpeed: 2
   paths: {fileID: 2416374682919358378, guid: 9b43621acd550044ca0f6b7ceb9f07eb, type: 3}
+  enemies: []
   waypointIndex: 0

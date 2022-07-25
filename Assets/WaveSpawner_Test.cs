@@ -13,6 +13,7 @@ public class WaveSpawner_Test : MonoBehaviour
     private float countDown = 2f;
     private float enemySpawnDelay = 0.5f; // delay in seconds for each enemy to spawn during wave.
     private int waveIndex = 0;
+    pathMover_Test pathMover;
 
     void Update()
     {
@@ -46,6 +47,7 @@ public class WaveSpawner_Test : MonoBehaviour
     private void SpawnEnemy()
     {
         Transform enemyprefabInstance = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        //pathMover.enemyCount.Add(enemyprefabInstance);
     }
 
 }

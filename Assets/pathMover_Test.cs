@@ -13,6 +13,8 @@ public class pathMover_Test : MonoBehaviour
     //public Enemy_Test enemy;
     public int waypointIndex;
 
+    //public List<Enemy_Test> enemyCount = new List<Enemy_Test>();
+    public List<Transform> enemyCount = new List<Transform>();
     /*    Enemy_Test enemy_test;
         Waypoints_New waypoints_New;
         private Transform target;
@@ -64,8 +66,9 @@ public class pathMover_Test : MonoBehaviour
 
     void Start()
     {
-        foreach (Enemy_Test e in enemies)
+        foreach (Transform e in enemyCount)
         {
+
             if (e == null)
             {
                 return;
@@ -80,9 +83,11 @@ public class pathMover_Test : MonoBehaviour
 
     void Update()
     {
-
-        foreach (Enemy_Test e in enemies)
+        foreach (Transform e in enemyCount)
         {
+
+            enemyCount.Add(e);
+
             if (e.transform.position == null)
             {
                 return;
