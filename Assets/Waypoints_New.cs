@@ -5,15 +5,15 @@ using UnityEngine;
 public class Waypoints_New : MonoBehaviour
 {
 
-    public Transform[] waypoints;
+    [SerializeField] public static Transform[] waypoints_new;
 
     void Awake()
     {
-        waypoints = new Transform[transform.childCount];
+        waypoints_new = new Transform[transform.childCount];
 
-        for (int i = 0; i < waypoints.Length; i++)
+        for (int i = 0; i < waypoints_new.Length; i++)
         {
-            waypoints[i] = transform.GetChild(i);
+            waypoints_new[i] = transform.GetChild(i);
         }
     }
 }

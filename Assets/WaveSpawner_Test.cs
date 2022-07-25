@@ -45,6 +45,7 @@ public class WaveSpawner_Test : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Transform enemyprefabInstance = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
     }
+
 }

@@ -14,7 +14,7 @@ public class WaveConfig_Test : MonoBehaviour
     //public Transform target;
 
     //
-    [SerializeField] private Paths paths;
+    public Paths paths;
     private Transform currentWaypoint;
 
 /*    private void Start()
@@ -73,6 +73,7 @@ public class WaveConfig_Test : MonoBehaviour
 
     void Update()
     {
+
         enemyPrefab.transform.position = Vector3.MoveTowards(enemyPrefab.transform.position, currentWaypoint.position, enemyTest.movingSpeed * Time.deltaTime);
         if(Vector3.Distance(enemyPrefab.transform.position, currentWaypoint.position) < 0.1f)
         {
