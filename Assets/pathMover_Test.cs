@@ -7,11 +7,15 @@ public class pathMover_Test : MonoBehaviour
 {
     public float movingSpeed = 2f;
 
-    public Paths paths;
+    
+    //public Paths paths;
     private Transform currentWaypoint;
+    public WaveSpawner_Test thisPaths;
+    public Transform enemyPath;
     //public Enemy_Test[] enemies;
     //public Enemy_Test enemy;
     public int waypointIndex;
+    
 
     //public List<Enemy_Test> enemyCount = new List<Enemy_Test>();
     //public List<Transform> enemyCount = new List<Transform>();
@@ -61,7 +65,6 @@ public class pathMover_Test : MonoBehaviour
         }*/
 
 
-
     // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     /*    void Start()
@@ -105,21 +108,44 @@ public class pathMover_Test : MonoBehaviour
 
     // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    void Start()
-    {
-        currentWaypoint = paths.GetToNextWaypoint(currentWaypoint);
-        transform.position = currentWaypoint.position;
-    }
-
-    void Update()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, movingSpeed * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, currentWaypoint.position) <= 0.1f)
+        private void Awake()
         {
-            currentWaypoint = paths.GetToNextWaypoint(currentWaypoint);
+            if (thisPaths == null) { return; }
         }
 
-    }
+        void Start()
+        {
+            currentWaypoint = thisPaths.GetToNextWaypoint(currentWaypoint);
+            transform.position = currentWaypoint.position;
+        }
+
+        void Update()
+        {
+            transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, movingSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, currentWaypoint.position) <= 0.1f)
+            {
+                currentWaypoint = thisPaths.GetToNextWaypoint(currentWaypoint);
+            }
+
+        }
+
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    /*    void Start()
+        {
+            currentWaypoint = paths.GetToNextWaypoint(currentWaypoint);
+            transform.position = currentWaypoint.position;
+        }
+
+        void Update()
+        {
+            transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, movingSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, currentWaypoint.position) <= 0.1f)
+            {
+                currentWaypoint = paths.GetToNextWaypoint(currentWaypoint);
+            }
+
+        }*/
 
 }

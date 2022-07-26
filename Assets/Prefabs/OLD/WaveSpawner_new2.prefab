@@ -104,7 +104,6 @@ GameObject:
   - component: {fileID: 2416374682919358374}
   - component: {fileID: 2416374682919358375}
   - component: {fileID: 2416374682919358378}
-  - component: {fileID: 1947579284}
   m_Layer: 0
   m_Name: WaveSpawner_new2
   m_TagString: Untagged
@@ -207,8 +206,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1851552984606008327, guid: 07d76a4c057b2ce498e4585a22d4b3b1, type: 3}
+  enemyPrefabGO: {fileID: 1851552984606008323, guid: 07d76a4c057b2ce498e4585a22d4b3b1, type: 3}
   spawnPoint: {fileID: 2416374682919358379}
   upcomingWaveDelay: 5
+  enemyTag: Attackers
+  paths: {fileID: 2416374682919358378}
 --- !u!114 &2416374682919358378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,22 +223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4c62ffca660ed4cb1e1c565b139eda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1947579284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2416374682919358368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bfc1d72f12ba2f48a27e1ff8e6e5e11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movingSpeed: 2
-  paths: {fileID: 2416374682919358378}
-  enemies: []
-  waypointIndex: 0
 --- !u!1 &2416374683380714795
 GameObject:
   m_ObjectHideFlags: 0
