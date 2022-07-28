@@ -6,15 +6,15 @@ using UnityEngine.UI;
 public class Shop_UI : MonoBehaviour
 {
     // ITEMS PANEL LIST (UP TO 9):
-    Button buttonItem1; // top left
-    Button buttonItem2; // top Center
-    Button buttonItem3; // top right
-    Button buttonItem4; // middle left
-    Button buttonItem5; // middle Center
-    Button buttonItem6; // middle right
-    Button buttonItem7; // bottom left
-    Button buttonItem8; // bottom Center
-    Button buttonItem9; // bottom right
+    public Button buttonItem1; // top left
+    public Button buttonItem2; // top Center
+    public Button buttonItem3; // top right
+    public Button buttonItem4; // middle left
+    public Button buttonItem5; // middle Center
+    public Button buttonItem6; // middle right
+    public Button buttonItem7; // bottom left
+    public Button buttonItem8; // bottom Center
+    public Button buttonItem9; // bottom right
 
 
 
