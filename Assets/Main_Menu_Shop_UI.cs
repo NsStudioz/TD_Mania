@@ -6,84 +6,96 @@ using UnityEngine.UI;
 public class Main_Menu_Shop_UI : MonoBehaviour
 {
     // ITEMS PANEL LIST (UP TO 9):
-    public Button buttonItem1; // top left
-    public Button buttonItem2; // top Center
-    public Button buttonItem3; // top right
-    public Button buttonItem4; // middle left
-    public Button buttonItem5; // middle Center
-    public Button buttonItem6; // middle right
-    public Button buttonItem7; // bottom left
-    public Button buttonItem8; // bottom Center
-    public Button buttonItem9; // bottom right
+    public GameObject buttonItem1; // top left
+    public GameObject buttonItem2; // top Center
+    public GameObject buttonItem3; // top right
+    public GameObject buttonItem4; // middle left
+    public GameObject buttonItem5; // middle Center
+    public GameObject buttonItem6; // middle right
+    public GameObject buttonItem7; // bottom left
+    public GameObject buttonItem8; // bottom Center
+    public GameObject buttonItem9; // bottom right
+
+/*    public Button item1;
+
+    private void Start()
+    {
+        item1.interactable = !item1.interactable;
+        item1.interactable = false;
+        item1.interactable = true;
+        
+    }*/
+
+
 
     public void OnTurretsCategoryClick()
     {
         //Buttons Visibility:
-        buttonItem1.enabled = true;
-        buttonItem2.enabled = true;
-        buttonItem3.enabled = true;
-        buttonItem4.enabled = true;
-        buttonItem5.enabled = true;
-        buttonItem6.enabled = true;
-        buttonItem7.enabled = true;
-        buttonItem8.enabled = true;
-        buttonItem9.enabled = true;
+        buttonItem1.SetActive(true);
+        buttonItem2.SetActive(true);
+        buttonItem3.SetActive(true);
+        buttonItem4.SetActive(true);
+        buttonItem5.SetActive(true);
+        buttonItem6.SetActive(true);
+        buttonItem7.SetActive(true);
+        buttonItem8.SetActive(true);
+        buttonItem9.SetActive(true);
     }
 
     public void OnTrapsCategoryClick()
     {
         //Buttons Visibility:
-        buttonItem1.enabled = true;
-        buttonItem2.enabled = true;
-        buttonItem3.enabled = true;
-        buttonItem4.enabled = true;
-        buttonItem5.enabled = true;
-        buttonItem6.enabled = true;
-        buttonItem7.enabled = false;
-        buttonItem8.enabled = false;
-        buttonItem9.enabled = false;
+        buttonItem1.SetActive(true);
+        buttonItem2.SetActive(true);
+        buttonItem3.SetActive(true);
+        buttonItem4.SetActive(true);
+        buttonItem5.SetActive(true);
+        buttonItem6.SetActive(true);
+        buttonItem7.SetActive(false);
+        buttonItem8.SetActive(false);
+        buttonItem9.SetActive(false);
     }
 
     public void OnPowerUpsCategoryClick()
     {
         //Buttons Visibility:
-        buttonItem1.enabled = true;
-        buttonItem2.enabled = true;
-        buttonItem3.enabled = true;
-        buttonItem4.enabled = true;
-        buttonItem5.enabled = true;
-        buttonItem6.enabled = false;
-        buttonItem7.enabled = false;
-        buttonItem8.enabled = false;
-        buttonItem9.enabled = false;
+        buttonItem1.SetActive(true);
+        buttonItem2.SetActive(true);
+        buttonItem3.SetActive(true);
+        buttonItem4.SetActive(true);
+        buttonItem5.SetActive(true);
+        buttonItem6.SetActive(false);
+        buttonItem7.SetActive(false);
+        buttonItem8.SetActive(false);
+        buttonItem9.SetActive(false);
     }
 
     public void OnArsenalCategoryClick()
     {
         //Buttons Visibility:
-        buttonItem1.enabled = true;
-        buttonItem2.enabled = true;
-        buttonItem3.enabled = true;
-        buttonItem4.enabled = true;
-        buttonItem5.enabled = false;
-        buttonItem6.enabled = false;
-        buttonItem7.enabled = false;
-        buttonItem8.enabled = false;
-        buttonItem9.enabled = false;
+        buttonItem1.SetActive(true);
+        buttonItem2.SetActive(true);
+        buttonItem3.SetActive(true);
+        buttonItem4.SetActive(true);
+        buttonItem5.SetActive(false);
+        buttonItem6.SetActive(false);
+        buttonItem7.SetActive(false);
+        buttonItem8.SetActive(false);
+        buttonItem9.SetActive(false);
     }
 
     public void OnDurabilityCategoryClick()
     {
         //Buttons Visibility:
-        buttonItem1.enabled = true;
-        buttonItem2.enabled = true;
-        buttonItem3.enabled = false;
-        buttonItem4.enabled = false;
-        buttonItem5.enabled = false;
-        buttonItem6.enabled = false;
-        buttonItem7.enabled = false;
-        buttonItem8.enabled = false;
-        buttonItem9.enabled = false;
+        buttonItem1.SetActive(true);
+        buttonItem2.SetActive(true);
+        buttonItem3.SetActive(false);
+        buttonItem4.SetActive(false);
+        buttonItem5.SetActive(false);
+        buttonItem6.SetActive(false);
+        buttonItem7.SetActive(false);
+        buttonItem8.SetActive(false);
+        buttonItem9.SetActive(false);
     }
 
 }
