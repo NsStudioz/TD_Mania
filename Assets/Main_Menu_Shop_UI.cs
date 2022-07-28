@@ -16,16 +16,74 @@ public class Main_Menu_Shop_UI : MonoBehaviour
     public Button buttonItem8; // bottom Center
     public Button buttonItem9; // bottom right
 
-
-
-    void Start()
+    public void OnTurretsCategoryClick()
     {
-        
+        //Buttons Visibility:
+        buttonItem1.enabled = true;
+        buttonItem2.enabled = true;
+        buttonItem3.enabled = true;
+        buttonItem4.enabled = true;
+        buttonItem5.enabled = true;
+        buttonItem6.enabled = true;
+        buttonItem7.enabled = true;
+        buttonItem8.enabled = true;
+        buttonItem9.enabled = true;
     }
 
-
-    void Update()
+    public void OnTrapsCategoryClick()
     {
-        
+        //Buttons Visibility:
+        buttonItem1.enabled = true;
+        buttonItem2.enabled = true;
+        buttonItem3.enabled = true;
+        buttonItem4.enabled = true;
+        buttonItem5.enabled = true;
+        buttonItem6.enabled = true;
+        buttonItem7.enabled = false;
+        buttonItem8.enabled = false;
+        buttonItem9.enabled = false;
     }
+
+    public void OnPowerUpsCategoryClick()
+    {
+        //Buttons Visibility:
+        buttonItem1.enabled = true;
+        buttonItem2.enabled = true;
+        buttonItem3.enabled = true;
+        buttonItem4.enabled = true;
+        buttonItem5.enabled = true;
+        buttonItem6.enabled = false;
+        buttonItem7.enabled = false;
+        buttonItem8.enabled = false;
+        buttonItem9.enabled = false;
+    }
+
+    public void OnArsenalCategoryClick()
+    {
+        //Buttons Visibility:
+        buttonItem1.enabled = true;
+        buttonItem2.enabled = true;
+        buttonItem3.enabled = true;
+        buttonItem4.enabled = true;
+        buttonItem5.enabled = false;
+        buttonItem6.enabled = false;
+        buttonItem7.enabled = false;
+        buttonItem8.enabled = false;
+        buttonItem9.enabled = false;
+    }
+
+    public void OnDurabilityCategoryClick()
+    {
+        //Buttons Visibility:
+        buttonItem1.enabled = true;
+        buttonItem2.enabled = true;
+        buttonItem3.enabled = false;
+        buttonItem4.enabled = false;
+        buttonItem5.enabled = false;
+        buttonItem6.enabled = false;
+        buttonItem7.enabled = false;
+        buttonItem8.enabled = false;
+        buttonItem9.enabled = false;
+    }
+
 }
