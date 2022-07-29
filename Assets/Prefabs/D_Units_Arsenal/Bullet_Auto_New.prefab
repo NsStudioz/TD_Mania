@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 699835885451655057}
   - component: {fileID: 699835885451655054}
   - component: {fileID: 699835885451655055}
-  - component: {fileID: 699835885451655059}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -27,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699835885451655052}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 0.1, y: 0.10000001, z: 0.25}
   m_Children: []
   m_Father: {fileID: 9030696264757478874}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &699835885451655057
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -96,21 +95,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &699835885451655059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699835885451655052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 892560bc6431e934b815c0d19b3a70c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 50
-  explosionRadius: 0
-  damage: 50
 --- !u!1 &7973617759097300563
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9030696264757478874}
+  - component: {fileID: 5264415425476418421}
   m_Layer: 0
   m_Name: Bullet_Auto_New
   m_TagString: Untagged
@@ -142,3 +127,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5264415425476418421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7973617759097300563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 892560bc6431e934b815c0d19b3a70c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
+  explosionRadius: 0
+  damage: 50
