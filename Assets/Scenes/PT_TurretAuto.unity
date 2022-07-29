@@ -860,13 +860,13 @@ MonoBehaviour:
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
   enemyTag: Attackers
-  range: 1
-  fireRate: 1
+  range: 5
+  fireRate: 2
   fireCountDown: 0
   turnSpeed: 10
-  partToRotate: {fileID: 0}
-  bulletPrefab: {fileID: 0}
-  firingPosition: {fileID: 0}
+  partToRotate: {fileID: 7734959038917688278}
+  bulletPrefab: {fileID: 7973617759097300563, guid: 67a9ad979c6d6b946b64783920c91620, type: 3}
+  firingPosition: {fileID: 7734959039039008414}
   useLaser: 0
 --- !u!23 &7734959038917688276
 MeshRenderer:
