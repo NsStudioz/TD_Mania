@@ -854,7 +854,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7734959038917688266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951687f18e0e91049969f9eeba650a8d, type: 3}
+  m_Script: {fileID: 11500000, guid: b34f021525ab9c942b11237c34bfbab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
@@ -865,7 +865,7 @@ MonoBehaviour:
   fireCountDown: 0
   turnSpeed: 10
   partToRotate: {fileID: 7734959038917688278}
-  bulletPrefab: {fileID: 7973617759097300563, guid: 67a9ad979c6d6b946b64783920c91620, type: 3}
+  bulletPrefab: {fileID: 8295831486803953046, guid: fdbc6a438f541e542ba75e93513e1a2a, type: 3}
   firingPosition: {fileID: 7734959039039008414}
   useLaser: 0
 --- !u!23 &7734959038917688276
