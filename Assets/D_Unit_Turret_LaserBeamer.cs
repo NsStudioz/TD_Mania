@@ -22,8 +22,8 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     [Header("Unit Laser Turret")]
     public bool useLaser = false;
     public LineRenderer lineRenderer;
-    /*public ParticleSystem laserImpactEffects;*/
-    //public Light laserImpactLight;
+    public ParticleSystem laserImpactEffects;
+    public Light laserImpactLight;
     public int damageOverTime = 30;
     public float laserHitSlowPct = .5f;
 
@@ -45,8 +45,8 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
                 if (lineRenderer.enabled)
                 {
                     lineRenderer.enabled = false;
-                    //laserImpactLight.enabled = false;
-                    //laserImpactEffects.Stop();
+                    laserImpactLight.enabled = false;
+                    laserImpactEffects.Stop();
                 }
 
             }
@@ -80,8 +80,8 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         if (!lineRenderer.enabled)
         {
             lineRenderer.enabled = true;
-            //laserImpactLight.enabled = true;
-            //laserImpactEffects.Play();
+            laserImpactLight.enabled = true;
+            laserImpactEffects.Play();
         }
 
         lineRenderer.SetPosition(0, firingPosition.position); // line starts based on position index (written in the component, can create more if want lasers to bend or change positions).
@@ -89,9 +89,9 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
 
         Vector3 dir = firingPosition.position - target.position;
 
-        //laserImpactEffects.transform.position = target.position + dir.normalized * 0.1f; // dir.normalized = normalize the length to 1, then multiply by 0.1f.
+        laserImpactEffects.transform.position = target.position + dir.normalized * 0.1f; // dir.normalized = normalize the length to 1, then multiply by 0.1f.
 
-        //laserImpactEffects.transform.rotation = Quaternion.LookRotation(dir);
+        laserImpactEffects.transform.rotation = Quaternion.LookRotation(dir);
 
     }
 
