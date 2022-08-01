@@ -28,8 +28,6 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     public float laserHitSlowPct = .5f;
 
 
-
-
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -89,7 +87,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
 
         Vector3 dir = firingPosition.position - target.position;
 
-        laserImpactEffects.transform.position = target.position + dir.normalized * 0.1f; // dir.normalized = normalize the length to 1, then multiply by 0.1f.
+        laserImpactEffects.transform.position = target.position + dir.normalized; // dir.normalized = normalize the length to 1, then multiply by 0.1f.
 
         laserImpactEffects.transform.rotation = Quaternion.LookRotation(dir);
 
