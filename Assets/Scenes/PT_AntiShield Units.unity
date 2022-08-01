@@ -767,7 +767,7 @@ MonoBehaviour:
   fireCountDown: 0
   turnSpeed: 10
   partToRotate: {fileID: 5637518886291059978}
-  bulletPrefab: {fileID: 8295831486803953046, guid: fdbc6a438f541e542ba75e93513e1a2a, type: 3}
+  bulletPrefab: {fileID: 7830110537255932576, guid: 8325c67c9c1d2c94ba0063e0693db9c9, type: 3}
   firingPosition: {fileID: 5637518886679109698}
   useLaser: 0
 --- !u!33 &5637518886551489993
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   fireCountDown: 0
   turnSpeed: 10
   partToRotate: {fileID: 7980191526769261758}
-  bulletPrefab: {fileID: 5834080202382640150, guid: 8898964fa9dd5c443aeb3100ffec8c60, type: 3}
+  bulletPrefab: {fileID: 1326570173534720320, guid: 4ed0f629c5e25714b93dc347178ca472, type: 3}
   firingPosition: {fileID: 7980191527037243435}
   useLaser: 0
 --- !u!1 &7980191527037243434
@@ -1536,7 +1536,7 @@ MonoBehaviour:
   fireCountDown: 0.25
   turnSpeed: 10
   partToRotate: {fileID: 8740268559716440855}
-  bulletPrefab: {fileID: 7498280192598164724, guid: cd4606a2876234e44b50b4917a085183, type: 3}
+  bulletPrefab: {fileID: 5194135924334827148, guid: 56a9640664fb1c342890472190d53812, type: 3}
   firingPosition: {fileID: 8740268559585152607}
   useLaser: 0
 --- !u!136 &8740268559716440852
