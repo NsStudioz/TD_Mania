@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 5637518886291059977}
   - component: {fileID: 5637518886291059991}
   m_Layer: 0
-  m_Name: D_Unit_Turret_Standard_Auto
+  m_Name: D_Unit_Turret_AS_Standard_Auto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1107,7 +1107,7 @@ GameObject:
   - component: {fileID: 7980191526838237385}
   - component: {fileID: 7980191526838237389}
   m_Layer: 0
-  m_Name: D_Unit_Turret_MissileLauncher
+  m_Name: D_Unit_Turret_AS_ShieldDestroyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1510,7 +1510,7 @@ GameObject:
   - component: {fileID: 8740268559716440852}
   - component: {fileID: 8740268559716440848}
   m_Layer: 0
-  m_Name: D_Unit_Turret_Standard
+  m_Name: D_Unit_Turret_AS_Standard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
