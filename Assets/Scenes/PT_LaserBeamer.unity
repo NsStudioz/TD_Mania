@@ -5370,7 +5370,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fbced99af20ba5540bc85cf79fd55a9d, type: 2}
+  - {fileID: 2100000, guid: 2aa847d79420eff42a865af4d9efd135, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5668,7 +5668,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.35
+      scalar: 0.5
       minScalar: 0.3
       maxCurve:
         serializedVersion: 2
