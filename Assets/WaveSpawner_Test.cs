@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class WaveSpawner_Test : MonoBehaviour
 {
     // Objects
     //public TMP_Text waveCountDownText;
+    
+    //
     public Transform enemyPrefab;
     public GameObject enemyPrefabGO;
     private GameObject[] enemiesPrefabInstances;
@@ -19,21 +22,26 @@ public class WaveSpawner_Test : MonoBehaviour
     public string enemyTag = "Attackers";
 
     // testings!:
-    public Paths paths;
+    //public Paths paths;
+    //public pathMover_Test pathMover_test;
     private Transform currentWaypoint;
-    public List<Transform> wayPoints = new List<Transform>();
-    public List<GameObject> wayPointsGOList = new List<GameObject>();
-    public List<GameObject> enemyTransformsList = new List<GameObject>();
+    //public List<Transform> wayPoints = new List<Transform>();
+    //public List<GameObject> wayPointsGOList = new List<GameObject>();
+    //public List<GameObject> enemyTransformsList = new List<GameObject>();
     //public List<GameObject> enemyTransformsList = new List<GameObject>();
 
-    private void Start()
+    public Transform GetWaveSpawnerTransform()
+    {
+        return transform;
+    }
+
+    void Start()
     {
         
     }
 
     void Update()
     {
-        BlaUpdateNew();
 
         if (countDown == 0f)
         {
@@ -48,7 +56,7 @@ public class WaveSpawner_Test : MonoBehaviour
         //waveCountDownText.text = string.Format("{0:00.00}", countDown); // convert to actual watch like, real world time format.
     }
 
-    private void BlaUpdateNew()
+/*    private void BlaUpdateNew()
     {
         foreach(GameObject enemy in enemyTransformsList)
         {
@@ -106,7 +114,7 @@ public class WaveSpawner_Test : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 
 
     IEnumerator SpawnWave()
@@ -118,7 +126,7 @@ public class WaveSpawner_Test : MonoBehaviour
         {
             //SpawnEnemy();
             CreateEnemyObjectWithScript(enemyPrefabGO, pathMover);
-            enemyTransformsList.Add(enemyPrefabGO);
+            //enemyTransformsList.Add(enemyPrefabGO);
 
             yield return new WaitForSeconds(enemySpawnDelay);
         }
@@ -136,9 +144,18 @@ public class WaveSpawner_Test : MonoBehaviour
     {
         //enemyPrefabGO = prefabName;
 
-        GameObject prefabIns = Instantiate(prefabName, spawnPoint.position, spawnPoint.rotation);
-        
+        //GameObject prefabIns = Instantiate(prefabName, spawnPoint.position, spawnPoint.rotation);
+        var prefabIns = Instantiate(prefabName, spawnPoint.position, spawnPoint.rotation);
+        pathmover.waypoints.Add(transform);
+
+
+
         //prefabIns.AddComponent<pathMover_Test>();
+    }
+
+    public void CheckEnemyandAssignTransform()
+    {
+
     }
 
     public void PrefabInstanceNavTracking()
@@ -167,7 +184,7 @@ public class WaveSpawner_Test : MonoBehaviour
 
             if (Vector3.Distance(transform.position, currentWaypoint.position) <= 0.1f)
             {
-                currentWaypoint = paths.GetToNextWaypoint(currentWaypoint);
+                //currentWaypoint = paths.GetToNextWaypoint(currentWaypoint);
             }
 
         }
@@ -175,20 +192,6 @@ public class WaveSpawner_Test : MonoBehaviour
     }
 
     // Testing purposes:
-    public Transform GetToNextWaypoint(Transform currentWaypoint)
-    {
-        if (currentWaypoint == null)
-        {
-            return transform.GetChild(0);
-        }
 
-        if (currentWaypoint.GetSiblingIndex() < transform.childCount - 1)
-        {
-            return transform.GetChild(currentWaypoint.GetSiblingIndex() + 1);
-        }
-
-        return transform.GetChild(0); // return first child index.
-
-    }
 
 }

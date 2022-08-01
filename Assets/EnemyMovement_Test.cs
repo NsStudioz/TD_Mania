@@ -11,6 +11,8 @@ public class EnemyMovement_Test : MonoBehaviour
     public Transform target;
     public int wavepointIndex = 0;
 
+    private WaveSpawner_Test waveSpawner;
+
     void Start()
     {
         target = target.GetChild(wavepointIndex);
@@ -58,6 +60,7 @@ public class EnemyMovement_Test : MonoBehaviour
 
 
         }*/
+
 
     private void EndPath()
     {

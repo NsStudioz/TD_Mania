@@ -7,128 +7,80 @@ public class pathMover_Test : MonoBehaviour
 {
     public float movingSpeed = 2f;
 
-    
+    [SerializeField] public List<Transform> waypoints;
     //public Paths paths;
     private Transform currentWaypoint;
-    public WaveSpawner_Test thisPaths;
-    public Transform enemyPath;
+    //public WaveSpawner_Test waveSpawner;
+    //public Transform enemyPath;
     //public Enemy_Test[] enemies;
     //public Enemy_Test enemy;
-    public int waypointIndex;
-    
+    public int waypointIndex = 0;
+    public int moveSpeed = 2;
 
-    //public List<Enemy_Test> enemyCount = new List<Enemy_Test>();
-    //public List<Transform> enemyCount = new List<Transform>();
-    /*    Enemy_Test enemy_test;
-        Waypoints_New waypoints_New;
-        private Transform target;
-        public int waypointIndex;
-        public float movingSpeed = 0.5f;
+    private void Awake()
+    {
+        
+    }
 
-        private void Start()
+    void Start()
+    {
+        transform.position = waypoints[waypointIndex].transform.position;
+    }
+
+    private void Update()
+    {
+        if (waypointIndex <= waypoints.Count - 1)
         {
-            waypointIndex = 0;
+            var targetPosition = waypoints[waypointIndex].transform.position;
+            var movementThisFrame = moveSpeed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, movementThisFrame);
 
-            enemy_test = GetComponent<Enemy_Test>();
-
-            target = Waypoints_New.waypoints_new[0];
-        }
-
-        private void Update()
-        {
-            Vector3 dir = target.position - transform.position;
-            transform.Translate(dir.normalized * movingSpeed * Time.deltaTime, Space.World);
-
-            if (Vector3.Distance(transform.position, target.position) <= 0.1f)
+            if (transform.position == targetPosition)
             {
-                MoveToNextWaypoint();
+                waypointIndex++;
             }
-
         }
-
-
-        private void MoveToNextWaypoint()
-        {
-            if (waypointIndex == Waypoints_New.waypoints_new.Length - 1) // if reached the destination.
-            {
-                EndPath();
-                return;
-            }
-
-            waypointIndex++;
-            target = Waypoints_New.waypoints_new[waypointIndex];
-        }
-
-        private void EndPath()
+        else
         {
             Destroy(gameObject);
-        }*/
+        }
+    }
 
 
     // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    /*    void Start()
-        {
-            foreach (Transform e in enemyCount)
+
+
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    /*        private void Awake()
             {
+                if (paths == null) { return; }
+            }*/
 
-                if (e == null)
-                {
-                    return;
-                }
-
+    /*        void Start()
+            {
                 currentWaypoint = paths.GetToNextWaypoint(currentWaypoint);
-                e.transform.position = currentWaypoint.position;
-
+                transform.position = currentWaypoint.position;
             }
 
-        }
-
-        void Update()
-        {
-            foreach (Transform e in enemyCount)
+            void Update()
             {
+                transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, movingSpeed * Time.deltaTime);
 
-                enemyCount.Add(e);
-
-                if (e.transform.position == null)
-                {
-                    return;
-                }
-
-                e.transform.position = Vector3.MoveTowards(e.transform.position, currentWaypoint.position, movingSpeed * Time.deltaTime);
-
-                if (Vector3.Distance(e.transform.position, currentWaypoint.position) <= 0.1f)
+                if (Vector3.Distance(transform.position, currentWaypoint.position) <= 0.1f)
                 {
                     currentWaypoint = paths.GetToNextWaypoint(currentWaypoint);
                 }
-            }
 
+            }*/
+
+    /*    public void Initialize(Paths paths)
+        {
+            this.paths = paths;
         }*/
 
-    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        private void Awake()
-        {
-            if (thisPaths == null) { return; }
-        }
-
-        void Start()
-        {
-            currentWaypoint = thisPaths.GetToNextWaypoint(currentWaypoint);
-            transform.position = currentWaypoint.position;
-        }
-
-        void Update()
-        {
-            transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, movingSpeed * Time.deltaTime);
-
-            if (Vector3.Distance(transform.position, currentWaypoint.position) <= 0.1f)
-            {
-                currentWaypoint = thisPaths.GetToNextWaypoint(currentWaypoint);
-            }
-
-        }
 
     // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
     /*    void Start()
