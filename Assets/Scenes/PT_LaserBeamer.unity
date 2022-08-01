@@ -6039,6 +6039,8 @@ MonoBehaviour:
   firingPosition: {fileID: 8155926733568600293}
   useLaser: 1
   lineRenderer: {fileID: 8155926733167050162}
+  laserImpactEffects: {fileID: 190708309}
+  laserImpactLight: {fileID: 194627380}
   damageOverTime: 30
   laserHitSlowPct: 0.5
 --- !u!33 &8155926733427737966
