@@ -10,7 +10,7 @@ public class D_Trap_Mine : MonoBehaviour
     public string defendingUnitTag = "Defenders";
     public float explosionRadius = 1f;
     public int explosionDamage = 100;
-    public float triggerRadius = 0.2f;
+    public float triggerRadius = 0.5f;
 
     [SerializeField] bool isTriggered;
 
@@ -71,5 +71,6 @@ public class D_Trap_Mine : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
+        Gizmos.DrawWireSphere(transform.position, triggerRadius);
     }
 }

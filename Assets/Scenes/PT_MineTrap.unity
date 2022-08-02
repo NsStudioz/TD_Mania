@@ -645,7 +645,7 @@ MonoBehaviour:
   defendingUnitTag: Defenders
   explosionRadius: 3
   explosionDamage: 100
-  triggerRadius: 0.2
+  triggerRadius: 0.5
   isTriggered: 0
 --- !u!1 &1955565302
 GameObject:
