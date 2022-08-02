@@ -10,6 +10,7 @@ public class D_Trap_Mine : MonoBehaviour
     public string defendingUnitTag = "Defenders";
     public float explosionRadius = 1f;
     public int explosionDamage = 100;
+    public float triggerRadius = 0.2f;
 
     [SerializeField] bool isTriggered;
 
@@ -21,13 +22,27 @@ public class D_Trap_Mine : MonoBehaviour
 
     void Update()
     {
-        Explode();
+        CheckRangeOnEnemyEncounter();
 
         if (isTriggered == true)
         {
             Destroy(gameObject);
         }
     }
+
+    private void CheckRangeOnEnemyEncounter()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, triggerRadius);
+        foreach (Collider collider in colliders)
+        {
+            if (collider.tag == "Attackers")
+            {
+                Explode();
+                isTriggered = true;
+            }
+        }
+    }
+
 
     private void Explode()
     {
@@ -37,7 +52,7 @@ public class D_Trap_Mine : MonoBehaviour
             if (collider.tag == "Attackers")
             {
                 Damage(collider.transform);
-                isTriggered = true;
+                
             }
         }
     }
