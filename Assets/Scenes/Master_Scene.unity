@@ -756,6 +756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurretSelect_UI
       objectReference: {fileID: 0}
+    - target: {fileID: 2327102806402457218, guid: e3e0384e53d9c9b45bdb08db77e37c0d, type: 3}
+      propertyPath: m_text
+      value: ENHANCE
+      objectReference: {fileID: 0}
     - target: {fileID: 2327102806659348896, guid: e3e0384e53d9c9b45bdb08db77e37c0d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -771,6 +775,10 @@ PrefabInstance:
     - target: {fileID: 2327102806659348896, guid: e3e0384e53d9c9b45bdb08db77e37c0d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327102806659348897, guid: e3e0384e53d9c9b45bdb08db77e37c0d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2327102807384031606, guid: e3e0384e53d9c9b45bdb08db77e37c0d, type: 3}
       propertyPath: m_AnchorMax.y
