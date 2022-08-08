@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    
+
     public static int Gold;
     public int startGold = 500;
 
@@ -20,5 +20,6 @@ public class PlayerStats : MonoBehaviour
 
         Rounds = 0;
     }
+
 
 }
