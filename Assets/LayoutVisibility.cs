@@ -28,7 +28,7 @@ public class LayoutVisibility : MonoBehaviour
     }
 
 
-    public void OnClickUnfoldPanel()
+    public void OnClickShowOrHidePanel()
     {
         if (!panelIsUnfolded)
         {
