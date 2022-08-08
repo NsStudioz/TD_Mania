@@ -6,7 +6,7 @@ public class PlayerStats : MonoBehaviour
 {
 
     public static int Gold;
-    public int startGold = 500;
+    public int startGold = 0;
 
     public static int Lives;
     public int startLives = 20;
