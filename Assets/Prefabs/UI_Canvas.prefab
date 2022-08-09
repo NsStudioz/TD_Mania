@@ -9299,11 +9299,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GoldCountText: {fileID: 3615402988096176189}
-  wavesCountText: {fileID: 6067597007053645190}
+  healthCountText: {fileID: 6067597007053645190}
   TimerCountText: {fileID: 6783754370926552704}
   goldText: 0
-  wavesText: 0
-  timerText: 0
 --- !u!1 &8554722436392561696
 GameObject:
   m_ObjectHideFlags: 0
