@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,11 +22,19 @@ public class D_Unit_Turret : MonoBehaviour
     [Header("Bullet Setup")]
     public GameObject bulletPrefab;
     public Transform firingPosition;
+    // Object Pooling:
+    private IObjectPool<Bullet> bulletPool;
+    public Bullet bulletPrefab_New;
+    
+
 
     [Header("Unit Use Laser?")]
     public bool useLaser = false;
 
-    
+    private void Awake()
+    {
+        //bulletPool = new ObjectPool<Bullet>(CreateBullet, OnGet);
+    }
 
     void Start()
     {
@@ -41,21 +50,15 @@ public class D_Unit_Turret : MonoBehaviour
 
         LockOnTarget();
 
-        if (useLaser)
-        {
-            UseTheLaser();
-        }
-        else
-        {
             if (fireCountDown <= 0f)
             {
                 Shoot();
+                //bulletPool.Get();
+                //AimAtTarget();
                 fireCountDown = 1f / fireRate;
             }
 
             fireCountDown -= Time.deltaTime;
-
-        }
     }
 
     private void LockOnTarget()
@@ -96,7 +99,7 @@ public class D_Unit_Turret : MonoBehaviour
 
     }
 
-    private void Shoot()
+    public void Shoot()
     {
         GameObject bulletGO = Instantiate(bulletPrefab, firingPosition.position, firingPosition.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
@@ -118,6 +121,73 @@ public class D_Unit_Turret : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
+    //
+    // FOR OBJECT POOLING:
+    //
 
+    #region ObjectPooling
+    private void AimAtTarget()
+    {
+        Bullet bullet = GetComponent<Bullet>();
+
+        if (bullet != null)
+        {
+            bullet.SeekTarget(target);
+        }
+    }
+
+    private Bullet CreateBullet()
+    {
+        Bullet bullet = Instantiate(bulletPrefab_New);
+        bullet.SetPool(bulletPool);
+        return bullet;
+    }
+
+    private void OnGet(Bullet bullet)
+    {
+        bullet.gameObject.SetActive(true);
+        bullet.transform.position = firingPosition.transform.position;
+    }
+
+    private void OnRelease(Bullet bullet)
+    {
+        bullet.gameObject.SetActive(false);
+    }
+
+    private void OnDestroyBullet(Bullet bullet)
+    {
+        Destroy(bullet.gameObject);
+    }
+    #endregion
+
+    #region OldUpdateMethod
+
+    void LeUpdate()
+    {
+        if (target == null)
+        {
+            return;
+        }
+
+        LockOnTarget();
+
+        if (useLaser)
+        {
+            UseTheLaser();
+        }
+        else
+        {
+            if (fireCountDown <= 0f)
+            {
+                Shoot();
+                fireCountDown = 1f / fireRate;
+            }
+
+            fireCountDown -= Time.deltaTime;
+
+        }
+    }
+
+    #endregion
 
 }

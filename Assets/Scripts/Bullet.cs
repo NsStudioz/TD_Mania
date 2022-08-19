@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class Bullet : MonoBehaviour
 {
+    private IObjectPool<Bullet> bulletPool;
     private Transform target;
 
     //public GameObject impactEffects;
@@ -13,12 +15,14 @@ public class Bullet : MonoBehaviour
     public float explosionRadius = 0f;
     public int damage = 50;
 
+
     public void SeekTarget(Transform _target)
     {
         target = _target;
     }
 
-    void Update()
+
+    private void Update()
     {
         if (target == null)
         {
@@ -52,6 +56,7 @@ public class Bullet : MonoBehaviour
         else { Damage(target); } // damage only the target.
 
         Destroy(gameObject);
+
     }
 
     private void Explode()
@@ -82,4 +87,20 @@ public class Bullet : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
+
+    // For Object Pooling:
+
+    #region ObjectPooling
+    public void SetPool(IObjectPool<Bullet> pool)
+    {
+        bulletPool = pool;
+    }
+
+    private void ForObjectPooling()
+    {
+        bulletPool.Release(this);
+    }
+
+    #endregion
+
 }
