@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class D_Unit_Turret : MonoBehaviour
 {
@@ -9,12 +10,12 @@ public class D_Unit_Turret : MonoBehaviour
     public Transform target;
     public Enemy targetEnemy;
     public string enemyTag = "Attackers";
-    public float range = 1f;
-    public float fireRate = 1f;
-    public float fireCountDown = 0f;
+    [SerializeField] float range = 1f;
+    [SerializeField] float fireRate = 1f;
+    [SerializeField] float fireCountDown = 0f;
 
     [Header("Unit Rotation")]
-    public float turnSpeed = 10f;
+    [SerializeField] float turnSpeed = 10f;
     public Transform partToRotate;
 
     [Header("Bullet Setup")]
@@ -24,6 +25,7 @@ public class D_Unit_Turret : MonoBehaviour
     [Header("Unit Use Laser?")]
     public bool useLaser = false;
 
+    
 
     void Start()
     {
