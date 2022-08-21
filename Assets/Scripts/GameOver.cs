@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public TMP_Text roundsText;
+    [SerializeField] TMP_Text roundsText;
 
     void OnEnable()
     {
