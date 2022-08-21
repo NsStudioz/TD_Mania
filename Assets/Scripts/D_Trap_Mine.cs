@@ -7,10 +7,10 @@ public class D_Trap_Mine : MonoBehaviour
 {
     [Header("Attributes")]
     //public List<GameObject> defUnitsInRange = new List<GameObject>();
-    public string defendingUnitTag = "Defenders";
-    public float explosionRadius = 1f;
-    public int explosionDamage = 100;
-    public float triggerRadius = 0.5f;
+    //public string defendingUnitTag = "Defenders";
+    [SerializeField] float explosionRadius = 1f;
+    [SerializeField] int explosionDamage = 100;
+    [SerializeField] float triggerRadius = 0.5f;
 
     [SerializeField] bool isTriggered;
 
