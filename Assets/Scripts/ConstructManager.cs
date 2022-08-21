@@ -26,7 +26,7 @@ public class ConstructManager : MonoBehaviour
 
     private void Start()
     {
-        PlayerStats.Gold += 500;
+        //PlayerStats.Gold += 500;
     }
 
     // called a property. we only allow it to actually get something from this variable, if its not equal to null, then the state is true and we can build.
