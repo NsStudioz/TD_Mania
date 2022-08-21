@@ -11,7 +11,7 @@ public class ConstructManager : MonoBehaviour
     public GameObject sellEffects;*/
     //
     private Node turret_SelectedNode;
-    public NodeUI nodeUI;
+    [SerializeField] NodeUI nodeUI;
 
     void Awake()
     {
