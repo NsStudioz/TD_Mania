@@ -7,15 +7,16 @@ using System;
 
 public class WaveSpawner : MonoBehaviour
 {
-    // Objects
+    // Objects:
     //public TMP_Text waveCountDownText;
-    public Transform enemyPrefab;
-    public Transform spawnPoint;
+    [SerializeField] Transform enemyPrefab;
+    [SerializeField] Transform spawnPoint;
     // Waves & Timers:
-    public float upcomingWaveDelay = 5f;
-    private float countDown = 2f;
-    private float enemySpawnDelay = 0.5f; // delay in seconds for each enemy to spawn during wave.
-    private int waveIndex = 0;
+    [SerializeField] float upcomingWaveDelay = 5f;
+    [SerializeField] float countDown = 2f;
+    [SerializeField] float enemySpawnDelay = 0.5f; // delay in seconds for each enemy to spawn during wave.
+    [SerializeField] int waveIndex = 0;
+    
 
     void Update()
     {
