@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public float movingSpeed;
 
-    public float enemyHealth = 100f;
-    public int goldToEarn = 100;
+    [SerializeField] float enemyHealth = 100f;
+    [SerializeField] int goldToEarn = 100;
 
     void Start()
     {
