@@ -6,9 +6,9 @@ using TMPro;
 public class GamePlay_Manager : MonoBehaviour
 {
 
-    public TMP_Text GoldCountText;  // Gold shown on Screen
-    public TMP_Text healthCountText; // wave count, when timer ends start new wave.
-    public TMP_Text TimerCountText; // Time left for game\waves to end.
+    [SerializeField] TMP_Text GoldCountText;  // Gold shown on Screen
+    [SerializeField] TMP_Text healthCountText; // wave count, when timer ends start new wave.
+    [SerializeField] TMP_Text TimerCountText; // Time left for game\waves to end.
 
     [SerializeField] int goldText = 0;
     private float countdown = 2f;
