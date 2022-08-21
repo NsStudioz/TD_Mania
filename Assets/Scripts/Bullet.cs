@@ -11,9 +11,9 @@ public class Bullet : MonoBehaviour
 
     //public GameObject impactEffects;
 
-    public float speed = 50f;
-    public float explosionRadius = 0f;
-    public int damage = 50;
+    [SerializeField] float speed = 50f;
+    [SerializeField] float explosionRadius = 0f;
+    [SerializeField] int damage = 50;
 
 
     public void SeekTarget(Transform _target)
