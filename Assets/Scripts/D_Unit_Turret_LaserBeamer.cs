@@ -7,25 +7,25 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     [Header("Attributes")]
     public Transform target;
     public Enemy targetEnemy;
-    public string enemyTag = "Attackers";
-    public float range = 15f;
-    public float fireRate = 1f;
-    public float fireCountDown = 0f;
+    [SerializeField] string enemyTag = "Attackers";
+    [SerializeField] float range = 15f;
+    [SerializeField] float fireRate = 1f;
+    [SerializeField] float fireCountDown = 0f;
 
     [Header("Unit Rotation")]
-    public float turnSpeed = 10f;
-    public Transform partToRotate;
+    [SerializeField] float turnSpeed = 10f;
+    [SerializeField] Transform partToRotate;
     // Bullet setup:
-    public GameObject bulletPrefab;
-    public Transform firingPosition;
+    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] Transform firingPosition;
 
     [Header("Unit Laser Turret")]
-    public bool useLaser = false;
-    public LineRenderer lineRenderer;
-    public ParticleSystem laserImpactEffects;
-    public Light laserImpactLight;
-    public int damageOverTime = 30;
-    public float laserHitSlowPct = .5f;
+    [SerializeField] bool useLaser = false;
+    [SerializeField] LineRenderer lineRenderer;
+    [SerializeField] ParticleSystem laserImpactEffects;
+    [SerializeField] Light laserImpactLight;
+    [SerializeField] int damageOverTime = 30;
+    [SerializeField] float laserHitSlowPct = .5f;
 
 
     void Start()
