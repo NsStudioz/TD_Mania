@@ -7,20 +7,20 @@ using UnityEngine.EventSystems;
 public class Node : MonoBehaviour
 {
     // node color:
-    private Color startColor;
-    public Color hovercolor;
-    public Color notEnoughGoldColor;
+    [SerializeField] Color startColor;
+    [SerializeField] Color hovercolor;
+    [SerializeField] Color notEnoughGoldColor;
     private Renderer rend;
 
     [HideInInspector]
-    public GameObject defendingUnit;
+    [SerializeField] GameObject defendingUnit;
     [HideInInspector]
     public D_Unit_Blueprint d_Unit_Blueprint;
     [HideInInspector]
     public bool isDefUnitUpgraded = false;
 
     // On unit Spawn:
-    public Vector3 unitPositionOffset;
+    [SerializeField] Vector3 unitPositionOffset;
 
     // Instance:
     ConstructManager constructManager;
