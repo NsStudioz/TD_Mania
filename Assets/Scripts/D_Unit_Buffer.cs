@@ -7,8 +7,8 @@ public class D_Unit_Buffer : MonoBehaviour
 
     [Header("Attributes")]
     //public List<GameObject> defUnitsInRange = new List<GameObject>();
-    public string defendingUnitTag = "Defenders";
-    public float rangeRadius = 1f;
+    [SerializeField] string defendingUnitTag = "Defenders";
+    [SerializeField] float rangeRadius = 1f;
 
 
     void Start()
