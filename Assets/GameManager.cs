@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 
     public static bool GameIsOver;
 
-    public GameObject gameOverUI;
+    [SerializeField] GameObject gameOverUI;
 
     void Start()
     {
