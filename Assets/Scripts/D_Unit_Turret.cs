@@ -10,26 +10,25 @@ public class D_Unit_Turret : MonoBehaviour
     [Header("Attributes")]
     public Transform target;
     public Enemy targetEnemy;
-    public string enemyTag = "Attackers";
+    [SerializeField] string enemyTag = "Attackers";
     [SerializeField] float range = 1f;
     [SerializeField] float fireRate = 1f;
     [SerializeField] float fireCountDown = 0f;
 
     [Header("Unit Rotation")]
     [SerializeField] float turnSpeed = 10f;
-    public Transform partToRotate;
+    [SerializeField] Transform partToRotate;
 
     [Header("Bullet Setup")]
-    public GameObject bulletPrefab;
-    public Transform firingPosition;
+    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] Transform firingPosition;
     // Object Pooling:
     private IObjectPool<Bullet> bulletPool;
-    public Bullet bulletPrefab_New;
+    [SerializeField] Bullet bulletPrefab_New;
     
 
-
-    [Header("Unit Use Laser?")]
-    public bool useLaser = false;
+/*    [Header("Unit Use Laser?")]
+    [SerializeField] bool useLaser = false;*/
 
     private void Awake()
     {
@@ -110,10 +109,10 @@ public class D_Unit_Turret : MonoBehaviour
         }
     }
 
-    private void UseTheLaser()
+/*    private void UseTheLaser()
     {
         return; // do nothing in this method since we don't use it on most turrets.
-    }
+    }*/
 
     private void OnDrawGizmosSelected()
     {
@@ -162,7 +161,7 @@ public class D_Unit_Turret : MonoBehaviour
 
     #region OldUpdateMethod
 
-    void LeUpdate()
+/*    void LeUpdate()
     {
         if (target == null)
         {
@@ -186,7 +185,7 @@ public class D_Unit_Turret : MonoBehaviour
             fireCountDown -= Time.deltaTime;
 
         }
-    }
+    }*/
 
     #endregion
 
