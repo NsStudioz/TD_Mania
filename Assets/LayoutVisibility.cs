@@ -5,18 +5,18 @@ using UnityEngine;
 public class LayoutVisibility : MonoBehaviour
 {
 
-    public GameObject shopPanelGO;
+    [SerializeField] GameObject shopPanelGO;
 
-    public GameObject panelVisibility_Btn;
-    public GameObject turrets_Btn;
-    public GameObject traps_Btn;
-    public GameObject turrets_Catalog;
-    public GameObject traps_Catalog;
+    [SerializeField] GameObject panelVisibility_Btn;
+    [SerializeField] GameObject turrets_Btn;
+    [SerializeField] GameObject traps_Btn;
+    [SerializeField] GameObject turrets_Catalog;
+    [SerializeField] GameObject traps_Catalog;
 
 
-    public Animator shopPanelUI;
+    [SerializeField] Animator shopPanelUI;
 
-    public bool panelIsUnfolded;
+    [SerializeField] bool panelIsUnfolded;
 
 
     void Start()
