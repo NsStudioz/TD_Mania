@@ -7,15 +7,15 @@ using TMPro;
 public class NodeUI : MonoBehaviour
 {
 
-    private Node target;
+    [SerializeField] Node target;
 
-    public GameObject ui;
+    [SerializeField] GameObject ui;
 
-    public TMP_Text upgradeCost;
+    [SerializeField] TMP_Text upgradeCost;
 
-    public TMP_Text sellingCost;
+    [SerializeField] TMP_Text sellingCost;
 
-    public Button upgradeButton;
+    [SerializeField] Button upgradeButton;
 
     public void SetTarget(Node _target)
     {
