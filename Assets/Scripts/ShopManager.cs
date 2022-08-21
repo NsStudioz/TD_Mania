@@ -5,15 +5,15 @@ using UnityEngine;
 public class ShopManager : MonoBehaviour
 {
 
-    public D_Unit_Blueprint d_Unit_Turret_Standard;
-    public D_Unit_Blueprint d_Unit_Turret_MissileLauncher;
-    public D_Unit_Blueprint d_Unit_Turret_WideBeamer;
-    public D_Unit_Blueprint d_Unit_Turret_LaserBeamer;
-    public D_Unit_Blueprint d_Unit_Turret_StandardAuto;
-    public D_Unit_Blueprint d_Unit_Turret_AntiShield_Standard;
-    public D_Unit_Blueprint d_Unit_Turret_AntiShield_StandardAuto;
-    public D_Unit_Blueprint d_Unit_Turret_AntiShield_ShieldDestroyer;
-    public D_Unit_Blueprint d_Unit_Turret_Buffer;
+    [SerializeField] D_Unit_Blueprint d_Unit_Turret_Standard;
+    [SerializeField] D_Unit_Blueprint d_Unit_Turret_MissileLauncher;
+    [SerializeField] D_Unit_Blueprint d_Unit_Turret_WideBeamer;
+    [SerializeField] D_Unit_Blueprint d_Unit_Turret_LaserBeamer;
+    [SerializeField] D_Unit_Blueprint d_Unit_Turret_StandardAuto;
+    [SerializeField] D_Unit_Blueprint d_Unit_Turret_AntiShield_Standard;
+    [SerializeField] D_Unit_Blueprint d_Unit_Turret_AntiShield_StandardAuto;
+    [SerializeField] D_Unit_Blueprint d_Unit_Turret_AntiShield_ShieldDestroyer;
+    [SerializeField] D_Unit_Blueprint d_Unit_Turret_Buffer;
 
 
     ConstructManager constructManager;
@@ -43,37 +43,31 @@ public class ShopManager : MonoBehaviour
 
     public void SelectTurretLaserBeamer()
     {
-        Debug.Log("Wide Beamer Selected");
         constructManager.SelectTurretToBuild(d_Unit_Turret_LaserBeamer);
     }
 
     public void SelectTurretStandardAuto()
     {
-        Debug.Log("Wide Beamer Selected");
         constructManager.SelectTurretToBuild(d_Unit_Turret_StandardAuto);
     }
 
     public void SelectTurretAntiShieldStandard()
     {
-        Debug.Log("Wide Beamer Selected");
         constructManager.SelectTurretToBuild(d_Unit_Turret_AntiShield_Standard);
     }
 
     public void SelectTurretAntiShieldStandardAuto()
     {
-        Debug.Log("Wide Beamer Selected");
         constructManager.SelectTurretToBuild(d_Unit_Turret_AntiShield_StandardAuto);
     }
 
     public void SelectTurretAntiShieldShieldDestroyer()
     {
-        Debug.Log("Wide Beamer Selected");
         constructManager.SelectTurretToBuild(d_Unit_Turret_AntiShield_ShieldDestroyer);
     }
 
     public void SelectTurretBuffer()
     {
-        Debug.Log("Wide Beamer Selected");
         constructManager.SelectTurretToBuild(d_Unit_Turret_Buffer);
     }
 
