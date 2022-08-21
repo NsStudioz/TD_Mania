@@ -15,13 +15,9 @@ public class GamePlay_Manager : MonoBehaviour
     //[SerializeField] private int healthText = 0;
     //[SerializeField] private float timerText = 0f;
 
-
-
-
     void Start()
     {
-        //LinkTextsToVars();
-        
+        //LinkTextsToVars(); 
     }
 
     void Update()
