@@ -24,10 +24,10 @@ public class D_Trap_Mine : MonoBehaviour
     {
         CheckRangeOnEnemyEncounter();
 
-        if (isTriggered == true)
+/*        if (isTriggered == true)
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 
     private void CheckRangeOnEnemyEncounter()
@@ -39,6 +39,7 @@ public class D_Trap_Mine : MonoBehaviour
             {
                 isTriggered = true;
                 Explode();
+                Destroy(gameObject);
             }
         }
     }
@@ -52,7 +53,7 @@ public class D_Trap_Mine : MonoBehaviour
             if (collider.tag == "Attackers")
             {
                 Damage(collider.transform);
-                isTriggered = false;
+                //isTriggered = false;
             }
         }
     }
@@ -74,8 +75,11 @@ public class D_Trap_Mine : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, triggerRadius);
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
-        Gizmos.DrawWireSphere(transform.position, triggerRadius);
+        
     }
 }
