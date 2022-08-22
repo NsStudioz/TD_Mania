@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bindRadius: 2
-  bindingDuration: 2
+  bindingDuration: 5
   triggerRadius: 1.5
   isTriggered: 0
   startBindingCountdown: 0
