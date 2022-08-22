@@ -6,14 +6,12 @@ public class D_Unit_Buffer : MonoBehaviour
 {
 
     [Header("Attributes")]
-    //public List<GameObject> defUnitsInRange = new List<GameObject>();
     [SerializeField] string defendingUnitTag = "Defenders";
     [SerializeField] float rangeRadius = 1f;
-
-    /*[SerializeField] float TrapMineexplosionDamageBonus = 50f;*/
+    // Bonuses:
     [SerializeField] float turretRangeBonus = 0.5f;
     [SerializeField] float bulletDamageBonus = 25f;
-
+    //
     Bullet bullet;
 
 
@@ -36,10 +34,7 @@ public class D_Unit_Buffer : MonoBehaviour
                 bullet.isBuffedByBuffer = true;
                 InitiateBuffForBullets(collider.transform);
             }
-/*            else if (collider.tag == "TrapMine")
-            {
-                InitiateBuffForTrapMine(collider.transform);
-            }*/
+
         }
     }
 
@@ -53,15 +48,7 @@ public class D_Unit_Buffer : MonoBehaviour
             defUnit.BuffDefendingUnit(turretRangeBonus);
         }
     }
-/*    private void InitiateBuffForTrapMine(Transform trap)
-    {
-        D_Trap_Mine defTrap = GetComponent<D_Trap_Mine>();
 
-        if (defTrap != null)
-        {
-            defTrap.BuffTrap(TrapMineexplosionDamageBonus);
-        }
-    }*/
 
     #endregion
 
@@ -80,7 +67,7 @@ public class D_Unit_Buffer : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, rangeRadius);
     }
 
