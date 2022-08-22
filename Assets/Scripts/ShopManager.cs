@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-
+    // Turrets:
     [SerializeField] D_Unit_Blueprint d_Unit_Turret_Standard;
     [SerializeField] D_Unit_Blueprint d_Unit_Turret_MissileLauncher;
     [SerializeField] D_Unit_Blueprint d_Unit_Turret_WideBeamer;
@@ -14,6 +14,9 @@ public class ShopManager : MonoBehaviour
     [SerializeField] D_Unit_Blueprint d_Unit_Turret_AntiShield_StandardAuto;
     [SerializeField] D_Unit_Blueprint d_Unit_Turret_AntiShield_ShieldDestroyer;
     [SerializeField] D_Unit_Blueprint d_Unit_Turret_Buffer;
+    // Traps:
+    [SerializeField] D_Unit_Blueprint d_Unit_Trap_Mine;
+    [SerializeField] D_Unit_Blueprint d_Unit_Trap_Binder;
 
 
     ConstructManager constructManager;
@@ -69,6 +72,16 @@ public class ShopManager : MonoBehaviour
     public void SelectTurretBuffer()
     {
         constructManager.SelectTurretToBuild(d_Unit_Turret_Buffer);
+    }
+
+    public void SelectTrapMine()
+    {
+        constructManager.SelectTurretToBuild(d_Unit_Trap_Mine);
+    }
+
+    public void SelectTrapBinder()
+    {
+        constructManager.SelectTurretToBuild(d_Unit_Trap_Binder);
     }
 
 }
