@@ -404,3 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1204dcb2fc3e1894e8552c5152155c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bindRadius: 2
+  bindingDuration: 2
+  triggerRadius: 1.5
+  isTriggered: 0
+  startBindingCountdown: 0
