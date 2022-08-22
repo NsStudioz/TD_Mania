@@ -13,14 +13,19 @@ public class Bullet : MonoBehaviour
 
     [SerializeField] float speed = 50f;
     [SerializeField] float explosionRadius = 0f;
-    [SerializeField] int damage = 50;
-
+    [SerializeField] float damage = 50;
+    //
+    public bool isBuffedByBuffer;
 
     public void SeekTarget(Transform _target)
     {
         target = _target;
     }
 
+    private void Awake()
+    {
+        isBuffedByBuffer = false;
+    }
 
     private void Update()
     {
@@ -79,6 +84,14 @@ public class Bullet : MonoBehaviour
         if (e != null)
         {
             e.TakeDamage(damage);
+        }
+    }
+
+    public void buffBullet(float buffAmount)
+    {
+        if (isBuffedByBuffer)
+        {
+            damage += buffAmount;
         }
     }
 

@@ -9,7 +9,7 @@ public class D_Trap_Mine : MonoBehaviour
     //public List<GameObject> defUnitsInRange = new List<GameObject>();
     //public string defendingUnitTag = "Defenders";
     [SerializeField] float explosionRadius = 1f;
-    [SerializeField] int explosionDamage = 100;
+    [SerializeField] float explosionDamage = 100;
     [SerializeField] float triggerRadius = 0.5f;
 
     [SerializeField] bool isTriggered;
@@ -37,8 +37,8 @@ public class D_Trap_Mine : MonoBehaviour
         {
             if (collider.tag == "Attackers")
             {
-                Explode();
                 isTriggered = true;
+                Explode();
             }
         }
     }
@@ -52,7 +52,7 @@ public class D_Trap_Mine : MonoBehaviour
             if (collider.tag == "Attackers")
             {
                 Damage(collider.transform);
-                
+                isTriggered = false;
             }
         }
     }
@@ -65,6 +65,11 @@ public class D_Trap_Mine : MonoBehaviour
         {
             e.TakeDamage(explosionDamage);
         }
+    }
+
+    public void BuffTrap(float buffAmount)
+    {
+        explosionDamage += buffAmount;
     }
 
     private void OnDrawGizmosSelected()

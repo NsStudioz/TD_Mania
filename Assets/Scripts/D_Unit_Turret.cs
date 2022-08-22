@@ -27,9 +27,6 @@ public class D_Unit_Turret : MonoBehaviour
     [SerializeField] Bullet bulletPrefab_New;
     
 
-/*    [Header("Unit Use Laser?")]
-    [SerializeField] bool useLaser = false;*/
-
     private void Awake()
     {
         //bulletPool = new ObjectPool<Bullet>(CreateBullet, OnGet);
@@ -109,10 +106,10 @@ public class D_Unit_Turret : MonoBehaviour
         }
     }
 
-/*    private void UseTheLaser()
+    public void BuffDefendingUnit(float bonusAmount)
     {
-        return; // do nothing in this method since we don't use it on most turrets.
-    }*/
+        range += bonusAmount;
+    }
 
     private void OnDrawGizmosSelected()
     {
@@ -161,31 +158,39 @@ public class D_Unit_Turret : MonoBehaviour
 
     #region OldUpdateMethod
 
-/*    void LeUpdate()
-    {
-        if (target == null)
+    /*    void LeUpdate()
         {
-            return;
-        }
-
-        LockOnTarget();
-
-        if (useLaser)
-        {
-            UseTheLaser();
-        }
-        else
-        {
-            if (fireCountDown <= 0f)
+            if (target == null)
             {
-                Shoot();
-                fireCountDown = 1f / fireRate;
+                return;
             }
 
-            fireCountDown -= Time.deltaTime;
+            LockOnTarget();
 
-        }
+            if (useLaser)
+            {
+                UseTheLaser();
+            }
+            else
+            {
+                if (fireCountDown <= 0f)
+                {
+                    Shoot();
+                    fireCountDown = 1f / fireRate;
+                }
+
+                fireCountDown -= Time.deltaTime;
+
+            }
+        }*/
+
+    /*    private void UseTheLaser()
+    {
+        return; // do nothing in this method since we don't use it on most turrets.
     }*/
+
+    /*    [Header("Unit Use Laser?")]
+    [SerializeField] bool useLaser = false;*/
 
     #endregion
 
