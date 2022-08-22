@@ -43,4 +43,14 @@ public class Enemy : MonoBehaviour
     {
         movingSpeed = startSpeed * (1f - slowPct); // percantages can be misleading since in unity the value is between 0 - 1 (and not 0% - 100%);
     }
+
+    public void BindEnemy()
+    {
+        movingSpeed = startSpeed * 0f;
+    }
+
+    public void UnbindEnemy()
+    {
+        movingSpeed = startSpeed;
+    }
 }
