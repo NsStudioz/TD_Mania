@@ -7,12 +7,13 @@ public class D_Trap_Binder : MonoBehaviour
 {
 
     [SerializeField] float bindRadius = 1f;
-    [SerializeField] float bindingDuration = 2f;
+    [SerializeField] float bindingDuration = 5f;
     [SerializeField] float triggerRadius = 0.5f;
+    [SerializeField] float bindValue = 0f;
 
     [SerializeField] bool isTriggered;
 
-    [SerializeField] bool startBindingCountdown = false;
+    public bool startBindingCountdown = false;
 
 
     private void Update()
@@ -21,8 +22,10 @@ public class D_Trap_Binder : MonoBehaviour
 
         if (isTriggered == true)
         {
-            gameObject.SetActive(false);
+            startBindingCountdown = true;
+            BindingCountdown();
         }
+
     }
 
     private void CheckRangeOnEnemyEncounter()
@@ -40,34 +43,41 @@ public class D_Trap_Binder : MonoBehaviour
 
     private void TriggerBinding()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, bindRadius);
-        foreach (Collider collider in colliders)
+        Collider[] enemies = Physics.OverlapSphere(transform.position, bindRadius);
+        foreach (Collider enemy in enemies)
         {
-            if (collider.tag == "Attackers")
+            if (enemy.tag == "Attackers")
             {
-                InitiateBind(collider.transform);
+                InitiateBind(enemy.transform);
             }
         }
     }
 
-    private void InitiateBind(Transform transform)
+    private void InitiateBind(Transform enemy)
     {
-        Enemy e = GetComponent<Enemy>();
-
+        Enemy e = enemy.GetComponent<Enemy>();
+        
         if (e != null)
         {
-            e.BindEnemy();
-            startBindingCountdown = true;
-            if (startBindingCountdown)
-            {
-                bindingDuration -= Time.deltaTime;
+            e.BindEnemy(bindValue);
 
-                if (bindingDuration <= 0f)
-                {
-                    startBindingCountdown = false;
-                    e.UnbindEnemy();
-                    Destroy(gameObject);
-                }
+            if (startBindingCountdown == false)
+            {
+                e.UnbindEnemy();
+            }
+        }
+    }
+
+    private void BindingCountdown()
+    {
+        if (startBindingCountdown)
+        {
+            bindingDuration -= Time.deltaTime;
+
+            if (bindingDuration <= 0)
+            {
+                startBindingCountdown = false;
+                Destroy(gameObject);
             }
         }
     }
