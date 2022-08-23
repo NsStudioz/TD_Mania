@@ -26,6 +26,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4407374679413765375}
   m_RootOrder: 0
@@ -60,6 +61,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4407374678912212933}
   m_Father: {fileID: 0}
@@ -84,6 +86,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -140,7 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d609498972aec42ac90cd4d7ea4930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveCountDownText: {fileID: 0}
-  enemyPrefab: {fileID: 4899215999690629462, guid: 23d8c96a76ca53048867d2678338a2e7, type: 3}
+  enemyPrefab: {fileID: 4765390458102929578, guid: ce50aeea4182bb742857484c4684a296, type: 3}
   spawnPoint: {fileID: 4407374678912212933}
-  upcomingWaveDelay: 5
+  upcomingWaveDelay: 10
+  countDown: 2
+  enemySpawnDelay: 0.5
+  waveIndex: 0
