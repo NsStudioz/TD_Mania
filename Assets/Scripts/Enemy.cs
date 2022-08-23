@@ -14,7 +14,11 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] float enemyHealth = 100f;
     [SerializeField] int goldToEarn = 100;
+
+    // binding:
     public bool isBinded = false;
+    public float bindDelay = 2f;
+
 
     void Start()
     {
@@ -23,14 +27,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-/*        if (isBinded)
-        {
-            movingSpeed = startSpeed - 1f;
-        }
-        else
-        {
-            movingSpeed = startSpeed;
-        }*/
+
     }
 
     public void TakeDamage(float amount)
@@ -57,7 +54,7 @@ public class Enemy : MonoBehaviour
         movingSpeed = startSpeed * (1f - slowPct); // percantages can be misleading since in unity the value is between 0 - 1 (and not 0% - 100%);
     }
 
-    public void BindEnemy(float bindValue)
+/*    public void BindEnemy(float bindValue)
     {
         movingSpeed = startSpeed * bindValue;
     }
@@ -65,5 +62,20 @@ public class Enemy : MonoBehaviour
     public void UnbindEnemy()
     {
         movingSpeed = startSpeed;
+    }*/
+
+    public void BindingEnemy(float bindValue)
+    {
+        isBinded = true;
+        if (isBinded)
+        {
+            bindDelay -= Time.deltaTime;
+            movingSpeed = startSpeed * bindValue;
+        }
+        
+        if(bindDelay <= 0f)
+        {
+            isBinded = false;
+        }
     }
 }

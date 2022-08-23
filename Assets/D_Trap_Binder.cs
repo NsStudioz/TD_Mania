@@ -7,14 +7,16 @@ public class D_Trap_Binder : MonoBehaviour
 {
 
     [SerializeField] float bindRadius = 1f;
-    [SerializeField] float bindingDuration = 5f;
+    [SerializeField] float bindingDuration = 2f;
     [SerializeField] float triggerRadius = 0.5f;
     [SerializeField] float bindValue = 0f;
 
+    [SerializeField] float delayTime = 1f; // stop the binding effect on unaffected enemies if is triggered.
+    [SerializeField] bool bindOn = false;
     [SerializeField] bool isTriggered;
 
-    public bool startBindingCountdown = false;
 
+    private bool startBindingCountdown = false;
 
     private void Update()
     {
@@ -25,7 +27,21 @@ public class D_Trap_Binder : MonoBehaviour
             startBindingCountdown = true;
             BindingCountdown();
         }
+        /////////////////
+/*        if (bindOn)
+        {
+            delayTime -= Time.deltaTime;
+        }
 
+        if (delayTime <= 0)
+        {
+            bindOn = false;
+        }
+
+        if (!bindOn)
+        {
+            delayTime = 1f;
+        }*/
     }
 
     private void CheckRangeOnEnemyEncounter()
@@ -53,18 +69,13 @@ public class D_Trap_Binder : MonoBehaviour
         }
     }
 
-    private void InitiateBind(Transform enemy)
+    public void InitiateBind(Transform enemy)
     {
         Enemy e = enemy.GetComponent<Enemy>();
         
         if (e != null)
         {
-            e.BindEnemy(bindValue);
-
-            if (startBindingCountdown == false)
-            {
-                e.UnbindEnemy();
-            }
+            e.BindingEnemy(bindValue);
         }
     }
 
@@ -81,6 +92,7 @@ public class D_Trap_Binder : MonoBehaviour
             }
         }
     }
+
 
     private void OnDrawGizmosSelected()
     {
