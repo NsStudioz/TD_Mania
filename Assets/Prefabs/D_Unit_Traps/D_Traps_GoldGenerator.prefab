@@ -211,7 +211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTriggered: 0
-  delayTimeThreshold: 10
+  delayTimeThreshold: 5
+  upgradeable_DelayTime: 5
   goldToEarn: 10
 --- !u!1 &2476797745033729455
 GameObject:

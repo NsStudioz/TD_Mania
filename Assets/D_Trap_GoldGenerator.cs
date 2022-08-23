@@ -5,9 +5,15 @@ using UnityEngine;
 public class D_Trap_GoldGenerator : MonoBehaviour
 {
 
-    [SerializeField] bool isTriggered;
-    [SerializeField] float delayTimeThreshold = 10f;
+    [SerializeField] float delayTimeThreshold;
+
+    [SerializeField] float upgradeable_DelayTime = 5f;
     [SerializeField] int goldToEarn = 10;
+
+    private void Start()
+    {
+        delayTimeThreshold = upgradeable_DelayTime;
+    }
 
     void Update()
     {
@@ -16,7 +22,7 @@ public class D_Trap_GoldGenerator : MonoBehaviour
         if (delayTimeThreshold <= 0)
         {
             PlayerStats.Gold += goldToEarn;
-            delayTimeThreshold = 10f;
+            delayTimeThreshold = upgradeable_DelayTime;
         }
 
     }
