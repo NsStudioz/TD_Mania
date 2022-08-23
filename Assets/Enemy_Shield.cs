@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Enemy_Shield : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] float shieldHealth;
+
+    public void TakeShieldDamage(float amount)
     {
-        
+        shieldHealth -= amount;
+        if (shieldHealth <= 0f)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
