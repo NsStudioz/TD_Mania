@@ -11,6 +11,7 @@ TagManager:
   - Defenders
   - Turrets
   - GoldGenerator
+  - EnemyShields
   layers:
   - Default
   - TransparentFX
