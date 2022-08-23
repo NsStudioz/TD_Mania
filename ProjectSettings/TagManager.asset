@@ -5,9 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Attackers
-  - Defensers
   - TrapMine
   - Bullet
+  - Traps
+  - Defenders
+  - Turrets
+  - GoldGenerator
   layers:
   - Default
   - TransparentFX
