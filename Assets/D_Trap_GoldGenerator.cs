@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class D_Trap_GoldGenerator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    [SerializeField] bool isTriggered;
+    [SerializeField] float delayTimeThreshold = 10f;
+    [SerializeField] int goldToEarn = 10;
+
     void Update()
     {
-        
+        delayTimeThreshold -= Time.deltaTime;
+
+        if (delayTimeThreshold <= 0)
+        {
+            PlayerStats.Gold += goldToEarn;
+            delayTimeThreshold = 10f;
+        }
+
     }
 }
