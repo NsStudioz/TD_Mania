@@ -409,8 +409,9 @@ MonoBehaviour:
   bindingDuration: 5
   triggerRadius: 1.5
   bindValue: 0
+  delayTime: 1
+  bindOn: 0
   isTriggered: 0
-  startBindingCountdown: 0
 --- !u!114 &829494396944061021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,3 +424,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aed9efb913ed134388dc4f91405b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bindRadius: 1
