@@ -44,6 +44,11 @@ public class D_Unit_Turret : MonoBehaviour
             return;
         }
 
+        if (targetEnemy.isShielded)
+        {
+            return;
+        }
+
         LockOnTarget();
 
             if (fireCountDown <= 0f)
