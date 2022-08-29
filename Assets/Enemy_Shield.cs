@@ -4,8 +4,6 @@ public class Enemy_Shield : MonoBehaviour
 {
     [SerializeField] float shieldHealth;
 
-    private Enemy enemy;
-
     private void Start()
     {
         gameObject.SetActive(true);
@@ -16,10 +14,23 @@ public class Enemy_Shield : MonoBehaviour
         shieldHealth -= amount;
         if (shieldHealth <= 0f)
         {
-            gameObject.SetActive(false);
-            enemy.isShielded = false;
-            //Destroy(gameObject);
+            DestroyShield();
         }
+    }
+
+    private void DestroyShield()
+    {
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "AS_Bullet")
+        {
+            TakeShieldDamage(50);
+            Destroy(collider.gameObject);
+        }  
     }
 
 }
