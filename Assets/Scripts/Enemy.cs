@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
     // binding:
     public bool isBinded = false;
     public float bindDelay = 2f;
+    // Shields:
+    public bool isShielded;
 
 
     void Start()
