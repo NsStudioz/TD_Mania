@@ -10,9 +10,11 @@ public class Bullet_AS : MonoBehaviour
 
     [SerializeField] float speed = 10f;
     [SerializeField] float explosionRadius = 0f;
-    [SerializeField] float AntiShield_Damage = 50;
+    [SerializeField] float antiShield_Damage = 50;
     //
     public bool isBuffedByBuffer;
+    //
+    [SerializeField] string shieldTag = "EnemyShields";
 
     public void SeekTarget(Transform _target)
     {
@@ -57,7 +59,7 @@ public class Bullet_AS : MonoBehaviour
         }
         else { Damage(target); } // damage only the target.
 
-        Destroy(gameObject);
+        //Destroy(gameObject);
 
     }
 
@@ -80,22 +82,30 @@ public class Bullet_AS : MonoBehaviour
 
         if (e != null)
         {
-            e.TakeDamage(AntiShield_Damage);
+            e.TakeDamage(antiShield_Damage);
         }
     }
 
-    public void buffBullet(float buffAmount)
+    public void buffAntiShieldBullet(float buffAmount)
     {
         if (isBuffedByBuffer)
         {
-            AntiShield_Damage += buffAmount;
+            antiShield_Damage += buffAmount;
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider shieldCollider)
     {
-        
+        if (shieldCollider.tag == shieldTag)
+        {
+            Enemy_Shield shield = shieldCollider.GetComponent<Enemy_Shield>();
+
+            shield.TakeShieldDamage(antiShield_Damage);
+            Destroy(gameObject);
+        }
+
     }
+
 
     private void OnDrawGizmosSelected()
     {
