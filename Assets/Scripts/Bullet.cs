@@ -101,6 +101,12 @@ public class Bullet : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 
+    // collider trigger testing:
+/*    private void OnTriggerEnter(Collider collider)
+    {
+        Destroy(gameObject);   
+    }*/
+
     // For Object Pooling:
 
     #region ObjectPooling
