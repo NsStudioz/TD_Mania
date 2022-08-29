@@ -24,7 +24,7 @@ public class D_Unit_Turret : MonoBehaviour
     [SerializeField] Transform firingPosition;
     // Object Pooling:
     private IObjectPool<Bullet> bulletPool;
-    [SerializeField] Bullet bulletPrefab_New;
+    //[SerializeField] Bullet bulletPrefab_New;
     
 
     private void Awake()
@@ -44,10 +44,10 @@ public class D_Unit_Turret : MonoBehaviour
             return;
         }
 
-        if (targetEnemy.isShielded)
+/*        if (targetEnemy.isShielded)
         {
             return;
-        }
+        }*/
 
         LockOnTarget();
 
