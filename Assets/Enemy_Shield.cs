@@ -24,13 +24,13 @@ public class Enemy_Shield : MonoBehaviour
         //Destroy(gameObject);
     }
 
-    private void OnTriggerEnter(Collider collider)
+/*    private void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "AS_Bullet")
         {
             TakeShieldDamage(50);
             Destroy(collider.gameObject);
         }  
-    }
+    }*/
 
 }
