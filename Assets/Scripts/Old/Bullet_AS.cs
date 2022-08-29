@@ -8,7 +8,7 @@ public class Bullet_AS : MonoBehaviour
 
     //public GameObject impactEffects;
 
-    [SerializeField] float speed = 50f;
+    [SerializeField] float speed = 10f;
     [SerializeField] float explosionRadius = 0f;
     [SerializeField] float AntiShield_Damage = 50;
     //
@@ -38,7 +38,7 @@ public class Bullet_AS : MonoBehaviour
 
         if (dir.magnitude <= distanceThisFrame)
         {
-            HitShieldTarget();
+            HitTarget();
             return;
         }
 
@@ -47,52 +47,54 @@ public class Bullet_AS : MonoBehaviour
         transform.LookAt(target); // point towards the target.
     }
 
-    private void HitShieldTarget()
+    private void HitTarget()
     {
         // GameObject effectsIns = Instantiate(impactEffects, transform.position, transform.rotation);
 
         if (explosionRadius > 0f)
         {
-            AntiShieldExplode(); // Damage multiple targets.
+            Explode(); // Damage multiple targets.
         }
-        else 
-        { 
-            AntiShieldDamage(target); // damage only the target.
-        } 
+        else { Damage(target); } // damage only the target.
 
         Destroy(gameObject);
 
     }
 
-    private void AntiShieldExplode()
+    private void Explode()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius); // shoot out a sphere, as an explosion. We'll see what it hits.
 
         foreach (Collider collider in colliders) // loop through all of the things it hits.
         {
-            if (collider.tag == "EnemyShields") // if the colliders are tagged as Enemy.
+            if (collider.tag == "Attackers") // if the colliders are tagged as Enemy.
             {
-                AntiShieldDamage(collider.transform); // damage the affected colliders
+                Damage(collider.transform); // damage the affected colliders
             }
         }
     }
 
-    private void AntiShieldDamage(Transform enemyShield)
+    private void Damage(Transform enemy)
     {
-        Enemy_Shield es = enemyShield.GetComponent<Enemy_Shield>();
+        Enemy e = enemy.GetComponent<Enemy>();
 
-        if (es != null)
+        if (e != null)
         {
-            es.TakeShieldDamage(AntiShield_Damage);
+            e.TakeDamage(AntiShield_Damage);
         }
     }
 
-    public void BuffAntiShieldBullet(float buffAmount)
+    public void buffBullet(float buffAmount)
     {
         if (isBuffedByBuffer)
         {
             AntiShield_Damage += buffAmount;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
     }
 
     private void OnDrawGizmosSelected()
