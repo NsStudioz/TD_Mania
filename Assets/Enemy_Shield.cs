@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Shield : MonoBehaviour
 {
     [SerializeField] float shieldHealth;
+
+    private Enemy enemy;
 
     private void Start()
     {
@@ -17,6 +17,7 @@ public class Enemy_Shield : MonoBehaviour
         if (shieldHealth <= 0f)
         {
             gameObject.SetActive(false);
+            enemy.isShielded = false;
             //Destroy(gameObject);
         }
     }
