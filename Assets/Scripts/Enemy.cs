@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] float enemyHealth = 100f;
     [SerializeField] int goldToEarn = 100;
+    [SerializeField] Enemy_Shield enemy_Shield;
 
     // binding:
     public bool isBinded = false;
@@ -29,7 +30,17 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-
+        if(enemy_Shield != null)
+        {
+            if (enemy_Shield.isActiveAndEnabled)
+            {
+                isShielded = true;
+            }
+            else
+            {
+                isShielded = false;
+            }
+        }
     }
 
     public void TakeDamage(float amount)
