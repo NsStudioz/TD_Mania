@@ -11,9 +11,15 @@ public class Bullet : MonoBehaviour
 
     //public GameObject impactEffects;
 
-    [SerializeField] float speed = 50f;
+    [SerializeField] float speed = 10f;
     [SerializeField] float explosionRadius = 0f;
     [SerializeField] float damage = 50;
+    //
+    [SerializeField] bool useAntiShieldBullets;
+    [SerializeField] string shieldTag = "EnemyShields";
+    [SerializeField] float Turret_AS_Damage = 50;
+    [SerializeField] float AutoTurret_AS_Damage = 50;
+    [SerializeField] float shieldDestroyer_AS_Damage = 50;
     //
     public bool isBuffedByBuffer;
 
@@ -92,6 +98,20 @@ public class Bullet : MonoBehaviour
         if (isBuffedByBuffer)
         {
             damage += buffAmount;
+        }
+    }
+
+    private void OnTriggerEnter(Collider shieldCollider)
+    {
+        if (useAntiShieldBullets)
+        {
+            if (shieldCollider.tag == shieldTag)
+            {
+                Enemy_Shield shield = shieldCollider.GetComponent<Enemy_Shield>();
+
+                shield.TakeShieldDamage(AutoTurret_AS_Damage);
+                Destroy(gameObject);
+            }
         }
     }
 
