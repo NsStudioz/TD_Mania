@@ -118,6 +118,7 @@ MonoBehaviour:
   goldToEarn: 100
   isBinded: 0
   bindDelay: 2
+  isShielded: 1
 --- !u!114 &7827039613245206716
 MonoBehaviour:
   m_ObjectHideFlags: 0
