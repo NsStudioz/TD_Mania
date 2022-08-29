@@ -114,4 +114,9 @@ MonoBehaviour:
   speed: 10
   explosionRadius: 0
   damage: 50
+  useAntiShieldBullets: 1
+  shieldTag: EnemyShields
+  Turret_AS_Damage: 50
+  AutoTurret_AS_Damage: 50
+  shieldDestroyer_AS_Damage: 50
   isBuffedByBuffer: 0
