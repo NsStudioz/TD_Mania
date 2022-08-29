@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 7830110537255932605}
   - component: {fileID: 7830110537255932578}
   - component: {fileID: 7830110537255932579}
-  - component: {fileID: 7830110537255932607}
+  - component: {fileID: 982659823458313398}
   m_Layer: 0
   m_Name: AS_Bullet_Auto
-  m_TagString: Untagged
+  m_TagString: AS_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: 0.25, z: 0.5}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53,6 +54,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -96,7 +98,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7830110537255932607
+--- !u!114 &982659823458313398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892560bc6431e934b815c0d19b3a70c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 5
   explosionRadius: 0
-  damage: 25
+  damage: 50
+  isBuffedByBuffer: 0

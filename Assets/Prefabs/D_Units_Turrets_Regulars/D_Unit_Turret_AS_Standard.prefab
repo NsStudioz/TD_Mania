@@ -26,6 +26,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7176738941855431095}
   m_RootOrder: 0
@@ -59,6 +60,7 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.5, z: 0.85}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7176738941727675425}
   m_Father: {fileID: 7176738942133944681}
@@ -83,6 +85,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -139,10 +142,10 @@ GameObject:
   - component: {fileID: 7176738942133944680}
   - component: {fileID: 7176738942133944683}
   - component: {fileID: 7176738942133944682}
-  - component: {fileID: 7176738942133944686}
+  - component: {fileID: -1530953742079190690}
   m_Layer: 0
   m_Name: D_Unit_Turret_AS_Standard
-  m_TagString: Untagged
+  m_TagString: Turrets_AS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,6 +160,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.75, y: 0.25, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7176738941855431095}
   m_Father: {fileID: 0}
@@ -181,6 +185,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -225,7 +230,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &7176738942133944686
+--- !u!114 &-1530953742079190690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,11 +245,11 @@ MonoBehaviour:
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
   enemyTag: Attackers
-  range: 2
+  range: 1
   fireRate: 1
-  fireCountDown: 0.25
+  fireCountDown: 0
   turnSpeed: 10
   partToRotate: {fileID: 7176738942133944681}
   bulletPrefab: {fileID: 5194135924334827148, guid: 56a9640664fb1c342890472190d53812, type: 3}
   firingPosition: {fileID: 7176738941727675425}
-  useLaser: 0
+  bulletPrefab_New: {fileID: 0}
