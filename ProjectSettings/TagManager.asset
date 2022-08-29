@@ -12,6 +12,8 @@ TagManager:
   - Turrets
   - GoldGenerator
   - EnemyShields
+  - AS_Bullet
+  - Turrets_AS
   layers:
   - Default
   - TransparentFX
