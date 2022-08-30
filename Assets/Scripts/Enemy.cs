@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float enemyHealth = 100f;
     [SerializeField] int goldToEarn = 100;
     //[SerializeField] Enemy_Shield enemy_Shield;
-
+    SphereCollider enemyBodyCollider;
     // binding:
     public bool isBinded = false;
     public float bindDelay = 2f;
@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        enemyBodyCollider = GetComponent<SphereCollider>();
 /*        if (enemy_Shield != null)
         {
             if (enemy_Shield.isActiveAndEnabled)
@@ -85,11 +86,8 @@ public class Enemy : MonoBehaviour
         if (shield.CompareTag("EnemyShields"))
         {
             isProtected = true;
-        }
-
+        }   
     }
-
-
 
 }
 
