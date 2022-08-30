@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4765390458102929577}
   - component: {fileID: 4765390458102929581}
   - component: {fileID: 7827039613245206716}
-  - component: {fileID: 8119042981003288371}
+  - component: {fileID: -3496856975387609815}
   m_Layer: 0
   m_Name: Enemy_Shielded
   m_TagString: Attackers
@@ -119,7 +119,8 @@ MonoBehaviour:
   goldToEarn: 100
   isBinded: 0
   bindDelay: 2
-  isShielded: 1
+  hasShield: 1
+  isProtected: 0
 --- !u!114 &7827039613245206716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4136b15cfb412f41b17a6ba5cfc1466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &8119042981003288371
+--- !u!54 &-3496856975387609815
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,6 +162,7 @@ GameObject:
   - component: {fileID: 7518663730926593195}
   - component: {fileID: 7518663730926593192}
   - component: {fileID: 7518663730926593188}
+  - component: {fileID: 4860099962496218887}
   m_Layer: 0
   m_Name: Enemy_Shield
   m_TagString: EnemyShields
@@ -259,4 +261,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldHealth: 100
+  range: 1
+--- !u!114 &4860099962496218887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7518663730926593193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4f045e11dcf9e448d1521e942fc5a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   range: 1
