@@ -244,6 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
+  isAntiShield: 0
   enemyTag: Attackers
   range: 2
   fireRate: 1
@@ -251,6 +252,5 @@ MonoBehaviour:
   turnSpeed: 10
   partToRotate: {fileID: 7007495501377291203}
   bulletPrefab: {fileID: 7498280192598164724, guid: cd4606a2876234e44b50b4917a085183, type: 3}
-  bulletPrefab_New: {fileID: 7498280192598164715, guid: cd4606a2876234e44b50b4917a085183, type: 3}
   firingPosition: {fileID: 7007495500966565515}
-  useLaser: 0
+  bulletPrefab_New: {fileID: 7498280192598164715, guid: cd4606a2876234e44b50b4917a085183, type: 3}

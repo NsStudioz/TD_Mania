@@ -371,6 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
+  isAntiShield: 1
   enemyTag: Attackers
   range: 2
   fireRate: 1
