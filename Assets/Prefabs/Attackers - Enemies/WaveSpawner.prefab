@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4407374678912212933}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4407374679413765373}
   - component: {fileID: 4407374679413765362}
   - component: {fileID: 4407374679413765374}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WaveSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
