@@ -10,6 +10,7 @@ public class D_Unit_Turret : MonoBehaviour
     [Header("Attributes")]
     public Transform target;
     public Enemy targetEnemy;
+    [SerializeField] bool isAntiShield;
     [SerializeField] string enemyTag = "Attackers";
     [SerializeField] float range = 1f;
     [SerializeField] float fireRate = 1f;
@@ -44,10 +45,14 @@ public class D_Unit_Turret : MonoBehaviour
             return;
         }
 
-/*        if (targetEnemy.isShielded)
+        if (isAntiShield && !targetEnemy.hasShield)
         {
             return;
-        }*/
+        }
+        else if (!isAntiShield && targetEnemy.hasShield)
+        {
+            return;
+        }
 
         LockOnTarget();
 
