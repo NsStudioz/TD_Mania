@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4765390458102929577}
   - component: {fileID: 4765390458102929581}
   - component: {fileID: 7827039613245206716}
+  - component: {fileID: 8119042981003288371}
   m_Layer: 0
   m_Name: Enemy_Shielded
   m_TagString: Attackers
@@ -95,7 +96,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4765390458102929574}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -116,7 +117,6 @@ MonoBehaviour:
   movingSpeed: 0
   enemyHealth: 100
   goldToEarn: 100
-  enemy_Shield: {fileID: 7518663730926593188}
   isBinded: 0
   bindDelay: 2
   isShielded: 1
@@ -132,6 +132,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4136b15cfb412f41b17a6ba5cfc1466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &8119042981003288371
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4765390458102929574}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &7518663730926593193
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +161,6 @@ GameObject:
   - component: {fileID: 7518663730926593195}
   - component: {fileID: 7518663730926593192}
   - component: {fileID: 7518663730926593188}
-  - component: {fileID: 6296750847623473269}
   m_Layer: 0
   m_Name: Enemy_Shield
   m_TagString: EnemyShields
@@ -244,19 +259,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldHealth: 100
---- !u!54 &6296750847623473269
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7518663730926593193}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
+  range: 1
