@@ -59,15 +59,19 @@ public class Bullet : MonoBehaviour
     private void HitTarget()
     {
         // GameObject effectsIns = Instantiate(impactEffects, transform.position, transform.rotation);
-
-        if (explosionRadius > 0f)
+        if (!useAntiShieldBullets)
         {
-            Explode(); // Damage multiple targets.
+            if (explosionRadius > 0f)
+            {
+                Explode(); // Damage multiple targets.
+            }
+            else 
+            {
+                Damage(target); // damage only the target.
+            } 
         }
-        else { Damage(target); } // damage only the target.
 
         Destroy(gameObject);
-
     }
 
     private void Explode()
@@ -113,6 +117,27 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        else if (useAntiShieldBullets)
+        {
+            if (shieldCollider.tag != shieldTag)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if (!useAntiShieldBullets)
+        {
+            if (shieldCollider.tag == shieldTag)
+            {
+                Destroy(gameObject);
+            }
+        }
+/*        else if (!useAntiShieldBullets)
+        {
+            if (shieldCollider.tag != shieldTag)
+            {
+                Destroy(gameObject);
+            }
+        }*/
     }
 
     private void OnDrawGizmosSelected()
@@ -121,10 +146,18 @@ public class Bullet : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 
-    // collider trigger testing:
-/*    private void OnTriggerEnter(Collider collider)
+/*    private void HitTarget()
     {
-        Destroy(gameObject);   
+        // GameObject effectsIns = Instantiate(impactEffects, transform.position, transform.rotation);
+
+        if (explosionRadius > 0f)
+        {
+            Explode(); // Damage multiple targets.
+        }
+        else { Damage(target); } // damage only the target.
+
+        Destroy(gameObject);
+
     }*/
 
     // For Object Pooling:
