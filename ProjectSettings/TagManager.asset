@@ -26,7 +26,7 @@ TagManager:
   - Nodes
   - Defenders
   - Attackers
-  - 
+  - EnemyShields
   - 
   - 
   - 
@@ -50,4 +50,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1995976807
+    locked: 0
+  - name: Ground
+    uniqueID: 2852267251
+    locked: 0
+  - name: Nodes
+    uniqueID: 1305547847
+    locked: 0
+  - name: Defenders
+    uniqueID: 1081277863
+    locked: 0
+  - name: Attackers
+    uniqueID: 593770905
     locked: 0
