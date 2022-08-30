@@ -14,33 +14,28 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] float enemyHealth = 100f;
     [SerializeField] int goldToEarn = 100;
-    [SerializeField] Enemy_Shield enemy_Shield;
+    //[SerializeField] Enemy_Shield enemy_Shield;
 
     // binding:
     public bool isBinded = false;
     public float bindDelay = 2f;
     // Shields:
-    public bool isShielded;
+    public bool hasShield;
+    public bool isProtected;
+/*    [SerializeField] float range = 1f;*/
 
 
     void Start()
     {
-        movingSpeed = startSpeed;
-    }
-
-    private void Update()
-    {
-        if(enemy_Shield != null)
+/*        if (enemy_Shield != null)
         {
             if (enemy_Shield.isActiveAndEnabled)
             {
-                isShielded = true;
+                hasShield = true;
             }
-            else
-            {
-                isShielded = false;
-            }
-        }
+        }*/
+
+        movingSpeed = startSpeed;
     }
 
     public void TakeDamage(float amount)
@@ -67,15 +62,7 @@ public class Enemy : MonoBehaviour
         movingSpeed = startSpeed * (1f - slowPct); // percantages can be misleading since in unity the value is between 0 - 1 (and not 0% - 100%);
     }
 
-/*    public void BindEnemy(float bindValue)
-    {
-        movingSpeed = startSpeed * bindValue;
-    }
 
-    public void UnbindEnemy()
-    {
-        movingSpeed = startSpeed;
-    }*/
 
     public void BindingEnemy(float bindValue)
     {
@@ -91,4 +78,98 @@ public class Enemy : MonoBehaviour
             isBinded = false;
         }
     }
+
+
+    private void OnTriggerStay(Collider shield)
+    {
+        if (shield.CompareTag("EnemyShields"))
+        {
+            isProtected = true;
+        }
+
+    }
+
+
+
 }
+
+    /*    public void TurnOnShields()
+{
+    isShielded = true;
+}*/
+
+    /*    public void BindEnemy(float bindValue)
+{
+    movingSpeed = startSpeed * bindValue;
+}
+
+public void UnbindEnemy()
+{
+    movingSpeed = startSpeed;
+}*/
+
+/*    private void Update()
+{
+
+*//*        if(enemy_Shield != null)
+        {
+            if (enemy_Shield.isActiveAndEnabled)
+            {
+                isShielded = true;
+            }
+
+            else if (!enemy_Shield.isActiveAndEnabled)
+            {
+                isShielded = false;
+            }
+            else
+            {
+                isShielded = false;
+            }
+        }*//*
+    }*/
+
+/*    private void OnTriggerStay(Collider shieldCol)
+    {
+        if (!hasShield)
+        {
+            if (shieldCol.tag == "Attacker")
+            {
+                Enemy enemy = shieldCol.GetComponent<Enemy>();
+
+                if (enemy.hasShield)
+                {
+                    hasShield = true;
+                }
+
+            }
+        }*/
+
+/*        if (!isShielded)
+        {
+            if (shieldCol.tag == "EnemyShield")
+            {
+                Enemy enemy = shieldCol.GetComponent<Enemy>();
+                enemy.isShielded = false;
+            }
+        }*/
+
+
+
+
+/*    private void OnTriggerExit(Collider shieldColl)
+    {
+        if (isShielded)
+        {
+            if (shieldColl.tag == "Attackers")
+            {
+                Enemy enemy = shieldColl.GetComponent<Enemy>();
+                enemy.isShielded = false;
+            }
+        }
+    }*/
+
+//}
+
+
+
