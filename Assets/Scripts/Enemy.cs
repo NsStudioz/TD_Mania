@@ -20,11 +20,31 @@ public class Enemy : MonoBehaviour
     // Shields:
     public bool hasShield;
     public bool isProtected;
+    [SerializeField] float range = 1f;
 
 
     void Start()
     {
         movingSpeed = startSpeed;
+    }
+
+    private void Update()
+    {
+        if (!hasShield)
+        {
+            Collider[] colliders = Physics.OverlapSphere(transform.position, range);
+            foreach (Collider collider in colliders)
+            {
+                if (collider.CompareTag("EnemyShields") && collider.enabled)
+                {
+                    isProtected = true;
+                }
+                else
+                {
+                    isProtected = false;
+                }
+            }
+        }
     }
 
     public void TakeDamage(float amount)
@@ -71,15 +91,21 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerStay(Collider shield)
     {
-        if (shield.CompareTag("EnemyShields"))
+/*        if (shield.CompareTag("EnemyShields"))
         {
             isProtected = true;
-        }
+        }*/
     }
 
     private void OnTriggerExit(Collider other)
     {
-        isProtected = false;
+        /*isProtected = false;*/
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 
 }

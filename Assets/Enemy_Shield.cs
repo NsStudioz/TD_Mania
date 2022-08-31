@@ -6,10 +6,13 @@ public class Enemy_Shield : MonoBehaviour
     public float range = 1f;
 
     Enemy enemy;
+    SphereCollider shieldCollider;
 
     private void Start()
     {
         gameObject.SetActive(true);
+
+        shieldCollider = GetComponent<SphereCollider>();
 
         enemy = GetComponentInParent<Enemy>();
     }
@@ -30,6 +33,7 @@ public class Enemy_Shield : MonoBehaviour
 
     private void DestroyShield()
     {
+        shieldCollider.enabled = false;
         gameObject.SetActive(false);
         enemy.hasShield = false;
         //Destroy(gameObject);
