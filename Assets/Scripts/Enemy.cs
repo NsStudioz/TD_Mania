@@ -89,18 +89,18 @@ public class Enemy : MonoBehaviour
     }
 
 
-    private void OnTriggerStay(Collider shield)
+/*    private void OnTriggerStay(Collider shield)
     {
-/*        if (shield.CompareTag("EnemyShields"))
+*//*        if (shield.CompareTag("EnemyShields"))
         {
             isProtected = true;
-        }*/
+        }*//*
     }
 
     private void OnTriggerExit(Collider other)
     {
-        /*isProtected = false;*/
-    }
+        *//*isProtected = false;*//*
+    }*/
 
     private void OnDrawGizmosSelected()
     {
