@@ -121,6 +121,7 @@ MonoBehaviour:
   bindDelay: 2
   hasShield: 1
   isProtected: 0
+  range: 0.01
 --- !u!114 &7827039613245206716
 MonoBehaviour:
   m_ObjectHideFlags: 0
