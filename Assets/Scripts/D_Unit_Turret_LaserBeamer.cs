@@ -51,6 +51,25 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
 
             return;
         }
+        
+        if (target != null)
+        {
+            if (targetEnemy.hasShield || targetEnemy.isProtected)
+            {
+                if (useLaser)
+                {
+                    if (lineRenderer.enabled)
+                    {
+                        lineRenderer.enabled = false;
+                        laserImpactLight.enabled = false;
+                        laserImpactEffects.Stop();
+                    }
+
+                }
+
+                return;
+            }
+        }
 
         LockOnTarget();
 
@@ -146,3 +165,39 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 }
+
+/*void Update()
+{
+    if (target == null)
+    {
+        if (useLaser)
+        {
+            if (lineRenderer.enabled)
+            {
+                lineRenderer.enabled = false;
+                laserImpactLight.enabled = false;
+                laserImpactEffects.Stop();
+            }
+
+        }
+
+        return;
+    }
+
+    LockOnTarget();
+
+    if (useLaser)
+    {
+        UseTheLaser();
+    }
+    else
+    {
+        if (fireCountDown <= 0f)
+        {
+            Shoot();
+            fireCountDown = 1f / fireRate;
+        }
+
+        fireCountDown -= Time.deltaTime;
+    }
+}*/
