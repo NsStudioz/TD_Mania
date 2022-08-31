@@ -45,13 +45,19 @@ public class D_Unit_Turret : MonoBehaviour
             return;
         }
 
-        if (isAntiShield && !targetEnemy.hasShield)
+        if (isAntiShield)
         {
-            return;
+            if (!targetEnemy.hasShield)
+            {
+                return;
+            }
         }
-        else if (!isAntiShield && targetEnemy.hasShield)
+        else if (!isAntiShield)
         {
-            return;
+            if (targetEnemy.hasShield || targetEnemy.isProtected)
+            {
+                return;
+            }
         }
 
         LockOnTarget();
