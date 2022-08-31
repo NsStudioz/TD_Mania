@@ -35,17 +35,23 @@ public class Enemy_Shield : MonoBehaviour
         //Destroy(gameObject);
     }
 
-
-
-
-    /*    private void OnTriggerEnter(Collider collider)
-        {
-            if (collider.tag == "AS_Bullet")
-            {
-                TakeShieldDamage(50);
-                Destroy(collider.gameObject);
-            }  
-        }*/
-
-
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
 }
+
+
+
+/*    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "AS_Bullet")
+        {
+            TakeShieldDamage(50);
+            Destroy(collider.gameObject);
+        }  
+    }*/
+
+
+
