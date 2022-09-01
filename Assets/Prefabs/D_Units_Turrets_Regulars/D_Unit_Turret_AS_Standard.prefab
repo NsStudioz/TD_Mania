@@ -246,7 +246,7 @@ MonoBehaviour:
   targetEnemy: {fileID: 0}
   isAntiShield: 1
   enemyTag: Attackers
-  range: 1
+  range: 3
   fireRate: 1
   fireCountDown: 0
   turnSpeed: 10
