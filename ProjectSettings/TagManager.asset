@@ -14,6 +14,8 @@ TagManager:
   - EnemyShields
   - AS_Bullet
   - Turrets_AS
+  - AS_Auto_Bullet
+  - SD_Bullet
   layers:
   - Default
   - TransparentFX
