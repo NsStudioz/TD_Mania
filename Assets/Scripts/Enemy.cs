@@ -71,8 +71,6 @@ public class Enemy : MonoBehaviour
         movingSpeed = startSpeed * (1f - slowPct); // percantages can be misleading since in unity the value is between 0 - 1 (and not 0% - 100%);
     }
 
-
-
     public void BindingEnemy(float bindValue)
     {
         isBinded = true;
@@ -87,20 +85,6 @@ public class Enemy : MonoBehaviour
             isBinded = false;
         }
     }
-
-
-/*    private void OnTriggerStay(Collider shield)
-    {
-*//*        if (shield.CompareTag("EnemyShields"))
-        {
-            isProtected = true;
-        }*//*
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        *//*isProtected = false;*//*
-    }*/
 
     private void OnDrawGizmosSelected()
     {
@@ -131,6 +115,19 @@ movingSpeed = startSpeed;
                 hasShield = true;
             }
         }*/
+
+/*    private void OnTriggerStay(Collider shield)
+    {
+*//*        if (shield.CompareTag("EnemyShields"))
+        {
+            isProtected = true;
+        }*//*
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        *//*isProtected = false;*//*
+    }*/
 
 
 
