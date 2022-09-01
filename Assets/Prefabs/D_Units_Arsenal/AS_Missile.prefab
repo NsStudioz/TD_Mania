@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 1326570173534720324}
   - component: {fileID: 1326570173534720327}
   - component: {fileID: 1326570173534720326}
+  - component: {fileID: -6444663105219322651}
   - component: {fileID: 8659378956603527701}
   m_Layer: 0
   m_Name: AS_Missile
-  m_TagString: Untagged
+  m_TagString: SD_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,12 +94,28 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326570173534720320}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-6444663105219322651
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326570173534720320}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!114 &8659378956603527701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +133,4 @@ MonoBehaviour:
   damage: 50
   useAntiShieldBullets: 1
   shieldTag: EnemyShields
-  Turret_AS_Damage: 50
-  AutoTurret_AS_Damage: 50
-  shieldDestroyer_AS_Damage: 50
   isBuffedByBuffer: 0
