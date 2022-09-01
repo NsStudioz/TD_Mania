@@ -17,9 +17,12 @@ public class Bullet : MonoBehaviour
     //
     [SerializeField] bool useAntiShieldBullets;
     [SerializeField] string shieldTag = "EnemyShields";
-    [SerializeField] float Turret_AS_Damage = 50;
-    [SerializeField] float AutoTurret_AS_Damage = 50;
-    [SerializeField] float shieldDestroyer_AS_Damage = 50;
+    private string antiShield_Tag = "AS_Bullet";
+    private string antiShield_Auto_Tag = "AS_Auto_Bullet";
+    private string sd_Destroyer_Tag = "SD_Bullet";
+    private float Turret_AS_Damage = 25;
+    private float AutoTurret_AS_Damage = 20;
+    private float shieldDestroyer_AS_Damage = 50;
     //
     public bool isBuffedByBuffer;
 
@@ -113,7 +116,19 @@ public class Bullet : MonoBehaviour
             {
                 Enemy_Shield shield = shieldCollider.GetComponent<Enemy_Shield>();
 
-                shield.TakeShieldDamage(AutoTurret_AS_Damage);
+                if (gameObject.CompareTag(antiShield_Tag))
+                {
+                    shield.TakeShieldDamage(Turret_AS_Damage);
+                }
+                else if (gameObject.CompareTag(antiShield_Auto_Tag))
+                {
+                    shield.TakeShieldDamage(AutoTurret_AS_Damage);
+                }
+                else if (gameObject.CompareTag(sd_Destroyer_Tag))
+                {
+                    shield.TakeShieldDamage(shieldDestroyer_AS_Damage);
+                }
+                
                 Destroy(gameObject);
             }
         }
@@ -146,6 +161,43 @@ public class Bullet : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 
+}
+/*    private void OnTriggerEnter(Collider shieldCollider)
+    {
+        if (useAntiShieldBullets)
+        {
+            if (shieldCollider.tag == shieldTag)
+            {
+                Enemy_Shield shield = shieldCollider.GetComponent<Enemy_Shield>();
+
+                shield.TakeShieldDamage(AutoTurret_AS_Damage);
+                Destroy(gameObject);
+            }
+        }
+        else if (useAntiShieldBullets)
+        {
+            if (shieldCollider.tag != shieldTag)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if (!useAntiShieldBullets)
+        {
+            if (shieldCollider.tag == shieldTag)
+            {
+                Destroy(gameObject);
+            }
+        }
+        *//*        else if (!useAntiShieldBullets)
+                {
+                    if (shieldCollider.tag != shieldTag)
+                    {
+                        Destroy(gameObject);
+                    }
+                }*//*
+    }*/
+
+
 /*    private void HitTarget()
     {
         // GameObject effectsIns = Instantiate(impactEffects, transform.position, transform.rotation);
@@ -160,10 +212,10 @@ public class Bullet : MonoBehaviour
 
     }*/
 
-    // For Object Pooling:
+// For Object Pooling:
 
-    #region ObjectPooling
-    public void SetPool(IObjectPool<Bullet> pool)
+/*#region ObjectPooling
+public void SetPool(IObjectPool<Bullet> pool)
     {
         bulletPool = pool;
     }
@@ -173,6 +225,6 @@ public class Bullet : MonoBehaviour
         bulletPool.Release(this);
     }
 
-    #endregion
+    #endregion*/
 
-}
+
