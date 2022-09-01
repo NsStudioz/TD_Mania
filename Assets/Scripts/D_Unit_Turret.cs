@@ -138,7 +138,7 @@ public class D_Unit_Turret : MonoBehaviour
     //
 
     #region ObjectPooling
-    private void AimAtTarget()
+/*    private void AimAtTarget()
     {
         Bullet bullet = GetComponent<Bullet>();
 
@@ -169,7 +169,7 @@ public class D_Unit_Turret : MonoBehaviour
     private void OnDestroyBullet(Bullet bullet)
     {
         Destroy(bullet.gameObject);
-    }
+    }*/
     #endregion
 
     #region OldUpdateMethod
