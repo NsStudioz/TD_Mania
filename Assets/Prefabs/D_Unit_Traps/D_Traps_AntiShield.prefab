@@ -304,6 +304,7 @@ GameObject:
   - component: {fileID: 3500775547374312491}
   - component: {fileID: 3500775547374312490}
   - component: {fileID: 3500775547374312502}
+  - component: {fileID: 7310915350955286056}
   m_Layer: 0
   m_Name: D_Traps_AntiShield
   m_TagString: Untagged
@@ -408,3 +409,15 @@ MonoBehaviour:
   explosionDamage: 100
   triggerRadius: 1.5
   isTriggered: 0
+--- !u!114 &7310915350955286056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500775547374312489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c412de13308d3c9409ca614857fcf58f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
