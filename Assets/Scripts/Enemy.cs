@@ -94,6 +94,8 @@ public class Enemy : MonoBehaviour
 
 }
 
+#region TrashCode:
+
 /*    public void BindEnemy(float bindValue)
 {
 movingSpeed = startSpeed * bindValue;
@@ -129,6 +131,6 @@ movingSpeed = startSpeed;
         *//*isProtected = false;*//*
     }*/
 
-
+#endregion
 
 
