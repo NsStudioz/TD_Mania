@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 647195351}
   - component: {fileID: -5018902704197528434}
   m_Layer: 10
-  m_Name: Enemy_Test
+  m_Name: Enemy_Test_2
   m_TagString: Attackers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907ba091f2f592846bbbe66e25e0784c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 1
+  startSpeed: 0.5
   movingSpeed: 0
   enemyHealth: 100
   goldToEarn: 100
@@ -132,6 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ae25c3a1dc91b44a1938214b4f369e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathing: {fileID: 7081334602081640374, guid: fd4bd6db4afca5f458a7a7219abbbbe9, type: 3}
+  pathing: {fileID: 7906467158115652343, guid: cc20053064ac173429ff3bafba0b9692, type: 3}
   moveSpeed: 1
   distanceThreshold: 0.05

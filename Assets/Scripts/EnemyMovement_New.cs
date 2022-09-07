@@ -9,12 +9,10 @@ public class EnemyMovement_New : MonoBehaviour
 
     [SerializeField] EnemyPaths pathing;
 
-    [SerializeField] float moveSpeed = 5f;
     [SerializeField] float distanceThreshold = 0.1f;
 
     void Start()
     {
-
         enemy = GetComponent<Enemy>();
 
         // set initial position to the first waypoint:
@@ -24,7 +22,6 @@ public class EnemyMovement_New : MonoBehaviour
         // set the next waypoint target:
         currentWaypoint = pathing.GetNextWaypoint(currentWaypoint);
         transform.LookAt(currentWaypoint);
-
     }
 
     void Update()
@@ -35,6 +32,8 @@ public class EnemyMovement_New : MonoBehaviour
             currentWaypoint = pathing.GetNextWaypoint(currentWaypoint);
             transform.LookAt(currentWaypoint);
         }
+
+        enemy.movingSpeed = enemy.startSpeed;
     }
 
 
