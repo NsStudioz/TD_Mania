@@ -3748,7 +3748,7 @@ GameObject:
   - component: {fileID: 4122731932179192254}
   - component: {fileID: 2888074139531608213}
   m_Layer: 5
-  m_Name: Shop_Trap_Mine_Item (3)
+  m_Name: Shop_Trap_AntiShieldMine_Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3860,7 +3860,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: SelectTrapAntiShieldMine
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5303,6 +5303,11 @@ MonoBehaviour:
     upgradeCost: 0
   d_Unit_Trap_GoldGenerator:
     prefab: {fileID: 2476797744666238361, guid: 21eedad84784ea348a2395d889f4060b, type: 3}
+    cost: 0
+    upgradedPrefab: {fileID: 0}
+    upgradeCost: 0
+  d_Unit_Trap_AntiShieldMine:
+    prefab: {fileID: 3500775547374312489, guid: 4ddf770ee0d79da41bd85ebf5baf6d02, type: 3}
     cost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
@@ -7327,7 +7332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buffer
+  m_text: Anti-Shield Mine
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
