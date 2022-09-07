@@ -303,7 +303,6 @@ GameObject:
   - component: {fileID: 3500775547374312500}
   - component: {fileID: 3500775547374312491}
   - component: {fileID: 3500775547374312490}
-  - component: {fileID: 3500775547374312502}
   - component: {fileID: 7310915350955286056}
   m_Layer: 0
   m_Name: D_Traps_AntiShield
@@ -393,22 +392,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3500775547374312502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3500775547374312489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08e99462f62c4044b873483ed9c5acc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionRadius: 2
-  explosionDamage: 100
-  triggerRadius: 1.5
-  isTriggered: 0
 --- !u!114 &7310915350955286056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,3 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c412de13308d3c9409ca614857fcf58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerRadius: 2
+  explosionRadius: 3
+  isTriggered: 0
+  Explode: 0
+  explosionDamage: 100
