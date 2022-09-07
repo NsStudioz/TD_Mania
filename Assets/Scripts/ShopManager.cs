@@ -18,6 +18,7 @@ public class ShopManager : MonoBehaviour
     [SerializeField] D_Unit_Blueprint d_Unit_Trap_Mine;
     [SerializeField] D_Unit_Blueprint d_Unit_Trap_Binder;
     [SerializeField] D_Unit_Blueprint d_Unit_Trap_GoldGenerator;
+    [SerializeField] D_Unit_Blueprint d_Unit_Trap_AntiShieldMine;
 
 
     ConstructManager constructManager;
@@ -88,6 +89,11 @@ public class ShopManager : MonoBehaviour
     public void SelectTrapGoldGenerator()
     {
         constructManager.SelectTurretToBuild(d_Unit_Trap_GoldGenerator);
+    }
+
+    public void SelectTrapAntiShieldMine()
+    {
+        constructManager.SelectTurretToBuild(d_Unit_Trap_AntiShieldMine);
     }
 
 }
