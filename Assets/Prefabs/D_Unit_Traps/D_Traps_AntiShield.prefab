@@ -404,8 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c412de13308d3c9409ca614857fcf58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerRadius: 2
-  explosionRadius: 3
+  triggerRadius: 1
+  explosionRadius: 1.5
   isTriggered: 0
   Explode: 0
   explosionDamage: 100
