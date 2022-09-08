@@ -6,7 +6,9 @@ public class D_Unit_Buffer : MonoBehaviour
 {
 
     [Header("Attributes")]
-    [SerializeField] string defendingUnitTag = "Defenders";
+    [SerializeField] string defUnit_Tag = "Defenders";
+    [SerializeField] string defUnit_Laser_Tag = "DefenderLaser";
+    [SerializeField] string defUnit_AS_Tag = "Turrets_AS";
     [SerializeField] float rangeRadius = 1f;
     // Bonuses:
     [SerializeField] float turretRangeBonus = 0.5f;
@@ -25,7 +27,7 @@ public class D_Unit_Buffer : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, rangeRadius);
         foreach (Collider collider in colliders)
         {
-            if (collider.tag == defendingUnitTag)
+            if (collider.tag == defUnit_Tag)
             {
                 InitiateBuffForTurrets(collider.transform);
             }
@@ -38,7 +40,7 @@ public class D_Unit_Buffer : MonoBehaviour
         }
     }
 
-    #region Turret&TrapBuffs:
+    #region TurretBuffs:
     private void InitiateBuffForTurrets(Transform turret)
     {
         D_Unit_Turret defUnit = GetComponent<D_Unit_Turret>();
@@ -67,7 +69,7 @@ public class D_Unit_Buffer : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.cyan;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, rangeRadius);
     }
 
