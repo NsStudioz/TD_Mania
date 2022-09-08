@@ -6,10 +6,15 @@ public class D_Unit_Buffer : MonoBehaviour
 {
 
     [Header("Attributes")]
-    [SerializeField] string defUnit_Tag = "Defenders";
-    [SerializeField] string defUnit_Laser_Tag = "DefenderLaser";
-    [SerializeField] string defUnit_AS_Tag = "Turrets_AS";
     [SerializeField] float rangeRadius = 1f;
+    // For Turrets:
+    [SerializeField] string defUnit_Tag = "Turrets";
+    [SerializeField] string defUnit_Laser_Tag = "TurretLaser";
+    [SerializeField] string defUnit_AS_Tag = "Turrets_AS";
+    // For Bullets
+    [SerializeField] string defBullet_Tag = "Bullet";
+    [SerializeField] string defBullet_AS_Tag = "Bullet_AS";
+
     // Bonuses:
     [SerializeField] float turretRangeBonus = 0.5f;
     [SerializeField] float bulletDamageBonus = 25f;
@@ -31,7 +36,7 @@ public class D_Unit_Buffer : MonoBehaviour
             {
                 InitiateBuffForTurrets(collider.transform);
             }
-            else if (collider.tag == "Bullet")
+            else if (collider.tag == defBullet_Tag)
             {
                 bullet.isBuffedByBuffer = true;
                 InitiateBuffForBullets(collider.transform);
