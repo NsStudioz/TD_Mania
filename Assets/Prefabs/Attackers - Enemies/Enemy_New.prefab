@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 4899215999690629463}
   - component: {fileID: 4899215999690629460}
   - component: {fileID: 4899215999690629461}
-  - component: {fileID: 4899215999690629457}
-  - component: {fileID: 7872477614095370560}
+  - component: {fileID: 647195351}
+  - component: {fileID: -5018902704197528434}
   m_Layer: 10
-  m_Name: Enemy
+  m_Name: Enemy_New
   m_TagString: Attackers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4899215999690629457
+--- !u!114 &647195351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,8 +119,8 @@ MonoBehaviour:
   bindDelay: 2
   hasShield: 0
   isProtected: 0
-  range: 0.01
---- !u!114 &7872477614095370560
+  range: 1
+--- !u!114 &-5018902704197528434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,6 +129,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4899215999690629466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4136b15cfb412f41b17a6ba5cfc1466, type: 3}
+  m_Script: {fileID: 11500000, guid: e4ae25c3a1dc91b44a1938214b4f369e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathing: {fileID: 0}
+  distanceThreshold: 0.05
