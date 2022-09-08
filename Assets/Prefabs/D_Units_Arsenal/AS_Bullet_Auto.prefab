@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892560bc6431e934b815c0d19b3a70c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   explosionRadius: 0
   damage: 20
   useAntiShieldBullets: 1
