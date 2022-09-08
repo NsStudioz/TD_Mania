@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d609498972aec42ac90cd4d7ea4930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4899215999690629462, guid: 23d8c96a76ca53048867d2678338a2e7, type: 3}
+  enemyPrefab: {fileID: 0}
   spawnPoint: {fileID: 6729223994105434866}
   upcomingWaveDelay: 10
   countDown: 2
