@@ -20,9 +20,9 @@ public class Bullet : MonoBehaviour
     private string antiShield_Tag = "AS_Bullet";
     private string antiShield_Auto_Tag = "AS_Auto_Bullet";
     private string sd_Destroyer_Tag = "SD_Bullet";
-    private float Turret_AS_Damage = 25;
-    private float AutoTurret_AS_Damage = 20;
-    private float shieldDestroyer_AS_Damage = 50;
+    private float turret_AS_Damage = 25f;
+    private float autoTurret_AS_Damage = 20f;
+    private float shieldDestroyer_AS_Damage = 50f;
     //
     public bool isBuffedByBuffer;
 
@@ -100,11 +100,35 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    public void buffBullet(float buffAmount)
+    public void BuffBullet(float buffAmount)
     {
         if (isBuffedByBuffer)
         {
             damage += buffAmount;
+        }
+    }
+
+    public void BuffBullet_AS(float buffAmount) // Anti-Shield
+    {
+        if (isBuffedByBuffer)
+        {
+            turret_AS_Damage += buffAmount;
+        }
+    }
+
+    public void BuffBullet_AS_Auto(float buffAmount) // Anti-Shield Auto
+    {
+        if (isBuffedByBuffer)
+        {
+            autoTurret_AS_Damage += buffAmount;
+        }
+    }
+
+    public void BuffBullet_AS_SD(float buffAmount) // Shield Destroyer
+    {
+        if (isBuffedByBuffer)
+        {
+            shieldDestroyer_AS_Damage += buffAmount;
         }
     }
 
@@ -118,11 +142,11 @@ public class Bullet : MonoBehaviour
 
                 if (gameObject.CompareTag(antiShield_Tag))
                 {
-                    shield.TakeShieldDamage(Turret_AS_Damage);
+                    shield.TakeShieldDamage(turret_AS_Damage);
                 }
                 else if (gameObject.CompareTag(antiShield_Auto_Tag))
                 {
-                    shield.TakeShieldDamage(AutoTurret_AS_Damage);
+                    shield.TakeShieldDamage(autoTurret_AS_Damage);
                 }
                 else if (gameObject.CompareTag(sd_Destroyer_Tag))
                 {

@@ -12,7 +12,7 @@ public class D_Unit_Turret : MonoBehaviour
     public Enemy targetEnemy;
     [SerializeField] bool isAntiShield;
     [SerializeField] string enemyTag = "Attackers";
-    [SerializeField] float range = 1f;
+    [SerializeField] float range = 2f;
     [SerializeField] float fireRate = 1f;
     [SerializeField] float fireCountDown = 0f;
 
@@ -26,7 +26,10 @@ public class D_Unit_Turret : MonoBehaviour
     // Object Pooling:
     private IObjectPool<Bullet> bulletPool;
     [SerializeField] Bullet bulletPrefab_New;
-    
+
+    [Header("Attributes")]
+    public bool isBuffed;
+
 
     private void Awake()
     {
@@ -122,7 +125,7 @@ public class D_Unit_Turret : MonoBehaviour
         }
     }
 
-    public void BuffDefendingUnit(float bonusAmount)
+    public void BuffDefendingUnit_Range(float bonusAmount)
     {
         range += bonusAmount;
     }

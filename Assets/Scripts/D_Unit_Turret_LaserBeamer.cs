@@ -51,7 +51,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
 
             return;
         }
-        
+
         if (target != null)
         {
             if (targetEnemy.hasShield || targetEnemy.isProtected)
@@ -157,6 +157,16 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
             targetEnemy = nearestEnemy.GetComponent<Enemy>();
         }
         else { target = null; }
+    }
+
+    public void BuffDefendingUnit_Range(float bonusRangeAmount)
+    {
+        range += bonusRangeAmount;
+    }
+
+    public void BuffDefendingUnit_Damage(int bonusDamageAmount)
+    {
+        damageOverTime += bonusDamageAmount;
     }
 
     private void OnDrawGizmosSelected()

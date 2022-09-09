@@ -13,11 +13,20 @@ public class D_Unit_Buffer : MonoBehaviour
     [SerializeField] string defUnit_AS_Tag = "Turrets_AS";
     // For Bullets
     [SerializeField] string defBullet_Tag = "Bullet";
-    [SerializeField] string defBullet_AS_Tag = "Bullet_AS";
+    [SerializeField] string defBullet_AS_Tag = "AS_Bullet";
+    [SerializeField] string defBullet_AS_Auto_Tag = "AS_Auto_Bullet";
+    [SerializeField] string defBullet_AS_SD_Tag = "SD_Bullet";
 
     // Bonuses:
-    [SerializeField] float turretRangeBonus = 0.5f;
+    [SerializeField] float turret_RangeBonus = 0.5f;
+    [SerializeField] float turret_Laser_RangeBonus = 0.5f;
+    [SerializeField] int Turret_Laser_DamageBonus = 25;
     [SerializeField] float bulletDamageBonus = 25f;
+    [SerializeField] float bullet_AS_DamageBonus = 25f;
+    [SerializeField] float bullet_AS_Auto_DamageBonus = 25f;
+    [SerializeField] float bullet_AS_SD_DamageBonus = 25f;
+    [SerializeField] float bullet_AntiShield_DamageBonus = 25f;
+
     //
     Bullet bullet;
 
@@ -31,16 +40,43 @@ public class D_Unit_Buffer : MonoBehaviour
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, rangeRadius);
         foreach (Collider collider in colliders)
-        {
-            if (collider.tag == defUnit_Tag)
-            {
-                InitiateBuffForTurrets(collider.transform);
-            }
-            else if (collider.tag == defBullet_Tag)
-            {
-                bullet.isBuffedByBuffer = true;
-                InitiateBuffForBullets(collider.transform);
-            }
+        {   // Turrets:
+
+                if (collider.tag == "Turrets")
+                {
+                    InitiateBuffForTurrets(collider.transform); // For Regulars
+                }
+/*                else if (collider.CompareTag(defUnit_AS_Tag))
+                {
+                    InitiateBuffForTurrets(collider.transform); // For Anti-Shield
+                }
+                else if (collider.CompareTag(defUnit_Laser_Tag))
+                {
+                    InitiateBuffForTurretLaserBeamer(collider.transform); // For Laser-Beamer
+                }*/
+
+                // Bullets:
+/*                if (collider.tag == defBullet_Tag)
+                {
+                    bullet.isBuffedByBuffer = true;
+                    InitiateBuffForBullets(collider.transform);
+                }
+                else if (collider.CompareTag(defBullet_AS_Tag))
+                {
+                    bullet.isBuffedByBuffer = true;
+                    InitiateBuffForBullets_AS(collider.transform);
+                }
+                else if (collider.CompareTag(defBullet_AS_Auto_Tag))
+                {
+                    bullet.isBuffedByBuffer = true;
+                    InitiateBuffForBullets_AS_Auto(collider.transform);
+                }
+                else if (collider.CompareTag(defBullet_AS_SD_Tag))
+                {
+                    bullet.isBuffedByBuffer = true;
+                    InitiateBuffForBullets_AS_SD(collider.transform);
+                }*/
+
 
         }
     }
@@ -52,10 +88,21 @@ public class D_Unit_Buffer : MonoBehaviour
 
         if(defUnit != null)
         {
-            defUnit.BuffDefendingUnit(turretRangeBonus);
+            defUnit.BuffDefendingUnit_Range(turret_RangeBonus);
+            //defUnit.isBuffed = true;
         }
     }
 
+    private void InitiateBuffForTurretLaserBeamer(Transform turret_Laser)
+    {
+        D_Unit_Turret_LaserBeamer defunit_Laser = GetComponent<D_Unit_Turret_LaserBeamer>();
+
+        if(defunit_Laser != null)
+        {
+            defunit_Laser.BuffDefendingUnit_Range(turret_Laser_RangeBonus);
+            defunit_Laser.BuffDefendingUnit_Damage(Turret_Laser_DamageBonus);
+        }
+    }
 
     #endregion
 
@@ -66,7 +113,37 @@ public class D_Unit_Buffer : MonoBehaviour
         
         if (bullet != null)
         {
-            defbullet.buffBullet(bulletDamageBonus);
+            defbullet.BuffBullet(bulletDamageBonus);
+        }
+    }
+
+    private void InitiateBuffForBullets_AS(Transform thisBullet)
+    {
+        Bullet defbullet = GetComponent<Bullet>();
+
+        if (bullet != null)
+        {
+            defbullet.BuffBullet_AS(bullet_AS_DamageBonus);
+        }
+    }
+
+    private void InitiateBuffForBullets_AS_Auto(Transform thisBullet)
+    {
+        Bullet defbullet = GetComponent<Bullet>();
+
+        if (bullet != null)
+        {
+            defbullet.BuffBullet_AS_Auto(bullet_AS_Auto_DamageBonus);
+        }
+    }
+
+    private void InitiateBuffForBullets_AS_SD(Transform thisBullet)
+    {
+        Bullet defbullet = GetComponent<Bullet>();
+
+        if (bullet != null)
+        {
+            defbullet.BuffBullet_AS_SD(bullet_AS_SD_DamageBonus);
         }
     }
 
