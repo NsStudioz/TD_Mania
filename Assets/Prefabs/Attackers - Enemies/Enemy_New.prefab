@@ -132,5 +132,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ae25c3a1dc91b44a1938214b4f369e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathing: {fileID: 0}
+  pathing: {fileID: 7081334602081640374, guid: fd4bd6db4afca5f458a7a7219abbbbe9, type: 3}
   distanceThreshold: 0.05
