@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 2365598109223597990}
   - component: {fileID: 2365598109223597991}
   - component: {fileID: 2365598109223598007}
+  - component: {fileID: 4756263921691261314}
   m_Layer: 9
   m_Name: D_Unit_Turret_Buffer
   m_TagString: Defenders
@@ -193,8 +194,8 @@ CapsuleCollider:
   m_GameObject: {fileID: 2365598109223598008}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
+  m_Enabled: 0
+  m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
@@ -226,6 +227,19 @@ MonoBehaviour:
   bullet_AS_Auto_DamageBonus: 25
   bullet_AS_SD_DamageBonus: 25
   bullet_AntiShield_DamageBonus: 25
+--- !u!135 &4756263921691261314
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365598109223598008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &2365598109481930619
 GameObject:
   m_ObjectHideFlags: 0
