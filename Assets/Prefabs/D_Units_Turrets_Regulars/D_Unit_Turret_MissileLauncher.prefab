@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6570815143184331346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackEffects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 6570815143252262206}
   - component: {fileID: 6570815143252262205}
   - component: {fileID: 6570815143252262204}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chassis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6570815144485431331}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 6570815144609026134}
   - component: {fileID: 6570815144609026133}
   - component: {fileID: 6570815144609026132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 6570815144753185977}
   - component: {fileID: 6570815144753185976}
   - component: {fileID: 6570815144753185975}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 6570815144818557122}
   - component: {fileID: 6570815144818557121}
   - component: {fileID: 6570815144818557125}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: D_Unit_Turret_MissileLauncher
   m_TagString: Turrets
   m_Icon: {fileID: 0}
@@ -483,3 +483,4 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5834080202382640150, guid: 8898964fa9dd5c443aeb3100ffec8c60, type: 3}
   firingPosition: {fileID: 6570815144485431331}
   bulletPrefab_New: {fileID: 0}
+  isBuffed: 0

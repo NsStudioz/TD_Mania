@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2537815696668636809}
   - component: {fileID: 2537815696668636806}
   - component: {fileID: 2537815696668636807}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 2537815697675475705}
   - component: {fileID: 2537815697675475702}
   - component: {fileID: 2537815697675475706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: D_Unit_Turret_WideBeamer
   m_TagString: Turrets
   m_Icon: {fileID: 0}
@@ -223,6 +223,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3513938970175188836, guid: 95a280dcc0b636b469697e19e02dd12d, type: 3}
   firingPosition: {fileID: 2537815697990984941}
   bulletPrefab_New: {fileID: 0}
+  isBuffed: 0
 --- !u!1 &2537815697990984938
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2537815697990984941}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

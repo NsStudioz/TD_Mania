@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7176738941727675425}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7176738941855431082}
   - component: {fileID: 7176738941855431093}
   - component: {fileID: 7176738941855431092}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 7176738942133944683}
   - component: {fileID: 7176738942133944682}
   - component: {fileID: -1530953742079190690}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: D_Unit_Turret_AS_Standard
   m_TagString: Turrets_AS
   m_Icon: {fileID: 0}
@@ -254,3 +254,4 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5194135924334827148, guid: 56a9640664fb1c342890472190d53812, type: 3}
   firingPosition: {fileID: 7176738941727675425}
   bulletPrefab_New: {fileID: 0}
+  isBuffed: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1189030444057258472}
   - component: {fileID: 1189030444057258473}
   - component: {fileID: 1189030444057258474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Satellite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 2365598109223597990}
   - component: {fileID: 2365598109223597991}
   - component: {fileID: 2365598109223598007}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: D_Unit_Turret_Buffer
   m_TagString: Defenders
   m_Icon: {fileID: 0}
@@ -210,12 +210,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c45493258ce05419967ff27f5fe541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defUnit_Tag: Defenders
+  rangeRadius: 5
+  defUnit_Tag: Turrets
   defUnit_Laser_Tag: TurretLaser
   defUnit_AS_Tag: Turrets_AS
-  rangeRadius: 1
-  turretRangeBonus: 0.5
+  defBullet_Tag: Bullet
+  defBullet_AS_Tag: AS_Bullet
+  defBullet_AS_Auto_Tag: AS_Auto_Bullet
+  defBullet_AS_SD_Tag: SD_Bullet
+  turret_RangeBonus: 0.5
+  turret_Laser_RangeBonus: 0.5
+  Turret_Laser_DamageBonus: 25
   bulletDamageBonus: 25
+  bullet_AS_DamageBonus: 25
+  bullet_AS_Auto_DamageBonus: 25
+  bullet_AS_SD_DamageBonus: 25
+  bullet_AntiShield_DamageBonus: 25
 --- !u!1 &2365598109481930619
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +238,7 @@ GameObject:
   - component: {fileID: 2365598109481930599}
   - component: {fileID: 2365598109481930616}
   - component: {fileID: 2365598109481930617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2365598109622657772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
