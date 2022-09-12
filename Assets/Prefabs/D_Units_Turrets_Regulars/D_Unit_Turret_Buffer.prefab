@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 2365598109223598007}
   m_Layer: 9
   m_Name: D_Unit_Turret_Buffer
-  m_TagString: Defenders
+  m_TagString: Buffer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
