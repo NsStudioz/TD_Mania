@@ -142,7 +142,9 @@ GameObject:
   - component: {fileID: 7007495501377291202}
   - component: {fileID: 7007495501377291201}
   - component: {fileID: 7007495501377291200}
+  - component: {fileID: 8569042254124983993}
   - component: {fileID: 7007495501377291204}
+  - component: {fileID: 8116763325446247225}
   m_Layer: 9
   m_Name: D_Unit_Turret_Standard
   m_TagString: Turrets
@@ -224,12 +226,28 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7007495501377291231}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!54 &8569042254124983993
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7007495501377291231}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &7007495501377291204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,4 +272,16 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7498280192598164724, guid: cd4606a2876234e44b50b4917a085183, type: 3}
   firingPosition: {fileID: 7007495500966565515}
   bulletPrefab_New: {fileID: 7498280192598164715, guid: cd4606a2876234e44b50b4917a085183, type: 3}
+--- !u!114 &8116763325446247225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7007495501377291231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89cecf871d4275498a69ed65eb2b178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   isBuffed: 0
