@@ -8,7 +8,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     public Transform target;
     public Enemy targetEnemy;
     [SerializeField] string enemyTag = "Attackers";
-    [SerializeField] float range = 15f;
+    [SerializeField] public float range = 15f;
     [SerializeField] float fireRate = 1f;
     [SerializeField] float fireCountDown = 0f;
 
