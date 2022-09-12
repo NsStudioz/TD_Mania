@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Pool;
 
 public class D_Unit_Turret : MonoBehaviour
@@ -12,7 +13,7 @@ public class D_Unit_Turret : MonoBehaviour
     public Enemy targetEnemy;
     [SerializeField] bool isAntiShield;
     [SerializeField] string enemyTag = "Attackers";
-    [SerializeField] float range = 2f;
+    [SerializeField] public float range = 2f;
     [SerializeField] float fireRate = 1f;
     [SerializeField] float fireCountDown = 0f;
 
@@ -27,13 +28,23 @@ public class D_Unit_Turret : MonoBehaviour
     private IObjectPool<Bullet> bulletPool;
     [SerializeField] Bullet bulletPrefab_New;
 
-    [Header("Attributes")]
-    public bool isBuffed;
-
+    [Header("Events")]
+    public bool isBuffed = false;
+    [SerializeField] float turretRadius = 2f; // radius of actual turret, not tracking range.
 
     private void Awake()
     {
         //bulletPool = new ObjectPool<Bullet>(CreateBullet, OnGet);
+    }
+
+    private void OnEnable()
+    {
+        //BufferAction.OnBuffTurret += BuffDefendingUnit_RangeTest;
+    }
+
+    private void OnDisable()
+    {
+        //BufferAction.OnBuffTurret -= BuffDefendingUnit_RangeTest;
     }
 
     void Start()
@@ -136,43 +147,53 @@ public class D_Unit_Turret : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
+
+
+/*    private void OnTriggerEnter(Collider buffer)
+    {
+        if (buffer.CompareTag("Buffer"))
+        {
+            isBuffed = true;
+        }
+    }*/
+
     //
     // FOR OBJECT POOLING:
     //
 
     #region ObjectPooling
-/*    private void AimAtTarget()
-    {
-        Bullet bullet = GetComponent<Bullet>();
-
-        if (bullet != null)
+    /*    private void AimAtTarget()
         {
-            bullet.SeekTarget(target);
+            Bullet bullet = GetComponent<Bullet>();
+
+            if (bullet != null)
+            {
+                bullet.SeekTarget(target);
+            }
         }
-    }
 
-    private Bullet CreateBullet()
-    {
-        Bullet bullet = Instantiate(bulletPrefab_New);
-        bullet.SetPool(bulletPool);
-        return bullet;
-    }
+        private Bullet CreateBullet()
+        {
+            Bullet bullet = Instantiate(bulletPrefab_New);
+            bullet.SetPool(bulletPool);
+            return bullet;
+        }
 
-    private void OnGet(Bullet bullet)
-    {
-        bullet.gameObject.SetActive(true);
-        bullet.transform.position = firingPosition.transform.position;
-    }
+        private void OnGet(Bullet bullet)
+        {
+            bullet.gameObject.SetActive(true);
+            bullet.transform.position = firingPosition.transform.position;
+        }
 
-    private void OnRelease(Bullet bullet)
-    {
-        bullet.gameObject.SetActive(false);
-    }
+        private void OnRelease(Bullet bullet)
+        {
+            bullet.gameObject.SetActive(false);
+        }
 
-    private void OnDestroyBullet(Bullet bullet)
-    {
-        Destroy(bullet.gameObject);
-    }*/
+        private void OnDestroyBullet(Bullet bullet)
+        {
+            Destroy(bullet.gameObject);
+        }*/
     #endregion
 
     #region OldUpdateMethod

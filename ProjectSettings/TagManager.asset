@@ -17,6 +17,7 @@ TagManager:
   - AS_Auto_Bullet
   - SD_Bullet
   - TurretLaser
+  - Buffer
   layers:
   - Default
   - TransparentFX

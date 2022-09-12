@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class D_Unit_Buffer : MonoBehaviour
 {
@@ -28,16 +30,16 @@ public class D_Unit_Buffer : MonoBehaviour
     [SerializeField] float bullet_AS_SD_DamageBonus = 25f;
     [SerializeField] float bullet_AntiShield_DamageBonus = 25f;
 
-    [Header("Attributes")]
+    [Header("Events")]
     [SerializeField] bool isCollision = false;
-
+    public event Action onCollisionWithBuffer;
     //
     Bullet bullet;
 
 
     void Update()
     {
-        CheckRangeRadius();
+        //CheckRangeRadius();
     }
 
     private void CheckRangeRadius()
@@ -48,48 +50,11 @@ public class D_Unit_Buffer : MonoBehaviour
             if (collider.CompareTag("Defenders"))
             {
                 isCollision = true;
-                InitiateBuffForTurrets(collider.transform);
+                //BufferAction.OnBuffTurret();
             }
-
-
-/*                if (collider.CompareTag("Turrets"))
-                {
-                    InitiateBuffForTurrets(collider.transform); // For Regulars
-                }*/
-                /*                else if (collider.CompareTag(defUnit_AS_Tag))
-                                {
-                                    InitiateBuffForTurrets(collider.transform); // For Anti-Shield
-                                }
-                                else if (collider.CompareTag(defUnit_Laser_Tag))
-                                {
-                                    InitiateBuffForTurretLaserBeamer(collider.transform); // For Laser-Beamer
-                                }*/
-
-                // Bullets:
-                /*                if (collider.tag == defBullet_Tag)
-                                {
-                                    bullet.isBuffedByBuffer = true;
-                                    InitiateBuffForBullets(collider.transform);
-                                }
-                                else if (collider.CompareTag(defBullet_AS_Tag))
-                                {
-                                    bullet.isBuffedByBuffer = true;
-                                    InitiateBuffForBullets_AS(collider.transform);
-                                }
-                                else if (collider.CompareTag(defBullet_AS_Auto_Tag))
-                                {
-                                    bullet.isBuffedByBuffer = true;
-                                    InitiateBuffForBullets_AS_Auto(collider.transform);
-                                }
-                                else if (collider.CompareTag(defBullet_AS_SD_Tag))
-                                {
-                                    bullet.isBuffedByBuffer = true;
-                                    InitiateBuffForBullets_AS_SD(collider.transform);
-                                }*/
-
-
         }
     }
+
 
     #region TurretBuffs:
     private void InitiateBuffForTurrets(Transform turret)
@@ -166,3 +131,51 @@ public class D_Unit_Buffer : MonoBehaviour
     }
 
 }
+
+#region TrashCode:
+/*private void CheckRangeRadius()
+{
+    Collider[] colliders = Physics.OverlapSphere(transform.position, rangeRadius);
+    foreach (Collider collider in colliders)
+    {
+        // Turrets:
+        if (collider.CompareTag("Turrets"))
+        {
+            InitiateBuffForTurrets(collider.transform); // For Regulars
+        }
+        else if (collider.CompareTag(defUnit_AS_Tag))
+        {
+            InitiateBuffForTurrets(collider.transform); // For Anti-Shield
+        }
+        else if (collider.CompareTag(defUnit_Laser_Tag))
+        {
+            InitiateBuffForTurretLaserBeamer(collider.transform); // For Laser-Beamer
+        }
+
+        // Bullets:
+        if (collider.tag == defBullet_Tag)
+        {
+            bullet.isBuffedByBuffer = true;
+            InitiateBuffForBullets(collider.transform);
+        }
+        else if (collider.CompareTag(defBullet_AS_Tag))
+        {
+            bullet.isBuffedByBuffer = true;
+            InitiateBuffForBullets_AS(collider.transform);
+        }
+        else if (collider.CompareTag(defBullet_AS_Auto_Tag))
+        {
+            bullet.isBuffedByBuffer = true;
+            InitiateBuffForBullets_AS_Auto(collider.transform);
+        }
+        else if (collider.CompareTag(defBullet_AS_SD_Tag))
+        {
+            bullet.isBuffedByBuffer = true;
+            InitiateBuffForBullets_AS_SD(collider.transform);
+        }
+
+
+    }
+}*/
+
+#endregion
