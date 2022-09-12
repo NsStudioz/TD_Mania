@@ -28,23 +28,10 @@ public class D_Unit_Turret : MonoBehaviour
     private IObjectPool<Bullet> bulletPool;
     [SerializeField] Bullet bulletPrefab_New;
 
-    [Header("Events")]
-    public bool isBuffed = false;
-    [SerializeField] float turretRadius = 2f; // radius of actual turret, not tracking range.
 
     private void Awake()
     {
         //bulletPool = new ObjectPool<Bullet>(CreateBullet, OnGet);
-    }
-
-    private void OnEnable()
-    {
-        //BufferAction.OnBuffTurret += BuffDefendingUnit_RangeTest;
-    }
-
-    private void OnDisable()
-    {
-        //BufferAction.OnBuffTurret -= BuffDefendingUnit_RangeTest;
     }
 
     void Start()
@@ -146,16 +133,6 @@ public class D_Unit_Turret : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
-
-
-
-/*    private void OnTriggerEnter(Collider buffer)
-    {
-        if (buffer.CompareTag("Buffer"))
-        {
-            isBuffed = true;
-        }
-    }*/
 
     //
     // FOR OBJECT POOLING:
