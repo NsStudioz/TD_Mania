@@ -31,15 +31,19 @@ public class D_Unit_Buffer : MonoBehaviour
     [SerializeField] float bullet_AntiShield_DamageBonus = 25f;
 
     [Header("Events")]
-    [SerializeField] bool isCollision = false;
-    public event Action onCollisionWithBuffer;
+    [SerializeField] bool isCollision;
     //
     Bullet bullet;
+
+    void Start()
+    {
+        isCollision = false;    
+    }
 
 
     void Update()
     {
-        //CheckRangeRadius();
+
     }
 
     private void CheckRangeRadius()
@@ -50,24 +54,12 @@ public class D_Unit_Buffer : MonoBehaviour
             if (collider.CompareTag("Defenders"))
             {
                 isCollision = true;
-                //BufferAction.OnBuffTurret();
             }
         }
     }
 
 
     #region TurretBuffs:
-    private void InitiateBuffForTurrets(Transform turret)
-    {
-        D_Unit_Turret defUnit = GetComponent<D_Unit_Turret>();
-
-        if(defUnit != null)
-        {
-            defUnit.BuffDefendingUnit_Range(turret_RangeBonus);
-            defUnit.isBuffed = true;
-        }
-    }
-
     private void InitiateBuffForTurretLaserBeamer(Transform turret_Laser)
     {
         D_Unit_Turret_LaserBeamer defunit_Laser = GetComponent<D_Unit_Turret_LaserBeamer>();
@@ -75,7 +67,6 @@ public class D_Unit_Buffer : MonoBehaviour
         if(defunit_Laser != null)
         {
             defunit_Laser.BuffDefendingUnit_Range(turret_Laser_RangeBonus);
-            defunit_Laser.BuffDefendingUnit_Damage(Turret_Laser_DamageBonus);
         }
     }
 
@@ -92,35 +83,6 @@ public class D_Unit_Buffer : MonoBehaviour
         }
     }
 
-    private void InitiateBuffForBullets_AS(Transform thisBullet)
-    {
-        Bullet defbullet = GetComponent<Bullet>();
-
-        if (bullet != null)
-        {
-            defbullet.BuffBullet_AS(bullet_AS_DamageBonus);
-        }
-    }
-
-    private void InitiateBuffForBullets_AS_Auto(Transform thisBullet)
-    {
-        Bullet defbullet = GetComponent<Bullet>();
-
-        if (bullet != null)
-        {
-            defbullet.BuffBullet_AS_Auto(bullet_AS_Auto_DamageBonus);
-        }
-    }
-
-    private void InitiateBuffForBullets_AS_SD(Transform thisBullet)
-    {
-        Bullet defbullet = GetComponent<Bullet>();
-
-        if (bullet != null)
-        {
-            defbullet.BuffBullet_AS_SD(bullet_AS_SD_DamageBonus);
-        }
-    }
 
     #endregion
 
