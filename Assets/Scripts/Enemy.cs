@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int goldToEarn = 100;
     // binding:
     public bool isBinded = false;
-    public float bindDelay = 2f;
+    public float bindDelay = 10f;
     // Shields:
     public bool hasShield;
     public bool isProtected;

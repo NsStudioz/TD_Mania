@@ -9,7 +9,7 @@ public class EnemyMovement_New : MonoBehaviour
 
     [SerializeField] EnemyPaths pathing;
 
-    [SerializeField] float distanceThreshold = 0.1f;
+    [SerializeField] float distanceThreshold = 0.1f; // distance from a waypoint
 
     void Start()
     {
