@@ -6,7 +6,6 @@ public class BuffAction : MonoBehaviour
 {
 
     public bool isBuffed = false;
-    [SerializeField] float turretRadius = 2f; // radius of actual turret, not tracking range.
 
     D_Unit_Turret defUnit;
 
@@ -14,41 +13,19 @@ public class BuffAction : MonoBehaviour
     {
         defUnit = GetComponent<D_Unit_Turret>();
     }
-    void Update()
-    {
-        if (isBuffed == true)
-        {
-            defUnit.range = defUnit.range + 1f;
-        }
-        else
-        {
-            defUnit.range = 2f;
-        }
-    }
-
-/*    private void CheckCollisionWithTurretBuffer()
-    {
-
-        Collider[] colliders = Physics.OverlapSphere(transform.position, turretRadius);
-        foreach (Collider collider in colliders)
-        {
-            if (collider.CompareTag("Buffer"))
-            {
-                isBuffed = true;
-            }
-            else
-            {
-                isBuffed = false;
-            }
-        }
-
-    }*/
 
     private void BuffTurret()
     {
         if (isBuffed)
         {
-            defUnit.range = defUnit.range + 5f;
+            defUnit.range++;
+        }
+    }
+    private void UnBuffTurret()
+    {
+        if (!isBuffed)
+        {
+            defUnit.range--;
         }
     }
 
@@ -58,13 +35,16 @@ public class BuffAction : MonoBehaviour
         if (buffer.CompareTag("Buffer"))
         {
             isBuffed = true;
-            //defUnit.range = defUnit.range + 2f;
+            BuffTurret();
         }
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnTriggerExit(Collider buffer)
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, turretRadius);
+        if (buffer.CompareTag("Buffer"))
+        {
+            isBuffed = false;
+            UnBuffTurret();
+        }
     }
 }
