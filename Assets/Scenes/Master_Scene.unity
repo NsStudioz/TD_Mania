@@ -3034,9 +3034,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d609498972aec42ac90cd4d7ea4930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4899215999690629462, guid: 34103b6b25dcc0543ad211071815f662, type: 3}
+  enemyPrefab: {fileID: 4765390458102929578, guid: c4f071ad3e924ee4ebbc73510faa55ca, type: 3}
   spawnPoint: {fileID: 3473426877567668212}
-  upcomingWaveDelay: 10
+  upcomingWaveDelay: 20
   countDown: 2
   enemySpawnDelay: 0.5
   waveIndex: 0

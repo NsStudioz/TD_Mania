@@ -396,7 +396,7 @@ MonoBehaviour:
   fireCountDown: 0
   turnSpeed: 10
   partToRotate: {fileID: 9120206838109689738}
-  bulletPrefab: {fileID: 1326570173534720320, guid: 4ed0f629c5e25714b93dc347178ca472, type: 3}
+  bulletPrefab: {fileID: 1326570173534720320, guid: e9602ba2d1359d94e90f6cc5e844987c, type: 3}
   firingPosition: {fileID: 9120206837840821023}
   bulletPrefab_New: {fileID: 0}
 --- !u!114 &-6636222323713651675
