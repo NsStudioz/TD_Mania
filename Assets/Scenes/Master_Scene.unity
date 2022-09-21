@@ -285,11 +285,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4899215999690629462, guid: 8da0c4a81b9fc8e4680ac1e4711c1bac, type: 3}
   spawnPoint: {fileID: 55881960}
-  upcomingWaveDelay: 10
-  countDown: 2
-  enemySpawnDelay: 0.5
   waveIndex: 0
-  enemiesPerWave: 5
+  enemiesPerWave: 10
+  countDown: 2
+  upcomingWaveDelay: 10
+  enemySpawnDelay: 0.5
   EnemySpawner_Single: 0
   EnemySpawner_Static: 1
   EnemySpawner_Incrementer: 0
@@ -2039,11 +2039,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4765390458102929578, guid: c4f071ad3e924ee4ebbc73510faa55ca, type: 3}
   spawnPoint: {fileID: 3473426877567668212}
-  upcomingWaveDelay: 20
-  countDown: 2
-  enemySpawnDelay: 0.5
   waveIndex: 0
-  enemiesPerWave: 5
+  enemiesPerWave: 10
+  countDown: 2
+  upcomingWaveDelay: 20
+  enemySpawnDelay: 0.5
   EnemySpawner_Single: 1
   EnemySpawner_Static: 0
   EnemySpawner_Incrementer: 0
@@ -2202,6 +2202,14 @@ PrefabInstance:
     - target: {fileID: 769306844, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379944072453510469, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
+      propertyPath: gameWon
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379944072453510469, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
+      propertyPath: masterTimerThreshold
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3506503890088319106, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
       propertyPath: m_Pivot.x
