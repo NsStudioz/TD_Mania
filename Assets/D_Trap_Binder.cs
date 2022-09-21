@@ -9,31 +9,24 @@ public class D_Trap_Binder : MonoBehaviour
     [SerializeField] float bindRadius = 1f;
     [SerializeField] float bindingDuration = 2f;
     [SerializeField] float triggerRadius = 0.5f;
-    [SerializeField] float bindValue = 0f; // enemy speed if on bind radius of trap
-
-    [SerializeField] float delayTime = 1f; // stop the binding effect on unaffected enemies if is triggered.
     [SerializeField] bool isTriggered;
-    private bool startBindingCountdown = false;
-
+    //
     // Vars for stopping unnecessary enemies from getting trapped:
     SphereCollider sphereCol;
-    //
-    [SerializeField] bool bindOn = false;
     [SerializeField] float trapTimeElapsed;
     [SerializeField] float trapTimeThreshold = 2f;
-    //
+
 
     private void Start()
     {
         trapTimeElapsed = trapTimeThreshold;
-        sphereCol = GetComponent<SphereCollider>();
 
+        sphereCol = GetComponent<SphereCollider>();
         sphereCol.enabled = false;
     }
 
     private void Update()
     {
-
         EnableBind();
 
         if (sphereCol.enabled)
@@ -53,31 +46,9 @@ public class D_Trap_Binder : MonoBehaviour
             if (bindingDuration <= 0f)
             {
                 Destroy(gameObject);
-            }
-            
+            }  
         }
-/*        CheckRangeOnEnemyEncounter();
-
-        if (isTriggered == true)
-        {
-            startBindingCountdown = true;
-            BindingCountdown();
-        }*/
     }
-
-
-    /////////////////
-    /*        if (bindOn)
-            {
-                trapTimeElapsed -= Time.deltaTime;
-
-                if (trapTimeElapsed <= 0)
-                {
-                    bindOn = false;
-                    bindRadius = 0f;
-                }
-            }*/
-    /// 
 
     private void EnableBind()
     {
@@ -93,55 +64,78 @@ public class D_Trap_Binder : MonoBehaviour
     }
 
     #region Backup:
+    //    [SerializeField] float bindValue = 0f; // enemy speed if on bind radius of trap
+    //   private bool startBindingCountdown = false;
 
-    private void CheckRangeOnEnemyEncounter()
-    {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, triggerRadius);
-        foreach (Collider collider in colliders)
+    ///
+    /*        CheckRangeOnEnemyEncounter();
+
+        if (isTriggered == true)
         {
-            if (collider.tag == "Attackers")
+            startBindingCountdown = true;
+            BindingCountdown();
+        }*/
+
+    /*        if (bindOn)
             {
-                isTriggered = true;
-                TriggerBinding();
+                trapTimeElapsed -= Time.deltaTime;
+
+                if (trapTimeElapsed <= 0)
+                {
+                    bindOn = false;
+                    bindRadius = 0f;
+                }
+            }*/
+    /// 
+
+    /*    private void CheckRangeOnEnemyEncounter()
+        {
+            Collider[] colliders = Physics.OverlapSphere(transform.position, triggerRadius);
+            foreach (Collider collider in colliders)
+            {
+                if (collider.tag == "Attackers")
+                {
+                    isTriggered = true;
+                    TriggerBinding();
+                }
             }
         }
-    }
 
-    private void TriggerBinding()
-    {
-        Collider[] enemies = Physics.OverlapSphere(transform.position, bindRadius);
-        foreach (Collider enemy in enemies)
+        private void TriggerBinding()
         {
-            if (enemy.tag == "Attackers")
+            Collider[] enemies = Physics.OverlapSphere(transform.position, bindRadius);
+            foreach (Collider enemy in enemies)
             {
-                InitiateBind(enemy.transform);
+                if (enemy.tag == "Attackers")
+                {
+                    InitiateBind(enemy.transform);
+                }
             }
         }
-    }
 
-    public void InitiateBind(Transform enemy)
-    {
-        Enemy e = enemy.GetComponent<Enemy>();
-
-        if (e != null)
+        public void InitiateBind(Transform enemy)
         {
-            e.BindingEnemy(bindValue);
-        }
-    }
+            Enemy e = enemy.GetComponent<Enemy>();
 
-    private void BindingCountdown()
-    {
-        if (startBindingCountdown)
-        {
-            bindingDuration -= Time.deltaTime;
-
-            if (bindingDuration <= 0)
+            if (e != null)
             {
-                startBindingCountdown = false;
-                Destroy(gameObject);
+                e.BindingEnemy(bindValue);
             }
         }
-    }
+
+        private void BindingCountdown()
+        {
+            if (startBindingCountdown)
+            {
+                bindingDuration -= Time.deltaTime;
+
+                if (bindingDuration <= 0)
+                {
+                    startBindingCountdown = false;
+                    Destroy(gameObject);
+                }
+            }
+        }*/
 
     #endregion
 
@@ -152,7 +146,7 @@ public class D_Trap_Binder : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, triggerRadius);
 
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, bindRadius);
+/*        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, bindRadius);*/
     }
 }

@@ -2,16 +2,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class D_Unit_Buffer : MonoBehaviour
 {
 
     [Header("Attributes")]
-
     [SerializeField] float rangeRadius = 1f;
-    // For Turrets:
-    [SerializeField] string defUnit_Tag = "Turrets";
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, rangeRadius);
+    }
+}
+
+#region TrashCode:
+// For Turrets:
+/*    [SerializeField] string defUnit_Tag = "Turrets";
     [SerializeField] string defUnit_Laser_Tag = "TurretLaser";
     [SerializeField] string defUnit_AS_Tag = "Turrets_AS";
     // For Bullets
@@ -28,38 +35,22 @@ public class D_Unit_Buffer : MonoBehaviour
     [SerializeField] float bullet_AS_DamageBonus = 25f;
     [SerializeField] float bullet_AS_Auto_DamageBonus = 25f;
     [SerializeField] float bullet_AS_SD_DamageBonus = 25f;
-    [SerializeField] float bullet_AntiShield_DamageBonus = 25f;
+    [SerializeField] float bullet_AntiShield_DamageBonus = 25f;*/
 
-    [Header("Events")]
-    [SerializeField] bool isCollision;
-    //
-    Bullet bullet;
-
-    void Start()
-    {
-        isCollision = false;    
-    }
-
-
-    void Update()
-    {
-
-    }
-
-    private void CheckRangeRadius()
-    {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, rangeRadius);
-        foreach (Collider collider in colliders)
-        {   // Turrets:
-            if (collider.CompareTag("Defenders"))
-            {
-                isCollision = true;
-            }
+/*private void CheckRangeRadius()
+{
+    Collider[] colliders = Physics.OverlapSphere(transform.position, rangeRadius);
+    foreach (Collider collider in colliders)
+    {   // Turrets:
+        if (collider.CompareTag("Defenders"))
+        {
+            isCollision = true;
         }
     }
+}*/
 
 
-    #region TurretBuffs:
+/*    
     private void InitiateBuffForTurretLaserBeamer(Transform turret_Laser)
     {
         D_Unit_Turret_LaserBeamer defunit_Laser = GetComponent<D_Unit_Turret_LaserBeamer>();
@@ -70,31 +61,20 @@ public class D_Unit_Buffer : MonoBehaviour
         }
     }
 
-    #endregion
 
-    #region ArsenalBuffs:
     private void InitiateBuffForBullets(Transform thisBullet)
     {
         Bullet defbullet = GetComponent<Bullet>();
-        
+
         if (bullet != null)
         {
             defbullet.BuffBullet(bulletDamageBonus);
         }
     }
+*/
+#endregion
 
-
-    #endregion
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, rangeRadius);
-    }
-
-}
-
-#region TrashCode:
+#region TrashCode2:
 /*private void CheckRangeRadius()
 {
     Collider[] colliders = Physics.OverlapSphere(transform.position, rangeRadius);

@@ -164,11 +164,6 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         range += bonusRangeAmount;
     }
 
-    public void BuffDefendingUnit_Damage(int bonusDamageAmount)
-    {
-        damageOverTime += bonusDamageAmount;
-    }
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
