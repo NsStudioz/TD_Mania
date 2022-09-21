@@ -18,10 +18,4 @@ public class GameOver : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // restart currently loaded scene on its index position.
     }
 
-    public void ReturnToMainMenu()
-    {
-        Debug.Log("Go to Menu");
-        //SceneManager.LoadScene(0);
-    }
-
 }
