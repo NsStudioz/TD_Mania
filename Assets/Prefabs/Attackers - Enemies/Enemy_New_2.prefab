@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4899215999690629461}
   - component: {fileID: 647195351}
   - component: {fileID: -5018902704197528434}
+  - component: {fileID: -5271390216061854994}
   m_Layer: 10
   m_Name: Enemy_New_2
   m_TagString: Attackers
@@ -134,3 +135,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathing: {fileID: 7906467158115652343, guid: cc20053064ac173429ff3bafba0b9692, type: 3}
   distanceThreshold: 0.05
+--- !u!114 &-5271390216061854994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4899215999690629466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485c42f518aa0c849b5b3141fe88ca77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBinded: 0
+  bindDelay: 10
