@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6729223994407369157}
   - component: {fileID: 6729223994407369161}
   m_Layer: 10
-  m_Name: EnemySpawner
+  m_Name: EnemySpawner_Static
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,3 +149,7 @@ MonoBehaviour:
   countDown: 2
   enemySpawnDelay: 0.5
   waveIndex: 0
+  enemiesPerWave: 0
+  EnemySpawner_Single: 0
+  EnemySpawner_Static: 1
+  EnemySpawner_Incrementer: 0
