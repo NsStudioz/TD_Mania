@@ -28,12 +28,12 @@ public class D_Trap_AntiShield : MonoBehaviour
             if(collider.tag == "EnemyShields")
             {
                 isTriggered = true;
-                ExlodeOnCollider();
+                ExplodeOnCollider();
             }
         }
     }
 
-    private void ExlodeOnCollider()
+    private void ExplodeOnCollider()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider collider in colliders)
