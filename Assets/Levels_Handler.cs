@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Levels_Handler : MonoBehaviour
 {
+    // RELATED TO LEVEL LOAD FUNCTIONALITIES:
 
     float pauseGame = 0f;
     float ResumeGame = 1f;
