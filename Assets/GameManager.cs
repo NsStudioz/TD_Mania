@@ -1,40 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-
-    public static bool GameIsOver;
+    // RESPONSIBLE FOR GAME-OVER\GAME-WON UI FUNCTIONALITY AFTER GAME-SESSION ENDS:
 
     [SerializeField] GameObject gameOverUI;
+    [SerializeField] GameObject gameWonUI;
+    [SerializeField] TMP_Text secondsSuvivedText; // after game ends.
 
     void Start()
     {
-        GameIsOver = false;
+        gameOverUI.SetActive(false);
+        gameWonUI.SetActive(false);
     }
-
 
     void Update()
     {
-        if (GameIsOver)
-            return;
-
-        if (Input.GetKeyDown("n"))
-        {
-            EndGame();
+        if (GamePlay_Manager.GetGameOver()) 
+        { 
+            SetGameOverUI();
+            secondsSuvivedText.text = GamePlay_Manager.GetSurvivalTimerResults().ToString("F2"); // ALSO CONVERT TO FLOAT WITH 2 DECIMAL POINTS.
         }
 
-        if (PlayerStats.Lives <= 0)
-        {
-            EndGame();
-        }
+        else if (GamePlay_Manager.GetGameWon()) { SetGameWonUI(); } 
     }
 
-    private void EndGame()
+    private void SetGameOverUI()
     {
-        GameIsOver = true;
         gameOverUI.SetActive(true);
+    }
+
+    private void SetGameWonUI()
+    {
+        gameWonUI.SetActive(true);
     }
 
 }
