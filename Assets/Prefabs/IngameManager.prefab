@@ -79,5 +79,5 @@ MonoBehaviour:
   healthCountText: {fileID: 0}
   TimerCountText: {fileID: 0}
   masterTimer: 0
-  masterTimerThreshold: 10
+  masterTimerThreshold: 60
   survivalTimerThreshold: 0
