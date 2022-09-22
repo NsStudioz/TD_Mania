@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 974758937459715592}
   - component: {fileID: 974758937459715593}
   - component: {fileID: 974758937459716086}
+  - component: {fileID: 1371792435}
   m_Layer: 0
   m_Name: IngameManager
   m_TagString: Untagged
@@ -28,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -45,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 0}
+  gameWonUI: {fileID: 0}
+  secondsSuvivedText: {fileID: 0}
 --- !u!114 &974758937459716086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,5 +61,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd8075ef61aa5449b602d58f56530da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startGold: 0
+  startGold: 500
   startLives: 20
+--- !u!114 &1371792435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974758937459715595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee90de517c4ae04eaf13df3eec1230e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GoldCountText: {fileID: 0}
+  healthCountText: {fileID: 0}
+  TimerCountText: {fileID: 0}
+  masterTimer: 0
+  masterTimerThreshold: 10
+  survivalTimerThreshold: 0
