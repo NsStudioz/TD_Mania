@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  explosionRadius: 0
+  explosionRadius: 0.75
   damage: 50
   useAntiShieldBullets: 0
   shieldTag: EnemyShields
