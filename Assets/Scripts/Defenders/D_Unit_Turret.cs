@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Pool;
+//using UnityEngine.Pool;
 
 public class D_Unit_Turret : MonoBehaviour
 {
@@ -24,10 +24,26 @@ public class D_Unit_Turret : MonoBehaviour
     [Header("Bullet Setup")]
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform firingPosition;
-    // Object Pooling:
-    private IObjectPool<Bullet> bulletPool;
-    [SerializeField] Bullet bulletPrefab_New;
 
+    [Header("Effects")]
+    [SerializeField] ParticleSystem muzzleEFX  = null;
+
+    [Header("Animations")]
+    [SerializeField] Animator animController = null;
+    [SerializeField] string animation_IdleName;
+    [SerializeField] string animation_FireName;
+    [SerializeField] string animation_BuildName;
+    [SerializeField] string animation_RemoveName;
+    [SerializeField] bool turretReady = false;
+
+    /*    [Header("Object Pooling")] // Object Pooling:
+        private IObjectPool<Bullet> bulletPool;
+        [SerializeField] Bullet bulletPrefab_New;*/
+
+    private void OnEnable()
+    {
+        animController.Play(animation_BuildName);
+    }
 
     private void Awake()
     {
@@ -41,27 +57,29 @@ public class D_Unit_Turret : MonoBehaviour
 
     void Update()
     {
-        if (target == null)
+        if (turretReady)
         {
-            return;
-        }
-
-        if (isAntiShield)
-        {
-            if (!targetEnemy.hasShield)
+            if (target == null)
             {
                 return;
             }
-        }
-        else if (!isAntiShield)
-        {
-            if (targetEnemy.hasShield || targetEnemy.isProtected)
-            {
-                return;
-            }
-        }
 
-        LockOnTarget();
+            if (isAntiShield)
+            {
+                if (!targetEnemy.hasShield)
+                {
+                    return;
+                }
+            }
+            else if (!isAntiShield)
+            {
+                if (targetEnemy.hasShield || targetEnemy.isProtected)
+                {
+                    return;
+                }
+            }
+
+            LockOnTarget();
 
             if (fireCountDown <= 0f)
             {
@@ -72,6 +90,7 @@ public class D_Unit_Turret : MonoBehaviour
             }
 
             fireCountDown -= Time.deltaTime;
+        }
     }
 
     private void LockOnTarget()
@@ -109,12 +128,13 @@ public class D_Unit_Turret : MonoBehaviour
             targetEnemy = nearestEnemy.GetComponent<Enemy>();
         }
         else { target = null; }
-
     }
 
     public void Shoot()
     {
         GameObject bulletGO = Instantiate(bulletPrefab, firingPosition.position, firingPosition.rotation);
+        muzzleEFX.Play();
+        animController.Play(animation_FireName);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if (bullet != null)
@@ -127,6 +147,12 @@ public class D_Unit_Turret : MonoBehaviour
     {
         range += bonusAmount;
     }
+
+    public void EnableTurret()
+    {
+        turretReady = true;
+    }
+
 
     private void OnDrawGizmosSelected()
     {
