@@ -339,6 +339,7 @@ GameObject:
   - component: {fileID: 723146766117936167}
   - component: {fileID: 817122321883492821}
   - component: {fileID: 5179687307088045088}
+  - component: {fileID: 8362301012828101364}
   m_Layer: 0
   m_Name: D_Unit_Turret_MissileLauncher_New
   m_TagString: Untagged
@@ -412,6 +413,19 @@ MonoBehaviour:
   animation_BuildName: Missile_Install
   animation_RemoveName: Missile_Remove
   turretReady: 0
+--- !u!114 &8362301012828101364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721280601622988769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89cecf871d4275498a69ed65eb2b178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBuffed: 0
 --- !u!1 &721329502858089901
 GameObject:
   m_ObjectHideFlags: 0

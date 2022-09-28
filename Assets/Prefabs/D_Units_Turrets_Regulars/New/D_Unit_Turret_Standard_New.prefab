@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 3949107618600223962}
   - component: {fileID: 4005221271698252204}
   - component: {fileID: 4005221271698252195}
+  - component: {fileID: 4816111004211021362}
   m_Layer: 0
   m_Name: D_Unit_Turret_Standard_New
   m_TagString: Untagged
@@ -395,6 +396,19 @@ MonoBehaviour:
   animation_BuildName: FattyMortar_Install
   animation_RemoveName: FattyMortar_Remove
   turretReady: 0
+--- !u!114 &4816111004211021362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946881031607588978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89cecf871d4275498a69ed65eb2b178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBuffed: 0
 --- !u!1 &3947129372121659980
 GameObject:
   m_ObjectHideFlags: 0
