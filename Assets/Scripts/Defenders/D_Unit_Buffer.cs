@@ -9,6 +9,25 @@ public class D_Unit_Buffer : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] float rangeRadius = 1f;
 
+    [Header("Animations")]
+    [SerializeField] Animator animController = null;
+    [SerializeField] string animation_IdleName;
+    [SerializeField] string animation_ActivateName;
+    [SerializeField] string animation_BuildName;
+    [SerializeField] string animation_RemoveName;
+    [SerializeField] bool turretReady = false;
+
+    private void OnEnable()
+    {
+        animController.Play(animation_BuildName);
+    }
+
+    public void EnableTurret()
+    {
+        turretReady = true;
+    }
+
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
