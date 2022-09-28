@@ -321,8 +321,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3949107618600223962}
   - component: {fileID: 4005221271698252204}
+  - component: {fileID: -5439993304094025051}
   - component: {fileID: 4005221271698252195}
   - component: {fileID: 4816111004211021362}
+  - component: {fileID: 7024660984280579750}
   m_Layer: 0
   m_Name: D_Unit_Turret_Standard_New
   m_TagString: Untagged
@@ -366,6 +368,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &-5439993304094025051
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946881031607588978}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &4005221271698252195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +427,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBuffed: 0
+--- !u!65 &7024660984280579750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946881031607588978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 3, z: 3.9}
+  m_Center: {x: 0, y: 1.25, z: 0.3}
 --- !u!1 &3947129372121659980
 GameObject:
   m_ObjectHideFlags: 0
