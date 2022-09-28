@@ -16,6 +16,18 @@ public class D_Trap_Binder : MonoBehaviour
     [SerializeField] float trapTimeElapsed;
     [SerializeField] float trapTimeThreshold = 2f;
 
+    [Header("Animations")]
+    [SerializeField] Animator animController = null;
+    [SerializeField] string animation_IdleName;
+    [SerializeField] string animation_ActivateName;
+    [SerializeField] string animation_BuildName;
+    [SerializeField] string animation_RemoveName;
+    [SerializeField] bool trapReady = false;
+
+    private void OnEnable()
+    {
+        animController.Play(animation_BuildName);
+    }
 
     private void Start()
     {
@@ -27,27 +39,31 @@ public class D_Trap_Binder : MonoBehaviour
 
     private void Update()
     {
-        EnableBind();
-
-        if (sphereCol.enabled)
+        if (trapReady)
         {
-            trapTimeElapsed -= Time.deltaTime;
+            EnableBind();
 
-            if (trapTimeElapsed <= 0f)
+            if (sphereCol.enabled)
             {
-                sphereCol.enabled = false;
+                trapTimeElapsed -= Time.deltaTime;
+
+                if (trapTimeElapsed <= 0f)
+                {
+                    sphereCol.enabled = false;
+                }
+            }
+
+            if (isTriggered)
+            {
+                bindingDuration -= Time.deltaTime;
+
+                if (bindingDuration <= 0f)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
 
-        if (isTriggered)
-        {
-            bindingDuration -= Time.deltaTime;
-
-            if (bindingDuration <= 0f)
-            {
-                Destroy(gameObject);
-            }  
-        }
     }
 
     private void EnableBind()
@@ -61,6 +77,11 @@ public class D_Trap_Binder : MonoBehaviour
                 isTriggered = true;
             }
         }
+    }
+
+    public void EnableTrap()
+    {
+        trapReady = true;
     }
 
     #region Backup:

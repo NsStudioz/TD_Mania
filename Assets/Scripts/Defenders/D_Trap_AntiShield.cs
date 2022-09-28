@@ -10,13 +10,29 @@ public class D_Trap_AntiShield : MonoBehaviour
     [SerializeField] bool Explode;
     [SerializeField] float explosionDamage = 100f;
 
+    [Header("Animations")]
+    [SerializeField] Animator animController = null;
+    [SerializeField] string animation_IdleName;
+    [SerializeField] string animation_ActivateName;
+    [SerializeField] string animation_BuildName;
+    [SerializeField] string animation_RemoveName;
+    [SerializeField] bool trapReady = false;
+
+    private void OnEnable()
+    {
+        animController.Play(animation_BuildName);
+    }
+
     void Update()
     {
-        CheckRangeOnEnemyEncounter();
-
-        if (isTriggered)
+        if (trapReady)
         {
-            Destroy(gameObject);
+            CheckRangeOnEnemyEncounter();
+
+            if (isTriggered)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -53,6 +69,11 @@ public class D_Trap_AntiShield : MonoBehaviour
         {
             eS.TakeShieldDamage(explosionDamage);
         }
+    }
+
+    public void EnableTrap()
+    {
+        trapReady = true;
     }
 
     private void OnDrawGizmos()

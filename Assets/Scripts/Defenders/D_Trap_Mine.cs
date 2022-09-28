@@ -11,13 +11,29 @@ public class D_Trap_Mine : MonoBehaviour
     [SerializeField] float triggerRadius = 0.5f;
     [SerializeField] bool isTriggered = false;
 
+    [Header("Animations")]
+    [SerializeField] Animator animController = null;
+    [SerializeField] string animation_IdleName;
+    [SerializeField] string animation_ActivateName;
+    [SerializeField] string animation_BuildName;
+    [SerializeField] string animation_RemoveName;
+    [SerializeField] bool trapReady = false;
+
+    private void OnEnable()
+    {
+        animController.Play(animation_BuildName);
+    }
+
     void Update()
     {
-        CheckRangeOnEnemyEncounter();
-
-        if (isTriggered == true)
+        if (trapReady)
         {
-            Destroy(gameObject);
+            CheckRangeOnEnemyEncounter();
+
+            if (isTriggered == true)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -54,6 +70,11 @@ public class D_Trap_Mine : MonoBehaviour
         {
             e.TakeDamage(explosionDamage);
         }
+    }
+
+    public void EnableTrap()
+    {
+        trapReady = true;
     }
 
     private void OnDrawGizmosSelected()
