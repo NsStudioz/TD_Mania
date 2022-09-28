@@ -338,10 +338,10 @@ GameObject:
   m_Component:
   - component: {fileID: 723146766117936167}
   - component: {fileID: 817122321883492821}
-  - component: {fileID: 5179687307088045088}
-  - component: {fileID: 8362301012828101364}
   - component: {fileID: 4553678505136660539}
   - component: {fileID: -2009374366340197382}
+  - component: {fileID: 5179687307088045088}
+  - component: {fileID: 8362301012828101364}
   m_Layer: 0
   m_Name: D_Unit_Turret_MissileLauncher_New
   m_TagString: Untagged
@@ -385,6 +385,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &4553678505136660539
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721280601622988769}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &-2009374366340197382
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721280601622988769}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.25, y: 2.25, z: 2.3}
+  m_Center: {x: 0.05, y: 1, z: 0}
 --- !u!114 &5179687307088045088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,35 +457,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBuffed: 0
---- !u!54 &4553678505136660539
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721280601622988769}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &-2009374366340197382
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721280601622988769}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.25, y: 2.25, z: 2.3}
-  m_Center: {x: 0.05, y: 1, z: 0}
 --- !u!1 &721329502858089901
 GameObject:
   m_ObjectHideFlags: 0

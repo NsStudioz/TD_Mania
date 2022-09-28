@@ -5051,10 +5051,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8107771146473767601}
   - component: {fileID: 8203462570733292703}
-  - component: {fileID: 8203462570733292704}
-  - component: {fileID: 2304594306103374222}
   - component: {fileID: 5781169863029529765}
   - component: {fileID: 535106430750340726}
+  - component: {fileID: 8203462570733292704}
+  - component: {fileID: 2304594306103374222}
   m_Layer: 0
   m_Name: D_Unit_Turret_Standard_Auto_New
   m_TagString: Untagged
@@ -5098,6 +5098,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &5781169863029529765
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8110588725520853881}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &535106430750340726
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8110588725520853881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.75, y: 2.5, z: 4.5}
+  m_Center: {x: 0, y: 1, z: 0.7}
 --- !u!114 &8203462570733292704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5141,35 +5170,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBuffed: 0
---- !u!54 &5781169863029529765
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8110588725520853881}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &535106430750340726
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8110588725520853881}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.75, y: 2.5, z: 4.5}
-  m_Center: {x: 0, y: 1, z: 0.7}
 --- !u!1 &8110603159272662499
 GameObject:
   m_ObjectHideFlags: 0
