@@ -4,11 +4,10 @@ public class D_Trap_AntiShield : MonoBehaviour
 {
 
     [Header("Attributes")]
-    [SerializeField] float triggerRadius;
     [SerializeField] float explosionRadius;
-    [SerializeField] bool isTriggered;
-    [SerializeField] bool Explode;
     [SerializeField] float explosionDamage = 100f;
+    [SerializeField] float triggerRadius;
+    [SerializeField] bool isTriggered;
 
     [Header("Animations")]
     [SerializeField] Animator animController = null;
