@@ -6,7 +6,7 @@ using UnityEngine;
 public class D_Trap_Binder : MonoBehaviour
 {
 
-    [SerializeField] float bindRadius = 1f;
+    //[SerializeField] float bindRadius = 1f;
     [SerializeField] float bindingDuration = 2f;
     [SerializeField] float triggerRadius = 0.5f;
     [SerializeField] bool isTriggered;
@@ -166,8 +166,5 @@ public class D_Trap_Binder : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, triggerRadius);
-
-/*        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, bindRadius);*/
     }
 }
