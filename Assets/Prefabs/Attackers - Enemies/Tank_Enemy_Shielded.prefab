@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3047548443790021801}
   - component: {fileID: 4262070008918730023}
   - component: {fileID: 596613904926299339}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TankFree_Wheel_b_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 5854461570942787259}
   - component: {fileID: 6337709931089300195}
   - component: {fileID: 8276950109298859646}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TankFree_Wheel_f_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 7454853795686192071}
   - component: {fileID: 1059367670469370364}
   - component: {fileID: 2663570550724768190}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TankFree_Wheel_b_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 1131088857865157847}
   - component: {fileID: 1131088857865157846}
   - component: {fileID: 1131088857865157845}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tank_Enemy_Shielded
   m_TagString: Attackers
   m_Icon: {fileID: 0}
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ae25c3a1dc91b44a1938214b4f369e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathing: {fileID: 7906467158115652343, guid: cc20053064ac173429ff3bafba0b9692, type: 3}
+  pathing: {fileID: 7081334602081640374, guid: fd4bd6db4afca5f458a7a7219abbbbe9, type: 3}
   distanceThreshold: 0.1
 --- !u!114 &1131088857865157845
 MonoBehaviour:
@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 8712026523043235902}
   - component: {fileID: 8559007787787244797}
   - component: {fileID: 3729732879534887386}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TankFree_Wheel_f_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -648,7 +648,7 @@ GameObject:
   - component: {fileID: 5311123200870730998}
   - component: {fileID: 7278489048320689007}
   - component: {fileID: 1315918622239189981}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TankFree_Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}

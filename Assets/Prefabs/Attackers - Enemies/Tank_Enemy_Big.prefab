@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4589844579273640257}
   - component: {fileID: 1370468690102716120}
   - component: {fileID: 7225344149787291242}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TankFree_Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1998958069567314151}
   - component: {fileID: 2180744278703586299}
   - component: {fileID: 59661040518601421}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TankFree_Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 1072372159602609545}
   - component: {fileID: 54382972794278218}
   - component: {fileID: 5027193043986568301}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TankFree_Wheel_f_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 8769896504934775136}
   - component: {fileID: 8769896504934775137}
   - component: {fileID: 8769896504934775138}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tank_Enemy_Big
   m_TagString: Attackers
   m_Icon: {fileID: 0}
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 1257198351271515760}
   - component: {fileID: 8697893930932102219}
   - component: {fileID: 5976389368783565833}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TankFree_Wheel_b_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 2826493637999696652}
   - component: {fileID: 2446176565691469652}
   - component: {fileID: 349912427565177801}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TankFree_Wheel_f_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 6651130637854036254}
   - component: {fileID: 5558404209119174800}
   - component: {fileID: 9097579203772486012}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TankFree_Wheel_b_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
