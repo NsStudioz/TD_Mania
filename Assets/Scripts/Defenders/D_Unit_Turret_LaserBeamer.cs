@@ -10,13 +10,13 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     [SerializeField] string enemyTag = "Attackers";
     [SerializeField] public float range = 15f;
     [SerializeField] float fireRate = 1f;
-    [SerializeField] float fireCountDown = 0f;
+    //[SerializeField] float fireCountDown = 0f;
 
     [Header("Unit Rotation")]
     [SerializeField] float turnSpeed = 10f;
     [SerializeField] Transform partToRotate;
     // Bullet setup:
-    [SerializeField] GameObject bulletPrefab;
+    //[SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform firingPosition;
 
     [Header("Unit Laser Turret")]
@@ -27,34 +27,31 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     [SerializeField] int damageOverTime = 30;
     [SerializeField] float laserHitSlowPct = .5f;
 
+    [Header("Animations")]
+    [SerializeField] Animator animController = null;
+    [SerializeField] string animation_IdleName;
+    [SerializeField] string animation_FireName;
+    [SerializeField] string animation_BuildName;
+    [SerializeField] string animation_RemoveName;
+    [SerializeField] bool turretReady = false;
+
+    private void OnEnable()
+    {
+        animController.Play(animation_BuildName);
+    }
 
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        lineRenderer.enabled = false;
+        laserImpactLight.enabled = false;
     }
-
 
     void Update()
     {
-        if (target == null)
+        if (turretReady)
         {
-            if (useLaser)
-            {
-                if (lineRenderer.enabled)
-                {
-                    lineRenderer.enabled = false;
-                    laserImpactLight.enabled = false;
-                    laserImpactEffects.Stop();
-                }
-
-            }
-
-            return;
-        }
-
-        if (target != null)
-        {
-            if (targetEnemy.hasShield || targetEnemy.isProtected)
+            if (target == null)
             {
                 if (useLaser)
                 {
@@ -69,23 +66,42 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
 
                 return;
             }
-        }
 
-        LockOnTarget();
-
-        if (useLaser)
-        {
-            UseTheLaser();
-        }
-        else
-        {
-            if (fireCountDown <= 0f)
+            if (target != null)
             {
-                Shoot();
-                fireCountDown = 1f / fireRate;
+                if (targetEnemy.hasShield || targetEnemy.isProtected)
+                {
+                    if (useLaser)
+                    {
+                        if (lineRenderer.enabled)
+                        {
+                            lineRenderer.enabled = false;
+                            laserImpactLight.enabled = false;
+                            laserImpactEffects.Stop();
+                        }
+
+                    }
+
+                    return;
+                }
             }
 
-            fireCountDown -= Time.deltaTime;
+            LockOnTarget();
+
+            if (useLaser)
+            {
+                UseTheLaser();
+            }
+            /*        else
+                    {
+                        if (fireCountDown <= 0f)
+                        {
+                            Shoot();
+                            fireCountDown = 1f / fireRate;
+                        }
+
+                        fireCountDown -= Time.deltaTime;
+                    }*/
         }
     }
 
@@ -123,7 +139,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
-    private void Shoot()
+/*    private void Shoot()
     {
         GameObject bulletGO = Instantiate(bulletPrefab, firingPosition.position, firingPosition.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
@@ -132,7 +148,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         {
             bullet.SeekTarget(target);
         }
-    }
+    }*/
 
     void UpdateTarget()
     {
@@ -162,6 +178,11 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     public void BuffDefendingUnit_Range(float bonusRangeAmount)
     {
         range += bonusRangeAmount;
+    }
+
+    public void EnableTurret()
+    {
+        turretReady = true;
     }
 
     private void OnDrawGizmosSelected()
