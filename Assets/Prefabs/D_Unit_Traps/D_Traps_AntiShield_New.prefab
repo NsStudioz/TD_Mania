@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5711126927458798053}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LineOfSight_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 696351345929895411}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 696081869902237425}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 706892396591130583}
   - component: {fileID: 714824811623622105}
   - component: {fileID: 642329123820371501}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MineB_Tellermine4300
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 696272981621831389}
   - component: {fileID: 826886380889054845}
   - component: {fileID: 827151187027307087}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff_FireDust00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5094,9 +5094,9 @@ GameObject:
   - component: {fileID: 642548607155118899}
   - component: {fileID: 701948649849538042}
   - component: {fileID: 701948649849538043}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: D_Traps_AntiShield_New
-  m_TagString: Untagged
+  m_TagString: Traps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5185,7 +5185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 699896895752935757}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff_Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5219,7 +5219,7 @@ GameObject:
   - component: {fileID: 700002531844800655}
   - component: {fileID: 827293222295699823}
   - component: {fileID: 828091278765202587}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff_DotGlowRed00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10043,7 +10043,7 @@ GameObject:
   - component: {fileID: 6289558172581675618}
   - component: {fileID: 6289558172581675616}
   - component: {fileID: 6289558172581675619}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10124,7 +10124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5456294548151612224}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LineOfSight_Explode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10158,7 +10158,7 @@ GameObject:
   - component: {fileID: 8996163330661221898}
   - component: {fileID: 5322136686998010700}
   - component: {fileID: 5197822637631240830}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}

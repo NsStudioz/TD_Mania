@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7670258964822984797}
   - component: {fileID: 7641157047176768439}
   - component: {fileID: 7649731437502983599}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Crusher_Log00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7668745696760585755}
   - component: {fileID: 7549141539697094747}
   - component: {fileID: 7546349224227588173}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff_FireDust00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4974,7 +4974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7670434850944457045}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5009,7 +5009,7 @@ GameObject:
   - component: {fileID: 7670490430258110477}
   - component: {fileID: 7641114623707812981}
   - component: {fileID: 7651431244851242377}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrusherB_Cilinder00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5092,7 +5092,7 @@ GameObject:
   - component: {fileID: 7669027724034129299}
   - component: {fileID: 7641387538889989867}
   - component: {fileID: 7651317004411915125}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrusherB_Base00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5175,9 +5175,9 @@ GameObject:
   - component: {fileID: 7668508666949287509}
   - component: {fileID: 7723585786743402081}
   - component: {fileID: 7672538353692473526}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: D_Traps_GoldGenerator_New
-  m_TagString: Untagged
+  m_TagString: Traps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5248,7 +5248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7670703568802812717}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5280,7 +5280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7670734893916471733}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5314,7 +5314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7670728271151149101}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

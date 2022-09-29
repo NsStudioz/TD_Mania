@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4428025059471275591}
   - component: {fileID: 4428025059471275589}
   - component: {fileID: 4428025059471275590}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6413231125546027483}
   - component: {fileID: 7783506885873005725}
   - component: {fileID: 7924916416844477871}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7953413721163398289}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LineOfSight_Explode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2700612968293039552}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LineOfSight_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7955917512237090733}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 7955837418849984833}
   - component: {fileID: 7834213471238827693}
   - component: {fileID: 7835503960494987453}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff_FireDust00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5153,7 +5153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7955730908140072865}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5188,7 +5188,7 @@ GameObject:
   - component: {fileID: 8010525320744916591}
   - component: {fileID: 7959830813905769322}
   - component: {fileID: 7959830813905769325}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: D_Traps_Binder_New
   m_TagString: Binder
   m_Icon: {fileID: 0}
@@ -5282,7 +5282,7 @@ GameObject:
   - component: {fileID: 7959643680506005935}
   - component: {fileID: 7834089676678825527}
   - component: {fileID: 7835603268279164039}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff_DotGlowYellow00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10107,7 +10107,7 @@ GameObject:
   - component: {fileID: 7930699541768455983}
   - component: {fileID: 7938802533481399787}
   - component: {fileID: 8010870259631562175}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MineB_M1AntiTankMine00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10208,7 +10208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7960007888337101399}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff_Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}

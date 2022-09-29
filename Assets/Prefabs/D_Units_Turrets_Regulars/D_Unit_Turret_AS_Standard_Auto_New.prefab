@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8012551479419082454}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LineOfSight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5489966056201440545}
   - component: {fileID: 5497020890732913731}
   - component: {fileID: 5507046089459684079}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CannonB_Guard00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5489743785466391059}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5489825231421637637}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5489843385535112415}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5490408782971109515}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: -5707270010679281080}
   - component: {fileID: 5579095471067586986}
   - component: {fileID: 1408853259907415130}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: D_Unit_Turret_AS_Standard_Auto_New
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5490146398858211063}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Firearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 5490290294952925993}
   - component: {fileID: 5497441149644182559}
   - component: {fileID: 5507313197091734173}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CannonB_Plate00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 5490288898134331339}
   - component: {fileID: 5496773287010081919}
   - component: {fileID: 5507282410812144697}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CannonB_Barrel02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5489441443455560599}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 5489443778737254355}
   - component: {fileID: 5692350617168084043}
   - component: {fileID: 5691551473774349003}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FireFx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5445,7 +5445,7 @@ GameObject:
   - component: {fileID: 8591545811936304465}
   - component: {fileID: 8591545811936304467}
   - component: {fileID: 8591545811936304464}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}

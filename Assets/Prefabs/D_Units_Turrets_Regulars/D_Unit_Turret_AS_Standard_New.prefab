@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3145206330464547873}
   - component: {fileID: 3145206330464547875}
   - component: {fileID: 3145206330464547872}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5285206495090051758}
   - component: {fileID: 5278090169483303724}
   - component: {fileID: 5267757161940845572}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MortarB_Plate00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 5280066270337445292}
   - component: {fileID: 5277895064642366944}
   - component: {fileID: 5267906910816486660}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MortarB_Barrel02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5280114925822924886}
   - component: {fileID: 7799814103359649369}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5284997010484664506}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5285012022537556620}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5285074485288591972}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5280445766599491548}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Firearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 5280013028102229642}
   - component: {fileID: 5443216955502912090}
   - component: {fileID: 5444463494380885476}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FireFx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5266,7 +5266,7 @@ GameObject:
   - component: {fileID: 5280259828845770810}
   - component: {fileID: 5278211319081824936}
   - component: {fileID: 5268307678717319232}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MortarB_Stand00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5347,7 +5347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5280422843452619768}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5384,7 +5384,7 @@ GameObject:
   - component: {fileID: 8971626458331266276}
   - component: {fileID: 1147592632091284710}
   - component: {fileID: -5034686251052843161}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: D_Unit_Turret_AS_Standard_New
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5509,7 +5509,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3724199837522821030}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LineOfSight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

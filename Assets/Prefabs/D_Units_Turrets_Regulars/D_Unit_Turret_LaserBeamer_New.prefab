@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3011667429232528797}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3011667429372829707}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 6405310217307991359}
   - component: {fileID: 6405310217307991345}
   - component: {fileID: 6405310217307991344}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: GlowEFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4888,7 +4888,7 @@ GameObject:
   - component: {fileID: 6405310218438106923}
   - component: {fileID: 6405310218438106925}
   - component: {fileID: 6405310218438106924}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: LaserImpactEFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9701,7 +9701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6405310218450428491}
   - component: {fileID: 6405310218450428492}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9794,7 +9794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6405310218526932997}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9827,7 +9827,7 @@ GameObject:
   - component: {fileID: 7505062302764716018}
   - component: {fileID: 7676479499536471932}
   - component: {fileID: 7706420457183578712}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff_Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14710,7 +14710,7 @@ GameObject:
   - component: {fileID: 7505044502418342566}
   - component: {fileID: 7707068659296579026}
   - component: {fileID: 7706280800661579772}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff_Pulse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19534,7 +19534,7 @@ GameObject:
   - component: {fileID: 7505020756844803200}
   - component: {fileID: 7512642336010288480}
   - component: {fileID: 7521796829133881410}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlasmaB_Plate00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19617,7 +19617,7 @@ GameObject:
   - component: {fileID: 7510130497278541768}
   - component: {fileID: 7707377601209267474}
   - component: {fileID: 7706263088603551732}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Glow (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24441,7 +24441,7 @@ GameObject:
   - component: {fileID: 7509994055260197354}
   - component: {fileID: 7512719319240368828}
   - component: {fileID: 7522099269799736958}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlasmaB_Barrel01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24522,7 +24522,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7510059597049043604}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24557,7 +24557,7 @@ GameObject:
   - component: {fileID: 7510135927861862804}
   - component: {fileID: 7707546889569192886}
   - component: {fileID: 7706372393096020454}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29379,7 +29379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7505119700374831000}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29412,7 +29412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7504781514627031002}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29446,7 +29446,7 @@ GameObject:
   - component: {fileID: 7505185897917044958}
   - component: {fileID: 7707493176564287800}
   - component: {fileID: 7706886502254398478}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff_Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34268,7 +34268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7505137409596048294}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34300,7 +34300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7509864641153624170}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Firearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34334,7 +34334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7510134572223333350}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff_Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34375,7 +34375,7 @@ GameObject:
   - component: {fileID: 7505029920153808718}
   - component: {fileID: 7707258823714256362}
   - component: {fileID: 7706283536559717714}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Glow (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39203,7 +39203,7 @@ GameObject:
   - component: {fileID: 7508541911011180495}
   - component: {fileID: 7508541911011180492}
   - component: {fileID: 7508541911011180493}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: D_Unit_Turret_LaserBeamer_New
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39432,7 +39432,7 @@ GameObject:
   - component: {fileID: 7504818772029519890}
   - component: {fileID: 7707596806240735650}
   - component: {fileID: 7706600489813902050}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Glow (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44256,7 +44256,7 @@ GameObject:
   - component: {fileID: 7504775691507276328}
   - component: {fileID: 7512598805486167818}
   - component: {fileID: 7522761800294456882}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlasmaB_Stand00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44337,7 +44337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7510226164406278604}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44371,7 +44371,7 @@ GameObject:
   - component: {fileID: 7510089311665008540}
   - component: {fileID: 7707131738921882758}
   - component: {fileID: 7707045023912992340}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eff_WindLine00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49253,7 +49253,7 @@ GameObject:
   - component: {fileID: 7509788759415359994}
   - component: {fileID: 7707473457025954542}
   - component: {fileID: 7706765443594494906}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Glow (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54077,7 +54077,7 @@ GameObject:
   - component: {fileID: 7505189156143935972}
   - component: {fileID: 7707850250711875604}
   - component: {fileID: 7706423401028897606}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Glow (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
