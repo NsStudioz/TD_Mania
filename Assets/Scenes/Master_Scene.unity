@@ -290,8 +290,8 @@ MonoBehaviour:
   countDown: 2
   upcomingWaveDelay: 15
   enemySpawnDelay: 1
-  EnemySpawner_Single: 0
-  EnemySpawner_Static: 1
+  EnemySpawner_Single: 1
+  EnemySpawner_Static: 0
   EnemySpawner_Incrementer: 0
 --- !u!136 &142402225
 CapsuleCollider:
@@ -976,10 +976,6 @@ PrefabInstance:
     - target: {fileID: 5230249739191897228, guid: ad671902d97484f45be58c72d34220ef, type: 3}
       propertyPath: m_Name
       value: Node (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5230249739191897228, guid: ad671902d97484f45be58c72d34220ef, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad671902d97484f45be58c72d34220ef, type: 3}
