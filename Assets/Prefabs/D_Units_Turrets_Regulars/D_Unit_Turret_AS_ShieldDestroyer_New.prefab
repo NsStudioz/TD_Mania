@@ -414,6 +414,7 @@ MonoBehaviour:
   animation_BuildName: Missile_Install
   animation_RemoveName: Missile_Remove
   turretReady: 0
+  lineofSight: {fileID: 8048302819262168330}
 --- !u!114 &4199497230658012212
 MonoBehaviour:
   m_ObjectHideFlags: 0
