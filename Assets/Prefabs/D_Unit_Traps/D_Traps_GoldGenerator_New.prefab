@@ -5230,8 +5230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2183f88e579ea254993e50baec7e71b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayTimeThreshold: 5
-  upgradeable_DelayTime: 5
+  delayTimeThreshold: 10
+  upgradeable_DelayTime: 10
   goldToEarn: 10
   animController: {fileID: 7723585786743402081}
   animation_IdleName: Crusher_Idle
