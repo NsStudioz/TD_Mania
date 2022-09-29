@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7442109365560095971}
   - component: {fileID: 1964611568766398879}
   m_Layer: 0
-  m_Name: Bullet_Pulse
+  m_Name: Plasma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
