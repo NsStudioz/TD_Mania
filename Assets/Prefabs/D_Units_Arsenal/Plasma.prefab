@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7780541282174191931}
   - component: {fileID: 7442109365560095971}
   - component: {fileID: 1964611568766398879}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plasma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4460987784553140}
   - component: {fileID: 198622541697181620}
   - component: {fileID: 199153290080664752}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eff_Pulse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4922,7 +4922,7 @@ GameObject:
   - component: {fileID: 4360707070967470}
   - component: {fileID: 198628281521288160}
   - component: {fileID: 199792315145532248}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eff_Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9747,7 +9747,7 @@ GameObject:
   - component: {fileID: 4713298942524834}
   - component: {fileID: 198361280322650336}
   - component: {fileID: 199507405143850800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eff_Pulse (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14573,7 +14573,7 @@ GameObject:
   - component: {fileID: 33554881266450452}
   - component: {fileID: 65163163650073800}
   - component: {fileID: 23237678844469692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
