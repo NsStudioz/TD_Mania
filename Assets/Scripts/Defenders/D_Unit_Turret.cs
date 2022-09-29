@@ -36,6 +36,7 @@ public class D_Unit_Turret : MonoBehaviour
     [SerializeField] string animation_RemoveName;
     [SerializeField] bool turretReady = false;
 
+    [SerializeField] GameObject lineofSight = null;
     /*    [Header("Object Pooling")] // Object Pooling:
         private IObjectPool<Bullet> bulletPool;
         [SerializeField] Bullet bulletPrefab_New;*/
@@ -47,6 +48,10 @@ public class D_Unit_Turret : MonoBehaviour
 
     private void Awake()
     {
+        if (lineofSight != null)
+        {
+            lineofSight.SetActive(false);
+        }
         //bulletPool = new ObjectPool<Bullet>(CreateBullet, OnGet);
     }
 
@@ -153,13 +158,28 @@ public class D_Unit_Turret : MonoBehaviour
         turretReady = true;
     }
 
+    public void EnableLOS()
+    {
+        if(lineofSight != null)
+        {
+            lineofSight.SetActive(true);
+        }
+    }
+
+    public void DisableLOS()
+    {
+        if (lineofSight != null)
+        {
+            lineofSight.SetActive(false);
+        }
+    }
+
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
-
     //
     // FOR OBJECT POOLING:
     //
