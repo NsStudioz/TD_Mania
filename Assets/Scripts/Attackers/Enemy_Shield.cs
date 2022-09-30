@@ -1,9 +1,13 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Shield : MonoBehaviour
 {
     [SerializeField] float shieldHealth;
     public float range = 1f;
+    private float sizeChangeDelay = 0.05f;
 
     Enemy enemy;
     SphereCollider shieldCollider;
@@ -39,6 +43,21 @@ public class Enemy_Shield : MonoBehaviour
         //Destroy(gameObject);
     }
 
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("AS_Bullet") || collider.CompareTag("AS_Auto_Bullet") || collider.CompareTag("SD_Bullet"))
+        {
+            StartCoroutine(ShieldHitEffect());
+        }
+    }
+
+    private IEnumerator ShieldHitEffect()
+    {
+        transform.localScale = new Vector3(9.75f, 9.75f, 9.75f);
+        yield return new WaitForSecondsRealtime(sizeChangeDelay);
+        transform.localScale = new Vector3(10f, 10f, 10f);
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
@@ -48,14 +67,7 @@ public class Enemy_Shield : MonoBehaviour
 
 
 
-/*    private void OnTriggerEnter(Collider collider)
-    {
-        if (collider.tag == "AS_Bullet")
-        {
-            TakeShieldDamage(50);
-            Destroy(collider.gameObject);
-        }  
-    }*/
+
 
 
 
