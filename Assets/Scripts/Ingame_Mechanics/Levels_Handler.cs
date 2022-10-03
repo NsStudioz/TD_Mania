@@ -6,9 +6,8 @@ using UnityEngine.SceneManagement;
 public class Levels_Handler : MonoBehaviour
 {
     // RELATED TO LEVEL LOAD FUNCTIONALITIES:
-
-    float pauseGame = 0f;
-    float ResumeGame = 1f;
+    const float pauseGame = 0f;
+    const float ResumeGame = 1f;
 
     public void Retry() // restart loaded scene
     {
