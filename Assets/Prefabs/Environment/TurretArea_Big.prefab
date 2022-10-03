@@ -120,7 +120,7 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   isDefUnitUpgraded: 0
-  unitPositionOffset: {x: 0, y: 0.1, z: 0}
+  unitPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &4467893624271942737
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   isDefUnitUpgraded: 0
-  unitPositionOffset: {x: 0, y: 0.1, z: 0}
+  unitPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &8608247954684131944
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   isDefUnitUpgraded: 0
-  unitPositionOffset: {x: 0, y: 0.1, z: 0}
+  unitPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &8608247954809997289
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,7 +875,7 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   isDefUnitUpgraded: 0
-  unitPositionOffset: {x: 0, y: 0.1, z: 0}
+  unitPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &8608247955788012397
 GameObject:
   m_ObjectHideFlags: 0
