@@ -120,4 +120,4 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   isDefUnitUpgraded: 0
-  unitPositionOffset: {x: 0, y: 0.1, z: 0}
+  unitPositionOffset: {x: 0, y: 0, z: 0}
