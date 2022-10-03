@@ -365,7 +365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4481577959997697280}
   m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: -5.5, y: 0.17, z: 4.75}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -475,7 +475,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &6056671781344052888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907ba091f2f592846bbbe66e25e0784c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 0.5
+  startSpeed: 1.2
   movingSpeed: 0
   enemyHealth: 100
   goldToEarn: 100
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ae25c3a1dc91b44a1938214b4f369e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathing: {fileID: 7906467158115652343, guid: cc20053064ac173429ff3bafba0b9692, type: 3}
+  pathing: {fileID: 2503089324704777215, guid: 59b0d4cf30151844388e3ffbd07d3a05, type: 3}
   distanceThreshold: 0.1
 --- !u!114 &6056671781344052890
 MonoBehaviour:
