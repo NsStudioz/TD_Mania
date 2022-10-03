@@ -5349,67 +5349,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   d_Unit_Turret_Standard:
-    prefab: {fileID: 3946881031607588978, guid: 638b8498fd707fa47bf6f89dce02b58e, type: 3}
+    prefab: {fileID: 747205943340696467, guid: 5be892e1f628c58479d6bdd7bc007c41, type: 3}
     cost: 100
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Turret_MissileLauncher:
-    prefab: {fileID: 721280601622988769, guid: 2f628aa449661f145a2d9cbca9742c9a, type: 3}
+    prefab: {fileID: 664215370524953652, guid: 78022eace9eb71d4d9b00c23ad7e5d8e, type: 3}
     cost: 100
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Turret_WideBeamer:
-    prefab: {fileID: 4297023648312698076, guid: f7002b07bfcc0e54087533ff93074ef6, type: 3}
+    prefab: {fileID: 8474896185252318068, guid: eb4d1c77e987c6847ab2451c6610bb5c, type: 3}
     cost: 100
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Turret_LaserBeamer:
-    prefab: {fileID: 7508541911011180466, guid: c7824833b05caff459bf4d42aee706a7, type: 3}
+    prefab: {fileID: 1189723678647334141, guid: 811168c3188497b408f7e2abd00d15ec, type: 3}
     cost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Turret_StandardAuto:
-    prefab: {fileID: 8110588725520853881, guid: ba1c936105181c54296692c4820070f0, type: 3}
+    prefab: {fileID: 2658647531683468651, guid: 3e3a03d6c1cea9040a19cb523261c3f5, type: 3}
     cost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Turret_AntiShield_Standard:
-    prefab: {fileID: 5282655100286450636, guid: a17446789e0018446ba3ed6aa333ef70, type: 3}
+    prefab: {fileID: 7469493915699138264, guid: 2768ced0349dd2e4cb61473635d10d10, type: 3}
     cost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Turret_AntiShield_StandardAuto:
-    prefab: {fileID: 5492976484124018291, guid: b70c78b1f0607eb40b431521afe3276f, type: 3}
+    prefab: {fileID: 7728694432787217956, guid: 5b48b0c6daab6a243a638d0fa777a99c, type: 3}
     cost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Turret_AntiShield_ShieldDestroyer:
-    prefab: {fileID: 176936689804893204, guid: c13ce7b3065eb254ea788604aac4f35c, type: 3}
+    prefab: {fileID: 5235268833271272827, guid: 5e31da637fb56e1449830285b2b74228, type: 3}
     cost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Turret_Buffer:
-    prefab: {fileID: 3847176797142692488, guid: 0197efa0f32fcc048b33b0f847d42366, type: 3}
+    prefab: {fileID: 3029260933156180478, guid: c797b593baa5758409db6d7bf949d5ae, type: 3}
     cost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Trap_Mine:
-    prefab: {fileID: 3907736701174324265, guid: 45813ebd840ae3a4abd4d9c624db2c58, type: 3}
+    prefab: {fileID: 3907736701174324265, guid: e006c7351367dc64a8363aace34c3693, type: 3}
     cost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Trap_Binder:
-    prefab: {fileID: 7961459518185122619, guid: 7cd4a2b52ea983c47b5823b3dae76e40, type: 3}
+    prefab: {fileID: 7961459518185122619, guid: 70cef2c56f3a7a147bc4b4e2258fc029, type: 3}
     cost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Trap_GoldGenerator:
-    prefab: {fileID: 7672538353692473529, guid: 135cf06a0c6fbe04cae95c8e288a7556, type: 3}
+    prefab: {fileID: 7672538353692473529, guid: 599b0faf3c771a14cbb8f184dd99855a, type: 3}
     cost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
   d_Unit_Trap_AntiShieldMine:
-    prefab: {fileID: 701948649849538045, guid: c3c260f57bcd0574d983b902076883f7, type: 3}
+    prefab: {fileID: 701948649849538045, guid: dc263acdeef318c43bd42d4737fed59e, type: 3}
     cost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
