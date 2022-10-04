@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 6729223994407369156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.724, y: 0.5, z: 9.75}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6729223994105434866}
@@ -145,11 +145,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 0}
   spawnPoint: {fileID: 6729223994105434866}
-  upcomingWaveDelay: 10
-  countDown: 2
-  enemySpawnDelay: 0.5
   waveIndex: 0
   enemiesPerWave: 0
+  countDown: 2
+  upcomingWaveDelay: 10
+  enemySpawnDelay: 0.5
   EnemySpawner_Single: 0
   EnemySpawner_Static: 1
   EnemySpawner_Incrementer: 0
