@@ -9,7 +9,7 @@ public class MusicManager : MonoBehaviour
 
     [SerializeField] int currentSceneIndex = 0;
 
-    [SerializeField] float setMusicVolumeToZero = 0f;
+    private const float setMusicVolumeToZero = 0f;
 
     [Header("Music Swap Attributes")]
     [SerializeField] bool playNextTrack = false;
