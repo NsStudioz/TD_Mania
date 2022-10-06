@@ -99,6 +99,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1088042135236074279, guid: cb3c660ebac75d5428457608309b9438, type: 3}
   m_PrefabInstance: {fileID: 2412653137568877885}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3342506209895847451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1088042135236074278, guid: cb3c660ebac75d5428457608309b9438, type: 3}
+  m_PrefabInstance: {fileID: 2412653137568877885}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2776aeb13a5eb624eaf9eaaf9a422f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3342506209722917130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -319,6 +330,10 @@ PrefabInstance:
       propertyPath: healthCountText
       value: 
       objectReference: {fileID: 2436516578134963843}
+    - target: {fileID: 1371792435, guid: b7124b6dc433f8144b523d6ba7dd4ddc, type: 3}
+      propertyPath: masterTimerThreshold
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 974758937459715592, guid: b7124b6dc433f8144b523d6ba7dd4ddc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -697,6 +712,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7481945426818587546, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3342506209895847451}
+    - target: {fileID: 7481945426818587546, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGameSession
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481945426818587546, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Levels_Handler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481945426818587546, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165826823101068986, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3342506209895847451}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
 --- !u!114 &1310938944939690777 stripped
