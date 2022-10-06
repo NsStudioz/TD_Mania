@@ -58,6 +58,7 @@ public class MusicManager : MonoBehaviour
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // Music Functions (also applicable to buttons):
     public void Play(string name)
     {
         Sound m = Array.Find(musicList, music => music.name == name);
@@ -112,7 +113,8 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // Music Settings:
     public void SetMusicSettings()
     {
         if (PlayerPrefs.GetInt("M_Muted") == 1)
@@ -125,6 +127,8 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // Music Swap Process:
     private IEnumerator FadeInTrack(string name)
     {
         Sound m = Array.Find(musicList, music => music.name == name);
@@ -171,7 +175,7 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    private IEnumerator DelayTimeToSwitchBools() // reset all bool states back to 0 \ false.
+    private IEnumerator ResetBools() // reset all bool states back to 0 \ false.
     {
         //startDelayTime = true;
 
@@ -187,7 +191,7 @@ public class MusicManager : MonoBehaviour
         StartCoroutine(FadeOutTrack(oldTrack)); // stop last track, do a fade-out.
         StartCoroutine(FadeInTrack(newTrack));  // start new track, do a fade-in.
 
-        StartCoroutine(DelayTimeToSwitchBools()); // switch all bools to false after a set amount of time to reset the swap track process.
+        StartCoroutine(ResetBools()); // switch all bools to false after a set amount of time to reset the swap track process.
     }
 
     private IEnumerator DelayTimeToPlayMainMenuTheme() // after splash screen
