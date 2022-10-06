@@ -22,8 +22,8 @@ public class MusicManager : MonoBehaviour
     [SerializeField] float timeToFade = 1f;
     [SerializeField] float timerThreshold = 1f; // delay time for function: DelayTimeToSwitchBools()
     // Lerp Vars:
-    [SerializeField] float lerpMaxValue = 1f;
-    [SerializeField] float lerpMinValue = 0f;
+    private const float lerpMaxValue = 1f;
+    private const float lerpMinValue = 0f;
 
     private void Awake()
     {
