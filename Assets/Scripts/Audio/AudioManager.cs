@@ -74,11 +74,11 @@ public class AudioManager : MonoBehaviour
 
     private void SetSoundMuteSettings()
     {
-        if(PlayerPrefs.GetInt("Muted") == 1)
+        if(PlayerPrefs.GetInt("S_Muted") == 1)
         {
             Mute();
         }
-        else if(PlayerPrefs.GetInt("Muted") == 0)
+        else if(PlayerPrefs.GetInt("S_Muted") == 0)
         {
             UnMute();
         }
