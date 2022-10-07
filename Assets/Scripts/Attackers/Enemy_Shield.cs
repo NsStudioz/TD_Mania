@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy_Shield : MonoBehaviour
 {
     [SerializeField] float shieldHealth;
+    [SerializeField] bool shieldOn;
     public float range = 1f;
     private float sizeChangeDelay = 0.05f;
 
@@ -19,6 +20,8 @@ public class Enemy_Shield : MonoBehaviour
         shieldCollider = GetComponent<SphereCollider>();
 
         enemy = GetComponentInParent<Enemy>();
+
+        shieldOn = true;
     }
 
     private void Update()
@@ -32,6 +35,7 @@ public class Enemy_Shield : MonoBehaviour
         if (shieldHealth <= 0f)
         {
             DestroyShield();
+            shieldOn = false;
         }
     }
 
@@ -47,7 +51,10 @@ public class Enemy_Shield : MonoBehaviour
     {
         if (collider.CompareTag("AS_Bullet") || collider.CompareTag("AS_Auto_Bullet") || collider.CompareTag("SD_Bullet"))
         {
-            StartCoroutine(ShieldHitEffect());
+            if (shieldOn)
+            {
+                StartCoroutine(ShieldHitEffect());
+            }
         }
     }
 
