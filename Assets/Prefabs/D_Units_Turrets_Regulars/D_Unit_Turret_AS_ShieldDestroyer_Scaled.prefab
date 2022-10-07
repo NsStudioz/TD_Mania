@@ -322,7 +322,7 @@ Transform:
   m_GameObject: {fileID: 5234872354190078235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5236804886009147789}
@@ -5431,7 +5431,7 @@ MonoBehaviour:
   fireCountDown: 0
   turnSpeed: 5
   partToRotate: {fileID: 5237090771704978683}
-  bulletPrefab: {fileID: 1322939992085902031, guid: c66a085e8971c8a418d7fb9bd4dd63b1, type: 3}
+  bulletPrefab: {fileID: 1322939992085902031, guid: 022fe7d7c8c7e8440ae738d31182d99d, type: 3}
   firingPosition: {fileID: 5236804886009147789}
   muzzleEFX: {fileID: 5359858717737604741}
   animController: {fileID: 5328578366016119631}

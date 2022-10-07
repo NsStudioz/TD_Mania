@@ -59,8 +59,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2658038065810304577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0.675}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2661145143256716179}
@@ -5195,12 +5195,12 @@ MonoBehaviour:
   targetEnemy: {fileID: 0}
   isAntiShield: 0
   enemyTag: Attackers
-  range: 2
+  range: 5
   fireRate: 1.5
   fireCountDown: 0
   turnSpeed: 5
   partToRotate: {fileID: 2662182851239671951}
-  bulletPrefab: {fileID: 7648687620416808614, guid: ed529ef7f4ab13643ac3fdffb3aa0e9d, type: 3}
+  bulletPrefab: {fileID: 7648687620416808614, guid: 293b4d927a3a5414b9b4acbf924b9b3b, type: 3}
   firingPosition: {fileID: 2661145143256716179}
   muzzleEFX: {fileID: 2747435879797124947}
   animController: {fileID: 2716652576019214989}
