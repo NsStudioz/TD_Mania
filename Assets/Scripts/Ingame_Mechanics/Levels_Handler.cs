@@ -15,6 +15,13 @@ public class Levels_Handler : MonoBehaviour
 
     [SerializeField] Animator animator;
 
+    [SerializeField] GameObject pauseMenu_UI;
+    [SerializeField] bool gameIsPaused;
+
+    private void Start()
+    {
+        pauseMenu_UI.SetActive(false);
+    }
 
     private void Update()
     {
@@ -28,27 +35,42 @@ public class Levels_Handler : MonoBehaviour
 
     public void RestartGameSession() // restart current scene
     {
+        Time.timeScale = ResumeGame;
         FadeLevel(currentSceneIndex);
     }
 
     public void ReturnToMainMenu()
     {
+        Time.timeScale = ResumeGame;
         FadeLevel(main_Menu_Index);
     }
 
     public void ResumeGameSession() // resume game
     {
         Time.timeScale = ResumeGame;
+        pauseMenu_UI.SetActive(false);
     }
 
     public void PauseGameSession() // pause game
     {
         Time.timeScale = pauseGame;
+        pauseMenu_UI.SetActive(true);
+
     }
 
     public void IngameMenuFunction()
     {
-        //
+        if (!gameIsPaused)
+        {
+            PauseGameSession();
+            gameIsPaused = true;
+        }
+        else if (gameIsPaused)
+        {
+            ResumeGameSession();
+            gameIsPaused = false;
+        }
+        // play SFX
     }
 
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------
