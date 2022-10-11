@@ -12,6 +12,7 @@ public class MainMenu_Handler : MonoBehaviour
     [SerializeField] bool creditsMenu = false;
     
     [Header("Scenes Index")]
+    private int levelToLoad;
     [SerializeField] int mainMenuIndex = 0;
     [SerializeField] int shopMenuIndex = 1;
     //
@@ -110,4 +111,13 @@ public class MainMenu_Handler : MonoBehaviour
     {
         credits_UI.SetActive(false);
     }
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // Load levels:
+    public void LoadLevelOne()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+
 }
