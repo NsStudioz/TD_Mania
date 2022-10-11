@@ -72,7 +72,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void SetSoundMuteSettings()
+    public void SetSoundMuteSettings()
     {
         if(PlayerPrefs.GetInt("S_Muted") == 1)
         {

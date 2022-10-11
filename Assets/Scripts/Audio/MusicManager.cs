@@ -41,7 +41,7 @@ public class MusicManager : MonoBehaviour
 
     void Start()
     {
-        SetMusicSettings();
+        SetMusicMuteSettings();
 
         SetMusicVolumeToZero();
 
@@ -89,7 +89,7 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public void MusicMute() // 'm' - means music;
+    private void MusicMute() // 'm' - means music;
     {
         foreach (Sound m in musicList)
         {
@@ -97,7 +97,7 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public void MusicUnmute() // 'm' - means music;
+    private void MusicUnmute() // 'm' - means music;
     {
         foreach(Sound m in musicList)
         {
@@ -105,7 +105,7 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public void SetMusicVolumeToZero() // 'm' - means music;
+    private void SetMusicVolumeToZero() // 'm' - means music;
     {
         foreach (Sound m in musicList)
         {
@@ -115,7 +115,7 @@ public class MusicManager : MonoBehaviour
 
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Music Settings:
-    public void SetMusicSettings()
+    public void SetMusicMuteSettings()
     {
         if (PlayerPrefs.GetInt("M_Muted") == 1)
         {
