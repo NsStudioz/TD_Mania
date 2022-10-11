@@ -97,26 +97,11 @@ public class MainMenu_Handler : MonoBehaviour
 
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // For Animations:
-    public void DeactivatePlayMenu()
+    public void DeactivateAllMenus()
     {
         play_UI.SetActive(false);
-    }
-
-    public void DeactivateOptionsMenu()
-    {
         options_UI.SetActive(false);
-    }
-
-    public void DeactivateCreditsMenu()
-    {
         credits_UI.SetActive(false);
-    }
-
-    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    // Load levels:
-    public void LoadLevelOne()
-    {
-        SceneManager.LoadScene(2);
     }
 
 
