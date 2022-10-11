@@ -12,6 +12,7 @@ public class Levels_Handler : MonoBehaviour
     private int levelToLoad;
 
     [SerializeField] int currentSceneIndex;
+    [SerializeField] int NextSceneIndex;
 
     [SerializeField] Animator animator;
 
@@ -26,22 +27,26 @@ public class Levels_Handler : MonoBehaviour
     private void Update()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        NextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
     }
 
     public void GoToNextLevel()
     {
         FadeLevel(currentSceneIndex++);
+        if (NextSceneIndex > PlayerPrefs.GetInt("Level_At")) { PlayerPrefs.SetInt("Level_At", NextSceneIndex); }
     }
 
     public void RestartGameSession() // restart current scene
     {
         Time.timeScale = ResumeGame;
+        pauseMenu_UI.SetActive(false);
         FadeLevel(currentSceneIndex);
     }
 
     public void ReturnToMainMenu()
     {
         Time.timeScale = ResumeGame;
+        pauseMenu_UI.SetActive(false);
         FadeLevel(main_Menu_Index);
     }
 
