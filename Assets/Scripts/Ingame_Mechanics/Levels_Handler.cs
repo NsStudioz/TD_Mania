@@ -17,6 +17,8 @@ public class Levels_Handler : MonoBehaviour
     [SerializeField] Animator animator;
 
     [SerializeField] GameObject pauseMenu_UI;
+    [SerializeField] GameObject gameOver_UI;
+    [SerializeField] GameObject gameWon_UI;
     [SerializeField] bool gameIsPaused;
 
     private void Start()
@@ -32,6 +34,7 @@ public class Levels_Handler : MonoBehaviour
 
     public void GoToNextLevel()
     {
+        gameWon_UI.SetActive(false);
         FadeLevel(currentSceneIndex++);
         if (NextSceneIndex > PlayerPrefs.GetInt("Level_At")) { PlayerPrefs.SetInt("Level_At", NextSceneIndex); }
     }
@@ -50,6 +53,18 @@ public class Levels_Handler : MonoBehaviour
         FadeLevel(main_Menu_Index);
     }
 
+    public void ReturnToMainMenuFromGameOver()
+    {
+        gameOver_UI.SetActive(false);
+        FadeLevel(main_Menu_Index);
+    }
+
+    public void ReturnToMainMenuFromGameWon()
+    {
+        gameWon_UI.SetActive(false);
+        FadeLevel(main_Menu_Index);
+    }
+
     public void ResumeGameSession() // resume game
     {
         Time.timeScale = ResumeGame;
@@ -60,7 +75,6 @@ public class Levels_Handler : MonoBehaviour
     {
         Time.timeScale = pauseGame;
         pauseMenu_UI.SetActive(true);
-
     }
 
     public void IngameMenuFunction()

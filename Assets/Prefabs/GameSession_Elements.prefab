@@ -49,6 +49,14 @@ PrefabInstance:
       value: Levels_Handler
       objectReference: {fileID: 0}
     - target: {fileID: 1088042135236074278, guid: cb3c660ebac75d5428457608309b9438, type: 3}
+      propertyPath: gameWon_UI
+      value: 
+      objectReference: {fileID: 4192517387964067326}
+    - target: {fileID: 1088042135236074278, guid: cb3c660ebac75d5428457608309b9438, type: 3}
+      propertyPath: gameOver_UI
+      value: 
+      objectReference: {fileID: 1310938945154474882}
+    - target: {fileID: 1088042135236074278, guid: cb3c660ebac75d5428457608309b9438, type: 3}
       propertyPath: pauseMenu_UI
       value: 
       objectReference: {fileID: 1712779128659195519}
@@ -94,14 +102,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1088042135236074279, guid: cb3c660ebac75d5428457608309b9438, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6811186696730789745, guid: cb3c660ebac75d5428457608309b9438, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 2250
-      objectReference: {fileID: 0}
-    - target: {fileID: 6811186696730789745, guid: cb3c660ebac75d5428457608309b9438, type: 3}
-      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -380,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 2436516578134963843}
     - target: {fileID: 1371792435, guid: b7124b6dc433f8144b523d6ba7dd4ddc, type: 3}
       propertyPath: masterTimerThreshold
-      value: 200
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 974758937459715592, guid: b7124b6dc433f8144b523d6ba7dd4ddc, type: 3}
       propertyPath: m_RootOrder
@@ -557,6 +557,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3342506209895847451}
     - target: {fileID: 4851056234378476140, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3342506209895847451}
+    - target: {fileID: 6158446302077458008, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3342506209895847451}
