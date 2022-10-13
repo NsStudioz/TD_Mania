@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Audio_Options_Handler : MonoBehaviour
 {
-
     [SerializeField] GameObject sfx_Mute_Sign;
     [SerializeField] GameObject music_Mute_Sign;
     [SerializeField] AudioManager audioManager;
     [SerializeField] MusicManager musicManager;
+    //private MainMenu_Handler menuHandler;
 
     [SerializeField] bool sfx_Muted;
     [SerializeField] bool music_Muted;
@@ -87,7 +87,6 @@ public class Audio_Options_Handler : MonoBehaviour
         SaveMusicSettings();
         musicManager.SetMusicMuteSettings();
     }
-
 
     private void UpdateSoundButtonIcons()
     {
