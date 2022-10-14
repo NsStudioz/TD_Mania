@@ -6,9 +6,9 @@ using UnityEngine;
 public class D_Trap_Mine : MonoBehaviour
 {
     [Header("Attributes")]
+    [SerializeField] float triggerRadius = 0.5f;
     [SerializeField] float explosionRadius = 1f;
     [SerializeField] float explosionDamage = 100;
-    [SerializeField] float triggerRadius = 0.5f;
     [SerializeField] bool isTriggered = false;
 
     [Header("Animations")]

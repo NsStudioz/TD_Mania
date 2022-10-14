@@ -13,6 +13,7 @@ public class Audio_Options_Handler : MonoBehaviour
     [SerializeField] bool sfx_Muted;
     [SerializeField] bool music_Muted;
 
+
     void Start()
     {
         CheckSoundSettings();
