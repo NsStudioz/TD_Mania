@@ -5166,9 +5166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c412de13308d3c9409ca614857fcf58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionRadius: 1.5
+  triggerRadius: 1.75
+  explosionRadius: 2.35
   explosionDamage: 100
-  triggerRadius: 1
   isTriggered: 0
   animController: {fileID: 642548607155118899}
   animation_IdleName: Mine_Idle
@@ -10059,7 +10059,7 @@ Transform:
   m_GameObject: {fileID: 6289558172581675621}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 15}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5711126927458798053}
@@ -10174,7 +10174,7 @@ Transform:
   m_GameObject: {fileID: 7882045353423873324}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10.5, y: 10.5, z: 10.5}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5456294548151612224}

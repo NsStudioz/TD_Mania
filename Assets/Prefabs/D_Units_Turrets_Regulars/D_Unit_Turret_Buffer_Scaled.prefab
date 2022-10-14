@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c45493258ce05419967ff27f5fe541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeRadius: 1.5
+  rangeRadius: 0
   animController: {fileID: 3123261871795741498}
   animation_IdleName: RadarStation_Idle
   animation_ActivateName: Tower_Activate

@@ -301,9 +301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892560bc6431e934b815c0d19b3a70c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   explosionRadius: 0
-  damage: 50
+  damage: 40
   useAntiShieldBullets: 0
   shieldTag: EnemyShields
   isBuffedByBuffer: 0

@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   explosionRadius: 0
-  damage: 50
+  damage: 30
   useAntiShieldBullets: 1
   shieldTag: EnemyShields
   isBuffedByBuffer: 0
