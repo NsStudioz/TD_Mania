@@ -13,31 +13,37 @@ MonoBehaviour:
   m_Name: ShopData
   m_EditorClassIdentifier: 
   shopItems:
-  - itemName: 
+  - itemName: Turret Buffer
     isUnlocked: 0
     unlockCost: 0
     unlockedLevel: 0
     turret_Level:
     - unlockCost: 0
-      radius: 0
+      radius: 7.5
       turnSpeed: 0
       FireRate: 0
       damageOverTime: 0
       slowingPercentage: 0
-    - unlockCost: 0
-      radius: 0
+    - unlockCost: 5000
+      radius: 10
       turnSpeed: 0
       FireRate: 0
       damageOverTime: 0
       slowingPercentage: 0
-    - unlockCost: 0
-      radius: 0
+    - unlockCost: 7500
+      radius: 12.5
       turnSpeed: 0
       FireRate: 0
       damageOverTime: 0
       slowingPercentage: 0
-    - unlockCost: 0
-      radius: 0
+    - unlockCost: 10000
+      radius: 15
+      turnSpeed: 0
+      FireRate: 0
+      damageOverTime: 0
+      slowingPercentage: 0
+    - unlockCost: 15000
+      radius: 17.5
       turnSpeed: 0
       FireRate: 0
       damageOverTime: 0
