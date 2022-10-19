@@ -430,8 +430,11 @@ MonoBehaviour:
   titleText: {fileID: 2666268449705255203}
   levelText: {fileID: 2666268450318876820}
   costText: {fileID: 2666268450218289241}
+  costTextGO: {fileID: 2666268449836132759}
+  UpgradeText: {fileID: 2666268450002338014}
   upgradeButton: {fileID: 71535808372616891}
   statsButton: {fileID: 2666268449840918146}
+  unitLevel: 0
 --- !u!1 &2666268450002338008
 GameObject:
   m_ObjectHideFlags: 0
