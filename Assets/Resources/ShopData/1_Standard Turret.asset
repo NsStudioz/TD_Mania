@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1_Standard Turret
   m_EditorClassIdentifier: 
   itemName: Cannon
+  Item_LevelIndex: 0
   unit_Level:
   - unlockCost: 5000
     unit_LevelIndex: 1
@@ -25,7 +26,13 @@ MonoBehaviour:
     damageOverTime: 0
     slowingPercentage: 0
     triggerRadius: 0
+    triggerQuad_X: 0
+    triggerQuad_Y: 0
+    triggerQuad_Scale: {x: 0, y: 0, z: 0}
     explosionRadius: 0
+    explosionQuad_X: 0
+    explosionQuad_Y: 0
+    explosionQuad_Scale: {x: 0, y: 0, z: 0}
     bindRadius: 0
     bindDuration: 0
     damage: 0
@@ -46,7 +53,13 @@ MonoBehaviour:
     damageOverTime: 0
     slowingPercentage: 0
     triggerRadius: 0
+    triggerQuad_X: 0
+    triggerQuad_Y: 0
+    triggerQuad_Scale: {x: 0, y: 0, z: 0}
     explosionRadius: 0
+    explosionQuad_X: 0
+    explosionQuad_Y: 0
+    explosionQuad_Scale: {x: 0, y: 0, z: 0}
     bindRadius: 0
     bindDuration: 0
     damage: 0
@@ -67,7 +80,13 @@ MonoBehaviour:
     damageOverTime: 0
     slowingPercentage: 0
     triggerRadius: 0
+    triggerQuad_X: 0
+    triggerQuad_Y: 0
+    triggerQuad_Scale: {x: 0, y: 0, z: 0}
     explosionRadius: 0
+    explosionQuad_X: 0
+    explosionQuad_Y: 0
+    explosionQuad_Scale: {x: 0, y: 0, z: 0}
     bindRadius: 0
     bindDuration: 0
     damage: 0
@@ -88,7 +107,13 @@ MonoBehaviour:
     damageOverTime: 0
     slowingPercentage: 0
     triggerRadius: 0
+    triggerQuad_X: 0
+    triggerQuad_Y: 0
+    triggerQuad_Scale: {x: 0, y: 0, z: 0}
     explosionRadius: 0
+    explosionQuad_X: 0
+    explosionQuad_Y: 0
+    explosionQuad_Scale: {x: 0, y: 0, z: 0}
     bindRadius: 0
     bindDuration: 0
     damage: 0

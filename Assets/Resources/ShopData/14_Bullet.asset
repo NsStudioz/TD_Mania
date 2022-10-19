@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 14_Bullet
   m_EditorClassIdentifier: 
   itemName: Bullet
+  Item_LevelIndex: 0
   unit_Level:
   - unlockCost: 5000
     unit_LevelIndex: 1
