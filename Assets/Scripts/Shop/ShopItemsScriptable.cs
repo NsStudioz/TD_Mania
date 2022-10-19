@@ -9,6 +9,7 @@ namespace ShopSystem
     public class ShopItemsScriptable : ScriptableObject
     {
         public string itemName;
+        public int Item_LevelIndex;
         public UnitItemInfo[] unit_Level;
         //public ShopItems[] shopItems;
     }
@@ -16,6 +17,7 @@ namespace ShopSystem
     [System.Serializable]
     public class ShopItems
     {
+        public int Item_LevelIndex;
         public string itemName;
         public UnitItemInfo[] unit_Level;
         //public int shopItemIndex;
