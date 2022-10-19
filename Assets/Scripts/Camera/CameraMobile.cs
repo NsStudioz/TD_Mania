@@ -11,11 +11,11 @@ public class CameraMobile : MonoBehaviour
     [SerializeField] float normalSpeed;
     [SerializeField] float movementSpeed;
     [SerializeField] float movementTime;
-    [SerializeField] float panBorderThickness = 10f;
+    //[SerializeField] float panBorderThickness = 10f;
     // Scrolling:
     [SerializeField] Vector3 zoomAmount;
     [SerializeField] Vector3 newZoom;
-    [SerializeField] float scrollSpeed = 5f;
+    //[SerializeField] float scrollSpeed = 5f;
     [SerializeField] float minZoom = 2f;
     [SerializeField] float maxZoom = 8f;
 

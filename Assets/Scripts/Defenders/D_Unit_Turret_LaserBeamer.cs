@@ -9,13 +9,14 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     public Enemy targetEnemy;
     [SerializeField] string enemyTag = "Attackers";
     [SerializeField] public float range = 15f;
-    [SerializeField] float fireRate = 1f;
+    //[SerializeField] float fireRate = 1f;
     //[SerializeField] float fireCountDown = 0f;
 
     [Header("Unit Rotation")]
     [SerializeField] float turnSpeed = 10f;
     [SerializeField] Transform partToRotate;
-    // Bullet setup:
+
+    [Header("Bullet Setup")]
     //[SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform firingPosition;
 

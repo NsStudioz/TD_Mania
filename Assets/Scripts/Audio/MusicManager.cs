@@ -14,8 +14,8 @@ public class MusicManager : MonoBehaviour
     [Header("Music Swap Attributes")]
     [SerializeField] bool playNextTrack = false;
     [SerializeField] bool stopLastTrack = false;
-    [SerializeField] bool startDelayTime = false;
-    [SerializeField] bool stateSwitch = false;
+    //[SerializeField] bool startDelayTime = false;
+    //[SerializeField] bool stateSwitch = false;
     // Timers
     [SerializeField] float timeElapsed = 0f;
     [SerializeField] const float timeElapsedDefaultValue = 0f;
