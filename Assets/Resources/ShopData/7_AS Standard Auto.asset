@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0874cd4ab5db15a4ebf474d8442f9e4e, type: 3}
+  m_Name: 7_AS Standard Auto
+  m_EditorClassIdentifier: 
+  itemName: Anti-Shield Auto
+  unit_Level:
+  - unlockCost: 5000
+    unit_LevelIndex: 1
+    radius: 5
+    quad_Scale_X: 25
+    quad_Scale_Y: 25
+    quad_Scale: {x: 25, y: 25, z: 0}
+    turnSpeed: 5
+    FireRate: 0.9
+    damageOverTime: 0
+    slowingPercentage: 0
+    triggerRadius: 0
+    explosionRadius: 0
+    bindRadius: 0
+    bindDuration: 0
+    damage: 0
+    damage_AS: 0
+    goldToEarn: 0
+    gold_DelayTime: 0
+    bullet_speed: 0
+    bullet_damage: 0
+    bullet_ShieldDamage: 0
+  - unlockCost: 7500
+    unit_LevelIndex: 2
+    radius: 6
+    quad_Scale_X: 30
+    quad_Scale_Y: 30
+    quad_Scale: {x: 30, y: 30, z: 0}
+    turnSpeed: 6
+    FireRate: 0.85
+    damageOverTime: 0
+    slowingPercentage: 0
+    triggerRadius: 0
+    explosionRadius: 0
+    bindRadius: 0
+    bindDuration: 0
+    damage: 0
+    damage_AS: 0
+    goldToEarn: 0
+    gold_DelayTime: 0
+    bullet_speed: 0
+    bullet_damage: 0
+    bullet_ShieldDamage: 0
+  - unlockCost: 10000
+    unit_LevelIndex: 3
+    radius: 7
+    quad_Scale_X: 35
+    quad_Scale_Y: 35
+    quad_Scale: {x: 35, y: 35, z: 0}
+    turnSpeed: 7
+    FireRate: 0.8
+    damageOverTime: 0
+    slowingPercentage: 0
+    triggerRadius: 0
+    explosionRadius: 0
+    bindRadius: 0
+    bindDuration: 0
+    damage: 0
+    damage_AS: 0
+    goldToEarn: 0
+    gold_DelayTime: 0
+    bullet_speed: 0
+    bullet_damage: 0
+    bullet_ShieldDamage: 0
+  - unlockCost: 13500
+    unit_LevelIndex: 4
+    radius: 8
+    quad_Scale_X: 40
+    quad_Scale_Y: 40
+    quad_Scale: {x: 40, y: 40, z: 0}
+    turnSpeed: 8
+    FireRate: 0.75
+    damageOverTime: 0
+    slowingPercentage: 0
+    triggerRadius: 0
+    explosionRadius: 0
+    bindRadius: 0
+    bindDuration: 0
+    damage: 0
+    damage_AS: 0
+    goldToEarn: 0
+    gold_DelayTime: 0
+    bullet_speed: 0
+    bullet_damage: 0
+    bullet_ShieldDamage: 0
