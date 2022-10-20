@@ -19607,6 +19607,7 @@ GameObject:
   - component: {fileID: 1189723678647334017}
   - component: {fileID: 1189723678647334022}
   - component: {fileID: 1189723678647334016}
+  - component: {fileID: 8878610517043939628}
   - component: {fileID: 1189723678647334019}
   - component: {fileID: 1189723678647334018}
   m_Layer: 2
@@ -19769,7 +19770,6 @@ MonoBehaviour:
   targetEnemy: {fileID: 0}
   enemyTag: Attackers
   range: 4
-  fireRate: 1
   turnSpeed: 5
   partToRotate: {fileID: 1191231917241799131}
   firingPosition: {fileID: 1195524768524276885}
@@ -19779,6 +19779,7 @@ MonoBehaviour:
   laserImpactLight: {fileID: 2329829693474990339}
   damageOverTime: 30
   laserHitSlowPct: 0.4
+  LOS: {fileID: 8156538482858582362}
   animController: {fileID: 1285528438605535703}
   animation_IdleName: Plasma_Idle
   animation_FireName: Plasma_Fire
@@ -19798,6 +19799,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBuffed: 0
+--- !u!114 &8878610517043939628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189723678647334141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7db5603486ff7c4fa397c682cebdbc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItemsData: []
+  shopItemSO: {fileID: 11400000, guid: fcb91ca25efc75b40b115d14b839a045, type: 2}
 --- !u!54 &1189723678647334019
 Rigidbody:
   m_ObjectHideFlags: 0

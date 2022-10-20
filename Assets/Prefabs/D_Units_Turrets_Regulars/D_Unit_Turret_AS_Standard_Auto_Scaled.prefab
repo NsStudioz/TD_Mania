@@ -5364,10 +5364,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5631950587673933969}
   - component: {fileID: 4560538557723931508}
-  - component: {fileID: 5048990974002293033}
-  - component: {fileID: 3090902069179302389}
   - component: {fileID: 8528952581704516844}
   - component: {fileID: 5258295414656314194}
+  - component: {fileID: 5905871444167578033}
+  - component: {fileID: 5048990974002293033}
+  - component: {fileID: 3090902069179302389}
   m_Layer: 2
   m_Name: D_Unit_Turret_AS_Standard_Auto_Scaled
   m_TagString: Untagged
@@ -5412,6 +5413,64 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8528952581704516844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7728694432787217956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34f021525ab9c942b11237c34bfbab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetEnemy: {fileID: 0}
+  isAntiShield: 1
+  enemyTag: Attackers
+  statsIdentifierTag: AS_Auto
+  range: 2
+  fireRate: 1.5
+  fireCountDown: 0
+  turnSpeed: 5
+  partToRotate: {fileID: 176753337977661846}
+  bulletPrefab: {fileID: 7648687620416808614, guid: b565c4c514c7b5c4abed531a6b6ed7af, type: 3}
+  firingPosition: {fileID: 7682608373762588045}
+  muzzleEFX: {fileID: 5998405853849011835}
+  LOS: {fileID: 2397926558785684364}
+  animController: {fileID: 4560538557723931508}
+  animation_IdleName: FattyCannon_Idle
+  animation_FireName: FattyCannon_Fire
+  animation_BuildName: FattyCannon_Install
+  animation_RemoveName: FattyCannon_Remove
+  turretReady: 0
+--- !u!114 &5258295414656314194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7728694432787217956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89cecf871d4275498a69ed65eb2b178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBuffed: 0
+--- !u!114 &5905871444167578033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7728694432787217956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e21dc523bf64e4aaa49f3128120c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItemSO: {fileID: 11400000, guid: 63de5f82b85bee04d8c61a902704482a, type: 2}
 --- !u!54 &5048990974002293033
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5441,50 +5500,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.75, y: 2.5, z: 4.5}
   m_Center: {x: 0, y: 1, z: 0.7}
---- !u!114 &8528952581704516844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7728694432787217956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b34f021525ab9c942b11237c34bfbab8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  targetEnemy: {fileID: 0}
-  isAntiShield: 1
-  enemyTag: Attackers
-  range: 2
-  fireRate: 1.5
-  fireCountDown: 0
-  turnSpeed: 5
-  partToRotate: {fileID: 176753337977661846}
-  bulletPrefab: {fileID: 7648687620416808614, guid: b565c4c514c7b5c4abed531a6b6ed7af, type: 3}
-  firingPosition: {fileID: 7682608373762588045}
-  muzzleEFX: {fileID: 5998405853849011835}
-  animController: {fileID: 4560538557723931508}
-  animation_IdleName: FattyCannon_Idle
-  animation_FireName: FattyCannon_Fire
-  animation_BuildName: FattyCannon_Install
-  animation_RemoveName: FattyCannon_Remove
-  turretReady: 0
-  lineofSight: {fileID: 0}
---- !u!114 &5258295414656314194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7728694432787217956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c89cecf871d4275498a69ed65eb2b178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isBuffed: 0
 --- !u!1 &8863953488338025556
 GameObject:
   m_ObjectHideFlags: 0

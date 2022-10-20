@@ -5333,10 +5333,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5236784224307908285}
   - component: {fileID: 5328578366016119631}
-  - component: {fileID: 3626203405245362509}
-  - component: {fileID: 476761066792049132}
   - component: {fileID: 379458570661770938}
   - component: {fileID: 8112231717577198939}
+  - component: {fileID: -4888457477633576686}
+  - component: {fileID: 3626203405245362509}
+  - component: {fileID: 476761066792049132}
   m_Layer: 2
   m_Name: D_Unit_Turret_AS_ShieldDestroyer_Scaled
   m_TagString: Untagged
@@ -5381,6 +5382,64 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &379458570661770938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5235268833271272827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34f021525ab9c942b11237c34bfbab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetEnemy: {fileID: 0}
+  isAntiShield: 1
+  enemyTag: Attackers
+  statsIdentifierTag: AS_ShieldDestroyer
+  range: 2
+  fireRate: 1
+  fireCountDown: 0
+  turnSpeed: 5
+  partToRotate: {fileID: 5237090771704978683}
+  bulletPrefab: {fileID: 1322939992085902031, guid: 022fe7d7c8c7e8440ae738d31182d99d, type: 3}
+  firingPosition: {fileID: 5236804886009147789}
+  muzzleEFX: {fileID: 5359858717737604741}
+  LOS: {fileID: 8480306495790160053}
+  animController: {fileID: 5328578366016119631}
+  animation_IdleName: Missile_Idle
+  animation_FireName: Missile_Fire
+  animation_BuildName: Missile_Install
+  animation_RemoveName: Missile_Remove
+  turretReady: 0
+--- !u!114 &8112231717577198939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5235268833271272827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89cecf871d4275498a69ed65eb2b178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBuffed: 0
+--- !u!114 &-4888457477633576686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5235268833271272827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e21dc523bf64e4aaa49f3128120c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItemSO: {fileID: 11400000, guid: e9efe86696b9fe342aa0f911e990d69e, type: 2}
 --- !u!54 &3626203405245362509
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5410,50 +5469,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.25, y: 2.25, z: 2.3}
   m_Center: {x: 0.05, y: 1, z: 0}
---- !u!114 &379458570661770938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5235268833271272827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b34f021525ab9c942b11237c34bfbab8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  targetEnemy: {fileID: 0}
-  isAntiShield: 1
-  enemyTag: Attackers
-  range: 2
-  fireRate: 1
-  fireCountDown: 0
-  turnSpeed: 5
-  partToRotate: {fileID: 5237090771704978683}
-  bulletPrefab: {fileID: 1322939992085902031, guid: 022fe7d7c8c7e8440ae738d31182d99d, type: 3}
-  firingPosition: {fileID: 5236804886009147789}
-  muzzleEFX: {fileID: 5359858717737604741}
-  animController: {fileID: 5328578366016119631}
-  animation_IdleName: 
-  animation_FireName: Missile_Fire
-  animation_BuildName: Missile_Install
-  animation_RemoveName: Missile_Remove
-  turretReady: 0
-  lineofSight: {fileID: 2693895274784781413}
---- !u!114 &8112231717577198939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5235268833271272827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c89cecf871d4275498a69ed65eb2b178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isBuffed: 0
 --- !u!1 &5235361538098575283
 GameObject:
   m_ObjectHideFlags: 0

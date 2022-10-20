@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 7420733449812276998}
   - component: {fileID: 7420733449812277001}
   - component: {fileID: 5937614912894159344}
+  - component: {fileID: 7723741092403362590}
   - component: {fileID: 2380762203409277426}
   - component: {fileID: 1496893205562083955}
   m_Layer: 2
@@ -189,6 +190,7 @@ MonoBehaviour:
   targetEnemy: {fileID: 0}
   isAntiShield: 1
   enemyTag: Attackers
+  statsIdentifierTag: AS_Cannon
   range: 2
   fireRate: 1
   fireCountDown: 0
@@ -197,13 +199,13 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2624340129718557939, guid: 0d16e436b07d6434b8285a9e197f5cf2, type: 3}
   firingPosition: {fileID: 7467231440012513004}
   muzzleEFX: {fileID: 7308509917909391182}
+  LOS: {fileID: 378653702441713970}
   animController: {fileID: 7420733449812276998}
   animation_IdleName: FattyMortar_Idle
   animation_FireName: FattyMortar_Fire
   animation_BuildName: FattyMortar_Install
   animation_RemoveName: FattyMortar_Remove
   turretReady: 0
-  lineofSight: {fileID: 0}
 --- !u!114 &5937614912894159344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +219,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBuffed: 0
+--- !u!114 &7723741092403362590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7469493915699138264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e21dc523bf64e4aaa49f3128120c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItemSO: {fileID: 0}
 --- !u!54 &2380762203409277426
 Rigidbody:
   m_ObjectHideFlags: 0

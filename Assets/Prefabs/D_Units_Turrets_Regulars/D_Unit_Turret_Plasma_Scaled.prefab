@@ -19547,6 +19547,8 @@ GameObject:
   - component: {fileID: 8469597984379837310}
   - component: {fileID: 8415239581817749708}
   - component: {fileID: 8415239581817749711}
+  - component: {fileID: -3501285338792338493}
+  - component: {fileID: 8383454224820555797}
   - component: {fileID: 8415239581817749697}
   - component: {fileID: 8415239581817749710}
   m_Layer: 2
@@ -19609,6 +19611,7 @@ MonoBehaviour:
   targetEnemy: {fileID: 0}
   isAntiShield: 0
   enemyTag: Attackers
+  statsIdentifierTag: Plasma_Cannon
   range: 5
   fireRate: 1
   fireCountDown: 0
@@ -19617,13 +19620,39 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1209480397694828, guid: d9828a8b125253f47a8e36297c9076b3, type: 3}
   firingPosition: {fileID: 8470119657067887454}
   muzzleEFX: {fileID: 8585380382945489180}
+  LOS: {fileID: 4632430959470663162}
   animController: {fileID: 8415239581817749708}
   animation_IdleName: Plasma_Idle
   animation_FireName: Plasma_Fire
   animation_BuildName: Plasma_Install
   animation_RemoveName: Plasma_Remove
   turretReady: 0
-  lineofSight: {fileID: 0}
+--- !u!114 &-3501285338792338493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8474896185252318068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89cecf871d4275498a69ed65eb2b178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBuffed: 0
+--- !u!114 &8383454224820555797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8474896185252318068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e21dc523bf64e4aaa49f3128120c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItemSO: {fileID: 11400000, guid: 478bacab4ca24084c9886a317eecf9b3, type: 2}
 --- !u!65 &8415239581817749697
 BoxCollider:
   m_ObjectHideFlags: 0
