@@ -13,12 +13,13 @@ public class D_Unit_Turret : MonoBehaviour
     public Enemy targetEnemy;
     [SerializeField] bool isAntiShield;
     [SerializeField] string enemyTag = "Attackers";
+    [SerializeField] public string statsIdentifierTag = "Attackers";
     [SerializeField] public float range = 2f;
-    [SerializeField] float fireRate = 1f;
-    [SerializeField] float fireCountDown = 0f;
+    [SerializeField] public float fireRate = 1f;
+    [SerializeField] public float fireCountDown = 0f;
 
     [Header("Unit Rotation")]
-    [SerializeField] float turnSpeed = 10f;
+    [SerializeField] public float turnSpeed = 10f;
     [SerializeField] Transform partToRotate;
 
     [Header("Bullet Setup")]
@@ -28,6 +29,9 @@ public class D_Unit_Turret : MonoBehaviour
     [Header("Effects")]
     [SerializeField] ParticleSystem muzzleEFX  = null;
 
+    [Header("Line Of Sight")]
+    public GameObject LOS;
+
     [Header("Animations")]
     [SerializeField] Animator animController = null;
     [SerializeField] string animation_IdleName;
@@ -36,7 +40,8 @@ public class D_Unit_Turret : MonoBehaviour
     [SerializeField] string animation_RemoveName;
     [SerializeField] bool turretReady = false;
 
-    [SerializeField] GameObject lineofSight = null;
+
+
     //
     /*    [Header("Object Pooling")] // Object Pooling:
         private IObjectPool<Bullet> bulletPool;
@@ -49,9 +54,9 @@ public class D_Unit_Turret : MonoBehaviour
 
     private void Awake()
     {
-        if (lineofSight != null)
+        if (LOS != null)
         {
-            lineofSight.SetActive(false);
+            LOS.SetActive(false);
         }
         //bulletPool = new ObjectPool<Bullet>(CreateBullet, OnGet);
     }
@@ -161,17 +166,17 @@ public class D_Unit_Turret : MonoBehaviour
 
     public void EnableLOS()
     {
-        if(lineofSight != null)
+        if(LOS != null)
         {
-            lineofSight.SetActive(true);
+            LOS.SetActive(true);
         }
     }
 
     public void DisableLOS()
     {
-        if (lineofSight != null)
+        if (LOS != null)
         {
-            lineofSight.SetActive(false);
+            LOS.SetActive(false);
         }
     }
 

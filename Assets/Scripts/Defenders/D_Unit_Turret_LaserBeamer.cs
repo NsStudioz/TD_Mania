@@ -13,7 +13,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     //[SerializeField] float fireCountDown = 0f;
 
     [Header("Unit Rotation")]
-    [SerializeField] float turnSpeed = 10f;
+    [SerializeField] public float turnSpeed = 10f;
     [SerializeField] Transform partToRotate;
 
     [Header("Bullet Setup")]
@@ -25,8 +25,11 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     [SerializeField] LineRenderer lineRenderer;
     [SerializeField] ParticleSystem laserImpactEffects;
     [SerializeField] Light laserImpactLight;
-    [SerializeField] int damageOverTime = 30;
-    [SerializeField] float laserHitSlowPct = .5f;
+    [SerializeField] public float damageOverTime = 30;
+    [SerializeField] public float laserHitSlowPct = .4f;
+
+    [Header("Line Of Sight")]
+    public GameObject LOS;
 
     [Header("Animations")]
     [SerializeField] Animator animController = null;
