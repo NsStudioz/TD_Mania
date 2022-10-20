@@ -44,7 +44,7 @@ namespace ShopSystem
         {
             for (int i = 0; i < shopItemsData.Length; i++)
             {
-                int item_LevelIndex = shopItemsData[i].Item_LevelIndex;
+                int item_LevelIndex = shopItemsData[i].Item_LevelIndex + 1;
                 if (item_LevelIndex < shopItemsData[i].unit_Level.Length)
                 {
                     shopItemsTemplates[i].costTextGO.SetActive(true);
@@ -62,7 +62,7 @@ namespace ShopSystem
 
         public void OnItemUpgradeClick(int thisItemIndex)
         {
-            int item_LevelIndex = shopItemsData[thisItemIndex].Item_LevelIndex + 1;
+            int item_LevelIndex = shopItemsData[thisItemIndex].Item_LevelIndex;
 
             if (item_LevelIndex < shopItemsData[thisItemIndex].unit_Level.Length)
             {
