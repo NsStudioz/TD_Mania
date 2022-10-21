@@ -5175,6 +5175,7 @@ GameObject:
   - component: {fileID: 7668508666949287509}
   - component: {fileID: 7723585786743402081}
   - component: {fileID: 7672538353692473526}
+  - component: {fileID: 4817814612475583947}
   m_Layer: 2
   m_Name: D_Traps_GoldGenerator_Scaled
   m_TagString: Traps
@@ -5231,7 +5232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTimeThreshold: 10
-  upgradeable_DelayTime: 10
+  gold_DelayTime: 5
   goldToEarn: 10
   animController: {fileID: 7723585786743402081}
   animation_IdleName: Crusher_Idle
@@ -5239,6 +5240,19 @@ MonoBehaviour:
   animation_BuildName: Crusher_Install
   animation_RemoveName: Crusher_Remove
   turretReady: 0
+--- !u!114 &4817814612475583947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7672538353692473529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddef97edc32dc8b45ac80361c0551ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItemSO: {fileID: 11400000, guid: 5f70b63dc37069441babbc8fe347573f, type: 2}
 --- !u!1 &7672566197517827063
 GameObject:
   m_ObjectHideFlags: 0

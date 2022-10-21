@@ -7,8 +7,8 @@ public class D_Trap_GoldGenerator : MonoBehaviour
 
     [SerializeField] float delayTimeThreshold;
 
-    [SerializeField] float upgradeable_DelayTime = 5f; // can be upgraded.
-    [SerializeField] int goldToEarn = 10;              // can be upgraded.
+    [SerializeField] public float gold_DelayTime = 5f; // can be upgraded.
+    [SerializeField] public int goldToEarn = 10;       // can be upgraded.
 
     [Header("Animations")]
     [SerializeField] Animator animController = null;
@@ -25,7 +25,7 @@ public class D_Trap_GoldGenerator : MonoBehaviour
 
     private void Start()
     {
-        delayTimeThreshold = upgradeable_DelayTime;
+        delayTimeThreshold = gold_DelayTime;
     }
 
     void Update()
@@ -40,7 +40,7 @@ public class D_Trap_GoldGenerator : MonoBehaviour
         if (delayTimeThreshold <= 0)
         {
             PlayerStats.Gold += goldToEarn;
-            delayTimeThreshold = upgradeable_DelayTime;
+            delayTimeThreshold = gold_DelayTime;
         }
     }
 
