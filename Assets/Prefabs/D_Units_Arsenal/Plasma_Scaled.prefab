@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7780541282174191931}
   - component: {fileID: 7442109365560095971}
   - component: {fileID: 1964611568766398879}
+  - component: {fileID: -8427197566526858103}
   m_Layer: 9
   m_Name: Plasma_Scaled
   m_TagString: Untagged
@@ -83,7 +84,22 @@ MonoBehaviour:
   damage: 45
   useAntiShieldBullets: 0
   shieldTag: EnemyShields
-  isBuffedByBuffer: 0
+  turret_AS_Damage: 25
+  autoTurret_AS_Damage: 20
+  shieldDestroyer_AS_Damage: 50
+--- !u!114 &-8427197566526858103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209480397694828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4ee97cd44129c4480e281903880874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItemSO: {fileID: 11400000, guid: 4c018b6ce471e1a49a06514784d1fe6f, type: 2}
 --- !u!1 &1516348286022474
 GameObject:
   m_ObjectHideFlags: 0

@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 2705063420359452475}
   - component: {fileID: 2643298357868790125}
   - component: {fileID: -713236002860278653}
+  - component: {fileID: -2242346325472638306}
   m_Layer: 9
   m_Name: Bullet_AS_Scaled
   m_TagString: AS_Bullet
@@ -306,4 +307,19 @@ MonoBehaviour:
   damage: 50
   useAntiShieldBullets: 1
   shieldTag: EnemyShields
-  isBuffedByBuffer: 0
+  turret_AS_Damage: 25
+  autoTurret_AS_Damage: 20
+  shieldDestroyer_AS_Damage: 50
+--- !u!114 &-2242346325472638306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2624340129718557939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d5fac68766f3c840855e479aa7a4762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItemSO: {fileID: 11400000, guid: bdb0c75b3341b3e40afadbe631bbe75a, type: 2}

@@ -11,30 +11,31 @@ public class Bullet : MonoBehaviour
 
     //public GameObject impactEffects;
 
-    [SerializeField] float speed = 10f;
-    [SerializeField] float explosionRadius = 0f;
-    [SerializeField] float damage = 50;
+    public float speed = 10f;
+    public float explosionRadius = 0f;
+    public float damage = 50;
     //
+    [Header("Anti-Shield Attributes")]
     [SerializeField] bool useAntiShieldBullets;
     [SerializeField] string shieldTag = "EnemyShields";
     private string antiShield_Tag = "AS_Bullet";
     private string antiShield_Auto_Tag = "AS_Auto_Bullet";
     private string sd_Destroyer_Tag = "SD_Bullet";
-    private float turret_AS_Damage = 25f;
-    private float autoTurret_AS_Damage = 20f;
-    private float shieldDestroyer_AS_Damage = 50f;
+    public float turret_AS_Damage = 25f;
+    public float autoTurret_AS_Damage = 20f;
+    public float shieldDestroyer_AS_Damage = 50f;
     //
-    public bool isBuffedByBuffer;
+    //public bool isBuffedByBuffer;
 
     public void SeekTarget(Transform _target)
     {
         target = _target;
     }
 
-    private void Awake()
+/*    private void Awake()
     {
         isBuffedByBuffer = false;
-    }
+    }*/
 
     private void Update()
     {
@@ -97,38 +98,6 @@ public class Bullet : MonoBehaviour
         if (e != null)
         {
             e.TakeDamage(damage);
-        }
-    }
-
-    public void BuffBullet(float buffAmount)
-    {
-        if (isBuffedByBuffer)
-        {
-            damage += buffAmount;
-        }
-    }
-
-    public void BuffBullet_AS(float buffAmount) // Anti-Shield
-    {
-        if (isBuffedByBuffer)
-        {
-            turret_AS_Damage += buffAmount;
-        }
-    }
-
-    public void BuffBullet_AS_Auto(float buffAmount) // Anti-Shield Auto
-    {
-        if (isBuffedByBuffer)
-        {
-            autoTurret_AS_Damage += buffAmount;
-        }
-    }
-
-    public void BuffBullet_AS_SD(float buffAmount) // Shield Destroyer
-    {
-        if (isBuffedByBuffer)
-        {
-            shieldDestroyer_AS_Damage += buffAmount;
         }
     }
 
@@ -234,6 +203,38 @@ public class Bullet : MonoBehaviour
 
         Destroy(gameObject);
 
+    }*/
+
+/*    public void BuffBullet(float buffAmount)
+    {
+        if (isBuffedByBuffer)
+        {
+            damage += buffAmount;
+        }
+    }
+
+    public void BuffBullet_AS(float buffAmount) // Anti-Shield
+    {
+        if (isBuffedByBuffer)
+        {
+            turret_AS_Damage += buffAmount;
+        }
+    }
+
+    public void BuffBullet_AS_Auto(float buffAmount) // Anti-Shield Auto
+    {
+        if (isBuffedByBuffer)
+        {
+            autoTurret_AS_Damage += buffAmount;
+        }
+    }
+
+    public void BuffBullet_AS_SD(float buffAmount) // Shield Destroyer
+    {
+        if (isBuffedByBuffer)
+        {
+            shieldDestroyer_AS_Damage += buffAmount;
+        }
     }*/
 
 // For Object Pooling:
