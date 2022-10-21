@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e21dc523bf64e4aaa49f3128120c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopItemSO: {fileID: 0}
+  shopItemSO: {fileID: 11400000, guid: 6bf0eb0fb9cc41a4281a866ddd144ecc, type: 2}
 --- !u!54 &2380762203409277426
 Rigidbody:
   m_ObjectHideFlags: 0
