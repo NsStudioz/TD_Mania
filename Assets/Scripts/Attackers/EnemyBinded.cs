@@ -23,16 +23,16 @@ public class EnemyBinded : MonoBehaviour
     private void OnTriggerEnter(Collider binder)
     {
         if (binder.CompareTag("Binder"))
-        {
+        {   
+            D_Trap_Binder bindTrap = binder.GetComponent<D_Trap_Binder>();
+            bindDelay = bindTrap.bindingDuration;
+            //
             isBinded = true;
-            //BindingEnemy();
         }
     }
 
     public void BindingEnemy()
     {
-        //isBinded = true;
-
         if (isBinded)
         {
             bindDelay -= Time.deltaTime;
@@ -50,5 +50,17 @@ public class EnemyBinded : MonoBehaviour
             bindDelay = 10f;
         }
     }
+
+/*    public void BindEnemyNewOLD()
+    {
+        if (isBinded)
+        {
+            enemy.movingSpeed = enemy.startSpeed * 0;
+        }
+        else
+        {
+            enemy.movingSpeed = enemy.startSpeed;
+        }
+    }*/
 
 }
