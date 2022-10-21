@@ -8,13 +8,10 @@ namespace ShopSystem
 {
     public class Stats_LaserBeamer : MonoBehaviour
     {
-        //[SerializeField] ShopItemsScriptable[] shopItemsData;
+        
         [SerializeField] ShopItemsScriptable shopItemSO;
 
         D_Unit_Turret_LaserBeamer laserBeamer;
-
-        //private int laserBeamer_ShopIndexIdentifier = 0;
-        //private int shopItems_Item_MaxLevelIndex = 4;
 
         private void Start()
         {
@@ -54,6 +51,9 @@ namespace ShopSystem
             laserBeamer.range = shopItemsData[laserBeamer_ShopIndexIdentifier].unit_Level[thisItem_LevelIndex].radius;*/
         }
 
+        //private int laserBeamer_ShopIndexIdentifier = 0;
+        //private int shopItems_Item_MaxLevelIndex = 4;
+        //[SerializeField] ShopItemsScriptable[] shopItemsData;
     }
 }
 
