@@ -93,10 +93,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3028624214136582300}
   - component: {fileID: 3123261871795741498}
+  - component: {fileID: 3029260933156180473}
+  - component: {fileID: 520351480806255800}
+  - component: {fileID: 3139463338188955458}
   - component: {fileID: 3029260933156180475}
   - component: {fileID: 3029260933156180472}
-  - component: {fileID: 3029260933156180473}
-  - component: {fileID: 3139463338188955458}
   m_Layer: 2
   m_Name: D_Unit_Turret_Buffer_Scaled
   m_TagString: Buffer
@@ -141,6 +142,54 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3029260933156180473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3029260933156180478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9c45493258ce05419967ff27f5fe541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangeRadius: 0
+  LOS: {fileID: 1001543954034407703}
+  animController: {fileID: 3123261871795741498}
+  animation_IdleName: RadarStation_Idle
+  animation_ActivateName: Tower_Activate
+  animation_BuildName: Tower_Install
+  animation_RemoveName: Tower_Remove
+  turretReady: 0
+--- !u!114 &520351480806255800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3029260933156180478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cbb876a4c894d4880914676d72e68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItemSO: {fileID: 11400000, guid: 01aaadd0e4d548d4bb3680d6aca8af62, type: 2}
+--- !u!114 &3139463338188955458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3029260933156180478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b363c9797c15e24db0cb994aedfa356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleEffects:
+  - {fileID: 2938780748023817190}
+  - {fileID: 2938961211455142924}
 --- !u!135 &3029260933156180475
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -170,40 +219,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3029260933156180473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3029260933156180478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9c45493258ce05419967ff27f5fe541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rangeRadius: 0
-  animController: {fileID: 3123261871795741498}
-  animation_IdleName: RadarStation_Idle
-  animation_ActivateName: Tower_Activate
-  animation_BuildName: Tower_Install
-  animation_RemoveName: Tower_Remove
-  turretReady: 0
---- !u!114 &3139463338188955458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3029260933156180478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b363c9797c15e24db0cb994aedfa356, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particleEffects:
-  - {fileID: 2938780748023817190}
-  - {fileID: 2938961211455142924}
 --- !u!1 &3029310143005415194
 GameObject:
   m_ObjectHideFlags: 0
