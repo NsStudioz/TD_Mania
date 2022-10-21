@@ -5400,10 +5400,10 @@ GameObject:
   - component: {fileID: 665519654534273010}
   - component: {fileID: 604120971448203776}
   - component: {fileID: 4959789849968504821}
+  - component: {fileID: 8591065756393984289}
   - component: {fileID: -882802004349142292}
   - component: {fileID: 4324773715618327534}
   - component: {fileID: 7433191281425422383}
-  - component: {fileID: 8591065756393984289}
   m_Layer: 2
   m_Name: D_Unit_Turret_MissileLauncher_Scaled
   m_TagString: Untagged
@@ -5480,6 +5480,19 @@ MonoBehaviour:
   animation_BuildName: Missile_Install
   animation_RemoveName: Missile_Remove
   turretReady: 0
+--- !u!114 &8591065756393984289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664215370524953652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89cecf871d4275498a69ed65eb2b178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBuffed: 0
 --- !u!114 &-882802004349142292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5522,19 +5535,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.25, y: 2.25, z: 2.3}
   m_Center: {x: 0.05, y: 1, z: 0}
---- !u!114 &8591065756393984289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664215370524953652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c89cecf871d4275498a69ed65eb2b178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isBuffed: 0
 --- !u!1 &664256630870597240
 GameObject:
   m_ObjectHideFlags: 0
