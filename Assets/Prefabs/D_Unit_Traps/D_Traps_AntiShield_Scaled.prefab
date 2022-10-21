@@ -5094,6 +5094,7 @@ GameObject:
   - component: {fileID: 642548607155118899}
   - component: {fileID: 701948649849538042}
   - component: {fileID: 701948649849538043}
+  - component: {fileID: 9118517488489996338}
   m_Layer: 2
   m_Name: D_Traps_AntiShield_Scaled
   m_TagString: Traps
@@ -5170,12 +5171,27 @@ MonoBehaviour:
   explosionRadius: 2.35
   explosionDamage: 100
   isTriggered: 0
+  TGR_Quad: {fileID: 6289558172581675621}
+  EXP_Quad: {fileID: 7882045353423873324}
   animController: {fileID: 642548607155118899}
   animation_IdleName: Mine_Idle
   animation_ActivateName: Mine_Activate
   animation_BuildName: Mine_Install
   animation_RemoveName: Mine_Remove
   trapReady: 0
+--- !u!114 &9118517488489996338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701948649849538045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6735ad7f263c022419453a87260c2775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItemSO: {fileID: 11400000, guid: 77c902c1e0a760f43a648db93e41a0d2, type: 2}
 --- !u!1 &701994019219633925
 GameObject:
   m_ObjectHideFlags: 0
