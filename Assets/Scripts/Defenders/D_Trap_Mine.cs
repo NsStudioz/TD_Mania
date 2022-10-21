@@ -6,10 +6,16 @@ using UnityEngine;
 public class D_Trap_Mine : MonoBehaviour
 {
     [Header("Attributes")]
-    [SerializeField] float triggerRadius = 0.5f;
-    [SerializeField] float explosionRadius = 1f;
-    [SerializeField] float explosionDamage = 100;
+    [SerializeField] public float triggerRadius = 0.5f;
+    [SerializeField] public float explosionRadius = 1f;
+    [SerializeField] public float explosionDamage = 100;
     [SerializeField] bool isTriggered = false;
+
+    [Header("Trigger Line Of Sight")]
+    public GameObject TGR_Quad;
+
+    [Header("Explosion Radius")]
+    public GameObject EXP_Quad;
 
     [Header("Animations")]
     [SerializeField] Animator animController = null;

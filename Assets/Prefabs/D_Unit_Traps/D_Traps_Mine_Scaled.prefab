@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3993262240242029471}
   - component: {fileID: 3993262240242029464}
   - component: {fileID: 3993262240242029465}
+  - component: {fileID: 6184915205146503543}
   m_Layer: 2
   m_Name: D_Traps_Mine_Scaled
   m_TagString: Traps
@@ -88,12 +89,27 @@ MonoBehaviour:
   explosionRadius: 2.35
   explosionDamage: 100
   isTriggered: 0
+  TGR_Quad: {fileID: 4394336550023404607}
+  EXP_Quad: {fileID: 9158963729360951842}
   animController: {fileID: 3993262240242029471}
   animation_IdleName: Mine_Idle
   animation_ActivateName: Mine_Activate
   animation_BuildName: Mine_Install
   animation_RemoveName: Mine_Remove
   trapReady: 0
+--- !u!114 &6184915205146503543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3907736701174324265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf31886e3fd0914eb8f82da90e91a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItemSO: {fileID: 11400000, guid: e4a45d9a38bf5d34e8ec91b2f4d3a4b4, type: 2}
 --- !u!1 &3907749408166823191
 GameObject:
   m_ObjectHideFlags: 0
