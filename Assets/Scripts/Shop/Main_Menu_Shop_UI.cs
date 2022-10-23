@@ -78,7 +78,7 @@ namespace ShopSystem
                 //
                 shopItemsTemplates[thisItemIndex].UpgradeText.text = $"Maxed";
                 shopItemsTemplates[thisItemIndex].upgradeButton.interactable = false;
-            } 
+            }
         }
 
 
