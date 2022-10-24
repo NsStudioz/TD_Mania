@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     //private IObjectPool<Bullet> bulletPool;
     private Transform target;
 
-    //public GameObject impactEffects;
+    public GameObject impactEFX;
 
     public float speed = 10f;
     public float explosionRadius = 0f;
@@ -24,18 +24,11 @@ public class Bullet : MonoBehaviour
     public float turret_AS_Damage = 25f;
     public float autoTurret_AS_Damage = 20f;
     public float shieldDestroyer_AS_Damage = 50f;
-    //
-    //public bool isBuffedByBuffer;
 
     public void SeekTarget(Transform _target)
     {
         target = _target;
     }
-
-/*    private void Awake()
-    {
-        isBuffedByBuffer = false;
-    }*/
 
     private void Update()
     {
@@ -62,7 +55,8 @@ public class Bullet : MonoBehaviour
 
     private void HitTarget()
     {
-        // GameObject effectsIns = Instantiate(impactEffects, transform.position, transform.rotation);
+        GameObject bullet_EFX_Ins = Instantiate(impactEFX, transform.position, transform.rotation);
+
         if (!useAntiShieldBullets)
         {
             if (explosionRadius > 0f)
