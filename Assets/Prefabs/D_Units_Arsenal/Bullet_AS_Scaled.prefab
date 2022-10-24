@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892560bc6431e934b815c0d19b3a70c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impactEFX: {fileID: 1459449714076721644, guid: 2705e1ccec4e4b549950ea3417630a91, type: 3}
   speed: 15
   explosionRadius: 0
   damage: 50

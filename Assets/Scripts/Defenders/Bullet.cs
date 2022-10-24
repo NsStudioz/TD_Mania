@@ -99,6 +99,8 @@ public class Bullet : MonoBehaviour
     {
         if (useAntiShieldBullets)
         {
+            GameObject antiShieldImpactEFX = Instantiate(impactEFX, transform.position, transform.rotation);
+
             if (shieldCollider.tag == shieldTag)
             {
                 Enemy_Shield shield = shieldCollider.GetComponent<Enemy_Shield>();
