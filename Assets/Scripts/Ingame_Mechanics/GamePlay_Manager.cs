@@ -48,7 +48,7 @@ public class GamePlay_Manager : MonoBehaviour
 
     private void LinkTexts()
     {
-        GoldCountText.text = "$" + PlayerStats.Gold.ToString();
+        GoldCountText.text = PlayerStats.Gold.ToString();
         healthCountText.text = PlayerStats.Lives.ToString();
         TimerCountText.text = string.Format("{0:00.00}", masterTimer);
     }
