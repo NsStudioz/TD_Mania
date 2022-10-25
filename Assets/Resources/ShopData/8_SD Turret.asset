@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 8_SD Turret
   m_EditorClassIdentifier: 
   itemName: Shield Destroyer
-  Item_LevelIndex: 0
+  Item_LevelIndex: 4
   unit_Level:
   - unlockCost: 0
     unit_LevelIndex: 0
