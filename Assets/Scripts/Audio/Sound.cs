@@ -15,6 +15,19 @@ public class Sound
     [Range(0f, 1f)]
     public float pitch;
 
+    [Range(0f, 1f)]
+    public float spatialBlend;
+
+    // Property:
+    public enum VolumeRolloff { LogarithmicRolloff, LinearRolloff, CustomRolloff }
+    public VolumeRolloff volumeRolloff;
+    //
+    [Range(0f, 50f)]
+    public float minDistance;
+
+    [Range(0f, 100f)]
+    public float maxDistance;
+
     public bool loop;
     public bool mute;
 

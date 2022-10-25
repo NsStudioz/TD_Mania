@@ -19,6 +19,10 @@ public class AudioManager : MonoBehaviour
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
             sound.source.mute = sound.mute;
+            sound.source.spatialBlend = sound.spatialBlend;
+            sound.source.maxDistance = sound.maxDistance;
+            sound.source.minDistance = sound.minDistance;
+            sound.source.rolloffMode = (AudioRolloffMode)sound.volumeRolloff; // Accessing the dropdown menu using a property.
         }
     }
 

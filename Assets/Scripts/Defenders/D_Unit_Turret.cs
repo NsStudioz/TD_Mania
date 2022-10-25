@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-//using UnityEngine.Pool;
 
 public class D_Unit_Turret : MonoBehaviour
 {
@@ -40,12 +39,7 @@ public class D_Unit_Turret : MonoBehaviour
     [SerializeField] string animation_RemoveName;
     [SerializeField] bool turretReady = false;
 
-
-
-    //
-    /*    [Header("Object Pooling")] // Object Pooling:
-        private IObjectPool<Bullet> bulletPool;
-        [SerializeField] Bullet bulletPrefab_New;*/
+    AudioManager audioManager;
 
     private void OnEnable()
     {
@@ -54,16 +48,20 @@ public class D_Unit_Turret : MonoBehaviour
 
     private void Awake()
     {
-        if (LOS != null)
-        {
-            LOS.SetActive(false);
-        }
-        //bulletPool = new ObjectPool<Bullet>(CreateBullet, OnGet);
+
     }
 
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
+
+        if (LOS != null)
+        {
+            LOS.SetActive(false);
+        }
     }
 
     void Update()
@@ -95,8 +93,6 @@ public class D_Unit_Turret : MonoBehaviour
             if (fireCountDown <= 0f)
             {
                 Shoot();
-                //bulletPool.Get();
-                //AimAtTarget();
                 fireCountDown = 1f / fireRate;
             }
 
@@ -146,6 +142,7 @@ public class D_Unit_Turret : MonoBehaviour
         GameObject bulletGO = Instantiate(bulletPrefab, firingPosition.position, firingPosition.rotation);
         muzzleEFX.Play();
         animController.Play(animation_FireName);
+        PlayTurretShootingSFX();
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if (bullet != null)
@@ -154,10 +151,10 @@ public class D_Unit_Turret : MonoBehaviour
         }
     }
 
-    public void BuffDefendingUnit_Range(float bonusAmount)
+/*    public void BuffDefendingUnit_Range(float bonusAmount)
     {
         range += bonusAmount;
-    }
+    }*/
 
     public void EnableTurret()
     {
@@ -180,52 +177,32 @@ public class D_Unit_Turret : MonoBehaviour
         }
     }
 
+    private void PlayTurretShootingSFX()
+    {
+        if (statsIdentifierTag == "Cannon" || statsIdentifierTag == "AS_Cannon")
+        {
+            audioManager.Play("Cannon_Fire");
+        }
+        else if (statsIdentifierTag == "Auto_Turret" || statsIdentifierTag == "AS_Auto")
+        {
+            audioManager.Play("Auto_Fire");
+        }
+        else if (statsIdentifierTag == "Missile_Launcher" || statsIdentifierTag == "AS_ShieldDestroyer")
+        {
+            audioManager.Play("Missile_Fire");
+        }
+        else if (statsIdentifierTag == "Plasma_Cannon")
+        {
+            audioManager.Play("Plasma_Fire");
+        }
+    }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
-    //
-    // FOR OBJECT POOLING:
-    //
 
-    #region ObjectPooling
-    /*    private void AimAtTarget()
-        {
-            Bullet bullet = GetComponent<Bullet>();
-
-            if (bullet != null)
-            {
-                bullet.SeekTarget(target);
-            }
-        }
-
-        private Bullet CreateBullet()
-        {
-            Bullet bullet = Instantiate(bulletPrefab_New);
-            bullet.SetPool(bulletPool);
-            return bullet;
-        }
-
-        private void OnGet(Bullet bullet)
-        {
-            bullet.gameObject.SetActive(true);
-            bullet.transform.position = firingPosition.transform.position;
-        }
-
-        private void OnRelease(Bullet bullet)
-        {
-            bullet.gameObject.SetActive(false);
-        }
-
-        private void OnDestroyBullet(Bullet bullet)
-        {
-            Destroy(bullet.gameObject);
-        }*/
-    #endregion
-
-    #region OldUpdateMethod
 
     /*    void LeUpdate()
         {
@@ -253,14 +230,7 @@ public class D_Unit_Turret : MonoBehaviour
             }
         }*/
 
-    /*    private void UseTheLaser()
-    {
-        return; // do nothing in this method since we don't use it on most turrets.
-    }*/
 
-    /*    [Header("Unit Use Laser?")]
-    [SerializeField] bool useLaser = false;*/
 
-    #endregion
 
 }

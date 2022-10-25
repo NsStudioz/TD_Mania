@@ -44,4 +44,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea68bfc95daa5340a63caf5ae1df7dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: Cannon_Fire
+    clip: {fileID: 8300000, guid: 4fe98e57716069e4480e39088a0a8931, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Missile_Fire
+    clip: {fileID: 8300000, guid: 844f796cc9a4f14449463e05297ee27a, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Plasma_Fire
+    clip: {fileID: 8300000, guid: 44ad40ff1737fea4ca2119854e140102, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Auto_Fire
+    clip: {fileID: 8300000, guid: b73ba51f51aeb7b43b75ad56e93f9426, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
