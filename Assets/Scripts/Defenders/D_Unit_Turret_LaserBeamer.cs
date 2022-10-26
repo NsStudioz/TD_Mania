@@ -39,6 +39,8 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     [SerializeField] string animation_RemoveName;
     [SerializeField] bool turretReady = false;
 
+    AudioManager audioManager;
+
     private void OnEnable()
     {
         animController.Play(animation_BuildName);
@@ -49,6 +51,9 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         lineRenderer.enabled = false;
         laserImpactLight.enabled = false;
+
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     void Update()
@@ -64,6 +69,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
                         lineRenderer.enabled = false;
                         laserImpactLight.enabled = false;
                         laserImpactEffects.Stop();
+                        audioManager.Stop("LaserBeamer_Fire");
                     }
 
                 }
@@ -82,6 +88,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
                             lineRenderer.enabled = false;
                             laserImpactLight.enabled = false;
                             laserImpactEffects.Stop();
+                            audioManager.Stop("LaserBeamer_Fire");
                         }
 
                     }
@@ -116,9 +123,10 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
 
         if (!lineRenderer.enabled)
         {
+            PlayTurretShootingSFX();
             lineRenderer.enabled = true;
             laserImpactLight.enabled = true;
-            laserImpactEffects.Play();
+            laserImpactEffects.Play();  
         }
 
         lineRenderer.SetPosition(0, firingPosition.position); // line starts based on position index (written in the component, can create more if want lasers to bend or change positions).
@@ -179,15 +187,31 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         else { target = null; }
     }
 
-    public void BuffDefendingUnit_Range(float bonusRangeAmount)
+/*    public void BuffDefendingUnit_Range(float bonusRangeAmount)
     {
         range += bonusRangeAmount;
-    }
+    }*/
 
     public void EnableTurret()
     {
         turretReady = true;
     }
+
+    public void PlayTurretShootingSFX()
+    {
+        audioManager.PlayOneShot("LaserBeamer_Fire");
+    }
+
+    public void PlayTurretConstructionSFX_1()
+    {
+        audioManager.PlayOneShot("Unit_Built_1");
+    }
+
+    public void PlayTurretConstructionSFX_2()
+    {
+        audioManager.PlayOneShot("Unit_Built_2");
+    }
+
 
     private void OnDrawGizmosSelected()
     {

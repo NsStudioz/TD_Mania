@@ -11,6 +11,8 @@ public class D_Unit_Buffer : MonoBehaviour
 
     private new SphereCollider collider;
 
+    AudioManager audioManager;
+
     [Header("Line Of Sight")]
     public GameObject LOS;
 
@@ -25,6 +27,9 @@ public class D_Unit_Buffer : MonoBehaviour
     private void Start()
     {
         collider = GetComponent<SphereCollider>();
+
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     private void Update()
@@ -40,6 +45,21 @@ public class D_Unit_Buffer : MonoBehaviour
     public void EnableTurret()
     {
         turretReady = true;
+    }
+
+    public void PlayBufferIdleSFX()
+    {
+        audioManager.PlayOneShot("Buffer_Activate");
+    }
+
+    public void PlayTurretConstructionSFX_1()
+    {
+        audioManager.PlayOneShot("Unit_Built_1");
+    }
+
+    public void PlayTurretConstructionSFX_2()
+    {
+        audioManager.PlayOneShot("Unit_Built_2");
     }
 
 

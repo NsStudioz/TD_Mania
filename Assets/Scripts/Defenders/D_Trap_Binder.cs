@@ -28,6 +28,8 @@ public class D_Trap_Binder : MonoBehaviour
     [SerializeField] string animation_RemoveName;
     [SerializeField] bool trapReady = false;
 
+    AudioManager audioManager;
+
     private void OnEnable()
     {
         animController.Play(animation_BuildName);
@@ -38,6 +40,9 @@ public class D_Trap_Binder : MonoBehaviour
         sphereCol = GetComponent<SphereCollider>();
 
         sphereCol.enabled = false;
+
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     private void Update()
@@ -77,6 +82,16 @@ public class D_Trap_Binder : MonoBehaviour
     public void EnableTrap()
     {
         trapReady = true;
+    }
+
+    public void PlayTurretConstructionSFX_1()
+    {
+        audioManager.PlayOneShot("Unit_Built_1");
+    }
+
+    public void PlayTurretConstructionSFX_2()
+    {
+        audioManager.PlayOneShot("Unit_Built_2");
     }
 
     private void OnDrawGizmosSelected()

@@ -151,11 +151,6 @@ public class D_Unit_Turret : MonoBehaviour
         }
     }
 
-/*    public void BuffDefendingUnit_Range(float bonusAmount)
-    {
-        range += bonusAmount;
-    }*/
-
     public void EnableTurret()
     {
         turretReady = true;
@@ -181,20 +176,34 @@ public class D_Unit_Turret : MonoBehaviour
     {
         if (statsIdentifierTag == "Cannon" || statsIdentifierTag == "AS_Cannon")
         {
-            audioManager.Play("Cannon_Fire");
+            //audioManager.Play("Cannon_Fire");
+            audioManager.PlayOneShot("Cannon_Fire");
         }
         else if (statsIdentifierTag == "Auto_Turret" || statsIdentifierTag == "AS_Auto")
         {
-            audioManager.Play("Auto_Fire");
+            //audioManager.Play("Auto_Fire");
+            audioManager.PlayOneShot("Auto_Fire");
         }
         else if (statsIdentifierTag == "Missile_Launcher" || statsIdentifierTag == "AS_ShieldDestroyer")
         {
-            audioManager.Play("Missile_Fire");
+            //audioManager.Play("Missile_Fire");
+            audioManager.PlayOneShot("Missile_Fire");
         }
         else if (statsIdentifierTag == "Plasma_Cannon")
         {
-            audioManager.Play("Plasma_Fire");
+            //audioManager.Play("Plasma_Fire");
+            audioManager.PlayOneShot("Plasma_Fire");
         }
+    }
+
+    public void PlayTurretConstructionSFX_1()
+    {
+        audioManager.PlayOneShot("Unit_Built_1");
+    }
+
+    public void PlayTurretConstructionSFX_2()
+    {
+        audioManager.PlayOneShot("Unit_Built_2");
     }
 
     private void OnDrawGizmosSelected()
@@ -203,6 +212,10 @@ public class D_Unit_Turret : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
+    /*    public void BuffDefendingUnit_Range(float bonusAmount)
+    {
+        range += bonusAmount;
+    }*/
 
     /*    void LeUpdate()
         {

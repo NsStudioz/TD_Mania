@@ -18,6 +18,8 @@ public class D_Trap_GoldGenerator : MonoBehaviour
     [SerializeField] string animation_RemoveName;
     [SerializeField] bool turretReady = false;
 
+    AudioManager audioManager;
+
     private void OnEnable()
     {
         animController.Play(animation_BuildName);
@@ -26,6 +28,9 @@ public class D_Trap_GoldGenerator : MonoBehaviour
     private void Start()
     {
         delayTimeThreshold = gold_DelayTime;
+
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     void Update()
@@ -48,4 +53,15 @@ public class D_Trap_GoldGenerator : MonoBehaviour
     {
         turretReady = true;
     }
+
+    public void PlayGoldGeneratorActivateSFX()
+    {
+        //audioManager.PlayOneShot("Unit_Built_1");
+    }
+
+    public void PlayTurretConstructionSFX_1()
+    {
+        audioManager.PlayOneShot("Unit_Built_1");
+    }
+
 }
