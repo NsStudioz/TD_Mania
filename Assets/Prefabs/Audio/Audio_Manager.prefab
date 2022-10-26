@@ -79,7 +79,51 @@ MonoBehaviour:
     mute: 0
     source: {fileID: 0}
   - name: Auto_Fire
-    clip: {fileID: 8300000, guid: b73ba51f51aeb7b43b75ad56e93f9426, type: 3}
+    clip: {fileID: 8300000, guid: 81bb396f34a70ae4899af1f48bfeffdf, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: LaserBeamer_Fire
+    clip: {fileID: 8300000, guid: a67045f3f9d4a2f479bcbc9a61ed95ba, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 25
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Buffer_Activate
+    clip: {fileID: 8300000, guid: ebefb7f65bc98c442b82c787a33c995e, type: 3}
+    volume: 0.425
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 5
+    maxDistance: 25
+    loop: 1
+    mute: 0
+    source: {fileID: 0}
+  - name: Unit_Built_1
+    clip: {fileID: 8300000, guid: b041032a33ebf5b4d9cacb199d75e130, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Unit_Built_2
+    clip: {fileID: 8300000, guid: 817dee9e5bd52e24dbafe6d65b1d178a, type: 3}
     volume: 0.5
     pitch: 1
     spatialBlend: 1

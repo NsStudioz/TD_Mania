@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour
             sound.source.maxDistance = sound.maxDistance;
             sound.source.minDistance = sound.minDistance;
             sound.source.rolloffMode = (AudioRolloffMode)sound.volumeRolloff; // Accessing the dropdown menu using a property.
+            //sound.source.PlayOneShot = sound.
         }
     }
 
@@ -42,6 +43,17 @@ public class AudioManager : MonoBehaviour
         sound.source.Play();
     }
 
+    public void PlayOneShot(string name)
+    {
+        Sound sound = Array.Find(sounds, sound => sound.name == name);
+        if (sound == null)
+        {
+            Debug.Log("Sound: " + name + " has not been found!");
+            return;
+        }
+        sound.source.PlayOneShot(sound.clip);
+    }
+
     public void Mute()
     {
         foreach (Sound sound in sounds)
@@ -56,6 +68,17 @@ public class AudioManager : MonoBehaviour
         {
             sound.source.mute = false;
         }
+    }
+
+    public void Stop(string name)
+    {
+        Sound sound = Array.Find(sounds, sound => sound.name == name);
+        if (sound == null)
+        {
+            Debug.Log("Sound: " + name + " has not been found!");
+            return;
+        }
+        sound.source.Stop();
     }
 
     public void StopAllSound()
