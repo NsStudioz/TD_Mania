@@ -79,7 +79,7 @@ MonoBehaviour:
     mute: 0
     source: {fileID: 0}
   - name: Auto_Fire
-    clip: {fileID: 8300000, guid: 81bb396f34a70ae4899af1f48bfeffdf, type: 3}
+    clip: {fileID: 8300000, guid: de97f492b93469d4fb068f67dba01de9, type: 3}
     volume: 0.5
     pitch: 1
     spatialBlend: 1
@@ -124,6 +124,116 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Unit_Built_2
     clip: {fileID: 8300000, guid: 817dee9e5bd52e24dbafe6d65b1d178a, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Plasma_Boom
+    clip: {fileID: 8300000, guid: aeb95813259949341b0071ea55a23a13, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Enemy_Boom
+    clip: {fileID: 8300000, guid: cca7540a4704ad04e82486b16ca1f3b8, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Bullet_Boom
+    clip: {fileID: 8300000, guid: b48b7a765a3216e458392a036b13396a, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Bullet_Auto_Boom
+    clip: {fileID: 8300000, guid: db90d037882f88247bbffd1860bbe563, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Missile_Boom
+    clip: {fileID: 8300000, guid: 97b496a1968b00541ac8608e7e46cc07, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Trap_Boom
+    clip: {fileID: 8300000, guid: 971d2d8e0dda03746ab1181a6ba8fa77, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Trap_Beep
+    clip: {fileID: 8300000, guid: e6c5732f5a4d9ea4586eb1111bf1f98e, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Bullet_Boom
+    clip: {fileID: 8300000, guid: b48b7a765a3216e458392a036b13396a, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Bullet_Auto_Boom
+    clip: {fileID: 8300000, guid: db90d037882f88247bbffd1860bbe563, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Missile_Boom
+    clip: {fileID: 8300000, guid: 97b496a1968b00541ac8608e7e46cc07, type: 3}
     volume: 0.5
     pitch: 1
     spatialBlend: 1
