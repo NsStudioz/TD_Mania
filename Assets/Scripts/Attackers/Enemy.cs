@@ -22,10 +22,16 @@ public class Enemy : MonoBehaviour
     public bool isProtected;
     [SerializeField] float range = 1f;
 
+    AudioManager audioManager;
+
+
 
     void Start()
     {
         movingSpeed = startSpeed;
+
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     private void Update()
@@ -52,6 +58,7 @@ public class Enemy : MonoBehaviour
         enemyHealth -= amount;
         if (enemyHealth <= 0f)
         {
+            audioManager.PlayOneShot("Enemy_Boom");
             Die();
         }
     }
