@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
     //
     [Header("Anti-Shield Attributes")]
     [SerializeField] bool useAntiShieldBullets;
+    [SerializeField] string bulletTags;
     [SerializeField] string shieldTag = "EnemyShields";
     private string antiShield_Tag = "AS_Bullet";
     private string antiShield_Auto_Tag = "AS_Auto_Bullet";
@@ -25,9 +26,17 @@ public class Bullet : MonoBehaviour
     public float autoTurret_AS_Damage = 20f;
     public float shieldDestroyer_AS_Damage = 50f;
 
+    AudioManager audioManager;
+
     public void SeekTarget(Transform _target)
     {
         target = _target;
+    }
+
+    private void Start()
+    {
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     private void Update()
@@ -44,7 +53,7 @@ public class Bullet : MonoBehaviour
 
         if (dir.magnitude <= distanceThisFrame)
         {
-            HitTarget();
+            HitTarget();        
             return;
         }
 
@@ -81,6 +90,7 @@ public class Bullet : MonoBehaviour
             if (collider.tag == "Attackers") // if the colliders are tagged as Enemy.
             {
                 Damage(collider.transform); // damage the affected colliders
+                PlayBulletImpactSFX();
             }
         }
     }
@@ -92,6 +102,7 @@ public class Bullet : MonoBehaviour
         if (e != null)
         {
             e.TakeDamage(damage);
+            PlayBulletImpactSFX();
         }
     }
 
@@ -99,6 +110,7 @@ public class Bullet : MonoBehaviour
     {
         if (useAntiShieldBullets)
         {
+            PlayBulletImpactSFX();
 
             if (shieldCollider.tag == shieldTag)
             {
@@ -109,14 +121,17 @@ public class Bullet : MonoBehaviour
                 if (gameObject.CompareTag(antiShield_Tag))
                 {
                     shield.TakeShieldDamage(turret_AS_Damage);
+                    //audioManager.PlayOneShot("Bullet_Boom");
                 }
                 else if (gameObject.CompareTag(antiShield_Auto_Tag))
                 {
                     shield.TakeShieldDamage(autoTurret_AS_Damage);
+                    //audioManager.PlayOneShot("Bullet_Auto_Boom");
                 }
                 else if (gameObject.CompareTag(sd_Destroyer_Tag))
                 {
                     shield.TakeShieldDamage(shieldDestroyer_AS_Damage);
+                    //audioManager.PlayOneShot("Missile_Boom");
                 }
                 
                 Destroy(gameObject);
@@ -136,13 +151,22 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-/*        else if (!useAntiShieldBullets)
+    }
+
+    private void PlayBulletImpactSFX()
+    {
+        if(bulletTags == "Bullet")
         {
-            if (shieldCollider.tag != shieldTag)
-            {
-                Destroy(gameObject);
-            }
-        }*/
+            audioManager.PlayOneShot("Bullet_Boom");
+        }
+        else if (bulletTags == "Bullet_Auto")
+        {
+            audioManager.PlayOneShot("Bullet_Auto_Boom");
+        }
+        else if (bulletTags == "Missile")
+        {
+            audioManager.PlayOneShot("Missile_Boom");
+        }
     }
 
     private void OnDrawGizmosSelected()
@@ -152,6 +176,17 @@ public class Bullet : MonoBehaviour
     }
 
 }
+
+#region Trash_Code:
+
+/*        else if (!useAntiShieldBullets)
+        {
+            if (shieldCollider.tag != shieldTag)
+            {
+                Destroy(gameObject);
+            }
+        }*/
+
 /*    private void OnTriggerEnter(Collider shieldCollider)
     {
         if (useAntiShieldBullets)
@@ -178,13 +213,15 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        *//*        else if (!useAntiShieldBullets)
+        */
+/*        else if (!useAntiShieldBullets)
                 {
                     if (shieldCollider.tag != shieldTag)
                     {
                         Destroy(gameObject);
                     }
-                }*//*
+                }*/
+/*
     }*/
 
 
@@ -249,4 +286,4 @@ public void SetPool(IObjectPool<Bullet> pool)
 
     #endregion*/
 
-
+#endregion

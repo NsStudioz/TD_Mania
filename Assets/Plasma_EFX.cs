@@ -16,9 +16,18 @@ public class Plasma_EFX : MonoBehaviour
     [SerializeField] float timeThreshold;
     [SerializeField] float endTimer = 0f;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
+    }
+
 
     void Start()
     {
+        audioManager.PlayOneShot("Plasma_Boom");
         timeElapsed = timeThreshold;
     }
 

@@ -84,6 +84,7 @@ MonoBehaviour:
   explosionRadius: 0.75
   damage: 50
   useAntiShieldBullets: 1
+  bulletTags: Missile
   shieldTag: EnemyShields
   turret_AS_Damage: 25
   autoTurret_AS_Damage: 20
