@@ -56,6 +56,7 @@ public class D_Trap_AntiShield : MonoBehaviour
             if(collider.tag == "EnemyShields")
             {
                 isTriggered = true;
+                PlayTrapExplodeSFX();
                 ExplodeOnCollider();
             }
         }
@@ -86,6 +87,11 @@ public class D_Trap_AntiShield : MonoBehaviour
     public void EnableTrap()
     {
         trapReady = true;
+    }
+
+    public void PlayTrapExplodeSFX()
+    {
+        audioManager.PlayOneShot("Trap_Boom");
     }
 
     public void PlayTurretConstructionSFX_1()

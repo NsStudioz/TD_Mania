@@ -56,7 +56,7 @@ public class D_Trap_GoldGenerator : MonoBehaviour
 
     public void PlayGoldGeneratorActivateSFX()
     {
-        //audioManager.PlayOneShot("Unit_Built_1");
+        //audioManager.PlayOneShot("");
     }
 
     public void PlayTurretConstructionSFX_1()

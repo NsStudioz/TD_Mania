@@ -84,6 +84,16 @@ public class D_Trap_Binder : MonoBehaviour
         trapReady = true;
     }
 
+    public void PlayTrapBeepSFX()
+    {
+        audioManager.PlayOneShot("Trap_Beep");
+    }
+
+    public void PlayTrapExplodeSFX()
+    {
+        audioManager.PlayOneShot("Trap_Boom");
+    }
+
     public void PlayTurretConstructionSFX_1()
     {
         audioManager.PlayOneShot("Unit_Built_1");

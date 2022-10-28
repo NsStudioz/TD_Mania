@@ -58,6 +58,7 @@ public class D_Trap_Mine : MonoBehaviour
             if (collider.tag == "Attackers")
             {
                 isTriggered = true;
+                PlayTrapExplodeSFX();
                 Explode();
             }
         }
@@ -88,6 +89,11 @@ public class D_Trap_Mine : MonoBehaviour
     public void EnableTrap()
     {
         trapReady = true;
+    }
+
+    public void PlayTrapExplodeSFX()
+    {
+        audioManager.PlayOneShot("Trap_Boom");
     }
 
     public void PlayTurretConstructionSFX_1()
