@@ -122,17 +122,14 @@ public class Bullet : MonoBehaviour
                 if (gameObject.CompareTag(antiShield_Tag))
                 {
                     shield.TakeShieldDamage(turret_AS_Damage);
-                    //audioManager.PlayOneShot("Bullet_Boom");
                 }
                 else if (gameObject.CompareTag(antiShield_Auto_Tag))
                 {
                     shield.TakeShieldDamage(autoTurret_AS_Damage);
-                    //audioManager.PlayOneShot("Bullet_Auto_Boom");
                 }
                 else if (gameObject.CompareTag(sd_Destroyer_Tag))
                 {
                     shield.TakeShieldDamage(shieldDestroyer_AS_Damage);
-                    //audioManager.PlayOneShot("Missile_Boom");
                 }
                 
                 Destroy(gameObject);
