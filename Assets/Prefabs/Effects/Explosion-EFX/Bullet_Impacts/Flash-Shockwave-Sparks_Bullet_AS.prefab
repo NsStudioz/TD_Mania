@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 677363230875215023}
   - {fileID: 3543026848477792975}
-  - {fileID: 673432908637658475}
+  - {fileID: 5389977494533949738}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5019,11 +5019,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParticleSystem_Sparks
       objectReference: {fileID: 0}
+    - target: {fileID: 8159480743491188965, guid: 98099463eed7e044fb834b5055904ca4, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159480743491188965, guid: 98099463eed7e044fb834b5055904ca4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98099463eed7e044fb834b5055904ca4, type: 3}
---- !u!4 &673432908637658475 stripped
+--- !u!4 &5389977494533949738 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3650665377656122532, guid: 98099463eed7e044fb834b5055904ca4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8159480743491188965, guid: 98099463eed7e044fb834b5055904ca4, type: 3}
   m_PrefabInstance: {fileID: 4319312099259281871}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4691293110204369609
