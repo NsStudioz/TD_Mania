@@ -48,8 +48,6 @@ MonoBehaviour:
   currentSceneIndex: 0
   playNextTrack: 0
   stopLastTrack: 0
-  startDelayTime: 0
-  stateSwitch: 0
   timeElapsed: 0
   timeToFade: 1
   timerThreshold: 1
