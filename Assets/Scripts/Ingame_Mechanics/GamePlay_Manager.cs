@@ -22,7 +22,6 @@ public class GamePlay_Manager : MonoBehaviour
     [SerializeField] static bool gameOver;
     [SerializeField] static bool gameWon;
 
-
     void Start()
     {
         gameWon = false;
@@ -67,6 +66,10 @@ public class GamePlay_Manager : MonoBehaviour
         {
             gameOver = true;
         }
+        else if (Input.GetKeyDown("b"))
+        {
+            gameWon = true;
+        }
     }
 
     public static bool GetGameOver()
@@ -81,7 +84,7 @@ public class GamePlay_Manager : MonoBehaviour
 
     public static float GetSurvivalTimerResults() // when game ends.
     {
-            return survivalTimer;
+        return survivalTimer;
     }
 
 }

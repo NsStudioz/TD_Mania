@@ -30,12 +30,11 @@ public class GameManager : MonoBehaviour
 
     private void SetGameOverUI()
     {
-        gameOverUI.SetActive(true);
+        gameOverUI.SetActive(true); 
     }
 
     private void SetGameWonUI()
     {
-        gameWonUI.SetActive(true);
+        gameWonUI.SetActive(true); 
     }
-
 }
