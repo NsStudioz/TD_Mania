@@ -5601,6 +5601,8 @@ GameObject:
   - component: {fileID: 3506503890088319105}
   - component: {fileID: 3506503890088319104}
   - component: {fileID: 3506503890088319119}
+  - component: {fileID: 5408090326379730075}
+  - component: {fileID: 4834253199152608439}
   m_Layer: 5
   m_Name: UI_Canvas
   m_TagString: Untagged
@@ -5694,6 +5696,39 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!95 &5408090326379730075
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506503890088319118}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f19cb53942a34614e886c413c5b91842, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4834253199152608439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506503890088319118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f8219ed5e8a6943bc197d2e7789a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5408090326379730075}
 --- !u!1 &3506503890256411351
 GameObject:
   m_ObjectHideFlags: 0
@@ -7832,13 +7867,14 @@ GameObject:
   m_Component:
   - component: {fileID: 6990278232629858256}
   - component: {fileID: 2473105831408170161}
+  - component: {fileID: 6701491634919969961}
   m_Layer: 5
   m_Name: GameWon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6990278232629858256
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7868,6 +7904,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5749550700284444411}
   m_CullTransparentMesh: 1
+--- !u!225 &6701491634919969961
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749550700284444411}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5834652713615234091
 GameObject:
   m_ObjectHideFlags: 0
@@ -10176,6 +10224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7481945428265152648}
   - component: {fileID: 7481945428265152649}
+  - component: {fileID: 2036464130871391192}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -10212,6 +10261,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7481945428265152647}
   m_CullTransparentMesh: 1
+--- !u!225 &2036464130871391192
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7481945428265152647}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7481945428390701845
 GameObject:
   m_ObjectHideFlags: 0
@@ -10335,9 +10396,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1088042135236074278, guid: cb3c660ebac75d5428457608309b9438, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Levels_Handler, Assembly-CSharp
-        m_MethodName: RestartGameSession
+        m_MethodName: RestartGameSessionFromGameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

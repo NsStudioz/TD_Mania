@@ -380,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 2436516578134963843}
     - target: {fileID: 1371792435, guid: b7124b6dc433f8144b523d6ba7dd4ddc, type: 3}
       propertyPath: masterTimerThreshold
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 974758937459715592, guid: b7124b6dc433f8144b523d6ba7dd4ddc, type: 3}
       propertyPath: m_RootOrder
@@ -568,6 +568,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3342506209895847451}
+    - target: {fileID: 7481945428390701847, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3342506209895847451}
+    - target: {fileID: 7481945428390701847, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGameSession
+      objectReference: {fileID: 0}
     - target: {fileID: 8165826823101068986, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
