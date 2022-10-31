@@ -35,13 +35,24 @@ public class MainMenu_Handler : MonoBehaviour
     [SerializeField] GameObject options_UI;
     [SerializeField] GameObject credits_UI;
 
+    //
+    AudioManager audioManager;
+
+    private void Start()
+    {
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
+    }
+
     public void OpenMainMenu() // When leaving SHOP SCENE;
     {
+        MenuClickSFX();
         SceneManager.LoadScene(mainMenuIndex);
     }
 
     public void OpenShopMenu()
     {
+        MenuClickSFX();
         SceneManager.LoadScene(shopMenuIndex);
     }
 
@@ -51,6 +62,7 @@ public class MainMenu_Handler : MonoBehaviour
     {
         playMenu = true;
         play_UI.SetActive(true);
+        MenuClickSFX();
         //menu_UI_AnimController.Play(play_UI_On);
     }
 
@@ -58,6 +70,7 @@ public class MainMenu_Handler : MonoBehaviour
     {
         optionsMenu = true;
         options_UI.SetActive(true);
+        MenuClickSFX();
         //menu_UI_AnimController.Play(options_UI_On);
     }
 
@@ -65,11 +78,13 @@ public class MainMenu_Handler : MonoBehaviour
     {
         creditsMenu = true;
         credits_UI.SetActive(true);
+        MenuClickSFX();
         //menu_UI_AnimController.Play(credits_UI_On);
     }
 
     public void OpenPrivacyPage()
     {
+        MenuClickSFX();
         Application.OpenURL(urlAddress);
     }
 
@@ -92,9 +107,22 @@ public class MainMenu_Handler : MonoBehaviour
             //menu_UI_AnimController.Play(credits_UI_Off);
             creditsMenu = false;
             credits_UI.SetActive(false);
-        }   
+        }
+
+        MenuBackSFX();
     }
 
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // For SFX:
+    private void MenuClickSFX()
+    {
+        audioManager.PlayOneShot("UI_Click_Menu");
+    }
+
+    private void MenuBackSFX()
+    {
+        audioManager.PlayOneShot("UI_Back");
+    }
 
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // For Animations:
@@ -104,6 +132,5 @@ public class MainMenu_Handler : MonoBehaviour
         options_UI.SetActive(false);
         credits_UI.SetActive(false);
     }
-
 
 }

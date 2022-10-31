@@ -243,3 +243,124 @@ MonoBehaviour:
     loop: 0
     mute: 0
     source: {fileID: 0}
+  - name: UI_Back
+    clip: {fileID: 8300000, guid: a916389a570baa941aa7f63e66438901, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: UI_Click_Menu
+    clip: {fileID: 8300000, guid: f6f7a43ad4aafe44e92871821a6d13db, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: UI_Click_Ingame
+    clip: {fileID: 8300000, guid: d9c88a8e5505e484da7163fba5e6dac3, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: UI_Popup
+    clip: {fileID: 8300000, guid: 5cbb413beacf4c64f893856dce4410ea, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: UI_ClickError
+    clip: {fileID: 8300000, guid: d0952ecf87df43940854c8e9e4aa141a, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: UI_ClickUpgrade
+    clip: {fileID: 8300000, guid: 36f268c2303f3b44b9b9d9ab923b61ec, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Ingame_GameOver
+    clip: {fileID: 8300000, guid: 645e34f8e0b68f545a84e84251568a4a, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 0
+    volumeRolloff: 0
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Ingame_GameWon
+    clip: {fileID: 8300000, guid: b8f8dc3d9792c954ba1e55b5636408e2, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 0
+    volumeRolloff: 0
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: UI_UnitsButton_Unfold
+    clip: {fileID: 8300000, guid: 888069ff6a889d84f974be9f87dac7af, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 0
+    volumeRolloff: 0
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: UI_UnitsButton_Fold
+    clip: {fileID: 8300000, guid: e049194bd8dd3fb48902fe676dbba7d9, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 0
+    volumeRolloff: 0
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: UI_TurretSelect
+    clip: {fileID: 8300000, guid: b713ac85400f0a5418c96c896bb1ea98, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 0
+    volumeRolloff: 0
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}

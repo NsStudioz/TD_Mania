@@ -11,6 +11,14 @@ public class LevelSelection : MonoBehaviour
     //
     public Button[] lvlButtons;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        GameObject forAudioManager = GameObject.Find("Audio_Manager");
+        audioManager = forAudioManager.GetComponent<AudioManager>();
+    }
+
     void Start()
     {
         int levelAt = PlayerPrefs.GetInt("Level_At", 3);
@@ -28,6 +36,7 @@ public class LevelSelection : MonoBehaviour
     {
         levelToSelect = currentSceneIndex;
         animator.SetTrigger("FadeScene");
+        audioManager.PlayOneShot("UI_Click_Menu");
     }
 
     public void OnFadeComplete()

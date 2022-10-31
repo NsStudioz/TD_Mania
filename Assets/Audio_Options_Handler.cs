@@ -13,6 +13,14 @@ public class Audio_Options_Handler : MonoBehaviour
     [SerializeField] bool sfx_Muted;
     [SerializeField] bool music_Muted;
 
+    private void Awake()
+    {
+        GameObject forAudioManager = GameObject.Find("Audio_Manager");
+        audioManager = forAudioManager.GetComponent<AudioManager>();
+        GameObject forMusicManager = GameObject.Find("Music_Manager");
+        musicManager = forMusicManager.GetComponent<MusicManager>();
+    }
+
 
     void Start()
     {
@@ -76,6 +84,8 @@ public class Audio_Options_Handler : MonoBehaviour
         //
         UpdateSoundButtonIcons();
         SaveSoundSettings();
+        //
+        audioManager.PlayOneShot("UI_Click_Menu");
         audioManager.SetSoundMuteSettings();
     }
 
@@ -86,6 +96,8 @@ public class Audio_Options_Handler : MonoBehaviour
         //
         UpdateMusicButtonIcons();
         SaveMusicSettings();
+        //
+        audioManager.PlayOneShot("UI_Click_Menu");
         musicManager.SetMusicMuteSettings();
     }
 

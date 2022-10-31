@@ -13,6 +13,8 @@ public class ConstructManager : MonoBehaviour
     private Node turret_SelectedNode;
     [SerializeField] NodeUI nodeUI;
 
+    AudioManager audioManager;
+
     void Awake()
     {
         if (instance != null)
@@ -26,7 +28,8 @@ public class ConstructManager : MonoBehaviour
 
     private void Start()
     {
-        //PlayerStats.Gold += 500;
+        GameObject forAudioManager = GameObject.Find("Audio_Manager");
+        audioManager = forAudioManager.GetComponent<AudioManager>();
     }
 
     // called a property. we only allow it to actually get something from this variable, if its not equal to null, then the state is true and we can build.
@@ -35,8 +38,7 @@ public class ConstructManager : MonoBehaviour
     // called a property. we only allow it to actually get something from this variable, if we have enough money, then the state is true and we can build.
     public bool HasGold { get { return PlayerStats.Gold >= defUnitToBuild.cost; } }
 
-    // function that works when we click on a built turret.
-    public void Turret_SelectNode(Node node)
+    public void Turret_SelectNode(Node node) // function that works when we click on a built turret.
     {
         if (turret_SelectedNode == node)
         {
@@ -52,6 +54,7 @@ public class ConstructManager : MonoBehaviour
 
     public void SelectTurretToBuild(D_Unit_Blueprint turretBlueprint) // on turret create
     {
+        audioManager.PlayOneShot("UI_TurretSelect");
         defUnitToBuild = turretBlueprint;
         DeselectNode();
     }

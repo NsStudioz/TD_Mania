@@ -15,6 +15,14 @@ namespace ShopSystem
 
         private int resetItem_LevelIndex = 0;
 
+        AudioManager audioManager;
+
+        private void Awake()
+        {
+            GameObject forAudioManager = GameObject.Find("Audio_Manager");
+            audioManager = forAudioManager.GetComponent<AudioManager>();
+        }
+
         private void Start()
         {
             SyncItems_Startup();
@@ -79,8 +87,14 @@ namespace ShopSystem
                 shopItemsTemplates[thisItemIndex].UpgradeText.text = $"Maxed";
                 shopItemsTemplates[thisItemIndex].upgradeButton.interactable = false;
             }
+
+            PlayCategorySFX();
         }
 
+        private void PlayCategorySFX()
+        {
+            audioManager.PlayOneShot("UI_ClickUpgrade");
+        }
 
         private void ResetUpgradesBackToZero()
         {

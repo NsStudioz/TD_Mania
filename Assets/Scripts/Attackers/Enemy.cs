@@ -24,14 +24,15 @@ public class Enemy : MonoBehaviour
 
     AudioManager audioManager;
 
-
+    private void Awake()
+    {
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
+    }
 
     void Start()
     {
         movingSpeed = startSpeed;
-
-        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     private void Update()
