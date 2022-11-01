@@ -11,10 +11,8 @@ public class D_Trap_Mine : MonoBehaviour
     [SerializeField] public float explosionDamage = 100;
     [SerializeField] bool isTriggered = false;
 
-    [Header("Trigger Line Of Sight")]
+    [HideInInspector]
     public GameObject TGR_Quad;
-
-    [Header("Explosion Radius")]
     public GameObject EXP_Quad;
 
     [Header("Animations")]
@@ -91,6 +89,8 @@ public class D_Trap_Mine : MonoBehaviour
         trapReady = true;
     }
 
+    #region SFX:
+
     public void PlayTrapExplodeSFX()
     {
         audioManager.PlayOneShot("Trap_Boom");
@@ -105,6 +105,8 @@ public class D_Trap_Mine : MonoBehaviour
     {
         audioManager.PlayOneShot("Unit_Built_2");
     }
+
+    #endregion
 
     private void OnDrawGizmosSelected()
     {

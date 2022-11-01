@@ -106,14 +106,10 @@ public class Node : MonoBehaviour
 
         d_Unit_Blueprint = blueprint; // set the turret blueprint equal to the turret that was passed in.
 
-        // set in a temporary gameobject, so we can rid of it later on ingame.
-/*        GameObject buildEFX = Instantiate(constructManager.buildEffects, GetBuildPosition(), Quaternion.identity); 
-        Destroy(buildEFX, 5f);*/
-
         Debug.Log("Turret Build!");
     }
 
-    public void UpgradeTurretOrDefUnit()
+/*    public void UpgradeTurretOrDefUnit()
     {
         if (PlayerStats.Gold < d_Unit_Blueprint.upgradeCost)
         {
@@ -131,21 +127,31 @@ public class Node : MonoBehaviour
         defendingUnit = turret;
 
         // set in a temporary gameobject, so we can rid of it later on ingame.
-/*        GameObject buildEFX = Instantiate(constructManager.buildEffects, GetBuildPosition(), Quaternion.identity); 
-        Destroy(buildEFX, 5f);*/
+        GameObject buildEFX = Instantiate(constructManager.buildEffects, GetBuildPosition(), Quaternion.identity);
+        Destroy(buildEFX, 5f);
 
         isDefUnitUpgraded = true;
 
         Debug.Log("Turret Upgraded!");
+    }*/
+
+    public void TemporarilyActivateTurretLOS()
+    {       
+        if(defendingUnit.GetComponent<Units_LineOfSight>() != null)
+        {
+            Units_LineOfSight _LOS = defendingUnit.GetComponent<Units_LineOfSight>();
+            _LOS.EnableLOS();
+        }
+        else if (defendingUnit.GetComponent<Units_Traps_LineOfSight>() != null)
+        {
+            Units_Traps_LineOfSight _LOS_Traps = defendingUnit.GetComponent<Units_Traps_LineOfSight>();
+            _LOS_Traps.EnableLOS();
+        }
     }
 
     public void SellDefUnit()
     {
         PlayerStats.Gold += d_Unit_Blueprint.GetSellAmount();
-
-        // set in a temporary gameobject, so we can rid of it later on ingame.
-/*        GameObject buildEFX = Instantiate(constructManager.sellEffects, GetBuildPosition(), Quaternion.identity); 
-        Destroy(buildEFX, 5f);*/
 
         Destroy(defendingUnit);
         d_Unit_Blueprint = null;

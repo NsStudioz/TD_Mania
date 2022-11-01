@@ -9,10 +9,8 @@ public class D_Trap_AntiShield : MonoBehaviour
     [SerializeField] public float explosionDamage = 100f;
     [SerializeField] bool isTriggered;
 
-    [Header("Trigger Line Of Sight")]
+    [HideInInspector]
     public GameObject TGR_Quad;
-
-    [Header("Explosion Radius")]
     public GameObject EXP_Quad;
 
     [Header("Animations")]
@@ -89,6 +87,8 @@ public class D_Trap_AntiShield : MonoBehaviour
         trapReady = true;
     }
 
+    #region SFX:
+
     public void PlayTrapExplodeSFX()
     {
         audioManager.PlayOneShot("Trap_Boom");
@@ -103,6 +103,8 @@ public class D_Trap_AntiShield : MonoBehaviour
     {
         audioManager.PlayOneShot("Unit_Built_2");
     }
+
+    #endregion
 
     private void OnDrawGizmos()
     {

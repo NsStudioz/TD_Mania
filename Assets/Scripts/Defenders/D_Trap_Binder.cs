@@ -13,10 +13,8 @@ public class D_Trap_Binder : MonoBehaviour
     //
     SphereCollider sphereCol;
 
-    [Header("Trigger Line Of Sight")]
+    [HideInInspector]
     public GameObject TGR_Quad;
-
-    [Header("Explosion Radius")]
     public GameObject Bind_Quad;
 
 
@@ -84,6 +82,8 @@ public class D_Trap_Binder : MonoBehaviour
         trapReady = true;
     }
 
+    #region SFX:
+
     public void PlayTrapBeepSFX()
     {
         audioManager.PlayOneShot("Trap_Beep");
@@ -103,6 +103,8 @@ public class D_Trap_Binder : MonoBehaviour
     {
         audioManager.PlayOneShot("Unit_Built_2");
     }
+
+    #endregion
 
     private void OnDrawGizmosSelected()
     {

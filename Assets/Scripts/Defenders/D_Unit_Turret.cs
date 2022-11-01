@@ -27,8 +27,9 @@ public class D_Unit_Turret : MonoBehaviour
 
     [Header("Effects")]
     [SerializeField] ParticleSystem muzzleEFX  = null;
+    /*    [SerializeField] GameObject deathEFX  = null;*/
 
-    [Header("Line Of Sight")]
+    [HideInInspector]
     public GameObject LOS;
 
     [Header("Animations")]
@@ -46,22 +47,21 @@ public class D_Unit_Turret : MonoBehaviour
         animController.Play(animation_BuildName);
     }
 
+/*    private void OnDestroy()
+    {
+        GameObject buildEFX = Instantiate(deathEFX, transform.position, Quaternion.identity);
+        Destroy(buildEFX, 2f);
+    }*/
+
     private void Awake()
     {
-
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
-
-        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();
-
-        if (LOS != null)
-        {
-            LOS.SetActive(false);
-        }
     }
 
     void Update()
@@ -156,42 +156,24 @@ public class D_Unit_Turret : MonoBehaviour
         turretReady = true;
     }
 
-    public void EnableLOS()
-    {
-        if(LOS != null)
-        {
-            LOS.SetActive(true);
-        }
-    }
-
-    public void DisableLOS()
-    {
-        if (LOS != null)
-        {
-            LOS.SetActive(false);
-        }
-    }
+    #region SFX:
 
     private void PlayTurretShootingSFX()
     {
         if (statsIdentifierTag == "Cannon" || statsIdentifierTag == "AS_Cannon")
         {
-            //audioManager.Play("Cannon_Fire");
             audioManager.PlayOneShot("Cannon_Fire");
         }
         else if (statsIdentifierTag == "Auto_Turret" || statsIdentifierTag == "AS_Auto")
         {
-            //audioManager.Play("Auto_Fire");
             audioManager.PlayOneShot("Auto_Fire");
         }
         else if (statsIdentifierTag == "Missile_Launcher" || statsIdentifierTag == "AS_ShieldDestroyer")
         {
-            //audioManager.Play("Missile_Fire");
             audioManager.PlayOneShot("Missile_Fire");
         }
         else if (statsIdentifierTag == "Plasma_Cannon")
         {
-            //audioManager.Play("Plasma_Fire");
             audioManager.PlayOneShot("Plasma_Fire");
         }
     }
@@ -205,6 +187,8 @@ public class D_Unit_Turret : MonoBehaviour
     {
         audioManager.PlayOneShot("Unit_Built_2");
     }
+
+    #endregion
 
     private void OnDrawGizmosSelected()
     {

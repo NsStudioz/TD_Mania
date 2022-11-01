@@ -13,7 +13,7 @@ public class D_Unit_Buffer : MonoBehaviour
 
     AudioManager audioManager;
 
-    [Header("Line Of Sight")]
+    [HideInInspector]
     public GameObject LOS;
 
     [Header("Animations")]
@@ -35,6 +35,12 @@ public class D_Unit_Buffer : MonoBehaviour
     private void Update()
     {
         collider.radius = rangeRadius;
+
+        if (turretReady)
+        {
+            animController.Play(animation_IdleName);
+        }
+
     }
 
     private void OnEnable()
@@ -46,6 +52,8 @@ public class D_Unit_Buffer : MonoBehaviour
     {
         turretReady = true;
     }
+
+    #region SFX:
 
     public void PlayBufferIdleSFX()
     {
@@ -62,6 +70,7 @@ public class D_Unit_Buffer : MonoBehaviour
         audioManager.PlayOneShot("Unit_Built_2");
     }
 
+    #endregion
 
     private void OnDrawGizmosSelected()
     {

@@ -28,7 +28,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     [SerializeField] public float damageOverTime = 30;
     [SerializeField] public float laserHitSlowPct = .4f;
 
-    [Header("Line Of Sight")]
+    [HideInInspector]
     public GameObject LOS;
 
     [Header("Animations")]
@@ -197,6 +197,8 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         turretReady = true;
     }
 
+    #region SFX:
+
     public void PlayTurretShootingSFX()
     {
         audioManager.PlayOneShot("LaserBeamer_Fire");
@@ -212,6 +214,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         audioManager.PlayOneShot("Unit_Built_2");
     }
 
+    #endregion
 
     private void OnDrawGizmosSelected()
     {
