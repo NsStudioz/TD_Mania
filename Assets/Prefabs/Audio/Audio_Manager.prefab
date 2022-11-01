@@ -364,3 +364,25 @@ MonoBehaviour:
     loop: 0
     mute: 0
     source: {fileID: 0}
+  - name: GoldGenerator_Activate
+    clip: {fileID: 8300000, guid: 99aee69487fd99745bf8c196bf892f88, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 4
+    maxDistance: 20
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: GoldGenerator_Retract
+    clip: {fileID: 8300000, guid: 359935fb0f48d1147a76f66838c8b837, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 4
+    maxDistance: 20
+    loop: 0
+    mute: 0
+    source: {fileID: 0}

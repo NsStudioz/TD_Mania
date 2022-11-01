@@ -54,9 +54,14 @@ public class D_Trap_GoldGenerator : MonoBehaviour
         turretReady = true;
     }
 
-    public void PlayGoldGeneratorActivateSFX()
+    public void PlayGoldGeneratorActivateSFX_1()
     {
-        //audioManager.PlayOneShot("");
+        audioManager.PlayOneShot("GoldGenerator_Activate");
+    }
+
+    public void PlayGoldGeneratorActivateSFX_2()
+    {
+        audioManager.PlayOneShot("GoldGenerator_Retract");
     }
 
     public void PlayTurretConstructionSFX_1()
