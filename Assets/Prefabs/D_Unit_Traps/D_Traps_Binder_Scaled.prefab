@@ -5189,6 +5189,7 @@ GameObject:
   - component: {fileID: 7959830813905769322}
   - component: {fileID: 7959830813905769325}
   - component: {fileID: 9092334135837361585}
+  - component: {fileID: 4769584254640405695}
   m_Layer: 2
   m_Name: D_Traps_Binder_Scaled
   m_TagString: Binder
@@ -5265,8 +5266,6 @@ MonoBehaviour:
   triggerRadius: 1.75
   bindRadius: 0
   isTriggered: 0
-  trapTimeElapsed: 2
-  trapTimeThreshold: 2
   TGR_Quad: {fileID: 4428025059471275584}
   Bind_Quad: {fileID: 5240557348787481341}
   animController: {fileID: 8010525320744916591}
@@ -5288,6 +5287,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: eb91ffaf5cd4ead4f82742d46b620ea6, type: 2}
+--- !u!114 &4769584254640405695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961459518185122619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b912fb8c4cd34c4b8ec90df6728c43a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeElapsed: 0
+  _LOS_On: 0
+  trigger_LOS: {fileID: 4428025059471275584}
+  explosion_LOS: {fileID: 5240557348787481341}
 --- !u!1 &7961560767768863253
 GameObject:
   m_ObjectHideFlags: 0

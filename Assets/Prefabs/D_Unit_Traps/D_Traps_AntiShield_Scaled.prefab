@@ -5095,6 +5095,7 @@ GameObject:
   - component: {fileID: 701948649849538042}
   - component: {fileID: 701948649849538043}
   - component: {fileID: 9118517488489996338}
+  - component: {fileID: 3802186694033170815}
   m_Layer: 2
   m_Name: D_Traps_AntiShield_Scaled
   m_TagString: Traps
@@ -5192,6 +5193,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: 77c902c1e0a760f43a648db93e41a0d2, type: 2}
+--- !u!114 &3802186694033170815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701948649849538045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b912fb8c4cd34c4b8ec90df6728c43a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeElapsed: 0
+  _LOS_On: 0
+  trigger_LOS: {fileID: 6289558172581675621}
+  explosion_LOS: {fileID: 7882045353423873324}
 --- !u!1 &701994019219633925
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3993262240242029464}
   - component: {fileID: 3993262240242029465}
   - component: {fileID: 6184915205146503543}
+  - component: {fileID: -7733931596133357926}
   m_Layer: 2
   m_Name: D_Traps_Mine_Scaled
   m_TagString: Traps
@@ -110,6 +111,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: e4a45d9a38bf5d34e8ec91b2f4d3a4b4, type: 2}
+--- !u!114 &-7733931596133357926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3907736701174324265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b912fb8c4cd34c4b8ec90df6728c43a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeElapsed: 0
+  _LOS_On: 0
+  trigger_LOS: {fileID: 4394336550023404607}
+  explosion_LOS: {fileID: 9158963729360951842}
 --- !u!1 &3907749408166823191
 GameObject:
   m_ObjectHideFlags: 0

@@ -19551,6 +19551,7 @@ GameObject:
   - component: {fileID: 8383454224820555797}
   - component: {fileID: 8415239581817749697}
   - component: {fileID: 8415239581817749710}
+  - component: {fileID: 1353297051373083034}
   m_Layer: 2
   m_Name: D_Unit_Turret_Plasma_Scaled
   m_TagString: Turrets
@@ -19682,6 +19683,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1353297051373083034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8474896185252318068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edfc0bfad2925e448d949947441a9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LOS: {fileID: 4632430959470663162}
 --- !u!1 &8475115092712122636
 GameObject:
   m_ObjectHideFlags: 0

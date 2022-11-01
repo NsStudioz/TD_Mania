@@ -5338,6 +5338,7 @@ GameObject:
   - component: {fileID: -4888457477633576686}
   - component: {fileID: 3626203405245362509}
   - component: {fileID: 476761066792049132}
+  - component: {fileID: 5051721878997128111}
   m_Layer: 2
   m_Name: D_Unit_Turret_AS_ShieldDestroyer_Scaled
   m_TagString: Untagged
@@ -5469,6 +5470,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.25, y: 2.25, z: 2.3}
   m_Center: {x: 0.05, y: 1, z: 0}
+--- !u!114 &5051721878997128111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5235268833271272827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edfc0bfad2925e448d949947441a9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LOS: {fileID: 8480306495790160053}
 --- !u!1 &5235361538098575283
 GameObject:
   m_ObjectHideFlags: 0

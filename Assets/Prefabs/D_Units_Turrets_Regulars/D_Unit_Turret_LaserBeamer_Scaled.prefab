@@ -19610,6 +19610,7 @@ GameObject:
   - component: {fileID: 8878610517043939628}
   - component: {fileID: 1189723678647334019}
   - component: {fileID: 1189723678647334018}
+  - component: {fileID: -4709044368364240530}
   m_Layer: 2
   m_Name: D_Unit_Turret_LaserBeamer_Scaled
   m_TagString: Untagged
@@ -19842,6 +19843,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &-4709044368364240530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189723678647334141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edfc0bfad2925e448d949947441a9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LOS: {fileID: 8156538482858582362}
 --- !u!1 &1189754274000677355
 GameObject:
   m_ObjectHideFlags: 0
