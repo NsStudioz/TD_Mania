@@ -7,8 +7,6 @@ public class ConstructManager : MonoBehaviour
 
     public static ConstructManager instance;
     private D_Unit_Blueprint defUnitToBuild;
-/*    public GameObject buildEffects;
-    public GameObject sellEffects;*/
     //
     private Node turret_SelectedNode;
     [SerializeField] NodeUI nodeUI;
