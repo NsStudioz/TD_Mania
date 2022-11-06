@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Game_End_Handler : MonoBehaviour
 {
-    AudioManager audioManager;
 
     [SerializeField] Animator animator;
 
-    private void Awake()
-    {
-        GameObject forAudioManager = GameObject.Find("Audio_Manager");
-        audioManager = forAudioManager.GetComponent<AudioManager>();
-    }
+    public static event Action OnClick_Ingame_GameOver_SFX;
+    public static event Action OnClick_Ingame_GameWon_SFX;
 
     private void Start()
     {
@@ -21,15 +16,9 @@ public class Game_End_Handler : MonoBehaviour
 
     private void Update()
     {
-        if (GamePlay_Manager.GetGameOver())
-        {
-            PlayGameOverAnimation();
-            
-        }
-        else if (GamePlay_Manager.GetGameWon())
-        {
-            PlayGameWonAnimation(); 
-        }
+        if (GamePlay_Manager.GetGameOver()) { PlayGameOverAnimation(); }
+
+        else if (GamePlay_Manager.GetGameWon()) { PlayGameWonAnimation(); }
     }
 
     public void PlayGameWonAnimation()
@@ -43,11 +32,11 @@ public class Game_End_Handler : MonoBehaviour
 
     public void SetGameOverSFX()
     {
-        audioManager.PlayOneShot("Ingame_GameOver");
+        OnClick_Ingame_GameOver_SFX?.Invoke();
     }
 
     public void SetGameWonSFX()
     {
-        audioManager.PlayOneShot("Ingame_GameWon");
+        OnClick_Ingame_GameWon_SFX?.Invoke();
     }
 }

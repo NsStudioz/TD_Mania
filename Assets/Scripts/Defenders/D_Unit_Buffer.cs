@@ -11,8 +11,6 @@ public class D_Unit_Buffer : MonoBehaviour
 
     private new SphereCollider collider;
 
-    AudioManager audioManager;
-
     [HideInInspector]
     public GameObject LOS;
 
@@ -24,23 +22,20 @@ public class D_Unit_Buffer : MonoBehaviour
     [SerializeField] string animation_RemoveName;
     [SerializeField] bool turretReady = false;
 
+    // EVENTS:
+    public static event Action OnUnitTurret_ConstructedSFX_1;
+    public static event Action OnBuffer_IdleSFX;
+
     private void Start()
     {
         collider = GetComponent<SphereCollider>();
-
-        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     private void Update()
     {
         collider.radius = rangeRadius;
 
-        if (turretReady)
-        {
-            animController.Play(animation_IdleName);
-        }
-
+        if (turretReady) { animController.Play(animation_IdleName); }
     }
 
     private void OnEnable()
@@ -54,22 +49,15 @@ public class D_Unit_Buffer : MonoBehaviour
     }
 
     #region SFX:
-
     public void PlayBufferIdleSFX()
     {
-        audioManager.PlayOneShot("Buffer_Activate");
+        OnBuffer_IdleSFX?.Invoke();
     }
 
     public void PlayTurretConstructionSFX_1()
     {
-        audioManager.PlayOneShot("Unit_Built_1");
+        OnUnitTurret_ConstructedSFX_1?.Invoke();
     }
-
-    public void PlayTurretConstructionSFX_2()
-    {
-        audioManager.PlayOneShot("Unit_Built_2");
-    }
-
     #endregion
 
     private void OnDrawGizmosSelected()
@@ -78,6 +66,13 @@ public class D_Unit_Buffer : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, rangeRadius);
     }
 
+    #region TrashCode:
+    /*    AudioManager audioManager;*/
+    /*        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();*/
+    //audioManager.PlayOneShot("Unit_Built_1");
+    //audioManager.PlayOneShot("Buffer_Activate");
+    #endregion
 }
 
 

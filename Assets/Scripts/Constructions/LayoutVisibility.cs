@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class LayoutVisibility : MonoBehaviour
@@ -12,18 +11,14 @@ public class LayoutVisibility : MonoBehaviour
     [SerializeField] GameObject traps_Btn;
     [SerializeField] GameObject turrets_Catalog;
     [SerializeField] GameObject traps_Catalog;
-
-    AudioManager audioManager;
-
+    //
     [SerializeField] Animator shopPanelUI;
-
+    //
     [SerializeField] bool panelIsUnfolded;
-
-    private void Awake()
-    {
-        GameObject forAudioManager = GameObject.Find("Audio_Manager");
-        audioManager = forAudioManager.GetComponent<AudioManager>();
-    }
+    //
+    public static event Action OnClick_UI_UnitsButton_Unfold_SFX;
+    public static event Action OnClick_UI_UnitsButton_Fold_SFX;
+    public static event Action OnUIClick_UnitSelect_SFX;
 
     void Start()
     {
@@ -32,20 +27,19 @@ public class LayoutVisibility : MonoBehaviour
         traps_Catalog.SetActive(false);
     }
 
-
     public void OnClickShowOrHidePanel()
     {
         if (!panelIsUnfolded)
         {
             panelIsUnfolded = true;
             shopPanelUI.Play("Anim_UnfoldPanel");
-            audioManager.PlayOneShot("UI_UnitsButton_Unfold");
+            OnClick_UI_UnitsButton_Unfold_SFX?.Invoke();
         }
         else if (panelIsUnfolded)
         {
             panelIsUnfolded = false;
             shopPanelUI.Play("Anim_FoldPanel");
-            audioManager.PlayOneShot("UI_UnitsButton_Fold");
+            OnClick_UI_UnitsButton_Fold_SFX?.Invoke();
         }
     }
 
@@ -53,15 +47,25 @@ public class LayoutVisibility : MonoBehaviour
     {
         turrets_Catalog.SetActive(true);
         traps_Catalog.SetActive(false);
-        audioManager.PlayOneShot("UI_TurretSelect");
+        OnUIClick_UnitSelect_SFX?.Invoke();
     }
 
     public void OnClickShowTrapsCatalog()
     {
         turrets_Catalog.SetActive(false);
         traps_Catalog.SetActive(true);
-        audioManager.PlayOneShot("UI_TurretSelect");
+        OnUIClick_UnitSelect_SFX?.Invoke();
     }
-
-
 }
+
+//AudioManager audioManager;
+/*    private void Awake()
+    {
+        GameObject forAudioManager = GameObject.Find("Audio_Manager");
+        audioManager = forAudioManager.GetComponent<AudioManager>();
+    }*/
+
+//audioManager.PlayOneShot("UI_UnitsButton_Unfold");
+//audioManager.PlayOneShot("UI_UnitsButton_Fold");
+//audioManager.PlayOneShot("UI_TurretSelect");
+//audioManager.PlayOneShot("UI_TurretSelect");

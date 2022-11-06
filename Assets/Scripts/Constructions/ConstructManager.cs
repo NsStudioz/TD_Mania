@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class ConstructManager : MonoBehaviour
@@ -10,8 +9,8 @@ public class ConstructManager : MonoBehaviour
     //
     private Node turret_SelectedNode;
     [SerializeField] NodeUI nodeUI;
-
-    AudioManager audioManager;
+    //
+    public static event Action OnUIClick_UnitSelect_SFX;
 
     void Awake()
     {
@@ -22,12 +21,6 @@ public class ConstructManager : MonoBehaviour
         }
 
         instance = this;
-    }
-
-    private void Start()
-    {
-        GameObject forAudioManager = GameObject.Find("Audio_Manager");
-        audioManager = forAudioManager.GetComponent<AudioManager>();
     }
 
     // called a property. we only allow it to actually get something from this variable, if its not equal to null, then the state is true and we can build.
@@ -52,7 +45,7 @@ public class ConstructManager : MonoBehaviour
 
     public void SelectTurretToBuild(D_Unit_Blueprint turretBlueprint) // on turret create
     {
-        audioManager.PlayOneShot("UI_TurretSelect");
+        OnUIClick_UnitSelect_SFX?.Invoke();
         defUnitToBuild = turretBlueprint;
         DeselectNode();
     }
@@ -67,5 +60,12 @@ public class ConstructManager : MonoBehaviour
     {
         return defUnitToBuild;
     }
-
 }
+
+/*    AudioManager audioManager;*/
+/*    private void Start()
+    {
+        GameObject forAudioManager = GameObject.Find("Audio_Manager");
+        audioManager = forAudioManager.GetComponent<AudioManager>();
+    }*/
+//audioManager.PlayOneShot("UI_TurretSelect");

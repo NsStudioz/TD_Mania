@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,24 +9,19 @@ public class Levels_Handler : MonoBehaviour
     private const float ResumeGame = 1f;
     private const int main_Menu_Index = 0;
     private int levelToLoad;
-
+    //
     [SerializeField] int currentSceneIndex;
     [SerializeField] int NextSceneIndex;
-
+    //
     [SerializeField] Animator animator;
-
+    //
     [SerializeField] GameObject pauseMenu_UI;
     [SerializeField] GameObject gameOver_UI;
     [SerializeField] GameObject gameWon_UI;
     [SerializeField] bool gameIsPaused;
-
-    AudioManager audioManager;
-
-    private void Awake()
-    {
-        GameObject forAudioManager = GameObject.Find("Audio_Manager");
-        audioManager = forAudioManager.GetComponent<AudioManager>();
-    }
+    //
+    public static event Action OnUIClick_Menu_SFX;
+    public static event Action OnUIClick_Ingame_SFX;
 
     private void Start()
     {
@@ -42,7 +36,7 @@ public class Levels_Handler : MonoBehaviour
 
     public void GoToNextLevel()
     {
-        audioManager.PlayOneShot("UI_Click_Menu");
+        OnUIClick_Menu_SFX?.Invoke();
         gameWon_UI.SetActive(false);
         FadeLevel(currentSceneIndex++);
         if (NextSceneIndex > PlayerPrefs.GetInt("Level_At")) { PlayerPrefs.SetInt("Level_At", NextSceneIndex); }
@@ -51,7 +45,7 @@ public class Levels_Handler : MonoBehaviour
     public void RestartGameSession() // restart current scene
     {
         Time.timeScale = ResumeGame;
-        audioManager.PlayOneShot("UI_Click_Menu");
+        OnUIClick_Menu_SFX?.Invoke();
         pauseMenu_UI.SetActive(false);
         FadeLevel(currentSceneIndex);  
     }
@@ -59,7 +53,7 @@ public class Levels_Handler : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Time.timeScale = ResumeGame;
-        audioManager.PlayOneShot("UI_Click_Menu");
+        OnUIClick_Menu_SFX?.Invoke();
         pauseMenu_UI.SetActive(false);
         FadeLevel(main_Menu_Index);     
     }
@@ -67,13 +61,13 @@ public class Levels_Handler : MonoBehaviour
     public void ReturnToMainMenuFromGameOver()
     {
         gameOver_UI.SetActive(false);
-        audioManager.PlayOneShot("UI_Click_Menu");
+        OnUIClick_Menu_SFX?.Invoke();
         FadeLevel(main_Menu_Index);
     }
 
     public void ReturnToMainMenuFromGameWon()
     {
-        audioManager.PlayOneShot("UI_Click_Menu");
+        OnUIClick_Menu_SFX?.Invoke();
         gameWon_UI.SetActive(false);
         FadeLevel(main_Menu_Index);
     }
@@ -81,13 +75,13 @@ public class Levels_Handler : MonoBehaviour
     public void ResumeGameSession() // resume game
     {
         Time.timeScale = ResumeGame;
-        audioManager.PlayOneShot("UI_Click_Ingame");
+        OnUIClick_Ingame_SFX?.Invoke();
         pauseMenu_UI.SetActive(false);
     }
 
     public void PauseGameSession() // pause game
     {
-        audioManager.PlayOneShot("UI_Click_Ingame");
+        OnUIClick_Ingame_SFX?.Invoke();
         Time.timeScale = pauseGame;
         pauseMenu_UI.SetActive(true);
     }
@@ -104,8 +98,8 @@ public class Levels_Handler : MonoBehaviour
             ResumeGameSession();
             gameIsPaused = false;
         }
-        // play SFX
     }
+
 
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // LevelFader:

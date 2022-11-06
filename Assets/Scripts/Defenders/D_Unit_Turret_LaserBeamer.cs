@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,15 +10,12 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     public Enemy targetEnemy;
     [SerializeField] string enemyTag = "Attackers";
     [SerializeField] public float range = 15f;
-    //[SerializeField] float fireRate = 1f;
-    //[SerializeField] float fireCountDown = 0f;
 
     [Header("Unit Rotation")]
     [SerializeField] public float turnSpeed = 10f;
     [SerializeField] Transform partToRotate;
 
     [Header("Bullet Setup")]
-    //[SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform firingPosition;
 
     [Header("Unit Laser Turret")]
@@ -28,9 +26,6 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     [SerializeField] public float damageOverTime = 30;
     [SerializeField] public float laserHitSlowPct = .4f;
 
-    [HideInInspector]
-    public GameObject LOS;
-
     [Header("Animations")]
     [SerializeField] Animator animController = null;
     [SerializeField] string animation_IdleName;
@@ -39,7 +34,15 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     [SerializeField] string animation_RemoveName;
     [SerializeField] bool turretReady = false;
 
-    AudioManager audioManager;
+    [HideInInspector]
+    public GameObject LOS;
+
+    // EVENTS:
+    public static event Action OnUnitTurret_ConstructedSFX_1;
+    public static event Action OnUnitTurret_ConstructedSFX_2;
+    //
+    public static event Action OnUnitTurret_LaserBeamer_Fire;
+    public static event Action OnUnitTurret_LaserBeamer_Stop;
 
     private void OnEnable()
     {
@@ -51,9 +54,6 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         lineRenderer.enabled = false;
         laserImpactLight.enabled = false;
-
-        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     void Update()
@@ -69,11 +69,9 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
                         lineRenderer.enabled = false;
                         laserImpactLight.enabled = false;
                         laserImpactEffects.Stop();
-                        audioManager.Stop("LaserBeamer_Fire");
+                        StopTurretShootingSFX();
                     }
-
                 }
-
                 return;
             }
 
@@ -88,15 +86,12 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
                             lineRenderer.enabled = false;
                             laserImpactLight.enabled = false;
                             laserImpactEffects.Stop();
-                            audioManager.Stop("LaserBeamer_Fire");
+                            StopTurretShootingSFX();
                         }
-
                     }
-
                     return;
                 }
             }
-
             LockOnTarget();
 
             if (useLaser)
@@ -137,7 +132,6 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         laserImpactEffects.transform.position = target.position + dir.normalized; // dir.normalized = normalize the length to 1, then multiply by 0.1f.
 
         laserImpactEffects.transform.rotation = Quaternion.LookRotation(dir);
-
     }
 
     private void LockOnTarget()
@@ -150,17 +144,6 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
 
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
-
-/*    private void Shoot()
-    {
-        GameObject bulletGO = Instantiate(bulletPrefab, firingPosition.position, firingPosition.rotation);
-        Bullet bullet = bulletGO.GetComponent<Bullet>();
-
-        if (bullet != null)
-        {
-            bullet.SeekTarget(target);
-        }
-    }*/
 
     void UpdateTarget()
     {
@@ -187,11 +170,6 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         else { target = null; }
     }
 
-/*    public void BuffDefendingUnit_Range(float bonusRangeAmount)
-    {
-        range += bonusRangeAmount;
-    }*/
-
     public void EnableTurret()
     {
         turretReady = true;
@@ -201,19 +179,22 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
 
     public void PlayTurretShootingSFX()
     {
-        audioManager.PlayOneShot("LaserBeamer_Fire");
+        OnUnitTurret_LaserBeamer_Fire?.Invoke();
+    }
+    private void StopTurretShootingSFX()
+    {
+        OnUnitTurret_LaserBeamer_Stop?.Invoke();
     }
 
     public void PlayTurretConstructionSFX_1()
     {
-        audioManager.PlayOneShot("Unit_Built_1");
+        OnUnitTurret_ConstructedSFX_1?.Invoke();
     }
 
     public void PlayTurretConstructionSFX_2()
     {
-        audioManager.PlayOneShot("Unit_Built_2");
+        OnUnitTurret_ConstructedSFX_2?.Invoke();
     }
-
     #endregion
 
     private void OnDrawGizmosSelected()
@@ -222,6 +203,8 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 }
+
+#region TrashCode:
 
 /*void Update()
 {
@@ -258,3 +241,35 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         fireCountDown -= Time.deltaTime;
     }
 }*/
+
+//[SerializeField] float fireRate = 1f;
+//[SerializeField] float fireCountDown = 0f;
+
+//[SerializeField] GameObject bulletPrefab;
+
+//AudioManager audioManager;
+
+/*        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();*/
+
+//audioManager.PlayOneShot("Unit_Built_1");
+//audioManager.PlayOneShot("LaserBeamer_Fire");
+//audioManager.PlayOneShot("Unit_Built_2");
+
+/*    private void Shoot()
+    {
+        GameObject bulletGO = Instantiate(bulletPrefab, firingPosition.position, firingPosition.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if (bullet != null)
+        {
+            bullet.SeekTarget(target);
+        }
+    }*/
+
+/*    public void BuffDefendingUnit_Range(float bonusRangeAmount)
+    {
+        range += bonusRangeAmount;
+    }*/
+
+#endregion

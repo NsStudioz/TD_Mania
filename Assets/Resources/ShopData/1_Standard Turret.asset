@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1_Standard Turret
   m_EditorClassIdentifier: 
   itemName: Cannon
-  Item_LevelIndex: 1
+  Item_LevelIndex: 4
   unit_Level:
   - unlockCost: 0
     unit_LevelIndex: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
     quad_Scale_Y: 40
     quad_Scale: {x: 40, y: 40, z: 0}
     turnSpeed: 8
-    FireRate: 0.75
+    FireRate: 1
     damageOverTime: 0
     slowingPercentage: 0
     triggerRadius: 0

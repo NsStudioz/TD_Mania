@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Plasma_EFX : MonoBehaviour
@@ -11,26 +10,19 @@ public class Plasma_EFX : MonoBehaviour
 
     [Header("Properties")]
     [SerializeField] Vector3 efx_ScaleChange = new Vector3(0.5f, 0.5f, 0.5f);
-
+    //
     [SerializeField] float timeElapsed;
     [SerializeField] float timeThreshold;
     [SerializeField] float endTimer = 0f;
 
-    AudioManager audioManager;
-
-    private void Awake()
-    {
-        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();
-    }
-
+    // EVENT:
+    public static event Action OnPlasmaBoomSFX;
 
     void Start()
     {
-        audioManager.PlayOneShot("Plasma_Boom");
+        OnPlasmaBoomSFX?.Invoke();
         timeElapsed = timeThreshold;
     }
-
 
     void Update()
     {

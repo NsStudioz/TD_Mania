@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3310932472665847335}
   - component: {fileID: 6377410166539186337}
+  - component: {fileID: 8097870526976425110}
   m_Layer: 0
   m_Name: Audio_Manager
   m_TagString: Untagged
@@ -210,6 +211,28 @@ MonoBehaviour:
     loop: 0
     mute: 0
     source: {fileID: 0}
+  - name: GoldGenerator_Activate
+    clip: {fileID: 8300000, guid: 99aee69487fd99745bf8c196bf892f88, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 4
+    maxDistance: 20
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: GoldGenerator_Retract
+    clip: {fileID: 8300000, guid: 359935fb0f48d1147a76f66838c8b837, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 1
+    volumeRolloff: 1
+    minDistance: 4
+    maxDistance: 20
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
   - name: Bullet_Boom
     clip: {fileID: 8300000, guid: b48b7a765a3216e458392a036b13396a, type: 3}
     volume: 0.5
@@ -364,25 +387,16 @@ MonoBehaviour:
     loop: 0
     mute: 0
     source: {fileID: 0}
-  - name: GoldGenerator_Activate
-    clip: {fileID: 8300000, guid: 99aee69487fd99745bf8c196bf892f88, type: 3}
-    volume: 0.5
-    pitch: 1
-    spatialBlend: 1
-    volumeRolloff: 1
-    minDistance: 4
-    maxDistance: 20
-    loop: 0
-    mute: 0
-    source: {fileID: 0}
-  - name: GoldGenerator_Retract
-    clip: {fileID: 8300000, guid: 359935fb0f48d1147a76f66838c8b837, type: 3}
-    volume: 0.5
-    pitch: 1
-    spatialBlend: 1
-    volumeRolloff: 1
-    minDistance: 4
-    maxDistance: 20
-    loop: 0
-    mute: 0
-    source: {fileID: 0}
+--- !u!114 &8097870526976425110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4631253664715220285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48c18a04dfd5c0459905cf210d46ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 6377410166539186337}

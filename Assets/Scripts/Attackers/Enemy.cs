@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -21,14 +19,8 @@ public class Enemy : MonoBehaviour
     public bool hasShield;
     public bool isProtected;
     [SerializeField] float range = 1f;
-
-    AudioManager audioManager;
-
-    private void Awake()
-    {
-        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();
-    }
+    //
+    public static event Action OnEnemy_Death_SFX;
 
     void Start()
     {
@@ -42,14 +34,9 @@ public class Enemy : MonoBehaviour
             Collider[] colliders = Physics.OverlapSphere(transform.position, range);
             foreach (Collider collider in colliders)
             {
-                if (collider.CompareTag("EnemyShields") && collider.enabled)
-                {
-                    isProtected = true;
-                }
-                else
-                {
-                    isProtected = false;
-                }
+                if (collider.CompareTag("EnemyShields") && collider.enabled) { isProtected = true; }
+
+                else { isProtected = false; }
             }
         }
     }
@@ -59,7 +46,7 @@ public class Enemy : MonoBehaviour
         enemyHealth -= amount;
         if (enemyHealth <= 0f)
         {
-            audioManager.PlayOneShot("Enemy_Boom");
+            OnEnemy_Death_SFX?.Invoke();
             Die();
         }
     }
@@ -88,10 +75,7 @@ public class Enemy : MonoBehaviour
             movingSpeed = startSpeed * bindValue;
         }
         
-        if(bindDelay <= 0f)
-        {
-            isBinded = false;
-        }
+        if(bindDelay <= 0f) { isBinded = false; }
     }
 
     private void OnDrawGizmosSelected()
@@ -99,8 +83,17 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, range);
     }
-
 }
+
+/*    AudioManager audioManager;
+
+    private void Awake()
+    {
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
+    }
+*/
+//audioManager.PlayOneShot("Enemy_Boom");
 
 #region TrashCode:
 

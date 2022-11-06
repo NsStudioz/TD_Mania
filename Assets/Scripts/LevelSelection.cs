@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,14 +9,8 @@ public class LevelSelection : MonoBehaviour
     [SerializeField] Animator animator;
     //
     public Button[] lvlButtons;
-
-    AudioManager audioManager;
-
-    private void Awake()
-    {
-        GameObject forAudioManager = GameObject.Find("Audio_Manager");
-        audioManager = forAudioManager.GetComponent<AudioManager>();
-    }
+    //
+    public static event Action OnUIClick_Menu_SFX;
 
     void Start()
     {
@@ -36,14 +29,11 @@ public class LevelSelection : MonoBehaviour
     {
         levelToSelect = currentSceneIndex;
         animator.SetTrigger("FadeScene");
-        audioManager.PlayOneShot("UI_Click_Menu");
+        OnUIClick_Menu_SFX?.Invoke();
     }
 
     public void OnFadeComplete()
     {
         SceneManager.LoadScene(levelToSelect);
     }
-
 }
-
-

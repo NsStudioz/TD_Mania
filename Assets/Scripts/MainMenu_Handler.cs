@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -34,15 +33,9 @@ public class MainMenu_Handler : MonoBehaviour
     [SerializeField] GameObject play_UI;
     [SerializeField] GameObject options_UI;
     [SerializeField] GameObject credits_UI;
-
     //
-    AudioManager audioManager;
-
-    private void Start()
-    {
-        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();
-    }
+    public static event Action OnUIClick_Menu_SFX;
+    public static event Action OnUIClick_Back_SFX;
 
     public void OpenMainMenu() // When leaving SHOP SCENE;
     {
@@ -55,7 +48,6 @@ public class MainMenu_Handler : MonoBehaviour
         MenuClickSFX();
         SceneManager.LoadScene(shopMenuIndex);
     }
-
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     public void OpenPlayMenu()
@@ -108,7 +100,6 @@ public class MainMenu_Handler : MonoBehaviour
             creditsMenu = false;
             credits_UI.SetActive(false);
         }
-
         MenuBackSFX();
     }
 
@@ -116,12 +107,12 @@ public class MainMenu_Handler : MonoBehaviour
     // For SFX:
     private void MenuClickSFX()
     {
-        audioManager.PlayOneShot("UI_Click_Menu");
+        OnUIClick_Menu_SFX?.Invoke();
     }
 
     private void MenuBackSFX()
     {
-        audioManager.PlayOneShot("UI_Back");
+        OnUIClick_Back_SFX?.Invoke();
     }
 
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -132,5 +123,4 @@ public class MainMenu_Handler : MonoBehaviour
         options_UI.SetActive(false);
         credits_UI.SetActive(false);
     }
-
 }

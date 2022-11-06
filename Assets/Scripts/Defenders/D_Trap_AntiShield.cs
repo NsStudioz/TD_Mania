@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class D_Trap_AntiShield : MonoBehaviour
@@ -21,16 +22,14 @@ public class D_Trap_AntiShield : MonoBehaviour
     [SerializeField] string animation_RemoveName;
     [SerializeField] bool trapReady = false;
 
-    AudioManager audioManager;
+    // EVENTS:
+    public static event Action OnAntiShieldMineExplode;
+    public static event Action OnUnitTrap_ConstructedSFX_1;
+    public static event Action OnUnitTrap_ConstructedSFX_2;
 
     private void OnEnable()
     {
         animController.Play(animation_BuildName);
-    }
-    private void Start()
-    {
-        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     void Update()
@@ -91,19 +90,18 @@ public class D_Trap_AntiShield : MonoBehaviour
 
     public void PlayTrapExplodeSFX()
     {
-        audioManager.PlayOneShot("Trap_Boom");
+        OnAntiShieldMineExplode?.Invoke();
     }
 
     public void PlayTurretConstructionSFX_1()
     {
-        audioManager.PlayOneShot("Unit_Built_1");
+        OnUnitTrap_ConstructedSFX_1?.Invoke();
     }
 
     public void PlayTurretConstructionSFX_2()
     {
-        audioManager.PlayOneShot("Unit_Built_2");
+        OnUnitTrap_ConstructedSFX_2?.Invoke();
     }
-
     #endregion
 
     private void OnDrawGizmos()
@@ -114,5 +112,15 @@ public class D_Trap_AntiShield : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
-
 }
+
+
+//AudioManager audioManager;
+/*    private void Start()
+    {
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
+    }*/
+//audioManager.PlayOneShot("Unit_Built_2");
+//audioManager.PlayOneShot("Unit_Built_1");
+//audioManager.PlayOneShot("Trap_Boom");

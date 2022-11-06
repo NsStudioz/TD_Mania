@@ -17,7 +17,6 @@ public class D_Trap_Binder : MonoBehaviour
     public GameObject TGR_Quad;
     public GameObject Bind_Quad;
 
-
     [Header("Animations")]
     [SerializeField] Animator animController = null;
     [SerializeField] string animation_IdleName;
@@ -26,7 +25,11 @@ public class D_Trap_Binder : MonoBehaviour
     [SerializeField] string animation_RemoveName;
     [SerializeField] bool trapReady = false;
 
-    AudioManager audioManager;
+    // EVENTS:
+    public static event Action OnBinderBeep;
+    public static event Action OnBinderExplode;
+    public static event Action OnUnitTrap_ConstructedSFX_1;
+    public static event Action OnUnitTrap_ConstructedSFX_2;
 
     private void OnEnable()
     {
@@ -38,9 +41,6 @@ public class D_Trap_Binder : MonoBehaviour
         sphereCol = GetComponent<SphereCollider>();
 
         sphereCol.enabled = false;
-
-        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     private void Update()
@@ -83,27 +83,25 @@ public class D_Trap_Binder : MonoBehaviour
     }
 
     #region SFX:
-
     public void PlayTrapBeepSFX()
     {
-        audioManager.PlayOneShot("Trap_Beep");
+        OnBinderBeep?.Invoke();
     }
 
     public void PlayTrapExplodeSFX()
     {
-        audioManager.PlayOneShot("Trap_Boom");
+        OnBinderExplode?.Invoke();
     }
 
     public void PlayTurretConstructionSFX_1()
     {
-        audioManager.PlayOneShot("Unit_Built_1");
+        OnUnitTrap_ConstructedSFX_1?.Invoke();
     }
 
     public void PlayTurretConstructionSFX_2()
     {
-        audioManager.PlayOneShot("Unit_Built_2");
+        OnUnitTrap_ConstructedSFX_2?.Invoke();
     }
-
     #endregion
 
     private void OnDrawGizmosSelected()
@@ -225,3 +223,13 @@ public class D_Trap_Binder : MonoBehaviour
         }
     }
 }*/
+
+/*AudioManager audioManager;*/
+/*
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();*/
+
+//audioManager.PlayOneShot("Trap_Beep");
+//audioManager.PlayOneShot("Trap_Boom");
+//audioManager.PlayOneShot("Unit_Built_2");
+//audioManager.PlayOneShot("Unit_Built_1");

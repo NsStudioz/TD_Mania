@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,15 +8,10 @@ public class Shop_Category_UI : MonoBehaviour
     [SerializeField] GameObject items_Traps_Category;
     [SerializeField] GameObject items_Arsenal_Category;
 
-    AudioManager audioManager;
+    public static event Action OnUIClick_Ingame_SFX;
+    public static event Action OnUIClick_Back_SFX;
 
     private int mainMenuSceneIndex = 0;
-
-    private void Awake()
-    {
-        GameObject forAudioManager = GameObject.Find("Audio_Manager");
-        audioManager = forAudioManager.GetComponent<AudioManager>();
-    }
 
     private void Start()
     {
@@ -53,11 +47,20 @@ public class Shop_Category_UI : MonoBehaviour
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene(mainMenuSceneIndex);
-        audioManager.PlayOneShot("UI_Back");
+        OnUIClick_Back_SFX?.Invoke();
     }
 
     private void PlayCategorySFX()
     {
-        audioManager.PlayOneShot("UI_Click_Ingame");
+        OnUIClick_Ingame_SFX?.Invoke();
     }
 }
+
+/*    AudioManager audioManager;
+    private void Awake()
+    {
+        GameObject forAudioManager = GameObject.Find("Audio_Manager");
+        audioManager = forAudioManager.GetComponent<AudioManager>();
+    }*/
+//audioManager.PlayOneShot("UI_Back");
+//audioManager.PlayOneShot("UI_Click_Ingame");

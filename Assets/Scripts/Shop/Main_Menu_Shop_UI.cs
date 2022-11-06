@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 namespace ShopSystem
 {
@@ -15,13 +14,7 @@ namespace ShopSystem
 
         private int resetItem_LevelIndex = 0;
 
-        AudioManager audioManager;
-
-        private void Awake()
-        {
-            GameObject forAudioManager = GameObject.Find("Audio_Manager");
-            audioManager = forAudioManager.GetComponent<AudioManager>();
-        }
+        public static event Action OnClick_UI_Upgrade_SFX;
 
         private void Start()
         {
@@ -93,7 +86,7 @@ namespace ShopSystem
 
         private void PlayCategorySFX()
         {
-            audioManager.PlayOneShot("UI_ClickUpgrade");
+            OnClick_UI_Upgrade_SFX?.Invoke();
         }
 
         private void ResetUpgradesBackToZero()
@@ -105,9 +98,6 @@ namespace ShopSystem
                 shopItemsTemplates[i].UpgradeText.text = $"Upgrade";
             }
         }
-
-
-
     }
 }
 
@@ -225,3 +215,11 @@ shopItemsTemplates[i].unitLevel = shopItemsData[i].unit_Level[nextLevelIndex].un
         }*/
 #endregion
 
+/*audioManager.PlayOneShot("UI_ClickUpgrade");*/
+/*        AudioManager audioManager;
+
+        private void Awake()
+        {
+            GameObject forAudioManager = GameObject.Find("Audio_Manager");
+            audioManager = forAudioManager.GetComponent<AudioManager>();
+        }*/

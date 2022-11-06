@@ -40,23 +40,19 @@ public class D_Unit_Turret : MonoBehaviour
     [SerializeField] string animation_RemoveName;
     [SerializeField] bool turretReady = false;
 
-    AudioManager audioManager;
+    // EVENTS:
+    public static event Action OnUnitTurret_ConstructedSFX_1;
+    public static event Action OnUnitTurret_ConstructedSFX_2;
+    //
+    public static event Action OnUnitTurret_Cannon_Fire;
+    public static event Action OnUnitTurret_MissileLauncher_Fire;
+    public static event Action OnUnitTurret_AutoTurret_Fire;
+    public static event Action OnUnitTurret_PlasmaCannon_Fire;
+    //
 
     private void OnEnable()
     {
         animController.Play(animation_BuildName);
-    }
-
-/*    private void OnDestroy()
-    {
-        GameObject buildEFX = Instantiate(deathEFX, transform.position, Quaternion.identity);
-        Destroy(buildEFX, 2f);
-    }*/
-
-    private void Awake()
-    {
-        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     void Start()
@@ -157,37 +153,35 @@ public class D_Unit_Turret : MonoBehaviour
     }
 
     #region SFX:
-
     private void PlayTurretShootingSFX()
     {
         if (statsIdentifierTag == "Cannon" || statsIdentifierTag == "AS_Cannon")
         {
-            audioManager.PlayOneShot("Cannon_Fire");
+            OnUnitTurret_Cannon_Fire?.Invoke();
         }
         else if (statsIdentifierTag == "Auto_Turret" || statsIdentifierTag == "AS_Auto")
         {
-            audioManager.PlayOneShot("Auto_Fire");
+            OnUnitTurret_AutoTurret_Fire?.Invoke();
         }
         else if (statsIdentifierTag == "Missile_Launcher" || statsIdentifierTag == "AS_ShieldDestroyer")
         {
-            audioManager.PlayOneShot("Missile_Fire");
+            OnUnitTurret_MissileLauncher_Fire?.Invoke();
         }
         else if (statsIdentifierTag == "Plasma_Cannon")
         {
-            audioManager.PlayOneShot("Plasma_Fire");
+            OnUnitTurret_PlasmaCannon_Fire?.Invoke();
         }
     }
 
     public void PlayTurretConstructionSFX_1()
     {
-        audioManager.PlayOneShot("Unit_Built_1");
+        OnUnitTurret_ConstructedSFX_1?.Invoke();
     }
 
     public void PlayTurretConstructionSFX_2()
     {
-        audioManager.PlayOneShot("Unit_Built_2");
+        OnUnitTurret_ConstructedSFX_2?.Invoke();
     }
-
     #endregion
 
     private void OnDrawGizmosSelected()
@@ -195,6 +189,9 @@ public class D_Unit_Turret : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+
+
+    #region TrashCode:
 
     /*    public void BuffDefendingUnit_Range(float bonusAmount)
     {
@@ -227,7 +224,28 @@ public class D_Unit_Turret : MonoBehaviour
             }
         }*/
 
+    /*    private void OnDestroy()
+    {
+        GameObject buildEFX = Instantiate(deathEFX, transform.position, Quaternion.identity);
+        Destroy(buildEFX, 2f);
+    }*/
 
+
+    //AudioManager audioManager;
+    /*    private void Awake()
+        {
+            GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+            audioManager = audioHubInstance.GetComponent<AudioManager>();
+        }*/
+
+    //audioManager.PlayOneShot("Cannon_Fire");
+    //audioManager.PlayOneShot("Auto_Fire");
+    //audioManager.PlayOneShot("Missile_Fire");
+    //audioManager.PlayOneShot("Plasma_Fire");
+    //audioManager.PlayOneShot("Unit_Built_1");
+    //audioManager.PlayOneShot("Unit_Built_2");
+
+    #endregion
 
 
 }

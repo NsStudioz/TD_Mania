@@ -1,12 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.Pool;
 
 public class Bullet : MonoBehaviour
 {
-    //private IObjectPool<Bullet> bulletPool;
+
     private Transform target;
 
     public GameObject impactEFX;
@@ -26,17 +23,14 @@ public class Bullet : MonoBehaviour
     public float autoTurret_AS_Damage = 20f;
     public float shieldDestroyer_AS_Damage = 50f;
 
-    AudioManager audioManager;
+    // EVENTS:
+    public static event Action OnBulletImpact_Bullet;
+    public static event Action OnBulletImpact_Missile;
+    public static event Action OnBulletImpact_BulletAuto;
 
     public void SeekTarget(Transform _target)
     {
         target = _target;
-    }
-
-    private void Start()
-    {
-        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();
     }
 
     private void Update()
@@ -155,15 +149,15 @@ public class Bullet : MonoBehaviour
     {
         if(bulletTags == "Bullet")
         {
-            audioManager.PlayOneShot("Bullet_Boom");
+            OnBulletImpact_Bullet?.Invoke();
         }
         else if (bulletTags == "Bullet_Auto")
         {
-            audioManager.PlayOneShot("Bullet_Auto_Boom");
+            OnBulletImpact_BulletAuto?.Invoke();
         }
         else if (bulletTags == "Missile")
         {
-            audioManager.PlayOneShot("Missile_Boom");
+            OnBulletImpact_Missile?.Invoke();
         }
     }
 
@@ -176,6 +170,13 @@ public class Bullet : MonoBehaviour
 }
 
 #region Trash_Code:
+
+/*    AudioManager audioManager;*/
+/*    private void Start()
+    {
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
+    }*/
 
 /*        else if (!useAntiShieldBullets)
         {
