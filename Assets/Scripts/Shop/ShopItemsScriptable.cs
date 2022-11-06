@@ -70,7 +70,7 @@ namespace ShopSystem
     }
 
 
-    [System.Serializable]
+/*    [System.Serializable]
     public class TurretItemInfo
     {
         public int unlockCost;
@@ -116,7 +116,7 @@ namespace ShopSystem
         public float turnSpeed;
         public float damageOverTime;
         public float slowingPercentage;
-    }
+    }*/
 
 }
 

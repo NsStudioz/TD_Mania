@@ -133,14 +133,3 @@ public class AudioManager : MonoBehaviour
          Mute_New("UI_Click_Ingame");
          Mute_New("UI_ClickError");
          Mute_New("UI_Popup");*/
-
-/*    public void Mute_New(string name)
-    {
-        Sound sound = Array.Find(sounds, sound => sound.name == name);
-        if (sound == null)
-        {
-            Debug.Log("Sound: " + name + " has not been found!");
-            return;
-        }
-        sound.source.mute = true;
-    }*/

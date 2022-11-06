@@ -10,9 +10,6 @@ public class D_Unit_Blueprint // dont want this script as MonoBehaviour, because
     public GameObject prefab;
     public int cost;
 
-/*    public GameObject upgradedPrefab;
-    public int upgradeCost;*/
-
     public int GetSellAmount()
     {
         return cost / 2;

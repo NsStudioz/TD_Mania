@@ -32,10 +32,7 @@ public class GamePlay_Manager : MonoBehaviour
 
     void Update()
     {
-        if (gameOver || gameWon)
-        {
-            return;
-        }
+        if (gameOver || gameWon) { return; }
 
         LinkTexts();
 

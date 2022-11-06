@@ -18,13 +18,10 @@ public class Node : MonoBehaviour
     public D_Unit_Blueprint d_Unit_Blueprint;
     [HideInInspector]
     public bool isDefUnitUpgraded = false;
-
     // On unit Spawn:
     [SerializeField] Vector3 unitPositionOffset;
-
     // Instance:
     ConstructManager constructManager;
-
 
     void Start()
     {
@@ -61,7 +58,6 @@ public class Node : MonoBehaviour
         {
             rend.material.color = notEnoughGoldColor;
         }
-
     }
 
     void OnMouseExit()
@@ -106,7 +102,7 @@ public class Node : MonoBehaviour
 
         d_Unit_Blueprint = blueprint; // set the turret blueprint equal to the turret that was passed in.
 
-        Debug.Log("Turret Build!");
+        //Debug.Log("Turret Build!");
     }
 
 /*    public void UpgradeTurretOrDefUnit()
