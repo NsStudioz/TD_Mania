@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0874cd4ab5db15a4ebf474d8442f9e4e, type: 3}
-  m_Name: 1_Standard Turret
+  m_Name: 8_SD Turret
   m_EditorClassIdentifier: 
-  itemName: Cannon
-  Item_LevelIndex: 4
+  itemName: Shield Destroyer
+  Item_LevelIndex: 0
   unit_Level:
   - unlockCost: 0
     unit_LevelIndex: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
     quad_Scale_Y: 40
     quad_Scale: {x: 40, y: 40, z: 0}
     turnSpeed: 8
-    FireRate: 1
+    FireRate: 0.75
     damageOverTime: 0
     slowingPercentage: 0
     triggerRadius: 0
