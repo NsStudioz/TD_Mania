@@ -9,8 +9,6 @@ namespace ShopSystem
     {
         public ShopItemsScriptable[] shopItemsData;
         public Item_Template[] shopItemsTemplates;
-        //public int[] unit_LevelIndex;
-        //public Button[] shopItemsUpgradeButtons;
 
         private int resetItem_LevelIndex = 0;
 
@@ -37,7 +35,6 @@ namespace ShopSystem
                 {
                     shopItemsTemplates[i].costText.text = shopItemsData[i].unit_Level[item_LevelIndex].unlockCost.ToString();
                 }
-
             }
         }
 
@@ -223,3 +220,5 @@ shopItemsTemplates[i].unitLevel = shopItemsData[i].unit_Level[nextLevelIndex].un
             GameObject forAudioManager = GameObject.Find("Audio_Manager");
             audioManager = forAudioManager.GetComponent<AudioManager>();
         }*/
+//public int[] unit_LevelIndex;
+//public Button[] shopItemsUpgradeButtons;
