@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   persistentObjectPrefab: {fileID: 1530522665817189666, guid: 7e0f12238fccde24f91dfec5068149a3, type: 3}
+  persistentObjectPrefab_DataHandler: {fileID: 4005615048478799622, guid: 61f60989b38cce64b93fc02f422f2d19, type: 3}

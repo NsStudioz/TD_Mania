@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 7_AS Standard Auto
   m_EditorClassIdentifier: 
   itemName: Anti-Shield Auto
-  Item_LevelIndex: 0
+  Item_LevelIndex: 2
   unit_Level:
   - unlockCost: 0
     unit_LevelIndex: 0
