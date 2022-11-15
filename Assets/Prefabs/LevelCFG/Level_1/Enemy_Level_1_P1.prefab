@@ -241,8 +241,8 @@ MonoBehaviour:
   deathEFX: {fileID: 1122851737323831764, guid: 98099463eed7e044fb834b5055904ca4, type: 3}
   startSpeed: 0.5
   movingSpeed: 0
-  enemyHealth: 100
-  goldToEarn: 100
+  enemyHealth: 75
+  goldToEarn: 25
   isBinded: 0
   bindDelay: 10
   hasShield: 0
