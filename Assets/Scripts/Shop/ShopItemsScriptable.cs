@@ -14,13 +14,6 @@ namespace ShopSystem
         public UnitItemInfo[] unit_Level;
     }
 
-/*    [System.Serializable]
-    public class ShopItems
-    {
-        public string itemName;
-        public int Item_LevelIndex;
-        public UnitItemInfo[] unit_Level;
-    }*/
     //
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // ITEM CATEGORIES:
@@ -66,5 +59,11 @@ namespace ShopSystem
     }
 }
 
-
+/*    [System.Serializable]
+    public class ShopItems
+    {
+        public string itemName;
+        public int Item_LevelIndex;
+        public UnitItemInfo[] unit_Level;
+    }*/
 
