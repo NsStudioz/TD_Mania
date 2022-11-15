@@ -114,6 +114,14 @@ PrefabInstance:
       value: Camera_Mobile
       objectReference: {fileID: 0}
     - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
+      propertyPath: maxZoom
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
+      propertyPath: minZoom
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
       propertyPath: joyStick
       value: 
       objectReference: {fileID: 4976151383169266657}
