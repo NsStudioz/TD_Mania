@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 5299240267412954488}
   - component: {fileID: 1790300970501921041}
   m_Layer: 10
-  m_Name: Tank_Enemy_Shielded
+  m_Name: Tank_Enemy_ShieldBar
   m_TagString: Attackers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,8 +439,8 @@ MonoBehaviour:
   range: 0.01
   _healthBar: {fileID: 1790300970501921041}
   _healthBar_Canvas_GO: {fileID: 4831181832797952459}
-  healthBarDelay: 0
   healthBarDelay_Threshold: 4
+  healthBarDelay: 0
   healthBar_Switch: 0
 --- !u!114 &5299240267412954491
 MonoBehaviour:
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ae25c3a1dc91b44a1938214b4f369e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathing: {fileID: 2503089324704777215, guid: 59b0d4cf30151844388e3ffbd07d3a05, type: 3}
+  pathing: {fileID: 8806451054436155298, guid: f5a1686e310034440af63dfe288604a0, type: 3}
   distanceThreshold: 0.1
 --- !u!114 &5299240267412954488
 MonoBehaviour:
@@ -593,7 +593,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4000841954415116340}
   m_LocalRotation: {x: -0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: -0.07}
+  m_LocalPosition: {x: 0, y: 0, z: 0.433}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -603,7 +603,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -45, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 0.11}
+  m_AnchoredPosition: {x: -0, y: 0.752}
   m_SizeDelta: {x: 1.02, y: 0.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &168201503208888126
@@ -703,7 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.17084908, b: 1, a: 1}
+  m_Color: {r: 0.5486784, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1070,9 +1070,10 @@ MonoBehaviour:
   current_shieldHealth: 0
   shieldOn: 0
   range: 1
+  _ShieldBar: {fileID: 1790300970501921041}
   _ShieldBar_Canvas_GO: {fileID: 4000841954415116340}
-  shieldBarDelay: 0
   shieldBarDelay_Threshold: 4
+  shieldBarDelay: 0
   shieldBar_Switch: 0
 --- !u!1 &8682133435917197681
 GameObject:
