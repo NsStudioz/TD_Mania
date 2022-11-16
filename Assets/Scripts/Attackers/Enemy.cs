@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public float movingSpeed;
     //
     [SerializeField] float enemyHealth = 100f;
+    [SerializeField] float currentEnemyHealth;
     [SerializeField] int goldToEarn = 100;
     // binding:
     public bool isBinded = false;
@@ -22,9 +23,19 @@ public class Enemy : MonoBehaviour
     //
     public static event Action OnEnemy_Death_SFX;
 
+    [Header("Health Bar")]
+    [SerializeField] Enemy_HealthBar _healthBar;
+    [SerializeField] GameObject _healthBar_Canvas_GO;
+    [SerializeField] float healthBarDelay_Threshold = 4f;
+    [SerializeField] float healthBarDelay;
+    [SerializeField] bool healthBar_Switch = false;
+
     void Start()
     {
         movingSpeed = startSpeed;
+        currentEnemyHealth = enemyHealth;
+
+        UpdateHealthBar();
     }
 
     private void Update()
@@ -39,17 +50,48 @@ public class Enemy : MonoBehaviour
                 else { isProtected = false; }
             }
         }
+
+        HealthBarVisibility();
+        HealthBarTimer();
     }
 
     public void TakeDamage(float amount)
     {
-        enemyHealth -= amount;
-        if (enemyHealth <= 0f)
+        currentEnemyHealth -= amount;
+        UpdateHealthBar();
+        healthBar_Switch = true;
+
+        if (currentEnemyHealth <= 0f)
         {
             OnEnemy_Death_SFX?.Invoke();
             Die();
         }
     }
+
+    #region Enemy_HealthBar
+    private void HealthBarVisibility()
+    {
+        if (healthBar_Switch) { _healthBar_Canvas_GO.SetActive(true); }
+        else                  { _healthBar_Canvas_GO.SetActive(false); }
+    }
+
+    private void HealthBarTimer()
+    {
+        if (healthBar_Switch)
+        {
+            healthBarDelay -= Time.deltaTime;
+
+            if (healthBarDelay <= 0) { healthBar_Switch = false; }
+        }
+    }
+
+    private void UpdateHealthBar()
+    {
+        _healthBar.UpdateEnemyHealthBar(enemyHealth, currentEnemyHealth);
+
+        healthBarDelay = healthBarDelay_Threshold;
+    }
+    #endregion
 
     private void Die()
     {
@@ -83,6 +125,7 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+
 }
 
 /*    AudioManager audioManager;

@@ -6,27 +6,17 @@ using UnityEngine.UI;
 public class Enemy_HealthBar : MonoBehaviour
 {
 
-    Enemy enemy;
 
     [SerializeField] Image _HealthBarSprite;
-
-    void Start()
-    {
-        enemy = GetComponent<Enemy>();
-    }
-
-    void Update()
-    {
-        
-    }
+    [SerializeField] Image _ShieldBarSprite;
 
     public void UpdateEnemyHealthBar(float maxHealth, float currentHealth)
     {
-        _HealthBarSprite.fillAmount = currentHealth / maxHealth * Time.deltaTime;
+        _HealthBarSprite.fillAmount = currentHealth / maxHealth;
     }
 
-    public void UpdateEnemyHealthBar(float maxHealth)
+    public void UpdateEnemyShieldBar(float maxHealth, float currentHealth)
     {
-        _HealthBarSprite.fillAmount = maxHealth * Time.deltaTime;
+        _ShieldBarSprite.fillAmount = currentHealth / maxHealth;
     }
 }
