@@ -11,8 +11,6 @@ public class WaveSpawner : MonoBehaviour
     [Header("Objects:")]
     [SerializeField] Transform enemyPrefab;
     [SerializeField] Transform spawnPoint;
-    //
-    //GamePlay_Manager gManager;
 
     [Header("Waves:")]
     [SerializeField] int waveIndex = 0;
@@ -28,21 +26,13 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] bool EnemySpawner_Static = false;
     [SerializeField] bool EnemySpawner_Incrementer = false;
 
-    private void Start()
-    {
-/*        if (gManager != null)
-        {
-            gManager = GetComponent<GamePlay_Manager>();
-        }*/
-    }
-
     void Update()
     {
         if(GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon())
         {
             return;
         }
-
+        //
         if(!EnemySpawner_Single & !EnemySpawner_Static && !EnemySpawner_Incrementer)
         {
             return;
@@ -71,26 +61,23 @@ public class WaveSpawner : MonoBehaviour
         countDown -= Time.deltaTime;
 
         countDown = Mathf.Clamp(countDown, 0f, Mathf.Infinity);
+    }
 
-        //waveCountDownText.text = string.Format("{0:00.00}", countDown); // convert to actual watch like, real world time format.
+    private void SpawnEnemy()
+    {
+        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 
     // increments amount of enemies by 1 each wave:
     IEnumerator SpawnWave_Incrementer()
     {
         waveIndex++;
-        //PlayerStats.Rounds++;
 
         for(int i = 0; i< waveIndex; i++)
         {
             SpawnEnemy();
             yield return new WaitForSeconds(enemySpawnDelay);
         }
-    }
-
-    private void SpawnEnemy()
-    {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 
     // Spawns X amount of enemies per wave:
@@ -110,19 +97,12 @@ public class WaveSpawner : MonoBehaviour
         yield return null;
     }
 
-    //public TMP_Text waveCountDownText;
-    //[SerializeField] TMP_Text masterTimer_Text;
 
     #region Backup:
-    /*            if (countDown == 0f)
-                {
-                    StartCoroutine(SpawnWave());
-                    countDown = upcomingWaveDelay;
-                }
 
-                countDown -= Time.deltaTime;
+/*countDown -= Time.deltaTime;
 
-                countDown = Mathf.Clamp(countDown, 0f, Mathf.Infinity);*/
+countDown = Mathf.Clamp(countDown, 0f, Mathf.Infinity);*/
 
     //waveCountDownText.text = string.Format("{0:00.00}", countDown); // convert to actual watch like, real world time format.
     #endregion
