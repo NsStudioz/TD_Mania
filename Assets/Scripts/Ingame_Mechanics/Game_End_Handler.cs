@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Game_End_Handler : MonoBehaviour
 {
-
+    // Game-Over / Game-Won Animations and SFX
     [SerializeField] Animator animator;
 
     public static event Action OnClick_Ingame_GameOver_SFX;
