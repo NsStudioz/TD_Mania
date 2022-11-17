@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,10 +11,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject gameWonUI;
     [SerializeField] TMP_Text secondsSuvivedText; // after game ends.
 
+    [Header("Game-Won Elements")]
+    [SerializeField] TMP_Text current_Gold_Text;
+    [SerializeField] TMP_Text total_Gold_Text;
+    [SerializeField] GameObject nextLevelButton_Blocker;
+    [SerializeField] int setCurrentGoldToZero = 0;
+    public static event Action OnClick_PlayGoldConversion;
+
     void Start()
     {
         gameOverUI.SetActive(false);
         gameWonUI.SetActive(false);
+        nextLevelButton_Blocker.SetActive(true);
     }
 
     void Update()
@@ -25,7 +33,9 @@ public class GameManager : MonoBehaviour
             secondsSuvivedText.text = GamePlay_Manager.GetSurvivalTimerResults().ToString("F2"); // ALSO CONVERT TO FLOAT WITH 2 DECIMAL POINTS.
         }
 
-        else if (GamePlay_Manager.GetGameWon()) { SetGameWonUI(); } 
+        else if (GamePlay_Manager.GetGameWon()) { SetGameWonUI(); }
+
+        SetGoldTextsValues();
     }
 
     private void SetGameOverUI()
@@ -36,5 +46,29 @@ public class GameManager : MonoBehaviour
     private void SetGameWonUI()
     {
         gameWonUI.SetActive(true); 
+    }
+
+    public void OnGameWon_SetCurrentGoldToTotalGoldConversion()
+    {
+        PlayerStats._TotalGold += PlayerStats.Gold;
+        PlayerStats.Gold = setCurrentGoldToZero;
+        //
+        PlayGoldConversion_SFX();
+        SetNextLevelButtonInteractable();
+    }
+
+    private void SetGoldTextsValues()
+    {
+        current_Gold_Text.text = PlayerStats.Gold.ToString();
+        total_Gold_Text.text = PlayerStats._TotalGold.ToString();
+    }
+
+    private void PlayGoldConversion_SFX()
+    {
+        OnClick_PlayGoldConversion?.Invoke();
+    }
+    private void SetNextLevelButtonInteractable()
+    {
+        nextLevelButton_Blocker.SetActive(false);
     }
 }

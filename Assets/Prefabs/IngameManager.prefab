@@ -49,6 +49,8 @@ MonoBehaviour:
   gameOverUI: {fileID: 0}
   gameWonUI: {fileID: 0}
   secondsSuvivedText: {fileID: 0}
+  current_Gold_Text: {fileID: 0}
+  total_Gold_Text: {fileID: 0}
 --- !u!114 &974758937459716086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd8075ef61aa5449b602d58f56530da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startGold: 500
+  startGold: 750
   startLives: 20
 --- !u!114 &1371792435
 MonoBehaviour:
@@ -79,5 +81,5 @@ MonoBehaviour:
   healthCountText: {fileID: 0}
   TimerCountText: {fileID: 0}
   masterTimer: 0
-  masterTimerThreshold: 60
+  masterTimerThreshold: 150
   survivalTimerThreshold: 0
