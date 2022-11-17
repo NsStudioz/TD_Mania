@@ -45,6 +45,11 @@ public class D_Trap_Binder : MonoBehaviour
 
     private void Update()
     {
+        if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon())
+        {
+            return;
+        }
+        //
         sphereCol.radius = bindRadius;
         //
         if (trapReady)

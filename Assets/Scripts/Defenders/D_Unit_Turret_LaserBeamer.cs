@@ -49,6 +49,11 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         animController.Play(animation_BuildName);
     }
 
+    private void OnDisable()
+    {
+        StopTurretShootingSFX();
+    }
+
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -58,6 +63,11 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
 
     void Update()
     {
+        if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon())
+        {
+            return;
+        }
+        //
         if (turretReady)
         {
             if (target == null)
@@ -98,16 +108,6 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
             {
                 UseTheLaser();
             }
-            /*        else
-                    {
-                        if (fireCountDown <= 0f)
-                        {
-                            Shoot();
-                            fireCountDown = 1f / fireRate;
-                        }
-
-                        fireCountDown -= Time.deltaTime;
-                    }*/
         }
     }
 
@@ -205,56 +205,17 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
 }
 
 #region TrashCode:
-
-/*void Update()
-{
-    if (target == null)
-    {
-        if (useLaser)
+// at the end of the update:
+/*        else
         {
-            if (lineRenderer.enabled)
+            if (fireCountDown <= 0f)
             {
-                lineRenderer.enabled = false;
-                laserImpactLight.enabled = false;
-                laserImpactEffects.Stop();
+                Shoot();
+                fireCountDown = 1f / fireRate;
             }
 
-        }
-
-        return;
-    }
-
-    LockOnTarget();
-
-    if (useLaser)
-    {
-        UseTheLaser();
-    }
-    else
-    {
-        if (fireCountDown <= 0f)
-        {
-            Shoot();
-            fireCountDown = 1f / fireRate;
-        }
-
-        fireCountDown -= Time.deltaTime;
-    }
-}*/
-
-//[SerializeField] float fireRate = 1f;
-//[SerializeField] float fireCountDown = 0f;
-
-//[SerializeField] GameObject bulletPrefab;
-
-//AudioManager audioManager;
-
-/*        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();*/
-
-//audioManager.PlayOneShot("Unit_Built_1");
-//audioManager.PlayOneShot("LaserBeamer_Fire");
-//audioManager.PlayOneShot("Unit_Built_2");
+            fireCountDown -= Time.deltaTime;
+        }*/
 
 /*    private void Shoot()
     {

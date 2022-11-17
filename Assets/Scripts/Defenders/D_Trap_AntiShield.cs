@@ -34,6 +34,11 @@ public class D_Trap_AntiShield : MonoBehaviour
 
     void Update()
     {
+        if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon())
+        {
+            return;
+        }
+        //
         if (trapReady)
         {
             CheckRangeOnEnemyEncounter();

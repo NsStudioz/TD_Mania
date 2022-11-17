@@ -62,6 +62,11 @@ public class D_Unit_Turret : MonoBehaviour
 
     void Update()
     {
+        if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon())
+        {
+            return;
+        }
+        //
         if (turretReady)
         {
             if (target == null)

@@ -33,6 +33,11 @@ public class D_Trap_Mine : MonoBehaviour
 
     void Update()
     {
+        if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon())
+        {
+            return;
+        }
+        //
         if (trapReady)
         {
             CheckRangeOnEnemyEncounter();

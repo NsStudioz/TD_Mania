@@ -26,6 +26,11 @@ public class EnemyMovement_New : MonoBehaviour
 
     void Update()
     {
+        if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon())
+        {
+            return;
+        }
+
         transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.position, enemy.movingSpeed * Time.deltaTime);
         if (Vector3.Distance(transform.position, currentWaypoint.position) < distanceThreshold)
         {
