@@ -620,6 +620,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1310938945154474882}
     - target: {fileID: 974758937459715593, guid: b7124b6dc433f8144b523d6ba7dd4ddc, type: 3}
+      propertyPath: TouchButtons_GO
+      value: 
+      objectReference: {fileID: 719926023749441727}
+    - target: {fileID: 974758937459715593, guid: b7124b6dc433f8144b523d6ba7dd4ddc, type: 3}
       propertyPath: nextLevelButton
       value: 
       objectReference: {fileID: 2347329746906858845}
@@ -814,6 +818,11 @@ PrefabInstance:
       objectReference: {fileID: 3342506209895847451}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
+--- !u!1 &719926023749441727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8942426306458897338, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
+  m_PrefabInstance: {fileID: 8495004681074004741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1310938944939690777 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7481945428589107228, guid: bea75594a7b5fc9419727255f35feda1, type: 3}

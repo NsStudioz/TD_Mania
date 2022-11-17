@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject gameWonUI;
     [SerializeField] TMP_Text secondsSuvivedText; // after game ends.
 
+    [Header("TouchButtons GameObject Parent")]
+    [SerializeField] GameObject TouchButtons_GO;
+
     [Header("Game-Won Elements")]
     [SerializeField] TMP_Text current_Gold_Text;
     [SerializeField] TMP_Text total_Gold_Text;
@@ -23,6 +26,7 @@ public class GameManager : MonoBehaviour
         gameOverUI.SetActive(false);
         gameWonUI.SetActive(false);
         nextLevelButton_Blocker.SetActive(true);
+        TouchButtons_GO.SetActive(true);
     }
 
     void Update()
@@ -35,6 +39,7 @@ public class GameManager : MonoBehaviour
 
         else if (GamePlay_Manager.GetGameWon()) { SetGameWonUI(); }
 
+        OnGameEnds_DeactivateTouchButtonsUI();
         SetGoldTextsValues();
     }
 
@@ -46,6 +51,14 @@ public class GameManager : MonoBehaviour
     private void SetGameWonUI()
     {
         gameWonUI.SetActive(true); 
+    }
+
+    private void OnGameEnds_DeactivateTouchButtonsUI()
+    {
+        if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon())
+        {
+            TouchButtons_GO.SetActive(false);
+        }
     }
 
     public void OnGameWon_SetCurrentGoldToTotalGoldConversion()
