@@ -17,6 +17,4 @@ public class PlayerStats : MonoBehaviour
         Gold = startGold;
         Lives = startLives;
     }
-
-
 }
