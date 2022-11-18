@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 3_Plasma Cannon
   m_EditorClassIdentifier: 
   itemName: Plasma Cannon
-  Item_LevelIndex: 0
+  Item_LevelIndex: 1
   unit_Level:
   - unlockCost: 0
     unit_LevelIndex: 0

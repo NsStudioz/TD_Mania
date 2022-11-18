@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        PlayerStats._TotalGold = PlayerPrefs.GetInt("TotalGoldCount");
+        //
         gameOverUI.SetActive(false);
         gameWonUI.SetActive(false);
         nextLevelButton_Blocker.SetActive(true);
@@ -40,6 +42,7 @@ public class GameManager : MonoBehaviour
         else if (GamePlay_Manager.GetGameWon()) { SetGameWonUI(); }
 
         OnGameEnds_DeactivateTouchButtonsUI();
+        OnGamePauses_DeactivateTouchButtonsUI();
         SetGoldTextsValues();
     }
 
@@ -55,18 +58,22 @@ public class GameManager : MonoBehaviour
 
     private void OnGameEnds_DeactivateTouchButtonsUI()
     {
-        if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon())
-        {
-            TouchButtons_GO.SetActive(false);
-        }
+        if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon()) { TouchButtons_GO.SetActive(false); }
     }
 
-    public void OnGameWon_SetCurrentGoldToTotalGoldConversion()
+    private void OnGamePauses_DeactivateTouchButtonsUI()
+    {
+        if (Time.timeScale == Levels_Handler.GetPauseGame()) { TouchButtons_GO.SetActive(false); }
+        else if (Time.timeScale == Levels_Handler.GetResumeGame()) { TouchButtons_GO.SetActive(true); }
+    }
+
+    public void OnGameWon_SetCurrentGoldToTotalGoldConversion() // Button Function
     {
         PlayerStats._TotalGold += PlayerStats.Gold;
         PlayerStats.Gold = setCurrentGoldToZero;
         //
         PlayGoldConversion_SFX();
+        SaveTotalGoldCount();
         SetNextLevelButtonInteractable();
     }
 
@@ -83,5 +90,12 @@ public class GameManager : MonoBehaviour
     private void SetNextLevelButtonInteractable()
     {
         nextLevelButton_Blocker.SetActive(false);
+    }
+
+    private void SaveTotalGoldCount()
+    {
+        PlayerPrefs.SetInt("TotalGoldCount", PlayerStats._TotalGold);
+        PlayerStats._TotalGold = PlayerPrefs.GetInt("TotalGoldCount");
+        PlayerPrefs.Save();
     }
 }

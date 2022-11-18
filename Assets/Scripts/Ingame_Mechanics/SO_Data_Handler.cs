@@ -14,6 +14,7 @@ namespace ShopSystem
         [Header("Scriptable Objects")]
         public List<ShopItemsScriptable> objectsToPersist;
 
+        // File Persistent Data Path Location: %AppData%\LocalLow\CompanyName\ProjectName\
         private void OnEnable()
         {
             for (int i = 0; i < objectsToPersist.Count; i++)
@@ -43,8 +44,10 @@ namespace ShopSystem
                 file.Close();
             }
         }
+    }
+}
 
-        /*        public void Save_SO_Data()
+/*        public void Save_SO_Data()
                 {
                     for (int i = 0; i < objectsToPersist.Count; i++)
                     {
@@ -73,7 +76,4 @@ namespace ShopSystem
                         }
                     }
                 }*/
-    }
-}
-
 

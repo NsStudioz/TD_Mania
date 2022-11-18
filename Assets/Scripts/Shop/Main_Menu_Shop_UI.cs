@@ -62,23 +62,28 @@ namespace ShopSystem
         {
             int item_LevelIndex = shopItemsData[thisItemIndex].Item_LevelIndex;
 
-            if (item_LevelIndex < shopItemsData[thisItemIndex].unit_Level.Length)
+            if (PlayerPrefs.GetInt("TotalGoldCount") >= shopItemsData[thisItemIndex].unit_Level[item_LevelIndex + 1].unlockCost)
             {
-                shopItemsData[thisItemIndex].Item_LevelIndex++;
-                shopItemsTemplates[thisItemIndex].costText.text = shopItemsData[thisItemIndex].unit_Level[item_LevelIndex].unlockCost.ToString();
-            }
+                PlayerPrefs.SetInt("TotalGoldCount", PlayerStats._TotalGold - shopItemsData[thisItemIndex].unit_Level[item_LevelIndex + 1].unlockCost);
 
-            if (item_LevelIndex == shopItemsData[thisItemIndex].unit_Level.Length)
-            {
-                shopItemsData[thisItemIndex].Item_LevelIndex++;
-                //
-                shopItemsTemplates[thisItemIndex].costTextGO.SetActive(false);
-                //
-                shopItemsTemplates[thisItemIndex].UpgradeText.text = $"Maxed";
-                shopItemsTemplates[thisItemIndex].upgradeButton.interactable = false;
-            }
+                if (item_LevelIndex < shopItemsData[thisItemIndex].unit_Level.Length)
+                {
+                    shopItemsData[thisItemIndex].Item_LevelIndex++;
+                    shopItemsTemplates[thisItemIndex].costText.text = shopItemsData[thisItemIndex].unit_Level[item_LevelIndex].unlockCost.ToString();
+                }
 
-            PlayCategorySFX();
+                if (item_LevelIndex == shopItemsData[thisItemIndex].unit_Level.Length)
+                {
+                    shopItemsData[thisItemIndex].Item_LevelIndex++;
+                    //
+                    shopItemsTemplates[thisItemIndex].costTextGO.SetActive(false);
+                    //
+                    shopItemsTemplates[thisItemIndex].UpgradeText.text = $"Maxed";
+                    shopItemsTemplates[thisItemIndex].upgradeButton.interactable = false;
+                }
+
+                PlayCategorySFX();
+            }
         }
 
         private void PlayCategorySFX()

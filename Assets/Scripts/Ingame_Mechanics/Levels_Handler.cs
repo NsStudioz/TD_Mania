@@ -23,6 +23,16 @@ public class Levels_Handler : MonoBehaviour
     public static event Action OnUIClick_Menu_SFX;
     public static event Action OnUIClick_Ingame_SFX;
 
+    // Getters:
+    public static float GetPauseGame()
+    {
+        return pauseGame;
+    }
+    public static float GetResumeGame()
+    {
+        return ResumeGame;
+    }
+
     private void Start()
     {
         pauseMenu_UI.SetActive(false);
