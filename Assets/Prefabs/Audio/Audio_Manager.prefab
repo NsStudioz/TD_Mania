@@ -399,7 +399,7 @@ MonoBehaviour:
     mute: 0
     source: {fileID: 0}
   - name: UI_Gold_Spent
-    clip: {fileID: 8300000, guid: b713ac85400f0a5418c96c896bb1ea98, type: 3}
+    clip: {fileID: 8300000, guid: f6f402c33ba0eec419e400dbc7003213, type: 3}
     volume: 0.5
     pitch: 1
     spatialBlend: 0
