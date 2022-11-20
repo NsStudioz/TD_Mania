@@ -72,6 +72,9 @@ namespace ShopSystem
             Main_Menu_Shop_UI.OnClick_UI_Upgrade_SFX += Play_UI_ClickUpgrade_SFX;
             Shop_Category_UI.OnUIClick_Back_SFX += Play_MainMenu_Back_SFX;
             Shop_Category_UI.OnUIClick_Ingame_SFX += Play_UI_Click_Ingame_SFX;
+            //
+            GameManager.OnClick_PlayGoldConversion += Play_GoldConversion_SFX;
+            Main_Menu_Shop_UI.OnClick_UI_GoldSpent_SFX += Play_GoldSpent_SFX;
         }
 
         private void OnDisable()
@@ -134,6 +137,9 @@ namespace ShopSystem
             Main_Menu_Shop_UI.OnClick_UI_Upgrade_SFX -= Play_UI_ClickUpgrade_SFX;
             Shop_Category_UI.OnUIClick_Back_SFX -= Play_MainMenu_Back_SFX;
             Shop_Category_UI.OnUIClick_Ingame_SFX -= Play_UI_Click_Ingame_SFX;
+            //
+            GameManager.OnClick_PlayGoldConversion -= Play_GoldConversion_SFX;
+            Main_Menu_Shop_UI.OnClick_UI_GoldSpent_SFX -= Play_GoldSpent_SFX;
         }
         #endregion
 
@@ -293,6 +299,18 @@ namespace ShopSystem
         {
             audioManager.PlayOneShot("Enemy_Boom");
         }
+        #endregion
+
+        #region UI_Gold_SFX
+        private void Play_GoldConversion_SFX()
+        {
+            audioManager.PlayOneShot("UI_Gold_Conversion");
+        }
+        private void Play_GoldSpent_SFX()
+        {
+            audioManager.PlayOneShot("UI_Gold_Spent");
+        }
+
         #endregion
 
         #region Trash Code:

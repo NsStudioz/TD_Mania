@@ -13,6 +13,7 @@ namespace ShopSystem
         private int resetItem_LevelIndex = 0;
 
         public static event Action OnClick_UI_Upgrade_SFX;
+        public static event Action OnClick_UI_GoldSpent_SFX;
 
         private void Start()
         {
@@ -83,12 +84,18 @@ namespace ShopSystem
                 }
 
                 PlayCategorySFX();
+                Play_GoldSpent_SFX();
             }
         }
 
         private void PlayCategorySFX()
         {
             OnClick_UI_Upgrade_SFX?.Invoke();
+        }
+
+        private void Play_GoldSpent_SFX()
+        {
+            OnClick_UI_GoldSpent_SFX?.Invoke();
         }
 
         private void ResetUpgradesBackToZero()

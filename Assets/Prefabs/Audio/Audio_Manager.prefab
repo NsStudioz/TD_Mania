@@ -387,6 +387,28 @@ MonoBehaviour:
     loop: 0
     mute: 0
     source: {fileID: 0}
+  - name: UI_Gold_Conversion
+    clip: {fileID: 8300000, guid: ff0fc66a8e299704eb41f9806c59baad, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 0
+    volumeRolloff: 0
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: UI_Gold_Spent
+    clip: {fileID: 8300000, guid: b713ac85400f0a5418c96c896bb1ea98, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 0
+    volumeRolloff: 0
+    minDistance: 7
+    maxDistance: 30
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
 --- !u!114 &8097870526976425110
 MonoBehaviour:
   m_ObjectHideFlags: 0
