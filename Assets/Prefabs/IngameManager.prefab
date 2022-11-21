@@ -49,8 +49,14 @@ MonoBehaviour:
   gameOverUI: {fileID: 0}
   gameWonUI: {fileID: 0}
   secondsSuvivedText: {fileID: 0}
+  TouchButtons_GO: {fileID: 0}
   current_Gold_Text: {fileID: 0}
   total_Gold_Text: {fileID: 0}
+  nextLevelButton_Blocker: {fileID: 0}
+  setCurrentGoldToZero: 0
+  _BronzeTrophy: {fileID: 0}
+  _SilverTrophy: {fileID: 0}
+  _GoldTrophy: {fileID: 0}
 --- !u!114 &974758937459716086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,5 +87,5 @@ MonoBehaviour:
   healthCountText: {fileID: 0}
   TimerCountText: {fileID: 0}
   masterTimer: 0
-  masterTimerThreshold: 150
+  masterTimerThreshold: 50
   survivalTimerThreshold: 0
