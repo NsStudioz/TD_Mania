@@ -10997,14 +10997,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2586752453260805056, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
-      propertyPath: startGold
-      value: 15000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2586752453260805056, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
-      propertyPath: startLives
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 3342506210163595330, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
       propertyPath: m_RootOrder
       value: 3

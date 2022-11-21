@@ -651,6 +651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IngameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 974758937459716086, guid: b7124b6dc433f8144b523d6ba7dd4ddc, type: 3}
+      propertyPath: startGold
+      value: 1500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7124b6dc433f8144b523d6ba7dd4ddc, type: 3}
 --- !u!4 &2586752453260804670 stripped

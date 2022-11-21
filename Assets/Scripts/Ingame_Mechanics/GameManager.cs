@@ -50,8 +50,8 @@ public class GameManager : MonoBehaviour
             OnGameWon_SetTrophiesVisibility();
         }
 
-        OnGameEnds_DeactivateTouchButtonsUI();
         OnGamePauses_DeactivateTouchButtonsUI();
+        OnGameEnds_DeactivateTouchButtonsUI();
         SetGoldTextsValues();
     }
 
@@ -78,11 +78,8 @@ public class GameManager : MonoBehaviour
 
     private void OnGamePauses_DeactivateTouchButtonsUI()
     {
-        if (!GamePlay_Manager.GetGameOver() || !GamePlay_Manager.GetGameWon())
-        {
-            if (Time.timeScale == Levels_Handler.GetPauseGame()) { TouchButtons_GO.SetActive(false); }
-            else if (Time.timeScale == Levels_Handler.GetResumeGame()) { TouchButtons_GO.SetActive(true); }
-        }
+        if (Time.timeScale == Levels_Handler.GetPauseGame()) { TouchButtons_GO.SetActive(false); }
+        else if (Time.timeScale == Levels_Handler.GetResumeGame()) { TouchButtons_GO.SetActive(true); }
     }
 
     public void OnGameWon_SetCurrentGoldToTotalGoldConversion() // Button Function
@@ -127,7 +124,7 @@ public class GameManager : MonoBehaviour
     private void OnGameWon_SetTrophiesVisibility()
     {
         if (PlayerStats.Lives == 20) { _GoldTrophy.SetActive(true); }
-        else if (PlayerStats.Lives >= 11 || PlayerStats.Lives <= 19) { _SilverTrophy.SetActive(true); }
-        else if (PlayerStats.Lives >= 1 || PlayerStats.Lives <= 10) { _BronzeTrophy.SetActive(true); }
+        else if (PlayerStats.Lives >= 11 & PlayerStats.Lives < 20) { _SilverTrophy.SetActive(true); }
+        else if (PlayerStats.Lives > 0 & PlayerStats.Lives <= 10) { _BronzeTrophy.SetActive(true); }
     }
 }
