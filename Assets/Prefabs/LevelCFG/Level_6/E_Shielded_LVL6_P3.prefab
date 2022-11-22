@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ae25c3a1dc91b44a1938214b4f369e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathing: {fileID: 3992026433935800359, guid: 059d4f1135c991c4cb385ec4b06c5f92, type: 3}
+  pathing: {fileID: 7452837257555550740, guid: bb36645a9862c6f488cb72b2104bba69, type: 3}
   distanceThreshold: 0.1
 --- !u!114 &5299240267412954488
 MonoBehaviour:
