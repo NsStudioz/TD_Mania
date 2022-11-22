@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 6056671781344052890}
   - component: {fileID: 2109055803212222815}
   m_Layer: 10
-  m_Name: Enemy_P1_LVL8
+  m_Name: E_LVL7_P1
   m_TagString: Attackers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ae25c3a1dc91b44a1938214b4f369e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathing: {fileID: 5616544605949941391, guid: 0374c6af49ea70d4cbc6d2a53c19049b, type: 3}
+  pathing: {fileID: 8651780195852801486, guid: 915d82cc3704f3a48ab3dcaa802acfd6, type: 3}
   distanceThreshold: 0.1
 --- !u!114 &6056671781344052890
 MonoBehaviour:
