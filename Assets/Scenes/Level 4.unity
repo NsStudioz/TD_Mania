@@ -2866,7 +2866,7 @@ GameObject:
   - component: {fileID: 413552890}
   - component: {fileID: 413552889}
   m_Layer: 10
-  m_Name: EnemySpawner_Static
+  m_Name: EnemySpawner_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2972,7 +2972,7 @@ Transform:
   m_Children:
   - {fileID: 460576103}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &418016281
 PrefabInstance:
@@ -5236,7 +5236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5671407135511872334, guid: a2efdf1ef4f8ad940a205b8a25eb2d6c, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5671407135511872334, guid: a2efdf1ef4f8ad940a205b8a25eb2d6c, type: 3}
       propertyPath: m_LocalScale.x
@@ -12184,7 +12184,7 @@ Transform:
   - {fileID: 92801203}
   - {fileID: 1169139087}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1853474331 stripped
 Transform:
@@ -14713,7 +14713,7 @@ GameObject:
   - component: {fileID: 4456914042549774055}
   - component: {fileID: 4456914042549774059}
   m_Layer: 10
-  m_Name: EnemySpawner_Static
+  m_Name: EnemySpawner_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14797,7 +14797,7 @@ Transform:
   m_Children:
   - {fileID: 4456914041578589648}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4456914042549774059
 MonoBehaviour:
@@ -14927,7 +14927,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6301721940841589889, guid: fa4d8873f7b1f2b4b8f7b32b6705c626, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6301721940841589889, guid: fa4d8873f7b1f2b4b8f7b32b6705c626, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14984,7 +14984,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2758126835772214921, guid: b92b8cba264c35448aa80b95731108e9, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2758126835772214921, guid: b92b8cba264c35448aa80b95731108e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15045,7 +15045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8318847449431433095, guid: ba6ab29a1a61e9e498c7023ea16fd253, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8318847449431433095, guid: ba6ab29a1a61e9e498c7023ea16fd253, type: 3}
       propertyPath: m_LocalPosition.x

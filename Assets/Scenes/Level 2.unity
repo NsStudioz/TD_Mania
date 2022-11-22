@@ -2143,7 +2143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7393070999169482109, guid: f620682f661a9a44eb7e5ec0057b653e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7393070999169482109, guid: f620682f661a9a44eb7e5ec0057b653e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5075,7 +5075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5671407135511872334, guid: a2efdf1ef4f8ad940a205b8a25eb2d6c, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5671407135511872334, guid: a2efdf1ef4f8ad940a205b8a25eb2d6c, type: 3}
       propertyPath: m_LocalScale.x
@@ -14799,7 +14799,7 @@ GameObject:
   - component: {fileID: 4456914042549774055}
   - component: {fileID: 4456914042549774059}
   m_Layer: 10
-  m_Name: EnemySpawner_Single
+  m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14883,7 +14883,7 @@ Transform:
   m_Children:
   - {fileID: 4456914041578589648}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4456914042549774059
 MonoBehaviour:

@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 6056671781344052890}
   - component: {fileID: -1835379251565414143}
   m_Layer: 10
-  m_Name: Enemy_Rusher_P2_LVL4
+  m_Name: Enemy_Rusher_P1_LVL4
   m_TagString: Attackers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
