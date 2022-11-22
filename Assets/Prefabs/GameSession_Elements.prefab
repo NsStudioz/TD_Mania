@@ -71,7 +71,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6648122006906177744, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.35
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 6648122006906177744, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
       propertyPath: m_LocalPosition.y
@@ -79,7 +79,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6648122006906177744, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 6648122006906177744, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
       propertyPath: m_LocalRotation.w
@@ -126,6 +126,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4976151383169266657}
     - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
+      propertyPath: x_Axis_Max
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
+      propertyPath: x_Axis_Min
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
+      propertyPath: z_Axis_Max
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
+      propertyPath: z_Axis_Min
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
       propertyPath: movementSpeed
       value: 10
       objectReference: {fileID: 0}
@@ -133,6 +149,18 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 4736521123551936477}
+    - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
+      propertyPath: cameraMovement_Pos.x
+      value: -17.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
+      propertyPath: cameraMovement_Pos.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
+      propertyPath: cameraMovement_Pos.z
+      value: -20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
 --- !u!4 &4736521123551936477 stripped

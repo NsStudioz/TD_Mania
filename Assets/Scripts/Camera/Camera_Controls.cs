@@ -25,6 +25,14 @@ public class Camera_Controls : MonoBehaviour
     // Scrolling-bools:
     [SerializeField] bool isPointerDown_ZoomIn = false;
     [SerializeField] bool isPointerDown_ZoomOut = false;
+    
+    [Header("Clamping Elements")]
+    [SerializeField] Vector3 cameraMovement_Pos;
+    [SerializeField] float x_Axis_Min;
+    [SerializeField] float x_Axis_Max;
+    [SerializeField] float z_Axis_Min;
+    [SerializeField] float z_Axis_Max;
+
 
     void Start()
     {
@@ -42,6 +50,7 @@ public class Camera_Controls : MonoBehaviour
             newZoom -= zoomAmount;
         }
 
+        HandleMovementBounds();
         HandleScrollingInput();
         HandleMovementInput();
     }
@@ -49,23 +58,31 @@ public class Camera_Controls : MonoBehaviour
     #region Input_Movement:
     private void HandleMovementInput()
     {
+        transform.position = cameraMovement_Pos;
+
         if (joyStick.Horizontal >= 0.2f)
         {
-            transform.position += (transform.right * movementSpeed * Time.deltaTime);
+            cameraMovement_Pos += (transform.right * movementSpeed * Time.deltaTime);
         }
         else if (joyStick.Horizontal <= -0.2f)
         {
-            transform.position += (transform.right * -movementSpeed * Time.deltaTime);
+            cameraMovement_Pos += (transform.right * -movementSpeed * Time.deltaTime);
         }
 
         if (joyStick.Vertical >= 0.2f)
         {
-            transform.position += (transform.forward * movementSpeed * Time.deltaTime);
+            cameraMovement_Pos += (transform.forward * movementSpeed * Time.deltaTime);
         }
         else if (joyStick.Vertical <= -0.2f)
         {
-            transform.position += (transform.forward * -movementSpeed * Time.deltaTime);
+            cameraMovement_Pos += (transform.forward * -movementSpeed * Time.deltaTime);
         }
+    }
+
+    private void HandleMovementBounds()
+    {
+        cameraMovement_Pos.x = Mathf.Clamp(cameraMovement_Pos.x, x_Axis_Min, x_Axis_Max);
+        cameraMovement_Pos.z = Mathf.Clamp(cameraMovement_Pos.z, z_Axis_Min, z_Axis_Max);
     }
     #endregion
 
@@ -101,3 +118,23 @@ public class Camera_Controls : MonoBehaviour
 
     #endregion
 }
+
+
+// Original Movement:
+/*        if (joyStick.Horizontal >= 0.2f)
+        {
+            transform.position += (transform.right * movementSpeed * Time.deltaTime);
+        }
+        else if (joyStick.Horizontal <= -0.2f)
+        {
+            transform.position += (transform.right * -movementSpeed * Time.deltaTime);
+        }
+
+        if (joyStick.Vertical >= 0.2f)
+        {
+            transform.position += (transform.forward * movementSpeed * Time.deltaTime);
+        }
+        else if (joyStick.Vertical <= -0.2f)
+        {
+            transform.position += (transform.forward * -movementSpeed * Time.deltaTime);
+        }*/
