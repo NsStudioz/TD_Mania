@@ -19800,8 +19800,8 @@ MonoBehaviour:
   playMenu: 0
   optionsMenu: 0
   creditsMenu: 0
-  mainMenuIndex: 0
-  shopMenuIndex: 1
+  mainMenuIndex: 1
+  shopMenuIndex: 2
   urlAddress: https://unity3d.com/legal/privacy-policy
   menu_UI_AnimController: {fileID: 79892395}
   play_UI_On: UI_Play_On

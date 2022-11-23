@@ -11,7 +11,7 @@ public class Shop_Category_UI : MonoBehaviour
     public static event Action OnUIClick_Ingame_SFX;
     public static event Action OnUIClick_Back_SFX;
 
-    private int mainMenuSceneIndex = 0;
+    private int mainMenuSceneIndex = 1;
 
     private void Start()
     {

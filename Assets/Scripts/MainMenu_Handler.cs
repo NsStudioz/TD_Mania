@@ -12,8 +12,8 @@ public class MainMenu_Handler : MonoBehaviour
     
     [Header("Scenes Index")]
     private int levelToLoad;
-    [SerializeField] int mainMenuIndex = 0;
-    [SerializeField] int shopMenuIndex = 1;
+    [SerializeField] int mainMenuIndex = 1;
+    [SerializeField] int shopMenuIndex = 2;
     //
     [SerializeField] string urlAddress;
 
