@@ -6,11 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PT_SplashScreen.unity
+    guid: a340ed2a0ad6fa94ab44b2938c5962cc
+  - enabled: 1
     path: Assets/Scenes/Main_Menu.unity
     guid: c8d3e6d8383690c41ac6264262202945
   - enabled: 1
     path: Assets/Scenes/Upgrade_Shop.unity
     guid: f4ced48400fb0b841b1bbf6ecda623b5
+  - enabled: 1
+    path: Assets/Scenes/Level 0.unity
+    guid: 3e4506576973f714ba6c7d3d1ad8a31e
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 20cd541ed492f6947819983ae9260ef4
@@ -20,4 +26,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: 4e3fa296f0c541c459eee2f753e7bda3
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 9d51ce053e7e0664eb617d44c6c01588
+  - enabled: 1
+    path: Assets/Scenes/Level 5.unity
+    guid: 892c4ec10e48b7943b6bd29fe6723b1d
+  - enabled: 1
+    path: Assets/Scenes/Level 6.unity
+    guid: 70b0abb54390612438ef3be0e8f75920
+  - enabled: 1
+    path: Assets/Scenes/Level 7.unity
+    guid: ecd51c6cc8717d74a9d8920908ab22e2
+  - enabled: 1
+    path: Assets/Scenes/Level 8.unity
+    guid: 68bccbfa5f7cd404f84143cd583414df
   m_configObjects: {}

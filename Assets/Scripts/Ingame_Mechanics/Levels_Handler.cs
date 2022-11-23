@@ -7,7 +7,7 @@ public class Levels_Handler : MonoBehaviour
     // RELATED TO LEVEL LOAD FUNCTIONALITIES:
     private const float pauseGame = 0f;
     private const float ResumeGame = 1f;
-    private const int main_Menu_Index = 0;
+    private const int main_Menu_Index = 1;
     private int levelToLoad;
     //
     [SerializeField] int currentSceneIndex;
@@ -48,7 +48,7 @@ public class Levels_Handler : MonoBehaviour
     {
         OnUIClick_Menu_SFX?.Invoke();
         gameWon_UI.SetActive(false);
-        FadeLevel(currentSceneIndex++);
+        FadeLevel(currentSceneIndex + 1);
         if (NextSceneIndex > PlayerPrefs.GetInt("Level_At")) { PlayerPrefs.SetInt("Level_At", NextSceneIndex); }
     }
 
