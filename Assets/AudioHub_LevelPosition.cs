@@ -8,19 +8,12 @@ public class AudioHub_LevelPosition : MonoBehaviour
 
     [Header("Scene Indexes")]
     [SerializeField] private int currentSceneIndex = 0;
+    private int firstGameplayMap_SceneIndex = 3; //
 
-    
-    private int mainMenuSceneIndex= 2; // 
-    private int tutorialMapSceneIndex= 3; // 
-    private int firstGameplayMap_SceneIndex= 4; // 
-    private int lastGameplayMap_SceneIndex= 12; // 
-    // test index
-    private int _TestSceneIndex = 2; // 
 
     [Header("Vectors")]
-    //[SerializeField] Vector3 mainShopScene_Pos;
+
     [SerializeField] Vector3 mainMenuScene_Pos;
-    [SerializeField] Vector3 TutorialScene_Pos;
     [SerializeField] Vector3 gameplayScenes_Pos;
 
     void Update()
@@ -31,7 +24,7 @@ public class AudioHub_LevelPosition : MonoBehaviour
 
     private void OnLevelIndexLoad_CorrectTransformPosition()
     {
-        if (currentSceneIndex == _TestSceneIndex)
+        if (currentSceneIndex >= firstGameplayMap_SceneIndex)
         {
             transform.position = gameplayScenes_Pos;
         }
@@ -39,6 +32,15 @@ public class AudioHub_LevelPosition : MonoBehaviour
         {
             transform.position = mainMenuScene_Pos;
         }
+    }
+}
+
+//private int mainMenuSceneIndex = 2; //
+//private int tutorialMapSceneIndex = 3; //
+//[SerializeField] Vector3 mainShopScene_Pos;
+//[SerializeField] Vector3 TutorialScene_Pos;
+//private int lastGameplayMap_SceneIndex = 12; //
+
 /*        else if (currentSceneIndex <= tutorialMapSceneIndex)
         {
             transform.position = TutorialScene_Pos;
@@ -47,5 +49,3 @@ public class AudioHub_LevelPosition : MonoBehaviour
         {
             transform.position = gameplayScenes_Pos;
         }*/
-    }
-}
