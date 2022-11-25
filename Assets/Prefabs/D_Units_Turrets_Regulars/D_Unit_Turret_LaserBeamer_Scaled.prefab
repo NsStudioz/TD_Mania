@@ -19767,6 +19767,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d1cd850770aa249bf6b6553e4580e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animController: {fileID: 1285528438605535703}
+  anim_IdleName: Plasma_Idle
+  anim_FireName: Plasma_Fire
+  anim_BuildName: Plasma_Install
+  anim_RemoveName: Plasma_Remove
+  isDefUnitReady: 0
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
   enemyTag: Attackers
@@ -19780,13 +19786,13 @@ MonoBehaviour:
   laserImpactLight: {fileID: 2329829693474990339}
   damageOverTime: 30
   laserHitSlowPct: 0.4
-  LOS: {fileID: 8156538482858582362}
   animController: {fileID: 1285528438605535703}
   animation_IdleName: Plasma_Idle
   animation_FireName: Plasma_Fire
   animation_BuildName: Plasma_Install
   animation_RemoveName: Plasma_Remove
   turretReady: 0
+  LOS: {fileID: 8156538482858582362}
 --- !u!114 &1189723678647334016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19855,6 +19861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1edfc0bfad2925e448d949947441a9f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeElapsed: 0
+  _LOS_On: 0
   LOS: {fileID: 8156538482858582362}
 --- !u!1 &1189754274000677355
 GameObject:

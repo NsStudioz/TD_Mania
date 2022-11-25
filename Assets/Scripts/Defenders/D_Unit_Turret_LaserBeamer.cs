@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class D_Unit_Turret_LaserBeamer : MonoBehaviour
+public class D_Unit_Turret_LaserBeamer : Anims_Template
 {
     [Header("Attributes")]
     public Transform target;
@@ -26,14 +26,6 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     [SerializeField] public float damageOverTime = 30;
     [SerializeField] public float laserHitSlowPct = .4f;
 
-    [Header("Animations")]
-    [SerializeField] Animator animController = null;
-    [SerializeField] string animation_IdleName;
-    [SerializeField] string animation_FireName;
-    [SerializeField] string animation_BuildName;
-    [SerializeField] string animation_RemoveName;
-    [SerializeField] bool turretReady = false;
-
     [HideInInspector]
     public GameObject LOS;
 
@@ -46,7 +38,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
 
     private void OnEnable()
     {
-        animController.Play(animation_BuildName);
+        _animController.Play(anim_BuildName);
     }
 
     private void OnDisable()
@@ -68,7 +60,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
             return;
         }
         //
-        if (turretReady)
+        if (isDefUnitReady)
         {
             if (target == null)
             {
@@ -170,10 +162,7 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
         else { target = null; }
     }
 
-    public void EnableTurret()
-    {
-        turretReady = true;
-    }
+
 
     #region SFX:
 
@@ -234,3 +223,18 @@ public class D_Unit_Turret_LaserBeamer : MonoBehaviour
     }*/
 
 #endregion
+
+/*    [Header("Animations")]
+    [SerializeField] Animator animController = null;
+    [SerializeField] string animation_IdleName;
+    [SerializeField] string animation_FireName;
+    [SerializeField] string animation_BuildName;
+    [SerializeField] string animation_RemoveName;
+    [SerializeField] bool turretReady = false;*/
+
+//animController.Play(animation_BuildName);
+
+/*    public void EnableTurret()
+    {
+        turretReady = true;
+    }*/
