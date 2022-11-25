@@ -152,8 +152,11 @@ public class Node : MonoBehaviour
         if (defendingUnit.GetComponent<Anims_Template>() != null)
         {
             Anims_Template anims = defendingUnit.GetComponent<Anims_Template>();
+            anims.DisableDefendingUnit();
             anims.RemoveDefendingUnit();
         }
+
+        else { Destroy(defendingUnit); }
 
         d_Unit_Blueprint = null;
     }

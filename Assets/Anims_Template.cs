@@ -22,6 +22,10 @@ public class Anims_Template : MonoBehaviour
     {
         isDefUnitReady = true;
     }
+    public void DisableDefendingUnit()
+    {
+        isDefUnitReady = false;
+    }
 
     public void RemoveDefendingUnit()
     {
