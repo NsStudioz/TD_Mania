@@ -149,7 +149,14 @@ public class Node : MonoBehaviour
     {
         PlayerStats.Gold += d_Unit_Blueprint.GetSellAmount();
 
-        Destroy(defendingUnit);
+        if (defendingUnit.GetComponent<Anims_Template>() != null)
+        {
+            Anims_Template anims = defendingUnit.GetComponent<Anims_Template>();
+            anims.RemoveDefendingUnit();
+        }
+
         d_Unit_Blueprint = null;
     }
 }
+
+//Destroy(defendingUnit);
