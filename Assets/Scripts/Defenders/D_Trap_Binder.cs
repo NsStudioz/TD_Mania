@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class D_Trap_Binder : MonoBehaviour
+public class D_Trap_Binder : Anims_Template
 {
 
+    [Header("Attributes")]
     [SerializeField] public float bindingDuration = 2f; // upgradeable
     [SerializeField] public float triggerRadius = 0.5f;
     [SerializeField] public float bindRadius;
@@ -17,14 +18,6 @@ public class D_Trap_Binder : MonoBehaviour
     public GameObject TGR_Quad;
     public GameObject Bind_Quad;
 
-    [Header("Animations")]
-    [SerializeField] Animator animController = null;
-    [SerializeField] string animation_IdleName;
-    [SerializeField] string animation_ActivateName;
-    [SerializeField] string animation_BuildName;
-    [SerializeField] string animation_RemoveName;
-    [SerializeField] bool trapReady = false;
-
     // EVENTS:
     public static event Action OnBinderBeep;
     public static event Action OnBinderExplode;
@@ -33,7 +26,7 @@ public class D_Trap_Binder : MonoBehaviour
 
     private void OnEnable()
     {
-        animController.Play(animation_BuildName);
+        _animController.Play(anim_BuildName);
     }
 
     private void Start()
@@ -52,13 +45,13 @@ public class D_Trap_Binder : MonoBehaviour
         //
         sphereCol.radius = bindRadius;
         //
-        if (trapReady)
+        if (isDefUnitReady)
         {
             EnableBind();
 
             if (isTriggered)
             {
-                animController.Play(animation_ActivateName);
+                _animController.Play(anim_FireName);
             }
         }
     }
@@ -82,10 +75,7 @@ public class D_Trap_Binder : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void EnableTrap()
-    {
-        trapReady = true;
-    }
+
 
     #region SFX:
     public void PlayTrapBeepSFX()
@@ -238,3 +228,16 @@ public class D_Trap_Binder : MonoBehaviour
 //audioManager.PlayOneShot("Trap_Boom");
 //audioManager.PlayOneShot("Unit_Built_2");
 //audioManager.PlayOneShot("Unit_Built_1");
+
+/*    public void EnableTrap()
+    {
+        trapReady = true;
+    }*/
+
+/*    [Header("Animations")]
+    [SerializeField] Animator animController = null;
+    [SerializeField] string animation_IdleName;
+    [SerializeField] string animation_ActivateName;
+    [SerializeField] string animation_BuildName;
+    [SerializeField] string animation_RemoveName;
+    [SerializeField] bool trapReady = false;*/
