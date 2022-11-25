@@ -4,8 +4,9 @@ using UnityEngine;
 public class D_Trap_GoldGenerator : Anims_Template
 {
 
+    [Header("Attributes")]
     [SerializeField] float delayTimeThreshold;
-
+    //
     [SerializeField] public float gold_DelayTime = 5f; // can be upgraded.
     [SerializeField] public int goldToEarn = 10;       // can be upgraded.
 
