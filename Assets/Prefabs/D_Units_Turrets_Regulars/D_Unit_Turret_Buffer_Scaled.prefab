@@ -155,6 +155,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c45493258ce05419967ff27f5fe541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animController: {fileID: 3123261871795741498}
+  anim_IdleName: RadarStation_Idle
+  anim_FireName: Tower_Activate
+  anim_BuildName: Tower_Install
+  anim_RemoveName: Tower_Remove
+  isDefUnitReady: 0
   rangeRadius: 0
   LOS: {fileID: 1001543954034407703}
   animController: {fileID: 3123261871795741498}
@@ -232,6 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1edfc0bfad2925e448d949947441a9f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeElapsed: 0
+  _LOS_On: 0
   LOS: {fileID: 1001543954034407703}
 --- !u!1 &3029310143005415194
 GameObject:

@@ -5265,10 +5265,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2183f88e579ea254993e50baec7e71b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animController: {fileID: 7723585786743402081}
+  anim_IdleName: Crusher_Idle
+  anim_FireName: Crusher_Activate
+  anim_BuildName: Crusher_Install
+  anim_RemoveName: Crusher_Remove
+  isDefUnitReady: 0
   delayTimeThreshold: 10
   gold_DelayTime: 5
   goldToEarn: 10
-  animController: {fileID: 7723585786743402081}
+  animController: {fileID: 0}
   animation_IdleName: Crusher_Idle
   animation_ActivateName: Crusher_Activate
   animation_BuildName: Crusher_Install

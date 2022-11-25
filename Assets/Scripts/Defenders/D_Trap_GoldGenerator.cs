@@ -1,21 +1,13 @@
 using System;
 using UnityEngine;
 
-public class D_Trap_GoldGenerator : MonoBehaviour
+public class D_Trap_GoldGenerator : Anims_Template
 {
 
     [SerializeField] float delayTimeThreshold;
 
     [SerializeField] public float gold_DelayTime = 5f; // can be upgraded.
     [SerializeField] public int goldToEarn = 10;       // can be upgraded.
-
-    [Header("Animations")]
-    [SerializeField] Animator animController = null;
-    [SerializeField] string animation_IdleName;
-    [SerializeField] string animation_ActivateName;
-    [SerializeField] string animation_BuildName;
-    [SerializeField] string animation_RemoveName;
-    [SerializeField] bool turretReady = false;
 
     // EVENTS:
     public static event Action OnUnitGG_ConstructedSFX_1;
@@ -24,7 +16,7 @@ public class D_Trap_GoldGenerator : MonoBehaviour
 
     private void OnEnable()
     {
-        animController.Play(animation_BuildName);
+        _animController.Play(anim_BuildName);
     }
 
     private void Start()
@@ -39,9 +31,9 @@ public class D_Trap_GoldGenerator : MonoBehaviour
             return;
         }
         //
-        if (turretReady)
+        if (isDefUnitReady)
         {
-            animController.Play(animation_ActivateName);
+            _animController.Play(anim_FireName);
         }
 
         delayTimeThreshold -= Time.deltaTime;
@@ -51,11 +43,6 @@ public class D_Trap_GoldGenerator : MonoBehaviour
             PlayerStats.Gold += goldToEarn;
             delayTimeThreshold = gold_DelayTime;
         }
-    }
-
-    public void EnableTurret()
-    {
-        turretReady = true;
     }
 
     public void PlayGoldGeneratorActivateSFX_1()
@@ -81,3 +68,19 @@ public class D_Trap_GoldGenerator : MonoBehaviour
 //audioManager.PlayOneShot("GoldGenerator_Activate");
 //audioManager.PlayOneShot("GoldGenerator_Retract");
 //audioManager.PlayOneShot("Unit_Built_1");
+
+/*    public void EnableTurret()
+    {
+        turretReady = true;
+    }*/
+
+//animController.Play(animation_BuildName);
+//animController.Play(animation_ActivateName);
+
+/*    [Header("Animations")]
+    [SerializeField] Animator animController = null;
+    [SerializeField] string animation_IdleName;
+    [SerializeField] string animation_ActivateName;
+    [SerializeField] string animation_BuildName;
+    [SerializeField] string animation_RemoveName;
+    [SerializeField] bool turretReady = false;*/

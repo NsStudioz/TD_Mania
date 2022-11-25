@@ -1,9 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class D_Unit_Buffer : MonoBehaviour
+public class D_Unit_Buffer : Anims_Template
 {
 
     [Header("Attributes")]
@@ -14,17 +12,10 @@ public class D_Unit_Buffer : MonoBehaviour
     [HideInInspector]
     public GameObject LOS;
 
-    [Header("Animations")]
-    [SerializeField] Animator animController = null;
-    [SerializeField] string animation_IdleName;
-    [SerializeField] string animation_ActivateName;
-    [SerializeField] string animation_BuildName;
-    [SerializeField] string animation_RemoveName;
-    [SerializeField] bool turretReady = false;
-
     // EVENTS:
     public static event Action OnUnitTurret_ConstructedSFX_1;
     public static event Action OnBuffer_IdleSFX;
+
 
     private void Start()
     {
@@ -35,17 +26,12 @@ public class D_Unit_Buffer : MonoBehaviour
     {
         collider.radius = rangeRadius;
 
-        if (turretReady) { animController.Play(animation_IdleName); }
+        if (isDefUnitReady) { _animController.Play(anim_IdleName); }
     }
 
     private void OnEnable()
     {
-        animController.Play(animation_BuildName);
-    }
-
-    public void EnableTurret()
-    {
-        turretReady = true;
+        _animController.Play(anim_BuildName);
     }
 
     #region SFX:
@@ -66,13 +52,47 @@ public class D_Unit_Buffer : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, rangeRadius);
     }
 
-    #region TrashCode:
-    /*    AudioManager audioManager;*/
-    /*        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();*/
-    //audioManager.PlayOneShot("Unit_Built_1");
-    //audioManager.PlayOneShot("Buffer_Activate");
-    #endregion
 }
 
+#region TrashCode:
+/*    AudioManager audioManager;*/
+/*        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+    audioManager = audioHubInstance.GetComponent<AudioManager>();*/
+//audioManager.PlayOneShot("Unit_Built_1");
+//audioManager.PlayOneShot("Buffer_Activate");
 
+
+/*    public void EnableTurret()
+    {
+        turretReady = true;
+    }*/
+
+/*    [Header("Animations")]
+    [SerializeField] Animator animController = null;
+    [SerializeField] string animation_IdleName;
+    [SerializeField] string animation_ActivateName;
+    [SerializeField] string animation_BuildName;
+    [SerializeField] string animation_RemoveName;
+    [SerializeField] bool turretReady = false;*/
+
+/*    public void EnableTurret()
+{
+    turretReady = true;
+}*/
+
+/*    public void DisableTurret()
+    {
+        turretReady = false;
+    }*/
+
+/*    public void RemoveTurretTest()
+    {
+        animController.Play(animation_RemoveName);
+    }*/
+
+/*    public void DestroyTurretTest()
+    {
+        Destroy(gameObject);
+    }*/
+
+#endregion
