@@ -19608,6 +19608,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34f021525ab9c942b11237c34bfbab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animController: {fileID: 8415239581817749708}
+  anim_IdleName: Plasma_Idle
+  anim_FireName: Plasma_Fire
+  anim_BuildName: Plasma_Install
+  anim_RemoveName: Plasma_Remove
+  isDefUnitReady: 0
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
   isAntiShield: 0
@@ -19695,6 +19701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1edfc0bfad2925e448d949947441a9f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeElapsed: 0
+  _LOS_On: 0
   LOS: {fileID: 4632430959470663162}
 --- !u!1 &8475115092712122636
 GameObject:

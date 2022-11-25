@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class D_Unit_Turret : MonoBehaviour
+public class D_Unit_Turret : Anims_Template
 {
 
     [Header("Attributes")]
@@ -27,18 +27,9 @@ public class D_Unit_Turret : MonoBehaviour
 
     [Header("Effects")]
     [SerializeField] ParticleSystem muzzleEFX  = null;
-    /*    [SerializeField] GameObject deathEFX  = null;*/
 
     [HideInInspector]
     public GameObject LOS;
-
-    [Header("Animations")]
-    [SerializeField] Animator animController = null;
-    [SerializeField] string animation_IdleName;
-    [SerializeField] string animation_FireName;
-    [SerializeField] string animation_BuildName;
-    [SerializeField] string animation_RemoveName;
-    [SerializeField] bool turretReady = false;
 
     // EVENTS:
     public static event Action OnUnitTurret_ConstructedSFX_1;
@@ -52,7 +43,7 @@ public class D_Unit_Turret : MonoBehaviour
 
     private void OnEnable()
     {
-        animController.Play(animation_BuildName);
+        _animController.Play(anim_BuildName);
     }
 
     void Start()
@@ -64,10 +55,10 @@ public class D_Unit_Turret : MonoBehaviour
     {
         if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon())
         {
-            return;
+            return;   
         }
         //
-        if (turretReady)
+        if (isDefUnitReady)
         {
             if (target == null)
             {
@@ -141,8 +132,8 @@ public class D_Unit_Turret : MonoBehaviour
     public void Shoot()
     {
         GameObject bulletGO = Instantiate(bulletPrefab, firingPosition.position, firingPosition.rotation);
-        muzzleEFX.Play();
-        animController.Play(animation_FireName);
+        PlayMuzzleEFX();
+        PlayFireAnimation();
         PlayTurretShootingSFX();
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
@@ -152,9 +143,14 @@ public class D_Unit_Turret : MonoBehaviour
         }
     }
 
-    public void EnableTurret()
+    private void PlayFireAnimation()
     {
-        turretReady = true;
+        _animController.Play(anim_FireName);
+    }
+
+    private void PlayMuzzleEFX()
+    {
+        muzzleEFX.Play();
     }
 
     #region SFX:
@@ -195,62 +191,76 @@ public class D_Unit_Turret : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
-
-    #region TrashCode:
-
-    /*    public void BuffDefendingUnit_Range(float bonusAmount)
-    {
-        range += bonusAmount;
-    }*/
-
-    /*    void LeUpdate()
-        {
-            if (target == null)
-            {
-                return;
-            }
-
-            LockOnTarget();
-
-            if (useLaser)
-            {
-                UseTheLaser();
-            }
-            else
-            {
-                if (fireCountDown <= 0f)
-                {
-                    Shoot();
-                    fireCountDown = 1f / fireRate;
-                }
-
-                fireCountDown -= Time.deltaTime;
-
-            }
-        }*/
-
-    /*    private void OnDestroy()
-    {
-        GameObject buildEFX = Instantiate(deathEFX, transform.position, Quaternion.identity);
-        Destroy(buildEFX, 2f);
-    }*/
-
-
-    //AudioManager audioManager;
-    /*    private void Awake()
-        {
-            GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-            audioManager = audioHubInstance.GetComponent<AudioManager>();
-        }*/
-
-    //audioManager.PlayOneShot("Cannon_Fire");
-    //audioManager.PlayOneShot("Auto_Fire");
-    //audioManager.PlayOneShot("Missile_Fire");
-    //audioManager.PlayOneShot("Plasma_Fire");
-    //audioManager.PlayOneShot("Unit_Built_1");
-    //audioManager.PlayOneShot("Unit_Built_2");
-
-    #endregion
-
-
 }
+
+#region TrashCode:
+
+/*    public void BuffDefendingUnit_Range(float bonusAmount)
+{
+    range += bonusAmount;
+}*/
+
+/*    void LeUpdate()
+    {
+        if (target == null)
+        {
+            return;
+        }
+
+        LockOnTarget();
+
+        if (useLaser)
+        {
+            UseTheLaser();
+        }
+        else
+        {
+            if (fireCountDown <= 0f)
+            {
+                Shoot();
+                fireCountDown = 1f / fireRate;
+            }
+
+            fireCountDown -= Time.deltaTime;
+
+        }
+    }*/
+
+/*    private void OnDestroy()
+{
+    GameObject buildEFX = Instantiate(deathEFX, transform.position, Quaternion.identity);
+    Destroy(buildEFX, 2f);
+}*/
+
+
+//AudioManager audioManager;
+/*    private void Awake()
+    {
+        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
+        audioManager = audioHubInstance.GetComponent<AudioManager>();
+    }*/
+
+//audioManager.PlayOneShot("Cannon_Fire");
+//audioManager.PlayOneShot("Auto_Fire");
+//audioManager.PlayOneShot("Missile_Fire");
+//audioManager.PlayOneShot("Plasma_Fire");
+//audioManager.PlayOneShot("Unit_Built_1");
+//audioManager.PlayOneShot("Unit_Built_2");
+
+#endregion
+
+/*    [Header("Animations")]
+[SerializeField] Animator animController = null;
+[SerializeField] string animation_IdleName;
+[SerializeField] string animation_FireName;
+[SerializeField] string animation_BuildName;
+[SerializeField] string animation_RemoveName;
+[SerializeField] bool turretReady = false;*/
+
+/*    public void EnableTurret()
+{
+    turretReady = true;
+}*/
+
+/*    [SerializeField] GameObject deathEFX  = null;*/
+//animController.Play(animation_BuildName);

@@ -187,6 +187,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34f021525ab9c942b11237c34bfbab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animController: {fileID: 796538162522962509, guid: 5be892e1f628c58479d6bdd7bc007c41, type: 3}
+  anim_IdleName: FattyMortar_Idle
+  anim_FireName: FattyMortar_Fire
+  anim_BuildName: FattyMortar_Install
+  anim_RemoveName: FattyMortar_Remove
+  isDefUnitReady: 0
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
   isAntiShield: 1
@@ -274,6 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1edfc0bfad2925e448d949947441a9f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeElapsed: 0
+  _LOS_On: 0
   LOS: {fileID: 378653702441713970}
 --- !u!1 &7469540183170979784
 GameObject:
