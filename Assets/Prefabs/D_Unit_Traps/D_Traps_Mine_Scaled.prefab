@@ -86,6 +86,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e99462f62c4044b873483ed9c5acc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animController: {fileID: 3993262240242029471}
+  anim_IdleName: Mine_Idle
+  anim_FireName: Mine_Activate
+  anim_BuildName: Mine_Install
+  anim_RemoveName: Mine_Remove
+  isDefUnitReady: 0
   triggerRadius: 1.75
   explosionRadius: 2.35
   explosionDamage: 100

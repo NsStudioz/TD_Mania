@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class D_Trap_Mine : MonoBehaviour
+public class D_Trap_Mine : Anims_Template
 {
     [Header("Attributes")]
     [SerializeField] public float triggerRadius = 0.5f;
@@ -13,14 +13,6 @@ public class D_Trap_Mine : MonoBehaviour
     public GameObject TGR_Quad;
     public GameObject EXP_Quad;
 
-    [Header("Animations")]
-    [SerializeField] Animator animController = null;
-    [SerializeField] string animation_IdleName;
-    [SerializeField] string animation_ActivateName;
-    [SerializeField] string animation_BuildName;
-    [SerializeField] string animation_RemoveName;
-    [SerializeField] bool trapReady = false;
-
     //EVENTS:
     public static event Action OnMineExplode;
     public static event Action OnUnitTrap_ConstructedSFX_1;
@@ -28,7 +20,7 @@ public class D_Trap_Mine : MonoBehaviour
 
     private void OnEnable()
     {
-        animController.Play(animation_BuildName);
+        _animController.Play(anim_BuildName);
     }
 
     void Update()
@@ -38,7 +30,7 @@ public class D_Trap_Mine : MonoBehaviour
             return;
         }
         //
-        if (trapReady)
+        if (isDefUnitReady)
         {
             CheckRangeOnEnemyEncounter();
 
@@ -85,11 +77,6 @@ public class D_Trap_Mine : MonoBehaviour
         }
     }
 
-    public void EnableTrap()
-    {
-        trapReady = true;
-    }
-
     #region SFX:
 
     public void PlayTrapExplodeSFX()
@@ -128,3 +115,16 @@ public class D_Trap_Mine : MonoBehaviour
 //audioManager.PlayOneShot("Trap_Boom");
 //audioManager.PlayOneShot("Unit_Built_1");
 //audioManager.PlayOneShot("Unit_Built_2");
+
+/*    [Header("Animations")]
+[SerializeField] Animator animController = null;
+[SerializeField] string animation_IdleName;
+[SerializeField] string animation_ActivateName;
+[SerializeField] string animation_BuildName;
+[SerializeField] string animation_RemoveName;
+[SerializeField] bool trapReady = false;*/
+
+/*    public void EnableTrap()
+    {
+        trapReady = true;
+    }*/

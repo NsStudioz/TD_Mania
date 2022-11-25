@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class D_Trap_AntiShield : MonoBehaviour
+public class D_Trap_AntiShield : Anims_Template
 {
 
     [Header("Attributes")]
@@ -14,14 +14,6 @@ public class D_Trap_AntiShield : MonoBehaviour
     public GameObject TGR_Quad;
     public GameObject EXP_Quad;
 
-    [Header("Animations")]
-    [SerializeField] Animator animController = null;
-    [SerializeField] string animation_IdleName;
-    [SerializeField] string animation_ActivateName;
-    [SerializeField] string animation_BuildName;
-    [SerializeField] string animation_RemoveName;
-    [SerializeField] bool trapReady = false;
-
     // EVENTS:
     public static event Action OnAntiShieldMineExplode;
     public static event Action OnUnitTrap_ConstructedSFX_1;
@@ -29,7 +21,7 @@ public class D_Trap_AntiShield : MonoBehaviour
 
     private void OnEnable()
     {
-        animController.Play(animation_BuildName);
+        _animController.Play(anim_BuildName);
     }
 
     void Update()
@@ -39,7 +31,7 @@ public class D_Trap_AntiShield : MonoBehaviour
             return;
         }
         //
-        if (trapReady)
+        if (isDefUnitReady)
         {
             CheckRangeOnEnemyEncounter();
 
@@ -86,11 +78,6 @@ public class D_Trap_AntiShield : MonoBehaviour
         }
     }
 
-    public void EnableTrap()
-    {
-        trapReady = true;
-    }
-
     #region SFX:
 
     public void PlayTrapExplodeSFX()
@@ -129,3 +116,16 @@ public class D_Trap_AntiShield : MonoBehaviour
 //audioManager.PlayOneShot("Unit_Built_2");
 //audioManager.PlayOneShot("Unit_Built_1");
 //audioManager.PlayOneShot("Trap_Boom");
+
+/*    public void EnableTrap()
+    {
+        trapReady = true;
+    }*/
+
+/*    [Header("Animations")]
+    [SerializeField] Animator animController = null;
+    [SerializeField] string animation_IdleName;
+    [SerializeField] string animation_ActivateName;
+    [SerializeField] string animation_BuildName;
+    [SerializeField] string animation_RemoveName;
+    [SerializeField] bool trapReady = false;*/
