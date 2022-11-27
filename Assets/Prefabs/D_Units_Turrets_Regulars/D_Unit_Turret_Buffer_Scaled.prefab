@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 3029260933156180478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.06, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.5, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3033449591753757262}
@@ -163,12 +163,6 @@ MonoBehaviour:
   isDefUnitReady: 0
   rangeRadius: 0
   LOS: {fileID: 1001543954034407703}
-  animController: {fileID: 3123261871795741498}
-  animation_IdleName: RadarStation_Idle
-  animation_ActivateName: Tower_Activate
-  animation_BuildName: Tower_Install
-  animation_RemoveName: Tower_Remove
-  turretReady: 0
 --- !u!114 &520351480806255800
 MonoBehaviour:
   m_ObjectHideFlags: 0
