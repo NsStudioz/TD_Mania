@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _SilverTrophy;
     [SerializeField] GameObject _GoldTrophy;
 
+    // Health Vars:
+    private int _MaxHealth = 10; // For Gold Trophy
+    private int _MidHealth = 5;  // For Silver Trophy
+    private int _NoHealth = 0;   // For Bronze Trophy
+
     // EVENTS:
     public static event Action OnGameEnds_StopThemeTrack; // Battle Theme
 
@@ -60,6 +65,7 @@ public class GameManager : MonoBehaviour
         OnGameEnds_StopMusicTrack();
     }
 
+    #region Game End UI
     private void SetGameOver_GameWonToNotVisible()
     {
         gameOverUI.SetActive(false);
@@ -76,6 +82,9 @@ public class GameManager : MonoBehaviour
         gameWonUI.SetActive(true); 
     }
 
+    #endregion
+
+    #region Mobile Controls Visibility
     private void OnGameEnds_DeactivateTouchButtonsUI()
     {
         if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon()) { TouchButtons_GO.SetActive(false); }
@@ -87,6 +96,9 @@ public class GameManager : MonoBehaviour
         else if (Time.timeScale == Levels_Handler.GetResumeGame()) { TouchButtons_GO.SetActive(true); }
     }
 
+    #endregion
+
+    #region Gold, SaveGold & Next button
     public void OnGameWon_SetCurrentGoldToTotalGoldConversion() // Button Function
     {
         PlayerStats._TotalGold += PlayerStats.Gold;
@@ -96,29 +108,28 @@ public class GameManager : MonoBehaviour
         SaveTotalGoldCount();
         SetNextLevelButtonInteractable();
     }
-
     private void SetGoldTextsValues()
     {
         current_Gold_Text.text = PlayerStats.Gold.ToString();
         total_Gold_Text.text = PlayerStats._TotalGold.ToString();
     }
-
     private void PlayGoldConversion_SFX()
     {
         OnClick_PlayGoldConversion?.Invoke();
     }
-    private void SetNextLevelButtonInteractable()
+    private void SetNextLevelButtonInteractable() // after conversion
     {
         nextLevelButton_Blocker.SetActive(false);
     }
-
     private void SaveTotalGoldCount()
     {
         PlayerPrefs.SetInt("TotalGoldCount", PlayerStats._TotalGold);
         PlayerStats._TotalGold = PlayerPrefs.GetInt("TotalGoldCount");
         PlayerPrefs.Save();
     }
-
+    #endregion
+    
+    #region Trophies
     private void OnGameStarts_SetTrophiesToNotVisible()
     {
         _BronzeTrophy.SetActive(false);
@@ -128,13 +139,18 @@ public class GameManager : MonoBehaviour
 
     private void OnGameWon_SetTrophiesVisibility()
     {
-        if (PlayerStats.Lives == 20) { _GoldTrophy.SetActive(true); }
-        else if (PlayerStats.Lives >= 11 & PlayerStats.Lives < 20) { _SilverTrophy.SetActive(true); }
-        else if (PlayerStats.Lives > 0 & PlayerStats.Lives <= 10) { _BronzeTrophy.SetActive(true); }
+        if (PlayerStats.Lives == _MaxHealth) { _GoldTrophy.SetActive(true); }
+        else if (PlayerStats.Lives >= _MidHealth & PlayerStats.Lives < _MaxHealth) { _SilverTrophy.SetActive(true); }
+        else if (PlayerStats.Lives > _NoHealth & PlayerStats.Lives < _MidHealth) { _BronzeTrophy.SetActive(true); }
     }
-
+    #endregion
+    
     private void OnGameEnds_StopMusicTrack()
     {
         if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon()) { OnGameEnds_StopThemeTrack?.Invoke(); }
     }
 }
+
+/*if (PlayerStats.Lives == 20) { _GoldTrophy.SetActive(true); }
+else if (PlayerStats.Lives >= 11 & PlayerStats.Lives < 20) { _SilverTrophy.SetActive(true); }
+else if (PlayerStats.Lives > 0 & PlayerStats.Lives <= 10) { _BronzeTrophy.SetActive(true); }*/
