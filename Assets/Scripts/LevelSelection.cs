@@ -11,6 +11,7 @@ public class LevelSelection : MonoBehaviour
     public Button[] lvlButtons;
     //
     public static event Action OnUIClick_Menu_SFX;
+    public static event Action OnUIclick_SwapTracks_MenuToBattle;
 
     void Start()
     {
@@ -35,5 +36,12 @@ public class LevelSelection : MonoBehaviour
     public void OnFadeComplete()
     {
         SceneManager.LoadScene(levelToSelect);
+        SwapTracks_MenuToBattle();
     }
+
+    private void SwapTracks_MenuToBattle()
+    {
+        OnUIclick_SwapTracks_MenuToBattle?.Invoke();
+    }
+
 }

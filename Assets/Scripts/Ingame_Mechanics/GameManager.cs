@@ -6,6 +6,7 @@ using System;
 public class GameManager : MonoBehaviour
 {
     // RESPONSIBLE FOR GAME-OVER\GAME-WON UI FUNCTIONALITY AFTER GAME-SESSION ENDS:
+    // Included an On Game Start method to run Music.
 
     [SerializeField] GameObject gameOverUI;
     [SerializeField] GameObject gameWonUI;
@@ -25,6 +26,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _BronzeTrophy;
     [SerializeField] GameObject _SilverTrophy;
     [SerializeField] GameObject _GoldTrophy;
+
+    // EVENTS:
+    public static event Action OnGameEnds_StopThemeTrack; // Battle Theme
 
     void Start()
     {
@@ -53,6 +57,7 @@ public class GameManager : MonoBehaviour
         OnGamePauses_DeactivateTouchButtonsUI();
         OnGameEnds_DeactivateTouchButtonsUI();
         SetGoldTextsValues();
+        OnGameEnds_StopMusicTrack();
     }
 
     private void SetGameOver_GameWonToNotVisible()
@@ -126,5 +131,10 @@ public class GameManager : MonoBehaviour
         if (PlayerStats.Lives == 20) { _GoldTrophy.SetActive(true); }
         else if (PlayerStats.Lives >= 11 & PlayerStats.Lives < 20) { _SilverTrophy.SetActive(true); }
         else if (PlayerStats.Lives > 0 & PlayerStats.Lives <= 10) { _BronzeTrophy.SetActive(true); }
+    }
+
+    private void OnGameEnds_StopMusicTrack()
+    {
+        if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon()) { OnGameEnds_StopThemeTrack?.Invoke(); }
     }
 }

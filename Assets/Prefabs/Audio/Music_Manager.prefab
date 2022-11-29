@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2257685881593745476}
   - component: {fileID: 1260179427889771613}
+  - component: {fileID: 7695536529535741668}
   m_Layer: 0
   m_Name: Music_Manager
   m_TagString: Untagged
@@ -44,10 +45,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0481c0b2f33a0454c90708bb6339e49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicList: []
-  currentSceneIndex: 0
-  playNextTrack: 0
-  stopLastTrack: 0
+  musicList:
+  - name: Main_Menu_Theme
+    clip: {fileID: 8300000, guid: 32e138f2f1254a44d9dfabf3a9c509cf, type: 3}
+    volume: 0
+    pitch: 1
+    spatialBlend: 0
+    volumeRolloff: 0
+    minDistance: 0
+    maxDistance: 0
+    loop: 1
+    mute: 0
+    source: {fileID: 0}
+  - name: Battle_Theme
+    clip: {fileID: 8300000, guid: b810a72958ca73f4082129f614ecf63b, type: 3}
+    volume: 0
+    pitch: 1
+    spatialBlend: 0
+    volumeRolloff: 0
+    minDistance: 0
+    maxDistance: 0
+    loop: 1
+    mute: 0
+    source: {fileID: 0}
   timeElapsed: 0
   timeToFade: 1
-  timerThreshold: 1
+--- !u!114 &7695536529535741668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2781438988902865722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4327a05645c93e4f909c805bd42d76b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicManager: {fileID: 1260179427889771613}

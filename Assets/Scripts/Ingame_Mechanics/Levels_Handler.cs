@@ -19,9 +19,12 @@ public class Levels_Handler : MonoBehaviour
     [SerializeField] GameObject gameOver_UI;
     [SerializeField] GameObject gameWon_UI;
     [SerializeField] bool gameIsPaused;
-    //
+
+    // EVENTS:
     public static event Action OnUIClick_Menu_SFX;
     public static event Action OnUIClick_Ingame_SFX;
+    public static event Action OnGameEnds_PlayBattleThemeOnNextLevel;
+    public static event Action OnThemeSwap_BattleToMenu;
 
     // Getters:
     public static float GetPauseGame()
@@ -122,5 +125,11 @@ public class Levels_Handler : MonoBehaviour
     public void OnFadeComplete()
     {
         SceneManager.LoadScene(levelToLoad);
+
+        if(levelToLoad != main_Menu_Index)
+        {
+            OnGameEnds_PlayBattleThemeOnNextLevel?.Invoke();
+        }
+        else { OnThemeSwap_BattleToMenu?.Invoke(); }
     }
 }

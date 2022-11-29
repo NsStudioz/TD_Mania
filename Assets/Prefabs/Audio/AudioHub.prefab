@@ -48,7 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSceneIndex: 0
   mainMenuScene_Pos: {x: 0, y: 0, z: 0}
-  TutorialScene_Pos: {x: 0, y: 0, z: 0}
   gameplayScenes_Pos: {x: -12.5, y: -3, z: -30}
 --- !u!1001 &1558262232605273679
 PrefabInstance:
