@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -83,7 +81,6 @@ public class GamePlay_Manager : MonoBehaviour
     {
         return survivalTimer;
     }
-
 }
 
     //[SerializeField] int goldText = 0;
