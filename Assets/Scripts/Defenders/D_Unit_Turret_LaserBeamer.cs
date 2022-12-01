@@ -57,6 +57,7 @@ public class D_Unit_Turret_LaserBeamer : Anims_Template
     {
         if (GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon())
         {
+            StopTurretShootingSFX();
             return;
         }
         //
@@ -100,6 +101,8 @@ public class D_Unit_Turret_LaserBeamer : Anims_Template
             {
                 UseTheLaser();
             }
+
+            OnGamePaused_StopFireSFX();
         }
     }
 
@@ -137,7 +140,7 @@ public class D_Unit_Turret_LaserBeamer : Anims_Template
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
-    void UpdateTarget()
+    private void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
 
@@ -162,7 +165,10 @@ public class D_Unit_Turret_LaserBeamer : Anims_Template
         else { target = null; }
     }
 
-
+    private void OnGamePaused_StopFireSFX()
+    {
+        if (Time.timeScale != 1) { StopTurretShootingSFX(); }
+    }
 
     #region SFX:
 
