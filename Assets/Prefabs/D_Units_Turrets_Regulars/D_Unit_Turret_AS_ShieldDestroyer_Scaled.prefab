@@ -5406,7 +5406,7 @@ MonoBehaviour:
   isAntiShield: 1
   enemyTag: Attackers
   statsIdentifierTag: AS_ShieldDestroyer
-  range: 2
+  range: 5
   fireRate: 1
   fireCountDown: 0
   turnSpeed: 5
@@ -5415,12 +5415,6 @@ MonoBehaviour:
   firingPosition: {fileID: 5236804886009147789}
   muzzleEFX: {fileID: 5359858717737604741}
   LOS: {fileID: 8480306495790160053}
-  animController: {fileID: 5328578366016119631}
-  animation_IdleName: Missile_Idle
-  animation_FireName: Missile_Fire
-  animation_BuildName: Missile_Install
-  animation_RemoveName: Missile_Remove
-  turretReady: 0
 --- !u!114 &8112231717577198939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5699,7 +5693,7 @@ Transform:
   m_GameObject: {fileID: 8480306495790160053}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 16, y: 16, z: 16}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7906378833672655669}

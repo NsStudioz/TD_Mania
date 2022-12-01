@@ -22,7 +22,7 @@ MonoBehaviour:
     quad_Scale_Y: 20
     quad_Scale: {x: 20, y: 20, z: 0}
     turnSpeed: 4
-    FireRate: 1
+    FireRate: 0.75
     damageOverTime: 0
     slowingPercentage: 0
     triggerRadius: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
     quad_Scale_Y: 25
     quad_Scale: {x: 25, y: 25, z: 0}
     turnSpeed: 5
-    FireRate: 0.9
+    FireRate: 0.8
     damageOverTime: 0
     slowingPercentage: 0
     triggerRadius: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
     quad_Scale_Y: 35
     quad_Scale: {x: 35, y: 35, z: 0}
     turnSpeed: 7
-    FireRate: 0.8
+    FireRate: 0.9
     damageOverTime: 0
     slowingPercentage: 0
     triggerRadius: 0
