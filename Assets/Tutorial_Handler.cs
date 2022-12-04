@@ -86,9 +86,6 @@ public class Tutorial_Handler : MonoBehaviour
         {
             visibleText.text = "";
         }
-
     }
-
-
 
 }
