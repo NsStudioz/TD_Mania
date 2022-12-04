@@ -82,6 +82,10 @@ public class Tutorial_Handler : MonoBehaviour
         {
             visibleText.text = tutorialTexts[indexPointer + 12];
         }
+        else if (timerDelay > 120f && timerDelay < 129.99f)
+        {
+            visibleText.text = tutorialTexts[indexPointer + 13];
+        }
         else
         {
             visibleText.text = "";

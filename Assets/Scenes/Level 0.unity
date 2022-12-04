@@ -4637,11 +4637,9 @@ MonoBehaviour:
   - The Blue Timer, located on the top left, indicates the remaining time for the
     game session.
   - Keep the enemies away from the base until it reaches zero.
+  - Click the units on the field to check for the range or sell them.
   - You will be able to keep the remaining gold in your bank once the game finishes.
   - You can pause the game anytime. Just press the button on the top right.
-  indexPointer: 0
-  timerDelay: 0
-  timerDelayThreshold: 0
 --- !u!4 &1456285906
 Transform:
   m_ObjectHideFlags: 0
