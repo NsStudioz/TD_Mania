@@ -40,6 +40,12 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        HealthBarVisibility();
+        HealthBarTimer();
+    }
+
+    private void FixedUpdate()
+    {
         if (!hasShield)
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, range);
@@ -47,12 +53,9 @@ public class Enemy : MonoBehaviour
             {
                 if (collider.CompareTag("EnemyShields") && collider.enabled) { isProtected = true; }
 
-                else { isProtected = false; }
+                else if (!collider.CompareTag("EnemyShields")) { isProtected = false; }
             }
         }
-
-        HealthBarVisibility();
-        HealthBarTimer();
     }
 
     public void TakeDamage(float amount)

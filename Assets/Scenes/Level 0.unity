@@ -3825,8 +3825,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 815824672}
   waveIndex: 0
   enemiesPerWave: 0
-  countDown: 80
-  upcomingWaveDelay: 20
+  countDown: 10
+  upcomingWaveDelay: 10
   enemySpawnDelay: 0.5
   EnemySpawner_Single: 1
   EnemySpawner_Static: 0
@@ -5820,7 +5820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2586752453260805056, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
       propertyPath: startGold
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2586752453260805056, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
       propertyPath: startLives
@@ -8297,7 +8297,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 4456914041578589648}
   waveIndex: 0
   enemiesPerWave: 2
-  countDown: 30
+  countDown: 5
   upcomingWaveDelay: 14
   enemySpawnDelay: 2
   EnemySpawner_Single: 0
