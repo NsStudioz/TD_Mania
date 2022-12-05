@@ -3826,7 +3826,7 @@ MonoBehaviour:
   waveIndex: 0
   enemiesPerWave: 0
   countDown: 10
-  upcomingWaveDelay: 10
+  upcomingWaveDelay: 20
   enemySpawnDelay: 0.5
   EnemySpawner_Single: 1
   EnemySpawner_Static: 0
