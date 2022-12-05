@@ -44,20 +44,6 @@ public class Enemy : MonoBehaviour
         HealthBarTimer();
     }
 
-    private void FixedUpdate()
-    {
-        if (!hasShield)
-        {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, range);
-            foreach (Collider collider in colliders)
-            {
-                if (collider.CompareTag("EnemyShields") && collider.enabled) { isProtected = true; }
-
-                else if (!collider.CompareTag("EnemyShields")) { isProtected = false; }
-            }
-        }
-    }
-
     public void TakeDamage(float amount)
     {
         currentEnemyHealth -= amount;
@@ -129,6 +115,23 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("EnemyShields"))
+        {
+            isProtected = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("EnemyShields"))
+        {
+            isProtected = false;
+        }
+    }
+
+
 }
 
 /*    AudioManager audioManager;
@@ -181,3 +184,16 @@ movingSpeed = startSpeed;
 #endregion
 
 
+/*    private void FixedUpdate()
+    {
+        if (!hasShield)
+        {
+            Collider[] colliders = Physics.OverlapSphere(transform.position, range);
+            foreach (Collider collider in colliders)
+            {
+                if (collider.CompareTag("EnemyShields") && collider.enabled) { isProtected = true; }
+
+                else if (!collider.CompareTag("EnemyShields")) { isProtected = false; }
+            }
+        }
+    }*/

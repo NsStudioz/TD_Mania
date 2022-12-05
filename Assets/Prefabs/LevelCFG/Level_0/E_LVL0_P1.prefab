@@ -460,8 +460,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0.45, z: 0}
 --- !u!54 &6056671781344052895
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEFX: {fileID: 1122851737323831764, guid: 98099463eed7e044fb834b5055904ca4, type: 3}
-  startSpeed: 0.75
+  startSpeed: 1.25
   movingSpeed: 0
   enemyHealth: 25
   currentEnemyHealth: 0

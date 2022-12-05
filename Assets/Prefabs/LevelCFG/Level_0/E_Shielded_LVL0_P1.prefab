@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEFX: {fileID: 1122851737323831764, guid: 98099463eed7e044fb834b5055904ca4, type: 3}
-  startSpeed: 0.75
+  startSpeed: 0.5
   movingSpeed: 0
   enemyHealth: 25
   currentEnemyHealth: 0
