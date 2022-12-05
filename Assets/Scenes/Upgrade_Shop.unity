@@ -2554,7 +2554,7 @@ PrefabInstance:
     - target: {fileID: 2666268449840918147, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 678ec4bfcdbff454c9a27af22cf5227c, type: 3}
     - target: {fileID: 2666268449840918156, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Name
       value: Arsenal_Item_2
@@ -2645,7 +2645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2666268450398368835, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 27.50003
+      value: 27.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
@@ -4714,7 +4714,7 @@ PrefabInstance:
     - target: {fileID: 2666268449840918147, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 0294d18de73018b4f8cb496717d5cf6c, type: 3}
     - target: {fileID: 2666268449840918156, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Name
       value: Arsenal_Item_5
@@ -4805,7 +4805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2666268450398368835, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 27.50003
+      value: 27.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
@@ -5358,7 +5358,7 @@ PrefabInstance:
     - target: {fileID: 2666268449840918147, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 4d63fd00bef87df48a14661d88abe804, type: 3}
     - target: {fileID: 2666268449840918156, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Name
       value: Arsenal_Item_3
@@ -5449,7 +5449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2666268450398368835, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 27.50003
+      value: 27.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
@@ -9977,7 +9977,7 @@ PrefabInstance:
     - target: {fileID: 2666268449840918147, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: ceb815d6153fa8b42b4051cbd7f489c4, type: 3}
     - target: {fileID: 2666268449840918156, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Name
       value: Arsenal_Item_4
@@ -10068,7 +10068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2666268450398368835, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 27.50003
+      value: 27.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
@@ -16978,7 +16978,7 @@ PrefabInstance:
     - target: {fileID: 2666268449840918147, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 3b68f004020ebea4b8423662e58ea212, type: 3}
     - target: {fileID: 2666268449840918156, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Name
       value: Arsenal_Item_1
@@ -17069,7 +17069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2666268450398368835, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 27.50003
+      value: 27.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
@@ -17735,7 +17735,7 @@ PrefabInstance:
     - target: {fileID: 2666268449840918147, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: c6ea51e424f6d7a4cb4da85dd9feeca6, type: 3}
     - target: {fileID: 2666268449840918156, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Name
       value: Arsenal_Item_6
@@ -17826,7 +17826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2666268450398368835, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 27.50003
+      value: 27.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
@@ -20332,7 +20332,7 @@ PrefabInstance:
     - target: {fileID: 2666268449840918147, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: eab2ebc852f31a94586682185c0db16a, type: 3}
     - target: {fileID: 2666268449840918156, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Name
       value: Arsenal_Item_7
@@ -20423,7 +20423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2666268450398368835, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 27.50003
+      value: 27.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
