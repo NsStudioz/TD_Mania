@@ -11117,6 +11117,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7237741982894384756, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: cameraMovement_Pos.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237741982894384756, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: cameraMovement_Pos.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8495004680347771865, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

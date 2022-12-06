@@ -11214,6 +11214,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameSession_Elements
       objectReference: {fileID: 0}
+    - target: {fileID: 7237741982894384756, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: cameraMovement_Pos.x
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237741982894384756, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: cameraMovement_Pos.y
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
 --- !u!4 &1730156071 stripped

@@ -11316,6 +11316,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameSession_Elements
       objectReference: {fileID: 0}
+    - target: {fileID: 4736521123653907198, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736521123653907198, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237741982894384756, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: cameraMovement_Pos.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237741982894384756, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: cameraMovement_Pos.y
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
 --- !u!1 &1721277968
