@@ -10,8 +10,10 @@ public class D_Unit_Turret : Anims_Template
     [Header("Attributes")]
     public Transform target;
     public Enemy targetEnemy;
+    public Enemy_Shield targetShield;
     [SerializeField] bool isAntiShield;
     [SerializeField] string enemyTag = "Attackers";
+    [SerializeField] string shieldTag = "EnemyShields";
     [SerializeField] public string statsIdentifierTag = "Attackers";
     [SerializeField] public float range = 2f;
     [SerializeField] public float fireRate = 1f;
@@ -48,7 +50,8 @@ public class D_Unit_Turret : Anims_Template
 
     void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        //InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        InvokeRepeating("UpdateTargetImproved", 0f, 0.5f);
     }
 
     void Update()
@@ -67,7 +70,7 @@ public class D_Unit_Turret : Anims_Template
 
             if (isAntiShield)
             {
-                if (!targetEnemy.hasShield)
+                if (!targetShield.GetShieldStatus())
                 {
                     return;
                 }
@@ -91,6 +94,11 @@ public class D_Unit_Turret : Anims_Template
             fireCountDown -= Time.deltaTime;
         }
     }
+
+    /*                if (!targetEnemy.hasShield)
+                {
+                    return;
+                }*/
 
     private void LockOnTarget()
     {
@@ -127,6 +135,60 @@ public class D_Unit_Turret : Anims_Template
             targetEnemy = nearestEnemy.GetComponent<Enemy>();
         }
         else { target = null; }
+    }
+
+    private void UpdateTargetImproved()
+    {
+        if (isAntiShield)
+        {
+            GameObject[] shields = GameObject.FindGameObjectsWithTag(shieldTag);
+
+            float shortestDistance_Shields = Mathf.Infinity;
+            GameObject nearestEnemy_Shields = null;
+
+            foreach (GameObject shield in shields)
+            {
+                float distanceToShield = Vector3.Distance(transform.position, shield.transform.position); // set the distance to enemy.
+
+                if (distanceToShield < shortestDistance_Shields)
+                {
+                    shortestDistance_Shields = distanceToShield;
+                    nearestEnemy_Shields = shield;
+                }
+            }
+
+            if (nearestEnemy_Shields != null && shortestDistance_Shields <= range)
+            {
+                target = nearestEnemy_Shields.transform;
+                targetShield = nearestEnemy_Shields.GetComponent<Enemy_Shield>();
+            }
+            else { target = null; }
+        }
+        else
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+
+            float shortestDistance = Mathf.Infinity;
+            GameObject nearestEnemy = null;
+
+            foreach (GameObject enemy in enemies)
+            {
+                float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position); // set the distance to enemy.
+
+                if (distanceToEnemy < shortestDistance)
+                {
+                    shortestDistance = distanceToEnemy;
+                    nearestEnemy = enemy;
+                }
+            }
+
+            if (nearestEnemy != null && shortestDistance <= range)
+            {
+                target = nearestEnemy.transform;
+                targetEnemy = nearestEnemy.GetComponent<Enemy>();
+            }
+            else { target = null; }
+        }
     }
 
     public void Shoot()
