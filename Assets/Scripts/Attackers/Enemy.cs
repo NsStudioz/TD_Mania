@@ -125,11 +125,6 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.CompareTag("EnemyShields"))
-        {
-            return;
-        }
-
         if (other.CompareTag("EnemyShields"))
         {
             isProtected = false;

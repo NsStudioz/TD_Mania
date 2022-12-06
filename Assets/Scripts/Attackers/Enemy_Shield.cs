@@ -8,11 +8,13 @@ public class Enemy_Shield : MonoBehaviour
     [SerializeField] float shieldHealth;
     [SerializeField] float current_shieldHealth;
     [SerializeField] bool shieldOn;
-    public float range = 1f;
+    public float range;
+    [SerializeField] float rangeTimerDelay = 1f;
     private float sizeChangeDelay = 0.05f;
 
     Enemy enemy;
     SphereCollider shieldCollider;
+    MeshRenderer shield_renderer;
 
     [Header("Shield Bar")]
     [SerializeField] Enemy_HealthBar _ShieldBar;
@@ -32,6 +34,7 @@ public class Enemy_Shield : MonoBehaviour
 
         gameObject.SetActive(true);
 
+        shield_renderer = GetComponent<MeshRenderer>();
         shieldCollider = GetComponent<SphereCollider>();
         enemy = GetComponentInParent<Enemy>();
 
@@ -42,6 +45,9 @@ public class Enemy_Shield : MonoBehaviour
     {
         ShieldBarVisibility();
         ShieldBarTimer();
+
+        RemoveEnemiesProtection();
+        CalculateRangeOnShieldOff();
     }
 
     public void TakeShieldDamage(float amount)
@@ -62,9 +68,9 @@ public class Enemy_Shield : MonoBehaviour
     private void DestroyShield()
     {
         shieldCollider.enabled = false;
-        gameObject.SetActive(false);
+        shield_renderer.enabled = false;
+        //gameObject.SetActive(false);
         enemy.hasShield = false;
-        //Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -83,6 +89,36 @@ public class Enemy_Shield : MonoBehaviour
         transform.localScale = new Vector3(9.75f, 9.75f, 9.75f);
         yield return new WaitForSecondsRealtime(sizeChangeDelay);
         transform.localScale = new Vector3(10f, 10f, 10f);
+    }
+
+    private void RemoveEnemiesProtection()
+    {
+        if (!shieldOn)
+        {
+            Collider[] attackers = Physics.OverlapSphere(transform.position, range);
+            foreach (Collider attacker in attackers)
+            {
+                if (attacker.tag == "Attackers")
+                {
+                    Enemy noShield_enemy = attacker.GetComponent<Enemy>();
+
+                    noShield_enemy.isProtected = false;
+                }
+            }
+        }
+    }
+
+    private void CalculateRangeOnShieldOff()
+    {
+        if (!shieldOn)
+        {
+            rangeTimerDelay -= Time.deltaTime;
+
+            if (rangeTimerDelay <= 0f)
+            {
+                range = 0f;
+            }
+        }
     }
 
 
