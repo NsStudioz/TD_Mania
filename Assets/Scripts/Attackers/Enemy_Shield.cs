@@ -21,6 +21,11 @@ public class Enemy_Shield : MonoBehaviour
     [SerializeField] float shieldBarDelay;
     [SerializeField] bool shieldBar_Switch = false;
 
+    public bool GetShieldStatus()
+    {
+        return shieldOn;
+    }
+
     private void Start()
     {
         current_shieldHealth = shieldHealth;
