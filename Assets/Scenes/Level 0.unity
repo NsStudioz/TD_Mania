@@ -3825,7 +3825,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 815824672}
   waveIndex: 0
   enemiesPerWave: 0
-  countDown: 10
+  countDown: 80
   upcomingWaveDelay: 20
   enemySpawnDelay: 0.5
   EnemySpawner_Single: 1
@@ -8316,9 +8316,9 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2838790609614838449, guid: 43d00aeca1b1ebc44a4d8af63daec3e3, type: 3}
   spawnPoint: {fileID: 4456914041578589648}
   waveIndex: 0
-  enemiesPerWave: 2
-  countDown: 5
-  upcomingWaveDelay: 14
+  enemiesPerWave: 3
+  countDown: 30
+  upcomingWaveDelay: 10
   enemySpawnDelay: 2
   EnemySpawner_Single: 0
   EnemySpawner_Static: 1
