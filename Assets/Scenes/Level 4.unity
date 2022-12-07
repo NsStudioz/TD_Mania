@@ -348,7 +348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.y
@@ -356,7 +356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2886,14 +2886,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2838790609614838449, guid: 023fd66e61c351c4f845b0a3b12c06d2, type: 3}
   spawnPoint: {fileID: 460576103}
-  waveIndex: 0
-  enemiesPerWave: 4
-  countDown: 2
+  waveIndex: 2
+  enemiesPerWave: 0
+  countDown: 10
   upcomingWaveDelay: 12
   enemySpawnDelay: 1
   EnemySpawner_Single: 0
-  EnemySpawner_Static: 1
-  EnemySpawner_Incrementer: 0
+  EnemySpawner_Static: 0
+  EnemySpawner_Incrementer: 1
 --- !u!136 &413552890
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3563,7 +3563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.5
+      value: -14
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6826,7 +6826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10674,7 +10674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11211,6 +11211,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2586752453260805056, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: startGold
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586752453260805056, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: startLives
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3342506209475594245, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: masterTimerThreshold
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 3342506210163595330, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -13905,7 +13917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -11.5
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14821,14 +14833,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2838790609614838449, guid: ea062e40ec722c248835ab786f231c8c, type: 3}
   spawnPoint: {fileID: 4456914041578589648}
-  waveIndex: 0
+  waveIndex: 1
   enemiesPerWave: 2
-  countDown: 2
-  upcomingWaveDelay: 15
-  enemySpawnDelay: 2
+  countDown: 18
+  upcomingWaveDelay: 12
+  enemySpawnDelay: 0.5
   EnemySpawner_Single: 0
-  EnemySpawner_Static: 1
-  EnemySpawner_Incrementer: 0
+  EnemySpawner_Static: 0
+  EnemySpawner_Incrementer: 1
 --- !u!1 &4578091182267201202
 GameObject:
   m_ObjectHideFlags: 0

@@ -325,9 +325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEFX: {fileID: 1122851737323831764, guid: 98099463eed7e044fb834b5055904ca4, type: 3}
-  startSpeed: 0.75
+  startSpeed: 1
   movingSpeed: 0
-  enemyHealth: 100
+  enemyHealth: 75
   currentEnemyHealth: 0
   goldToEarn: 400
   isBinded: 0
@@ -662,6 +662,7 @@ MonoBehaviour:
   current_shieldHealth: 0
   shieldOn: 0
   range: 1
+  rangeTimerDelay: 1
   _ShieldBar: {fileID: 1790300970501921041}
   _ShieldBar_Canvas_GO: {fileID: 4000841954415116340}
   shieldBarDelay_Threshold: 4

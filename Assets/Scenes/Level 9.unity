@@ -348,7 +348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.y
@@ -356,7 +356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8
+      value: -9.5
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalRotation.w
@@ -726,10 +726,10 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4243051740354822483, guid: 9675a1c5f0257604d9b8b53d780dde40, type: 3}
   spawnPoint: {fileID: 1244401539}
   waveIndex: 0
-  enemiesPerWave: 2
-  countDown: 2
+  enemiesPerWave: 3
+  countDown: 60
   upcomingWaveDelay: 15
-  enemySpawnDelay: 2
+  enemySpawnDelay: 15
   EnemySpawner_Single: 0
   EnemySpawner_Static: 1
   EnemySpawner_Incrementer: 0
@@ -1153,7 +1153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: -3.75
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1161,7 +1161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.5
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2978,12 +2978,12 @@ MonoBehaviour:
   spawnPoint: {fileID: 460576103}
   waveIndex: 0
   enemiesPerWave: 4
-  countDown: 2
-  upcomingWaveDelay: 12
+  countDown: 15
+  upcomingWaveDelay: 20
   enemySpawnDelay: 1
   EnemySpawner_Single: 0
-  EnemySpawner_Static: 1
-  EnemySpawner_Incrementer: 0
+  EnemySpawner_Static: 0
+  EnemySpawner_Incrementer: 1
 --- !u!136 &413552890
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3839,7 +3839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -3.75
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7292,7 +7292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7300,7 +7300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.5
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11719,13 +11719,13 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4243051740354822483, guid: 9675a1c5f0257604d9b8b53d780dde40, type: 3}
   spawnPoint: {fileID: 732709998}
   waveIndex: 0
-  enemiesPerWave: 2
-  countDown: 2
+  enemiesPerWave: 0
+  countDown: 20
   upcomingWaveDelay: 15
   enemySpawnDelay: 2
   EnemySpawner_Single: 0
-  EnemySpawner_Static: 1
-  EnemySpawner_Incrementer: 0
+  EnemySpawner_Static: 0
+  EnemySpawner_Incrementer: 1
 --- !u!136 &1573718622
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12186,7 +12186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12194,7 +12194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8
+      value: -11.5
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13022,6 +13022,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2586752453260805056, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: startGold
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586752453260805056, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: startLives
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3342506209475594245, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
+      propertyPath: masterTimerThreshold
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 3342506210163595330, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -16006,7 +16018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -3.75
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16014,7 +16026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -9.5
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16481,7 +16493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: -3.75
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16489,7 +16501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: -13.5
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348555, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16525,7 +16537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202319656663348564, guid: 74b531eed8717ed469d4de7974614866, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74b531eed8717ed469d4de7974614866, type: 3}
@@ -16966,12 +16978,12 @@ MonoBehaviour:
   spawnPoint: {fileID: 4456914041578589648}
   waveIndex: 0
   enemiesPerWave: 2
-  countDown: 2
+  countDown: 10
   upcomingWaveDelay: 15
   enemySpawnDelay: 2
   EnemySpawner_Single: 0
-  EnemySpawner_Static: 1
-  EnemySpawner_Incrementer: 0
+  EnemySpawner_Static: 0
+  EnemySpawner_Incrementer: 1
 --- !u!1 &4578091182267201202
 GameObject:
   m_ObjectHideFlags: 0
