@@ -20,6 +20,9 @@ public class Audio_Options_Handler : MonoBehaviour
         audioManager = forAudioManager.GetComponent<AudioManager>();
         GameObject forMusicManager = GameObject.Find("Music_Manager");
         musicManager = forMusicManager.GetComponent<MusicManager>();
+
+        music_Mute_Sign.SetActive(false);
+        sfx_Mute_Sign.SetActive(false);
     }
 
     void Start()
