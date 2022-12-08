@@ -33,7 +33,10 @@ public class Camera_Controls : MonoBehaviour
     [SerializeField] float z_Axis_Min;
     [SerializeField] float z_Axis_Max;
 
-
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
     void Start()
     {
         newZoom = cameraTransform.localPosition;
