@@ -9,21 +9,23 @@ public class Audio_Options_Handler : MonoBehaviour
     [SerializeField] MusicManager musicManager;
     //private MainMenu_Handler menuHandler;
 
-    [SerializeField] bool sfx_Muted;
-    [SerializeField] bool music_Muted;
+    [SerializeField] bool sfx_Muted = false;
+    [SerializeField] bool music_Muted = false;
     // EVENTS:
     public static event Action OnUIClick_Menu_SFX;
 
     private void Awake()
     {
-        GameObject forAudioManager = GameObject.Find("Audio_Manager");
-        audioManager = forAudioManager.GetComponent<AudioManager>();
-        GameObject forMusicManager = GameObject.Find("Music_Manager");
-        musicManager = forMusicManager.GetComponent<MusicManager>();
+
     }
 
     void Start()
     {
+        GameObject forAudioManager = GameObject.Find("Audio_Manager");
+        audioManager = forAudioManager.GetComponent<AudioManager>();
+        GameObject forMusicManager = GameObject.Find("Music_Manager");
+        musicManager = forMusicManager.GetComponent<MusicManager>();
+
         CheckSoundSettings();
         CheckMusicSettings();
     }
