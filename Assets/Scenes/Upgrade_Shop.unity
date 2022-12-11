@@ -12872,7 +12872,7 @@ PrefabInstance:
     - target: {fileID: 2666268449840918147, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e0db5ea44eedf104dadda7f18047cf50, type: 3}
+      objectReference: {fileID: 21300000, guid: 5902ea4b93e4c20499bcce52932622e3, type: 3}
     - target: {fileID: 2666268449840918156, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Name
       value: Trap_Item_4
@@ -19446,7 +19446,7 @@ PrefabInstance:
     - target: {fileID: 2666268449840918147, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5902ea4b93e4c20499bcce52932622e3, type: 3}
+      objectReference: {fileID: 21300000, guid: e0db5ea44eedf104dadda7f18047cf50, type: 3}
     - target: {fileID: 2666268449840918156, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_Name
       value: Trap_Item_1
