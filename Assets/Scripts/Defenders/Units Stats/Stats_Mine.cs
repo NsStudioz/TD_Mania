@@ -26,7 +26,7 @@ namespace ShopSystem
         // Final Product Stats Check:
         private void StatsCheckerAndSetter_Final()
         {
-            int itemLevelIndex = shopItemSO.Item_LevelIndex;
+            int itemLevelIndex = unitLevelHandler.GetUnitLevel(); 
 
             mine.triggerRadius = shopItemSO.unit_Level[itemLevelIndex].triggerRadius;
             mine.explosionRadius = shopItemSO.unit_Level[itemLevelIndex].explosionRadius;
@@ -39,7 +39,7 @@ namespace ShopSystem
         // Editor Product Stats Check:
         private void StatsCheckerAndSetter()
         {
-            int itemLevelIndex = unitLevelHandler.GetUnitLevel();
+            int itemLevelIndex = shopItemSO.Item_LevelIndex;
 
             mine.triggerRadius = shopItemSO.unit_Level[itemLevelIndex].triggerRadius;
             mine.explosionRadius = shopItemSO.unit_Level[itemLevelIndex].explosionRadius;

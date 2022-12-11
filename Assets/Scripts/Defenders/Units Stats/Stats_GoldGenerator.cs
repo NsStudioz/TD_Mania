@@ -27,7 +27,7 @@ namespace ShopSystem
         // Final Product Stats Check:
         private void StatsCheckerAndSetter_Final()
         {
-            int itemLevelIndex = shopItemSO.Item_LevelIndex;
+            int itemLevelIndex = unitLevelHandler.GetUnitLevel();
 
             goldGenerator.goldToEarn = shopItemSO.unit_Level[itemLevelIndex].goldToEarn;
             goldGenerator.gold_DelayTime = shopItemSO.unit_Level[itemLevelIndex].gold_DelayTime;
@@ -36,7 +36,7 @@ namespace ShopSystem
         // Editor Product Stats Check:
         private void StatsCheckerAndSetter()
         {
-            int itemLevelIndex = unitLevelHandler.GetUnitLevel();
+            int itemLevelIndex = shopItemSO.Item_LevelIndex; 
 
             goldGenerator.goldToEarn = shopItemSO.unit_Level[itemLevelIndex].goldToEarn;
             goldGenerator.gold_DelayTime = shopItemSO.unit_Level[itemLevelIndex].gold_DelayTime;

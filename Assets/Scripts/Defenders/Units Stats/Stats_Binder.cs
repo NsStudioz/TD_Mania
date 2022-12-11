@@ -28,7 +28,7 @@ namespace ShopSystem
         // Final Product Stats Check:
         private void StatsCheckerAndSetter_Final()
         {
-            int itemLevelIndex = shopItemSO.Item_LevelIndex;
+            int itemLevelIndex = unitLevelHandler.GetUnitLevel();
 
             binder.triggerRadius = shopItemSO.unit_Level[itemLevelIndex].triggerRadius;
             binder.bindRadius = shopItemSO.unit_Level[itemLevelIndex].bindRadius;
@@ -41,7 +41,7 @@ namespace ShopSystem
         // Editor Product Stats Check:
         private void StatsCheckerAndSetter()
         {
-            int itemLevelIndex = unitLevelHandler.GetUnitLevel();
+            int itemLevelIndex = shopItemSO.Item_LevelIndex;
 
             binder.triggerRadius = shopItemSO.unit_Level[itemLevelIndex].triggerRadius;
             binder.bindRadius = shopItemSO.unit_Level[itemLevelIndex].bindRadius;
