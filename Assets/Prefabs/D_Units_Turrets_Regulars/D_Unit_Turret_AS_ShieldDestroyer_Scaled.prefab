@@ -5403,8 +5403,10 @@ MonoBehaviour:
   isDefUnitReady: 0
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
+  targetShield: {fileID: 0}
   isAntiShield: 1
   enemyTag: Attackers
+  shieldTag: EnemyShields
   statsIdentifierTag: AS_ShieldDestroyer
   range: 5
   fireRate: 1
@@ -5441,6 +5443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: e9efe86696b9fe342aa0f911e990d69e, type: 2}
+  unitLevelHandler: {fileID: 7315058005003733756, guid: 6773a787a6734284cb867d19b844d847, type: 3}
 --- !u!54 &3626203405245362509
 Rigidbody:
   m_ObjectHideFlags: 0

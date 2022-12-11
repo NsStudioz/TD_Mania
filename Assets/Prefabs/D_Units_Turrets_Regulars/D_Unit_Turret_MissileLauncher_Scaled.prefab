@@ -5466,11 +5466,13 @@ MonoBehaviour:
   anim_FireName: Missile_Fire
   anim_BuildName: Missile_Install
   anim_RemoveName: Missile_Remove
-  isTurretReady: 0
+  isDefUnitReady: 0
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
+  targetShield: {fileID: 0}
   isAntiShield: 0
   enemyTag: Attackers
+  shieldTag: EnemyShields
   statsIdentifierTag: Missile_Launcher
   range: 5
   fireRate: 1
@@ -5481,12 +5483,6 @@ MonoBehaviour:
   firingPosition: {fileID: 665533650970519746}
   muzzleEFX: {fileID: 860933011631738826}
   LOS: {fileID: 6416805706717121322}
-  animController: {fileID: 604120971448203776}
-  animation_IdleName: Missile_Idle
-  animation_FireName: Missile_Fire
-  animation_BuildName: Missile_Install
-  animation_RemoveName: Missile_Remove
-  turretReady: 0
 --- !u!114 &8591065756393984289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5513,6 +5509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: 1481424472a858e4db3ec7ecb8260f79, type: 2}
+  unitLevelHandler: {fileID: 7315058005003733756, guid: 93c1bb5c45e5b65498bb054d2f546248, type: 3}
 --- !u!54 &4324773715618327534
 Rigidbody:
   m_ObjectHideFlags: 0

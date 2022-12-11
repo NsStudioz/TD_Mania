@@ -9,6 +9,7 @@ namespace ShopSystem
     {
 
         [SerializeField] ShopItemsScriptable shopItemSO;
+        [SerializeField] Units_Data_Handler unitLevelHandler;
 
         D_Trap_AntiShield antiMine;
 
@@ -19,12 +20,27 @@ namespace ShopSystem
 
         void Update()
         {
-            StatsCheckerAndSetter();
+            //StatsCheckerAndSetter();
+            StatsCheckerAndSetter_Final();
         }
 
-        public void StatsCheckerAndSetter()
+        // Final Product Stats Check:
+        private void StatsCheckerAndSetter_Final()
         {
             int itemLevelIndex = shopItemSO.Item_LevelIndex;
+
+            antiMine.triggerRadius = shopItemSO.unit_Level[itemLevelIndex].triggerRadius;
+            antiMine.explosionRadius = shopItemSO.unit_Level[itemLevelIndex].explosionRadius;
+            antiMine.explosionDamage = shopItemSO.unit_Level[itemLevelIndex].damage_AS;
+            //
+            antiMine.TGR_Quad.transform.localScale = shopItemSO.unit_Level[itemLevelIndex].triggerQuad_Scale;
+            antiMine.EXP_Quad.transform.localScale = shopItemSO.unit_Level[itemLevelIndex].explosionQuad_Scale;
+        }
+
+        // Editor Product Stats Check:
+        private void StatsCheckerAndSetter()
+        {
+            int itemLevelIndex = unitLevelHandler.GetUnitLevel();
 
             antiMine.triggerRadius = shopItemSO.unit_Level[itemLevelIndex].triggerRadius;
             antiMine.explosionRadius = shopItemSO.unit_Level[itemLevelIndex].explosionRadius;

@@ -84,6 +84,7 @@ MonoBehaviour:
   explosionRadius: 0
   damage: 45
   useAntiShieldBullets: 0
+  bulletTags: 
   shieldTag: EnemyShields
   turret_AS_Damage: 25
   autoTurret_AS_Damage: 20
@@ -101,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: 4c018b6ce471e1a49a06514784d1fe6f, type: 2}
+  unitLevelHandler: {fileID: 7315058005003733756, guid: d6fd0f4481a14db43abb38736f7cde72, type: 3}
 --- !u!1 &1516348286022474
 GameObject:
   m_ObjectHideFlags: 0

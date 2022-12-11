@@ -5180,12 +5180,6 @@ MonoBehaviour:
   isTriggered: 0
   TGR_Quad: {fileID: 6289558172581675621}
   EXP_Quad: {fileID: 7882045353423873324}
-  animController: {fileID: 642548607155118899}
-  animation_IdleName: Mine_Idle
-  animation_ActivateName: Mine_Activate
-  animation_BuildName: Mine_Install
-  animation_RemoveName: Mine_Remove
-  trapReady: 0
 --- !u!114 &9118517488489996338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5199,6 +5193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: 77c902c1e0a760f43a648db93e41a0d2, type: 2}
+  unitLevelHandler: {fileID: 7315058005003733756, guid: 18e141db406b87240a54f4b066e417c9, type: 3}
 --- !u!114 &3802186694033170815
 MonoBehaviour:
   m_ObjectHideFlags: 0

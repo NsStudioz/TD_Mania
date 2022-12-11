@@ -8,6 +8,7 @@ namespace ShopSystem
     {
 
         [SerializeField] ShopItemsScriptable shopItemSO;
+        [SerializeField] Units_Data_Handler unitLevelHandler;
 
         D_Trap_GoldGenerator goldGenerator;
 
@@ -19,12 +20,23 @@ namespace ShopSystem
 
         void Update()
         {
-            StatsCheckerAndSetter();
+            //StatsCheckerAndSetter();
+            StatsCheckerAndSetter_Final();
         }
 
-        public void StatsCheckerAndSetter()
+        // Final Product Stats Check:
+        private void StatsCheckerAndSetter_Final()
         {
             int itemLevelIndex = shopItemSO.Item_LevelIndex;
+
+            goldGenerator.goldToEarn = shopItemSO.unit_Level[itemLevelIndex].goldToEarn;
+            goldGenerator.gold_DelayTime = shopItemSO.unit_Level[itemLevelIndex].gold_DelayTime;
+        }
+
+        // Editor Product Stats Check:
+        private void StatsCheckerAndSetter()
+        {
+            int itemLevelIndex = unitLevelHandler.GetUnitLevel();
 
             goldGenerator.goldToEarn = shopItemSO.unit_Level[itemLevelIndex].goldToEarn;
             goldGenerator.gold_DelayTime = shopItemSO.unit_Level[itemLevelIndex].gold_DelayTime;

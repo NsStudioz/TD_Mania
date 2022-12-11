@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: 0b8ba5488d2f40147ad36b914806e233, type: 2}
+  unitLevelHandler: {fileID: 7315058005003733756, guid: 4e0ca8eee0674684abf9dd4fb5b9f439, type: 3}
 --- !u!1 &7649027230199974706
 GameObject:
   m_ObjectHideFlags: 0

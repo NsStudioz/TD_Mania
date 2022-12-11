@@ -9,6 +9,7 @@ namespace ShopSystem
     {
 
         [SerializeField] ShopItemsScriptable shopItemSO;
+        [SerializeField] Units_Data_Handler unitLevelHandler;
 
         D_Trap_Binder binder;
 
@@ -20,12 +21,27 @@ namespace ShopSystem
 
         void Update()
         {
-            StatsCheckerAndSetter();
+            //StatsCheckerAndSetter();
+            StatsCheckerAndSetter_Final();
         }
 
-        public void StatsCheckerAndSetter()
+        // Final Product Stats Check:
+        private void StatsCheckerAndSetter_Final()
         {
             int itemLevelIndex = shopItemSO.Item_LevelIndex;
+
+            binder.triggerRadius = shopItemSO.unit_Level[itemLevelIndex].triggerRadius;
+            binder.bindRadius = shopItemSO.unit_Level[itemLevelIndex].bindRadius;
+            binder.bindingDuration = shopItemSO.unit_Level[itemLevelIndex].bindDuration;
+            //
+            binder.TGR_Quad.transform.localScale = shopItemSO.unit_Level[itemLevelIndex].triggerQuad_Scale;
+            binder.Bind_Quad.transform.localScale = shopItemSO.unit_Level[itemLevelIndex].explosionQuad_Scale;
+        }
+
+        // Editor Product Stats Check:
+        private void StatsCheckerAndSetter()
+        {
+            int itemLevelIndex = unitLevelHandler.GetUnitLevel();
 
             binder.triggerRadius = shopItemSO.unit_Level[itemLevelIndex].triggerRadius;
             binder.bindRadius = shopItemSO.unit_Level[itemLevelIndex].bindRadius;

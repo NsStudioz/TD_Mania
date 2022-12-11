@@ -5274,12 +5274,6 @@ MonoBehaviour:
   delayTimeThreshold: 10
   gold_DelayTime: 5
   goldToEarn: 10
-  animController: {fileID: 0}
-  animation_IdleName: Crusher_Idle
-  animation_ActivateName: Crusher_Activate
-  animation_BuildName: Crusher_Install
-  animation_RemoveName: Crusher_Remove
-  turretReady: 0
 --- !u!114 &4817814612475583947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5293,6 +5287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: 5f70b63dc37069441babbc8fe347573f, type: 2}
+  unitLevelHandler: {fileID: 7315058005003733756, guid: 0434445c4cd1bfc419df5f0ddc4a137a, type: 3}
 --- !u!114 &1620005763993552194
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -325,3 +325,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: bdb0c75b3341b3e40afadbe631bbe75a, type: 2}
+  unitLevelHandler: {fileID: 7315058005003733756, guid: 0df5c52b96d615841a20c1eeac5cd98b, type: 3}

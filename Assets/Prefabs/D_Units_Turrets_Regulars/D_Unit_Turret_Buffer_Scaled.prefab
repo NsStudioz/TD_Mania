@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: 01aaadd0e4d548d4bb3680d6aca8af62, type: 2}
+  unitLevelHandler: {fileID: 7315058005003733756, guid: 39978cbc822b26a49adc18a417d1c275, type: 3}
 --- !u!114 &3139463338188955458
 MonoBehaviour:
   m_ObjectHideFlags: 0

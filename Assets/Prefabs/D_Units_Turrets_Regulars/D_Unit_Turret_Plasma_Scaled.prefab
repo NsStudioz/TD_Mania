@@ -19616,8 +19616,10 @@ MonoBehaviour:
   isDefUnitReady: 0
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
+  targetShield: {fileID: 0}
   isAntiShield: 0
   enemyTag: Attackers
+  shieldTag: EnemyShields
   statsIdentifierTag: Plasma_Cannon
   range: 5
   fireRate: 1
@@ -19628,12 +19630,6 @@ MonoBehaviour:
   firingPosition: {fileID: 8470119657067887454}
   muzzleEFX: {fileID: 8585380382945489180}
   LOS: {fileID: 4632430959470663162}
-  animController: {fileID: 8415239581817749708}
-  animation_IdleName: Plasma_Idle
-  animation_FireName: Plasma_Fire
-  animation_BuildName: Plasma_Install
-  animation_RemoveName: Plasma_Remove
-  turretReady: 0
 --- !u!114 &-3501285338792338493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19660,6 +19656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: 478bacab4ca24084c9886a317eecf9b3, type: 2}
+  unitLevelHandler: {fileID: 7315058005003733756, guid: 8b60bf0cacf824e4ba1514401eecaedd, type: 3}
 --- !u!65 &8415239581817749697
 BoxCollider:
   m_ObjectHideFlags: 0

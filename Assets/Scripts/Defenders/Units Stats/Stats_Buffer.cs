@@ -8,21 +8,31 @@ namespace ShopSystem
     {
 
         [SerializeField] ShopItemsScriptable shopItemSO;
+        [SerializeField] Units_Data_Handler unitLevelHandler;
 
         D_Unit_Buffer turretBuffer;
 
-        // Start is called before the first frame update
         void Start()
         {
             turretBuffer = GetComponent<D_Unit_Buffer>();
         }
 
-        // Update is called once per frame
         void Update()
         {
-            StatsCheckerAndSetter();
+            //StatsCheckerAndSetter();
+            StatsCheckerAndSetter_Final();
         }
 
+        // Final Product Stats Check:
+        private void StatsCheckerAndSetter_Final()
+        {   // INITIALIZER:
+            int thisItem_LevelIndex = unitLevelHandler.GetUnitLevel();
+            // Radius + Quad Sync:
+            turretBuffer.LOS.transform.localScale = shopItemSO.unit_Level[thisItem_LevelIndex].quad_Scale;
+            turretBuffer.rangeRadius = shopItemSO.unit_Level[thisItem_LevelIndex].radius;
+        }
+
+        // Editor Product Stats Check:
         private void StatsCheckerAndSetter()
         {   // INITIALIZER:
             int thisItem_LevelIndex = shopItemSO.Item_LevelIndex;

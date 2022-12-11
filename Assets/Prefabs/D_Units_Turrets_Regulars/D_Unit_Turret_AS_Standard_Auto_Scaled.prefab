@@ -5434,8 +5434,10 @@ MonoBehaviour:
   isDefUnitReady: 0
   target: {fileID: 0}
   targetEnemy: {fileID: 0}
+  targetShield: {fileID: 0}
   isAntiShield: 1
   enemyTag: Attackers
+  shieldTag: EnemyShields
   statsIdentifierTag: AS_Auto
   range: 2
   fireRate: 1.5
@@ -5446,12 +5448,6 @@ MonoBehaviour:
   firingPosition: {fileID: 7682608373762588045}
   muzzleEFX: {fileID: 5998405853849011835}
   LOS: {fileID: 2397926558785684364}
-  animController: {fileID: 4560538557723931508}
-  animation_IdleName: FattyCannon_Idle
-  animation_FireName: FattyCannon_Fire
-  animation_BuildName: FattyCannon_Install
-  animation_RemoveName: FattyCannon_Remove
-  turretReady: 0
 --- !u!114 &5258295414656314194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5478,6 +5474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemSO: {fileID: 11400000, guid: 63de5f82b85bee04d8c61a902704482a, type: 2}
+  unitLevelHandler: {fileID: 7315058005003733756, guid: 97089e93b5bcec142b0f44990160628f, type: 3}
 --- !u!54 &5048990974002293033
 Rigidbody:
   m_ObjectHideFlags: 0
