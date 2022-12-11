@@ -51,9 +51,9 @@ namespace ShopSystem
             selected_ItemIndex = itemIndex;
         }
 
+        #region Sync_Unit_Stats (Final Product):
         private void Sync_ItemsStats_Final()
         {
-            //int thisItemIndex = shopItems[selected_ItemIndex].Item_LevelIndex;
             int thisItemIndex = menuShop_UI.unitsLevelHandler[selected_ItemIndex].GetUnitLevel();
 
             titleText.text = shopItems[selected_ItemIndex].itemName;
@@ -72,7 +72,7 @@ namespace ShopSystem
                 }
                 else if (selected_ItemIndex == turretBuffer_Index)
                 {
-                    attributeText_1.text = "Radius => " + shopItems[laserBeamer_Index].unit_Level[thisItemIndex].radius.ToString();
+                    attributeText_1.text = "Radius => " + shopItems[turretBuffer_Index].unit_Level[thisItemIndex].radius.ToString();
                     attributeText_2.text = "";
                     attributeText_3.text = "";
                     attributeText_3.text = "";
@@ -120,6 +120,9 @@ namespace ShopSystem
             }
     }
 
+#endregion
+
+        #region Sync_Unit_Stats_Editor:
         private void Sync_ItemsStats()
         {
             int thisItemIndex = shopItems[selected_ItemIndex].Item_LevelIndex;
@@ -187,6 +190,8 @@ namespace ShopSystem
                 attributeText_4.text = "";
             }
         }
+
+        #endregion
     }
 }
 
