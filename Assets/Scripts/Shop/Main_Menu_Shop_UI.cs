@@ -9,6 +9,7 @@ namespace ShopSystem
     {
         public ShopItemsScriptable[] shopItemsData;
         public Item_Template[] shopItemsTemplates;
+        public SO_Data_Handler dataHandler;
 
         private int resetItem_LevelIndex = 0;
 

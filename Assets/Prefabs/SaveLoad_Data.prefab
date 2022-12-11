@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05376616ee394b2499de5df6e0f198d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  persisterName: Main
+  persisterName: Unit_Stats_Main
   objectsToPersist:
   - {fileID: 11400000, guid: ed5e9533827549745b6e5e9e96821e63, type: 2}
   - {fileID: 11400000, guid: 1481424472a858e4db3ec7ecb8260f79, type: 2}

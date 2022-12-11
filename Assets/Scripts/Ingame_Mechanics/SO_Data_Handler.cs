@@ -14,7 +14,9 @@ namespace ShopSystem
         [Header("Scriptable Objects")]
         public List<ShopItemsScriptable> objectsToPersist;
 
-        // File Persistent Data Path Location: %AppData%\LocalLow\CompanyName\ProjectName\
+        [SerializeField] int[] unitsLevelList = new int[20];
+
+        // File Persistent Data Path Location: %AppData%\LocalLow\CompanyName\ProjectName\  (!Editor!)
         private void OnEnable()
         {
             for (int i = 0; i < objectsToPersist.Count; i++)
