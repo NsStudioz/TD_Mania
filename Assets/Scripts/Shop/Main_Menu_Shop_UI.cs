@@ -9,7 +9,8 @@ namespace ShopSystem
     {
         public ShopItemsScriptable[] shopItemsData;
         public Item_Template[] shopItemsTemplates;
-        public SO_Data_Handler dataHandler;
+        [SerializeField] SO_Data_Handler dataHandler;
+        public Units_Data_Handler[] unitsLevelHandler;
 
         private int resetItem_LevelIndex = 0;
 
@@ -18,14 +19,94 @@ namespace ShopSystem
 
         private void Start()
         {
-            SyncItems_Startup();
+            //SyncItems_Startup();
+            SyncItems_Startup_Final();
         }
 
         private void Update()
         {
-            SyncItems_UpgradeLevels();
+            //SyncItems_UpgradeLevels();
+            SyncItems_UpgradeLevels_Final();
+
+            for (int i = 0; i < shopItemsTemplates.Length; i++)
+            {
+                shopItemsTemplates[i].unitLevel = unitsLevelHandler[i].GetUnitLevel();
+                shopItemsTemplates[i].levelText.text = $"LVL."+ shopItemsTemplates[i].unitLevel.ToString();
+            }
+            
         }
 
+
+        #region SO_Data_Sync (Final Product)
+        private void SyncItems_Startup_Final() 
+        {
+            for (int i = 0; i < shopItemsData.Length; i++)
+            {
+                shopItemsTemplates[i].titleText.text = shopItemsData[i].itemName;
+
+                int item_LevelIndex = unitsLevelHandler[i].GetUnitLevel();
+                if (item_LevelIndex == resetItem_LevelIndex)
+                {
+                    shopItemsTemplates[i].costText.text = shopItemsData[i].unit_Level[item_LevelIndex].unlockCost.ToString();
+                }
+            }
+        }
+
+        private void SyncItems_UpgradeLevels_Final()
+        {
+            for (int i = 0; i < shopItemsData.Length; i++)
+            {
+                int item_LevelIndex = unitsLevelHandler[i].GetUnitLevel() + 1;
+                if (item_LevelIndex < shopItemsData[i].unit_Level.Length)
+                {
+                    shopItemsTemplates[i].costTextGO.SetActive(true);
+                    shopItemsTemplates[i].UpgradeText.text = $"Upgrade";
+                    shopItemsTemplates[i].costText.text = shopItemsData[i].unit_Level[item_LevelIndex].unlockCost.ToString();
+                }
+                else
+                {
+                    shopItemsTemplates[i].costTextGO.SetActive(false);
+                    shopItemsTemplates[i].UpgradeText.text = $"Maxed";
+                    shopItemsTemplates[i].upgradeButton.interactable = false;
+                }
+            }
+        }
+
+        public void OnItemUpgradeClick_Final(int thisItemIndex)
+        {
+            int item_LevelIndex = unitsLevelHandler[thisItemIndex].GetUnitLevel();
+
+            if(PlayerPrefs.GetInt("TotalGoldCount") >= shopItemsData[thisItemIndex].unit_Level[item_LevelIndex + 1].unlockCost)
+            {
+                PlayerPrefs.SetInt("TotalGoldCount", PlayerStats._TotalGold - shopItemsData[thisItemIndex].unit_Level[item_LevelIndex + 1].unlockCost);
+
+                if (item_LevelIndex < shopItemsData[thisItemIndex].unit_Level.Length)
+                {
+                    unitsLevelHandler[thisItemIndex].UpgradeUnitLevel();
+                    //item_LevelIndex++;
+                    shopItemsTemplates[thisItemIndex].costText.text = shopItemsData[thisItemIndex].unit_Level[item_LevelIndex].unlockCost.ToString();
+                }
+
+                else if (item_LevelIndex == shopItemsData[thisItemIndex].unit_Level.Length)
+                {
+                    //item_LevelIndex++;
+                    unitsLevelHandler[thisItemIndex].UpgradeUnitLevel();
+                    //
+                    shopItemsTemplates[thisItemIndex].costTextGO.SetActive(false);
+                    //
+                    shopItemsTemplates[thisItemIndex].UpgradeText.text = $"Maxed";
+                    shopItemsTemplates[thisItemIndex].upgradeButton.interactable = false;
+                }
+
+                PlayCategorySFX();
+                Play_GoldSpent_SFX();
+                dataHandler.Save_Final();
+            }
+        }
+
+        #endregion
+
+        #region SO_Data_Sync (EDITOR ONLY)
         private void SyncItems_Startup()
         {
             for (int i = 0; i < shopItemsData.Length; i++)
@@ -88,6 +169,8 @@ namespace ShopSystem
                 Play_GoldSpent_SFX();
             }
         }
+
+        #endregion
 
         private void PlayCategorySFX()
         {

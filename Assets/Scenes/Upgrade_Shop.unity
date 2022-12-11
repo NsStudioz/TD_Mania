@@ -1901,7 +1901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2505,7 +2505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3439,7 +3439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4480,7 +4480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4665,7 +4665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4850,7 +4850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -5309,7 +5309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -9026,7 +9026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -9928,7 +9928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -12815,7 +12815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -15998,7 +15998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -16199,7 +16199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -16654,7 +16654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -16929,7 +16929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -17139,6 +17139,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bdb0c75b3341b3e40afadbe631bbe75a, type: 2}
   - {fileID: 11400000, guid: 7076e2743c2056e4ebe48b949a55f432, type: 2}
   - {fileID: 11400000, guid: 2f2465653a944e44bb8b3e05072795a3, type: 2}
+  menuShop_UI: {fileID: 1792844636}
   titleText: {fileID: 218079770}
   attributeText_1: {fileID: 507503043}
   attributeText_2: {fileID: 1096542046}
@@ -17686,7 +17687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -17883,7 +17884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -19388,7 +19389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -19950,6 +19951,28 @@ MonoBehaviour:
   - {fileID: 356083134}
   - {fileID: 1533590679}
   - {fileID: 1836752714}
+  dataHandler: {fileID: 526196343, guid: 61f60989b38cce64b93fc02f422f2d19, type: 3}
+  unitsLevelHandler:
+  - {fileID: 7315058005003733756, guid: b7a22af052466a640a67ca23e603b6b5, type: 3}
+  - {fileID: 7315058005003733756, guid: 93c1bb5c45e5b65498bb054d2f546248, type: 3}
+  - {fileID: 7315058005003733756, guid: 8b60bf0cacf824e4ba1514401eecaedd, type: 3}
+  - {fileID: 7315058005003733756, guid: 17e9b98e43e4b6a459fca5a8257189fc, type: 3}
+  - {fileID: 7315058005003733756, guid: 576c2663c97adc74b9090aefd6b26562, type: 3}
+  - {fileID: 7315058005003733756, guid: 98f5e1e63275df1488b19f80342ce9be, type: 3}
+  - {fileID: 7315058005003733756, guid: 97089e93b5bcec142b0f44990160628f, type: 3}
+  - {fileID: 7315058005003733756, guid: 6773a787a6734284cb867d19b844d847, type: 3}
+  - {fileID: 7315058005003733756, guid: 39978cbc822b26a49adc18a417d1c275, type: 3}
+  - {fileID: 7315058005003733756, guid: 8997928e79bce5f4a9b7652faf317de2, type: 3}
+  - {fileID: 7315058005003733756, guid: 9faacefd4e1cf2844a3dbddadcfe57ab, type: 3}
+  - {fileID: 7315058005003733756, guid: 0434445c4cd1bfc419df5f0ddc4a137a, type: 3}
+  - {fileID: 7315058005003733756, guid: 18e141db406b87240a54f4b066e417c9, type: 3}
+  - {fileID: 7315058005003733756, guid: e879218d9709a434bb3da920dac8247c, type: 3}
+  - {fileID: 7315058005003733756, guid: eedab99fd37002f43b5179b3acf2cb6b, type: 3}
+  - {fileID: 7315058005003733756, guid: d6fd0f4481a14db43abb38736f7cde72, type: 3}
+  - {fileID: 7315058005003733756, guid: 4e0ca8eee0674684abf9dd4fb5b9f439, type: 3}
+  - {fileID: 7315058005003733756, guid: 0df5c52b96d615841a20c1eeac5cd98b, type: 3}
+  - {fileID: 7315058005003733756, guid: 9b0fa6523c674a64788f7b25853dfcd4, type: 3}
+  - {fileID: 7315058005003733756, guid: 6dfb6a70dc3275a45907a4ab27bedd9e, type: 3}
 --- !u!4 &1792844637
 Transform:
   m_ObjectHideFlags: 0
@@ -20283,7 +20306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -23763,7 +23786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -24073,7 +24096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnItemUpgradeClick
+      value: OnItemUpgradeClick_Final
       objectReference: {fileID: 0}
     - target: {fileID: 71535808372616891, guid: 75fe9df79997f224f907689e66d1caa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

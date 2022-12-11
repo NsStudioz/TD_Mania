@@ -5836,7 +5836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3342506209475594245, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
       propertyPath: masterTimerThreshold
-      value: 200
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3342506210163595330, guid: 4f4c7a5808ce02143875f71d7dee456a, type: 3}
       propertyPath: m_RootOrder
