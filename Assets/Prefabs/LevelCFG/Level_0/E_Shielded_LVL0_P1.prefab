@@ -335,7 +335,6 @@ MonoBehaviour:
   hasShield: 1
   isProtected: 0
   range: 0.01
-  timer: 0.5
   _healthBar: {fileID: 1790300970501921041}
   _healthBar_Canvas_GO: {fileID: 4831181832797952459}
   healthBarDelay_Threshold: 4
@@ -600,8 +599,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6611452608967051708}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -663,6 +662,7 @@ MonoBehaviour:
   current_shieldHealth: 0
   shieldOn: 0
   range: 2
+  rangeTimerDelay: 1
   _ShieldBar: {fileID: 1790300970501921041}
   _ShieldBar_Canvas_GO: {fileID: 4000841954415116340}
   shieldBarDelay_Threshold: 4
