@@ -133,9 +133,14 @@ MonoBehaviour:
   joyStick: {fileID: 0}
   movementSpeed: 1100
   movementTime: 8
-  zoomAmount: {x: 0, y: -0.015, z: 0.015}
+  zoomAmount: {x: 0, y: -0.06, z: 0.06}
   newZoom: {x: 0, y: 0, z: 0}
   minZoom: 1
   maxZoom: 5
   isPointerDown_ZoomIn: 0
   isPointerDown_ZoomOut: 0
+  cameraMovement_Pos: {x: 0, y: 0, z: 0}
+  x_Axis_Min: 0
+  x_Axis_Max: 0
+  z_Axis_Min: 0
+  z_Axis_Max: 0
