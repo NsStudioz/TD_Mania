@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impactEFX: {fileID: 3199371358055305029, guid: 8a73c916cce459d4e8dcf13348dcc952, type: 3}
   speed: 5
-  explosionRadius: 0
+  explosionRadius: 1
   damage: 45
   useAntiShieldBullets: 0
   bulletTags: 
