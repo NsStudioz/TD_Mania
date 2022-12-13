@@ -4748,7 +4748,7 @@ GameObject:
   - component: {fileID: 1456285906}
   - component: {fileID: 1456285905}
   m_Layer: 0
-  m_Name: Tutorial_Handler
+  m_Name: Tutorial_Handler_Level_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
