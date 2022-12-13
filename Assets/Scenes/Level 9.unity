@@ -726,12 +726,12 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4243051740354822483, guid: 0e14363e3d8839e4ba8682afaf1bdf00, type: 3}
   spawnPoint: {fileID: 1244401539}
   waveIndex: 0
-  enemiesPerWave: 3
+  enemiesPerWave: 1
   countDown: 60
   upcomingWaveDelay: 15
   enemySpawnDelay: 15
-  EnemySpawner_Single: 0
-  EnemySpawner_Static: 1
+  EnemySpawner_Single: 1
+  EnemySpawner_Static: 0
   EnemySpawner_Incrementer: 0
 --- !u!136 &80630108
 CapsuleCollider:
