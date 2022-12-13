@@ -4770,12 +4770,13 @@ MonoBehaviour:
   tutorialTexts:
   - Welcome to Tower Defense Mania! In this tutorial you will learn the basics.
   - Move around with the left stick located at the bottom left.
-  - And press any of the arrows next to the left stick to zoom in or zoom out.
+  - Next to the left stick, press the Plus button to Zoom In, or the Minus button
+    to Zoom Out.
   - Now press the green Units button to open your units menu.
-  - Click your desired unit, then click any of the green squares to summon them on
-    the field.
-  - Keep in mind of the cost of your units. You will have a certain amount of gold
-    per level.
+  - Click your desired Defending Unit, then click any of the Green Squares on the
+    Field to summon them.
+  - This will cost you Gold, every Unit has a gold cost on the Units UI. You will
+    have a certain amount of gold per level.
   - Use Blue turret units to destroy enemy tanks! Use Purple turret units to destroy
     enemy shields!
   - "You will earn gold for destroying any enemy tank. Enemy shields don\u2019t count!"
