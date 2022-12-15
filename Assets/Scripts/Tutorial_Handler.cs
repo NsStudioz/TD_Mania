@@ -23,6 +23,12 @@ public class Tutorial_Handler : MonoBehaviour
 
     private void Update()
     {
+        if (GamePlay_Manager.GetGameWon() || GamePlay_Manager.GetGameOver())
+        {
+            timerDelay = timerDelayThreshold;
+            visibleText.text = "";
+        }
+
         PlayTutorial();
     }
 

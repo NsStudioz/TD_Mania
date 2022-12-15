@@ -38,7 +38,12 @@ public class GamePlay_Manager : MonoBehaviour
 
     void Update()
     {
-        if (gameOver || gameWon) { return; }
+        if (gameOver || gameWon) 
+        {
+            isNotEnoughGoldTextOn = false;
+            notEnoughGold.SetActive(false);
+            return; 
+        }
 
         LinkTexts();
 
@@ -123,7 +128,6 @@ public class GamePlay_Manager : MonoBehaviour
         if (isNotEnoughGoldTextOn) { notEnoughGold.SetActive(true); }
         else                       { notEnoughGold.SetActive(false); }
     }
-
 
     #endregion
 }
