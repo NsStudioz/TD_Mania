@@ -17,6 +17,14 @@ public class NodeUI : MonoBehaviour
 
     [SerializeField] Button upgradeButton;
 
+    private void Update()
+    {
+        if(GamePlay_Manager.GetGameOver() || GamePlay_Manager.GetGameWon())
+        {
+            Hide();
+        }
+    }
+
     public void SetTarget(Node _target)
     {
         target = _target;
