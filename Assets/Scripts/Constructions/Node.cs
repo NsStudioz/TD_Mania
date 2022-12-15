@@ -91,7 +91,9 @@ public class Node : MonoBehaviour
     {
         if (PlayerStats.Gold < blueprint.cost)
         {
-            Debug.Log("Not enough gold to build this turret!");
+            GamePlay_Manager.Get_NotEnoughGoldText();
+            //Debug.Log("Not enough gold to build this turret!");
+
             return;
         }
 

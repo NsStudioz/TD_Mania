@@ -9,6 +9,7 @@ public class GamePlay_Manager : MonoBehaviour
     [SerializeField] TMP_Text GoldCountText;   // Gold count
     [SerializeField] TMP_Text healthCountText; // Remaining Health
     [SerializeField] TMP_Text TimerCountText;  // Time left for game & waves to end
+    [SerializeField] GameObject notEnoughGold;  // Not Enough Gold Text
 
     [Header("Master Timer")]
     [SerializeField] float masterTimer = 0f;
@@ -20,10 +21,17 @@ public class GamePlay_Manager : MonoBehaviour
     [SerializeField] static bool gameOver;
     [SerializeField] static bool gameWon;
 
+    //
+    [Header("Not Enough Gold Attribures")]
+    [SerializeField] float timeElapsed = 0f;
+    [SerializeField] float timeElapsedthreshold = 2f;
+    [SerializeField] static bool isNotEnoughGoldTextOn;
+
     void Start()
     {
         gameWon = false;
         gameOver = false;
+        isNotEnoughGoldTextOn = false;
         masterTimer = masterTimerThreshold;
         survivalTimer = survivalTimerThreshold;
     }
@@ -38,6 +46,9 @@ public class GamePlay_Manager : MonoBehaviour
 
         masterTimer -= Time.deltaTime;
         survivalTimer += Time.deltaTime;
+
+        CalculateNotEnoughGoldText_Visibility();
+        Check_NotEnoughGoldText_Visibility();
     }
 
     private void LinkTexts()
@@ -81,12 +92,46 @@ public class GamePlay_Manager : MonoBehaviour
     {
         return survivalTimer;
     }
+
+    #region NotEnoughGold_Text
+
+    public static bool Get_NotEnoughGoldText()
+    {
+        return isNotEnoughGoldTextOn = true;
+    }
+
+    private void CalculateNotEnoughGoldText_Visibility()
+    {
+        if (!isNotEnoughGoldTextOn)
+        {
+            timeElapsed = timeElapsedthreshold;
+        }
+
+        else if (isNotEnoughGoldTextOn)
+        {
+            timeElapsed -= Time.deltaTime;
+            
+            if (timeElapsed <= 0f) 
+            { 
+                isNotEnoughGoldTextOn = false;
+            }
+        }
+    }
+
+    private void Check_NotEnoughGoldText_Visibility()
+    {
+        if (isNotEnoughGoldTextOn) { notEnoughGold.SetActive(true); }
+        else                       { notEnoughGold.SetActive(false); }
+    }
+
+
+    #endregion
 }
 
-    //[SerializeField] int goldText = 0;
-    //private float countdown = 2f;
-    //[SerializeField] private int healthText = 0;
-    //[SerializeField] private float timerText = 0f;
+//[SerializeField] int goldText = 0;
+//private float countdown = 2f;
+//[SerializeField] private int healthText = 0;
+//[SerializeField] private float timerText = 0f;
 
 
 /*    private void LinkTexts()
