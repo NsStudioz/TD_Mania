@@ -47,6 +47,7 @@ public class Enemy_Shield : MonoBehaviour
         ShieldBarTimer();
 
         RemoveEnemiesProtection();
+        DeactivateShieldBar();
         CalculateRangeOnShieldOff();
     }
 
@@ -60,8 +61,8 @@ public class Enemy_Shield : MonoBehaviour
         if (current_shieldHealth <= 0f)
         {
             DestroyShield();
-            _ShieldBar_Canvas_GO.SetActive(false);
             shieldOn = false;
+            //_ShieldBar_Canvas_GO.SetActive(false);
         }
     }
 
@@ -69,8 +70,8 @@ public class Enemy_Shield : MonoBehaviour
     {
         shieldCollider.enabled = false;
         shield_renderer.enabled = false;
-        //gameObject.SetActive(false);
         enemy.hasShield = false;
+        //gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -89,6 +90,14 @@ public class Enemy_Shield : MonoBehaviour
         transform.localScale = new Vector3(9.75f, 9.75f, 9.75f);
         yield return new WaitForSecondsRealtime(sizeChangeDelay);
         transform.localScale = new Vector3(10f, 10f, 10f);
+    }
+
+    private void DeactivateShieldBar()
+    {
+        if (!shieldOn)
+        {
+            _ShieldBar_Canvas_GO.SetActive(false);
+        }
     }
 
     private void RemoveEnemiesProtection()

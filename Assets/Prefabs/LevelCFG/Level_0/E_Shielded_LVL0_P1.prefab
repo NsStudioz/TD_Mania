@@ -842,14 +842,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8743662146669460812, guid: feed57dac2fe1f4408ed2a867b654ea5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.436
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743662146669460812, guid: feed57dac2fe1f4408ed2a867b654ea5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 1.194
-      objectReference: {fileID: 0}
     - target: {fileID: 8992923195258428896, guid: feed57dac2fe1f4408ed2a867b654ea5, type: 3}
       propertyPath: m_Name
       value: HealthBar_Canvas
