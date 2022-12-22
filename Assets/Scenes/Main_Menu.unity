@@ -20166,7 +20166,7 @@ MonoBehaviour:
   creditsMenu: 0
   mainMenuIndex: 1
   shopMenuIndex: 2
-  urlAddress: https://unity3d.com/legal/privacy-policy
+  urlAddress: https://unity.com/legal/game-player-and-app-user-privacy-policy
   menu_UI_AnimController: {fileID: 79892395}
   play_UI_On: UI_Play_On
   play_UI_Off: UI_Play_Off
