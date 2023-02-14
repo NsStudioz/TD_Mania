@@ -100,18 +100,20 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaValue: 0.6
+    - _AlphaValue: 0.75
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
+    - _GLOBNODESTARTEFX: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 3
+    - _NodeStartEFX: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueControl: 0
@@ -125,11 +127,13 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 0.01960802, g: 1, b: 0, a: 1}
-    - _Color: {r: 0.026637204, g: 0.754717, b: 0, a: 1}
+    - _Color: {r: 0.026483826, g: 0.7264151, b: 0, a: 1}
     - _Color_1: {r: 0.05490184, g: 1, b: 0, a: 0.28235295}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HDR_Color: {r: 1, g: 0.62975955, b: 0.033018887, a: 1}
-    - _Ranges: {r: 0.75, g: 2, b: 0, a: 0}
-    - _Remap_Ins: {r: -0.25, g: 1, b: 0, a: 0}
+    - _NodeColor: {r: 0.02745098, g: 0.7254902, b: 0, a: 1}
+    - _Node_HDR_Color: {r: 1.9811319, g: 1.9603871, b: 0.010372419, a: 0}
+    - _Ranges: {r: 0.2, g: 1, b: 0, a: 0}
+    - _Remap_Ins: {r: -0.5, g: 0.5, b: 0, a: 0}
     - _Remap_Outs: {r: 0.1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
