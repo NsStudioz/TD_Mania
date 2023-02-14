@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour
 
     public static int Gold;
     public int startGold = 0;
+    public static int notEnoughGoldThreshold = 250;
     public static int _TotalGold;
 
     public static int Lives;

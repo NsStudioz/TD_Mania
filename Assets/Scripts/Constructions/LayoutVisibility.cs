@@ -34,12 +34,16 @@ public class LayoutVisibility : MonoBehaviour
             panelIsUnfolded = true;
             shopPanelUI.Play("Anim_UnfoldPanel");
             OnClick_UI_UnitsButton_Unfold_SFX?.Invoke();
+            //
+            NodeList.isUnitsPanelOpen = true;
         }
         else if (panelIsUnfolded)
         {
             panelIsUnfolded = false;
             shopPanelUI.Play("Anim_FoldPanel");
             OnClick_UI_UnitsButton_Fold_SFX?.Invoke();
+            //
+            NodeList.isUnitsPanelOpen = false;
         }
     }
 
@@ -58,7 +62,6 @@ public class LayoutVisibility : MonoBehaviour
     }
 }
 
-//AudioManager audioManager;
 /*    private void Awake()
     {
         GameObject forAudioManager = GameObject.Find("Audio_Manager");
