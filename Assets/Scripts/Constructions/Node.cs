@@ -13,7 +13,10 @@ public class Node : MonoBehaviour
     [SerializeField] private string nodeUnavailable;
     [SerializeField] private string nodeStartEffect;
 
-    //private Renderer rend;
+    private Renderer rend;
+    [SerializeField] Color startColor;
+    [SerializeField] Color hovercolor;
+    [SerializeField] Color notEnoughGoldColor;
 
     [HideInInspector]
     [SerializeField] GameObject defendingUnit;
@@ -25,25 +28,57 @@ public class Node : MonoBehaviour
     [SerializeField] Vector3 unitPositionOffset;
     // Instance:
     ConstructManager constructManager;
+    [SerializeField] private bool isUnitInstalled = false;
 
     void Start()
     {
-        //rend = GetComponent<Renderer>();
+        rend = GetComponent<Renderer>();
         nodeAnimator = GetComponent<Animator>();
         constructManager = ConstructManager.instance;
+    }
+
+    private void OnDestroy()
+    {
+        nodeAnimator.StopPlayback();
     }
 
     public Vector3 GetBuildPosition()
     {
         return transform.position + unitPositionOffset;
     }
-
-    public GameObject GetNodeAvailability()
+    public bool GetNodeAvailability()
     {
-        return defendingUnit;
+        return isUnitInstalled;
     }
 
+    /*    public GameObject GetNodeAvailability()
+        {
+            return defendingUnit;
+        }*/
+
     // MouseDown/Touch Input:
+    void OnMouseEnter()
+    {
+        if (EventSystem.current.IsPointerOverGameObject()) // if the mouse hovers a gameobject while on a UI Element (Panel in this case)
+        {
+            return;
+        }
+
+        if (!constructManager.CanBuild)
+        {
+            return;
+        }
+
+        if (constructManager.HasGold)
+        {
+            rend.material.color = hovercolor;
+        }
+        else
+        {
+            rend.material.color = notEnoughGoldColor;
+        }
+    }
+
     void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject()) // if the mouse hovers a gameobject while on a UI Element (Panel in this case)
@@ -64,6 +99,12 @@ public class Node : MonoBehaviour
 
         //constructManager.BuildDefUnitOn(this); // this = we pass in this node.
         BuildTurret(constructManager.GetDefUnitToBuild());
+    }
+
+    void OnMouseExit()
+    {
+        rend.material.color = startColor;
+        
     }
 
     void BuildTurret(D_Unit_Blueprint blueprint)

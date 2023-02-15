@@ -19,6 +19,10 @@ public class LayoutVisibility : MonoBehaviour
     public static event Action OnClick_UI_UnitsButton_Unfold_SFX;
     public static event Action OnClick_UI_UnitsButton_Fold_SFX;
     public static event Action OnUIClick_UnitSelect_SFX;
+    // NodeList Events:
+    public static event Action OnUIClick_SetNodeEffectOn;
+    public static event Action OnUIClick_SetNodeEffectOff;
+
 
     void Start()
     {
@@ -35,7 +39,9 @@ public class LayoutVisibility : MonoBehaviour
             shopPanelUI.Play("Anim_UnfoldPanel");
             OnClick_UI_UnitsButton_Unfold_SFX?.Invoke();
             //
-            NodeList.isUnitsPanelOpen = true;
+            //NodeList.isUnitsPanelOpen = true;
+            OnUIClick_SetNodeEffectOn?.Invoke();
+
         }
         else if (panelIsUnfolded)
         {
@@ -43,7 +49,8 @@ public class LayoutVisibility : MonoBehaviour
             shopPanelUI.Play("Anim_FoldPanel");
             OnClick_UI_UnitsButton_Fold_SFX?.Invoke();
             //
-            NodeList.isUnitsPanelOpen = false;
+            //NodeList.isUnitsPanelOpen = false;
+            OnUIClick_SetNodeEffectOff?.Invoke();
         }
     }
 

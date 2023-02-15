@@ -5,29 +5,52 @@ using UnityEngine;
 public class NodeList : MonoBehaviour
 {
     
-    [SerializeField] static List<Node> nodes = new List<Node>();
-    [SerializeField] public static bool isUnitsPanelOpen = false;
+    [SerializeField] private List<Node> nodes = new List<Node>();
+    [SerializeField] private bool isUnitsPanelOpen = false;
 
     void Start()
     {
         OnStart_SyncAndAddAllNodeChildsToList();
     }
 
+    private void OnEnable()
+    {
+        LayoutVisibility.OnUIClick_SetNodeEffectOn += SetBoolOn;
+        LayoutVisibility.OnUIClick_SetNodeEffectOff += SetBoolOff;
+    }
+    private void OnDisable()
+    {
+        LayoutVisibility.OnUIClick_SetNodeEffectOn -= SetBoolOn;
+        LayoutVisibility.OnUIClick_SetNodeEffectOff -= SetBoolOff;
+    }
+
     void Update()
     {
-        if (isUnitsPanelOpen && PlayerStats.Gold >= PlayerStats.notEnoughGoldThreshold) 
-        { 
-            CheckNodeAvailabilityAndSetEffect(); 
+        if (isUnitsPanelOpen && PlayerStats.Gold >= PlayerStats.notEnoughGoldThreshold)
+        {
+            CheckNodeAvailabilityAndSetEffect();
         }
         else if (isUnitsPanelOpen && PlayerStats.Gold < PlayerStats.notEnoughGoldThreshold)
         {
             NodesUnavailable();
         }
         else
-        { 
-            DisableNodeEffects(); 
-        }    
+        {
+            DisableNodeEffects();
+        }
     }
+    //------------------------------------------------------------------------------------------------------------------------
+    // Set Bools:
+    private void SetBoolOn()
+    {
+        isUnitsPanelOpen = true;
+    }
+
+    private void SetBoolOff()
+    {
+        isUnitsPanelOpen = false;
+    }
+
     //------------------------------------------------------------------------------------------------------------------------
     private void OnStart_SyncAndAddAllNodeChildsToList()
     {
@@ -37,11 +60,11 @@ public class NodeList : MonoBehaviour
         }
     }
 
-    public static void CheckNodeAvailabilityAndSetEffect()
+    private void CheckNodeAvailabilityAndSetEffect()
     {
         foreach(Node node in nodes)
         {
-            if (node.GetNodeAvailability() == null)
+            if (!node.GetNodeAvailability())
             {
                 node.OnTurretChoice_EnableNodeEffect();
             }
@@ -52,7 +75,7 @@ public class NodeList : MonoBehaviour
         }
     }
 
-    public static void DisableNodeEffects()
+    private void DisableNodeEffects()
     {
         foreach (Node node in nodes)
         {
@@ -60,7 +83,7 @@ public class NodeList : MonoBehaviour
         }
     }
 
-    public static void NodesUnavailable() // not enough gold
+    private void NodesUnavailable() // not enough gold
     {
         foreach (Node node in nodes)
         {
@@ -68,6 +91,23 @@ public class NodeList : MonoBehaviour
         }
     }
 }
+
+//Old methods: 
+/*private void CheckNodeAvailabilityAndSetEffect()
+{
+    foreach (Node node in nodes)
+    {
+        if (node.GetNodeAvailability() == null)
+        {
+            node.OnTurretChoice_EnableNodeEffect();
+        }
+        else
+        {
+            node.OnTurretUnchoice_DisableNodeEffect();
+        }
+    }
+}*/
+
 
 /*    public void OnGoldAmount_SetNodeColorAndEffect_New()
     {
