@@ -9919,7 +9919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3840562873715598054, guid: 09a924c8d53c6f04b93438de3928a2a7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09a924c8d53c6f04b93438de3928a2a7, type: 3}
@@ -10555,6 +10555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee855fe462b3dd4098bd32fa3626982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodes: []
+  isUnitsPanelOpen: 0
 --- !u!4 &9080650536414260022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 718321637470811613, guid: e2bb51ad759a6334f8dab64c30d95aae, type: 3}
