@@ -87,7 +87,7 @@ public class NodeList : MonoBehaviour
     {
         foreach (Node node in nodes)
         {
-            node.NodesUnavailable();
+            if (!node.GetNodeAvailability()) { node.NodesUnavailable(); }      
         }
     }
 }

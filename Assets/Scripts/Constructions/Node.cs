@@ -13,10 +13,10 @@ public class Node : MonoBehaviour
     [SerializeField] private string nodeUnavailable;
     [SerializeField] private string nodeStartEffect;
 
-    private Renderer rend;
+/*    private Renderer rend;
     [SerializeField] Color startColor;
     [SerializeField] Color hovercolor;
-    [SerializeField] Color notEnoughGoldColor;
+    [SerializeField] Color notEnoughGoldColor;*/
 
     [HideInInspector]
     [SerializeField] GameObject defendingUnit;
@@ -32,7 +32,7 @@ public class Node : MonoBehaviour
 
     void Start()
     {
-        rend = GetComponent<Renderer>();
+        //rend = GetComponent<Renderer>();
         nodeAnimator = GetComponent<Animator>();
         constructManager = ConstructManager.instance;
     }
@@ -69,14 +69,14 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (constructManager.HasGold)
+/*        if (constructManager.HasGold)
         {
             rend.material.color = hovercolor;
         }
         else
         {
             rend.material.color = notEnoughGoldColor;
-        }
+        }*/
     }
 
     void OnMouseDown()
@@ -101,11 +101,10 @@ public class Node : MonoBehaviour
         BuildTurret(constructManager.GetDefUnitToBuild());
     }
 
-    void OnMouseExit()
+/*    void OnMouseExit()
     {
-        rend.material.color = startColor;
-        
-    }
+        rend.material.color = startColor;    
+    }*/
 
     void BuildTurret(D_Unit_Blueprint blueprint)
     {
@@ -122,6 +121,7 @@ public class Node : MonoBehaviour
         defendingUnit = turret;
 
         d_Unit_Blueprint = blueprint; // set the turret blueprint equal to the turret that was passed in.
+        isUnitInstalled = true;
     }
 
     public void TemporarilyActivateTurretLOS()
@@ -151,6 +151,7 @@ public class Node : MonoBehaviour
         else { Destroy(defendingUnit); }
 
         d_Unit_Blueprint = null;
+        isUnitInstalled = false;
     }
 
     #region Shader Effects
