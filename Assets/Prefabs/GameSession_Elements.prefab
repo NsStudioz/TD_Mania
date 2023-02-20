@@ -150,14 +150,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4736521123551936477}
     - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
-      propertyPath: cameraMovement_Pos.x
-      value: -17.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
-      propertyPath: cameraMovement_Pos.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8757461253443951706, guid: c1ca2e5b2a1a605459ae14e1217f3033, type: 3}
       propertyPath: cameraMovement_Pos.z
       value: -20
       objectReference: {fileID: 0}
