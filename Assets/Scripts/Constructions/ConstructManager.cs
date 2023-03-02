@@ -60,11 +60,6 @@ public class ConstructManager : MonoBehaviour
     {
         return defUnitToBuild;
     }
-
-    private void Update()
-    {
-        Debug.Log(CanBuild);
-    }
 }
 
 /*    AudioManager audioManager;*/
