@@ -7,10 +7,10 @@ public class Player_Health : MonoBehaviour
 
     [SerializeField] float range = 0f;
 
-    private void Update()
+/*    private void Update()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, range);
-        foreach(Collider collider in colliders)
+        foreach (Collider collider in colliders)
         {
             if (collider.CompareTag("Attackers"))
             {
@@ -18,12 +18,21 @@ public class Player_Health : MonoBehaviour
                 Destroy(collider.gameObject);
             }
         }
-    }
+    }*/
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    private void OnTriggerEnter(Collider enemy)
+    {
+        if (enemy.CompareTag("Attackers"))
+        {
+            PlayerStats.Lives--;
+            Destroy(enemy.gameObject);
+        }
     }
 
 }
