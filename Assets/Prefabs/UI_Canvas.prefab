@@ -3418,7 +3418,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Camera_Controls, Assembly-CSharp
-          m_MethodName: HandleScrollingInput_ZoomIn_HoldPress
+          m_MethodName: ZoomInInput_PointerDown
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3434,7 +3434,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Camera_Controls, Assembly-CSharp
-          m_MethodName: HandleScrollingInput_ZoomIn_Release
+          m_MethodName: ZoomInInput_PointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5340,7 +5340,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Camera_Controls, Assembly-CSharp
-          m_MethodName: HandleScrollingInput_ZoomOut_HoldPress
+          m_MethodName: ZoomOutInput_PointerDown
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5356,7 +5356,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Camera_Controls, Assembly-CSharp
-          m_MethodName: HandleScrollingInput_ZoomOut_Release
+          m_MethodName: ZoomOutInput_PointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

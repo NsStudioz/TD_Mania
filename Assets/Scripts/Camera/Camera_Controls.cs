@@ -1,37 +1,29 @@
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
 
 public class Camera_Controls : MonoBehaviour
 {
+    [Header("Objects")]
+    [SerializeField] private Transform cameraTransform;
+    [SerializeField] private FixedJoystick joyStick;
 
-    /*    [SerializeField] Vector3 newPosition;*/
-    /*    [SerializeField] float normalSpeed;*/
-    //[SerializeField] float panBorderThickness = 10f;
-    //[SerializeField] float scrollSpeed = 5f;
-    /*newPosition = transform.position;*/
+    [Header("Movement")]
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private float movementTime;
 
-    // Objects:
-    [SerializeField] Transform cameraTransform;
-    [SerializeField] FixedJoystick joyStick;
-    // Position:
-    [SerializeField] float movementSpeed;
-    [SerializeField] float movementTime;
-    // Scrolling:
-    [SerializeField] Vector3 zoomAmount;
-    [SerializeField] Vector3 newZoom;
-    [SerializeField] float minZoom = 2f;
-    [SerializeField] float maxZoom = 8f;
-    // Scrolling-bools:
-    [SerializeField] bool isPointerDown_ZoomIn = false;
-    [SerializeField] bool isPointerDown_ZoomOut = false;
+    [Header("Zoom Elements")] 
+    [SerializeField] private Vector3 zoomAmount;
+    [SerializeField] private Vector3 newZoom;
+    [SerializeField] private float minZoom = 2f;
+    [SerializeField] private float maxZoom = 8f;
+    [SerializeField] private bool isPointerDown_ZoomIn = false;
+    [SerializeField] private bool isPointerDown_ZoomOut = false;
     
     [Header("Clamping Elements")]
-    [SerializeField] Vector3 cameraMovement_Pos;
-    [SerializeField] float x_Axis_Min;
-    [SerializeField] float x_Axis_Max;
-    [SerializeField] float z_Axis_Min;
-    [SerializeField] float z_Axis_Max;
+    [SerializeField] private Vector3 cameraMovement_Pos;
+    [SerializeField] private float x_Axis_Min;
+    [SerializeField] private float x_Axis_Max;
+    [SerializeField] private float z_Axis_Min;
+    [SerializeField] private float z_Axis_Max;
 
     private void Awake()
     {
@@ -45,16 +37,12 @@ public class Camera_Controls : MonoBehaviour
     private void Update()
     {
         if (isPointerDown_ZoomIn)
-        {
             newZoom += zoomAmount;
-        }
         else if (isPointerDown_ZoomOut)
-        {
             newZoom -= zoomAmount;
-        }
 
         HandleMovementBounds();
-        HandleScrollingInput();
+        HandleZoomUpdates();
         HandleMovementInput();
     }
 
@@ -63,23 +51,17 @@ public class Camera_Controls : MonoBehaviour
     {
         transform.position = cameraMovement_Pos;
 
+        // Horizontal:
         if (joyStick.Horizontal >= 0.2f)
-        {
-            cameraMovement_Pos += (transform.right * movementSpeed * Time.deltaTime);
-        }
+            cameraMovement_Pos += movementSpeed * Time.deltaTime * transform.right;
         else if (joyStick.Horizontal <= -0.2f)
-        {
-            cameraMovement_Pos += (transform.right * -movementSpeed * Time.deltaTime);
-        }
+            cameraMovement_Pos += -movementSpeed * Time.deltaTime * transform.right;
 
+        // Vertical:
         if (joyStick.Vertical >= 0.2f)
-        {
-            cameraMovement_Pos += (transform.forward * movementSpeed * Time.deltaTime);
-        }
+            cameraMovement_Pos += movementSpeed * Time.deltaTime * transform.forward;
         else if (joyStick.Vertical <= -0.2f)
-        {
-            cameraMovement_Pos += (transform.forward * -movementSpeed * Time.deltaTime);
-        }
+            cameraMovement_Pos += -movementSpeed * Time.deltaTime * transform.forward;
     }
 
     private void HandleMovementBounds()
@@ -89,55 +71,37 @@ public class Camera_Controls : MonoBehaviour
     }
     #endregion
 
-    #region Input_Scrolling:
+    #region Input_Zoom_EventTriggers:
 
-    public void HandleScrollingInput_ZoomIn_HoldPress()
+    public void ZoomInInput_PointerDown()
     {
         isPointerDown_ZoomIn = true;
     }
 
-    public void HandleScrollingInput_ZoomIn_Release()
+    public void ZoomInInput_PointerUp()
     {
         isPointerDown_ZoomIn = false;
     }
 
-    public void HandleScrollingInput_ZoomOut_HoldPress()
+    public void ZoomOutInput_PointerDown()
     {
         isPointerDown_ZoomOut = true;
     }
 
-    public void HandleScrollingInput_ZoomOut_Release()
+    public void ZoomOutInput_PointerUp()
     {
         isPointerDown_ZoomOut = false;
     }
 
-    public void HandleScrollingInput()
+    #endregion
+
+    private void HandleZoomUpdates()
     {
         newZoom.y = Mathf.Clamp(newZoom.y, minZoom, maxZoom);
         newZoom.z = Mathf.Clamp(newZoom.z, minZoom, maxZoom);
 
         cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, newZoom, Time.deltaTime * movementTime); // Smooth camera zoom;
     }
-
-    #endregion
 }
 
 
-// Original Movement:
-/*        if (joyStick.Horizontal >= 0.2f)
-        {
-            transform.position += (transform.right * movementSpeed * Time.deltaTime);
-        }
-        else if (joyStick.Horizontal <= -0.2f)
-        {
-            transform.position += (transform.right * -movementSpeed * Time.deltaTime);
-        }
-
-        if (joyStick.Vertical >= 0.2f)
-        {
-            transform.position += (transform.forward * movementSpeed * Time.deltaTime);
-        }
-        else if (joyStick.Vertical <= -0.2f)
-        {
-            transform.position += (transform.forward * -movementSpeed * Time.deltaTime);
-        }*/
