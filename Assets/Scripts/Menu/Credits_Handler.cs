@@ -6,13 +6,13 @@ public class Credits_Handler : MonoBehaviour
 
     // SHOW/HIDE Credits Contributors based on categories
     [Header("Main Categories Menu")]
-    [SerializeField] GameObject _MainCategoriesMenu;
-    [SerializeField] GameObject _MeText;
+    [SerializeField] private GameObject _MainCategoriesMenu;
+    [SerializeField] private GameObject _MeText;
 
     [Header("Sub Categories Menus")]
-    [SerializeField] GameObject _AssetsMenu;
-    [SerializeField] GameObject _SFXMenu;
-    [SerializeField] GameObject _MusicMenu;
+    [SerializeField] private GameObject _AssetsMenu;
+    [SerializeField] private GameObject _SFXMenu;
+    [SerializeField] private GameObject _MusicMenu;
 
     [Header("Buttons")]
     [SerializeField] private Button creditsBack_Btn; // this is a sub category button, will return to the main categories menu of Credits/
