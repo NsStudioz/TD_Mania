@@ -20327,12 +20327,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0f9cb5aa5ab5429450fb46de39d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _CategoriesMenu: {fileID: 787102890}
-  _MyText: {fileID: 1736967355}
+  _MainCategoriesMenu: {fileID: 787102890}
+  _MeText: {fileID: 1736967355}
   _AssetsMenu: {fileID: 875957933}
   _SFXMenu: {fileID: 2009523887}
   _MusicMenu: {fileID: 62428615}
-  _BackButton: {fileID: 2090216241}
+  creditsBack_Btn: {fileID: 2090216243}
+  assets_Btn: {fileID: 1756295344}
+  sfx_Btn: {fileID: 318772237}
+  music_Btn: {fileID: 603495306}
 --- !u!1 &749398525
 GameObject:
   m_ObjectHideFlags: 0
@@ -20615,7 +20618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 787102891}
   m_Layer: 5
-  m_Name: Categories
+  m_Name: MainCategories
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42202,7 +42205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2090216242
 RectTransform:
   m_ObjectHideFlags: 0
