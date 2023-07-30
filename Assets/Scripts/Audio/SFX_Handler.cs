@@ -1,4 +1,5 @@
 using UnityEngine;
+using TD_Mania_MainMenu;
 
 namespace ShopSystem 
 {
@@ -58,8 +59,8 @@ namespace ShopSystem
             Enemy.OnEnemy_Death_SFX += Play_EnemyDeath_SFX;
             // UI-SFX:
             LevelSelection.OnUIClick_Menu_SFX += Play_UI_ClickMenu_SFX;
-            MainMenu_Handler.OnUIClick_Menu_SFX += Play_UI_ClickMenu_SFX;
-            MainMenu_Handler.OnUIClick_Back_SFX += Play_MainMenu_Back_SFX;
+            MainMenu_Handler.OnUIClick_PlayMenuSFX += Play_UI_ClickMenu_SFX;
+            MainMenu_Handler.OnUIClick_PlayBackSFX += Play_MainMenu_Back_SFX;
             Levels_Handler.OnUIClick_Menu_SFX += Play_UI_ClickMenu_SFX;
             Levels_Handler.OnUIClick_Ingame_SFX += Play_UI_Click_Ingame_SFX;
             //
@@ -123,8 +124,8 @@ namespace ShopSystem
             Enemy.OnEnemy_Death_SFX -= Play_EnemyDeath_SFX;
             // UI-SFX:
             LevelSelection.OnUIClick_Menu_SFX -= Play_UI_ClickMenu_SFX;
-            MainMenu_Handler.OnUIClick_Menu_SFX -= Play_UI_ClickMenu_SFX;
-            MainMenu_Handler.OnUIClick_Back_SFX -= Play_MainMenu_Back_SFX;
+            MainMenu_Handler.OnUIClick_PlayMenuSFX -= Play_UI_ClickMenu_SFX;
+            MainMenu_Handler.OnUIClick_PlayBackSFX -= Play_MainMenu_Back_SFX;
             Levels_Handler.OnUIClick_Menu_SFX -= Play_UI_ClickMenu_SFX;
             Levels_Handler.OnUIClick_Ingame_SFX -= Play_UI_Click_Ingame_SFX;
             //

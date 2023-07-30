@@ -1,127 +1,174 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class MainMenu_Handler : MonoBehaviour
+namespace TD_Mania_MainMenu
 {
-
-    [Header("Menu Switches")]
-    [SerializeField] bool playMenu = false;
-    [SerializeField] bool optionsMenu = false;
-    [SerializeField] bool creditsMenu = false;
-    
-    [Header("Scenes Index")]
-    [SerializeField] int mainMenuIndex = 1;
-    [SerializeField] int shopMenuIndex = 2;
-    //
-    [SerializeField] string urlAddress;
-
-    [Header("Animations")]
-    [SerializeField] Animator menu_UI_AnimController;
-    //
-    [SerializeField] string play_UI_On;
-    [SerializeField] string play_UI_Off;
-    //
-    [SerializeField] string options_UI_On;
-    [SerializeField] string options_UI_Off;
-    //
-    [SerializeField] string credits_UI_On;
-    [SerializeField] string credits_UI_Off;
-
-    [Header("UI Objects")]
-    [SerializeField] GameObject play_UI;
-    [SerializeField] GameObject options_UI;
-    [SerializeField] GameObject credits_UI;
-    //
-    public static event Action OnUIClick_Menu_SFX;
-    public static event Action OnUIClick_Back_SFX;
-
-    public void OpenMainMenu() // When leaving SHOP SCENE;
+    public class MainMenu_Handler : MonoBehaviour
     {
-        MenuClickSFX();
-        SceneManager.LoadScene(mainMenuIndex);
-    }
 
-    public void OpenShopMenu()
-    {
-        MenuClickSFX();
-        SceneManager.LoadScene(shopMenuIndex);
-    }
-    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        public static event Action OnUIClick_PlayMenuSFX;
+        public static event Action OnUIClick_PlayBackSFX;
+        private readonly int shopMenuIndex = 2;
 
-    public void OpenPlayMenu()
-    {
-        playMenu = true;
-        play_UI.SetActive(true);
-        MenuClickSFX();
-        //menu_UI_AnimController.Play(play_UI_On);
-    }
+        [Header("Menu Switches")]
+        [SerializeField] private bool isPlayUI_On = false;
+        [SerializeField] private bool isOptionsUI_On = false;
+        [SerializeField] private bool isCreditsUI_On = false;
 
-    public void OpenOptionsMenu()
-    {
-        optionsMenu = true;
-        options_UI.SetActive(true);
-        MenuClickSFX();
-        //menu_UI_AnimController.Play(options_UI_On);
-    }
+        [Header("Privacy Web Address")]
+        [SerializeField] private string urlAddress;
 
-    public void OpenCreditsMenu()
-    {
-        creditsMenu = true;
-        credits_UI.SetActive(true);
-        MenuClickSFX();
-        //menu_UI_AnimController.Play(credits_UI_On);
-    }
+        [Header("UI Objects")]
+        [SerializeField] private GameObject play_UI;
+        [SerializeField] private GameObject options_UI;
+        [SerializeField] private GameObject credits_UI;
 
-    public void OpenPrivacyPage()
-    {
-        MenuClickSFX();
-        Application.OpenURL(urlAddress);
-    }
+        [Header("Buttons")]
+        [SerializeField] private Button play_Btn;
+        [SerializeField] private Button options_Btn;
+        [SerializeField] private Button credits_Btn;
+        [SerializeField] private Button privacy_Btn;
+        [SerializeField] private Button shop_Btn;
+        [SerializeField] private Button[] back_Btns;
 
-    public void ClosePopUpMenus()
-    {
-        if (playMenu == true)
+
+        private void OnEnable()
         {
-            //menu_UI_AnimController.Play(play_UI_Off);
-            playMenu = false;
-            play_UI.SetActive(false);
+            ButtonsAddListeners();
+            BackButtonsArrayAddListeners();
         }
-        else if (optionsMenu == true)
+        private void OnDisable()
         {
-            //menu_UI_AnimController.Play(options_UI_Off);
-            optionsMenu = false;
-            options_UI.SetActive(false);
+            ButtonsRemoveListeners();
+            BackButtonsArrayRemoveListeners();
         }
-        else if (creditsMenu == true)
+
+
+        #region Button_OnClick_Initialize/Deactivate:
+
+        private void ButtonsAddListeners()
         {
-            //menu_UI_AnimController.Play(credits_UI_Off);
-            creditsMenu = false;
-            credits_UI.SetActive(false);
+            play_Btn.onClick.AddListener(() =>
+            {
+                Event_OnUIClick_PlayMenuSFX();
+                ShowPlayUI();
+            });
+            options_Btn.onClick.AddListener(() =>
+            {
+                Event_OnUIClick_PlayMenuSFX();
+                ShowOptionsUI();
+            });
+            credits_Btn.onClick.AddListener(() =>
+            {
+                Event_OnUIClick_PlayMenuSFX();
+                ShowCreditsUI();
+            });
+            privacy_Btn.onClick.AddListener(() =>
+            {
+                Event_OnUIClick_PlayMenuSFX();
+                OpenPrivacyURLPage();
+            });
+            shop_Btn.onClick.AddListener(() =>
+            {
+                Event_OnUIClick_PlayMenuSFX();
+                GoToShopScene();
+            });
         }
-        MenuBackSFX();
-    }
+        private void ButtonsRemoveListeners()
+        {
+            play_Btn.onClick.RemoveAllListeners();
+            shop_Btn.onClick.RemoveAllListeners();
+            options_Btn.onClick.RemoveAllListeners();
+            credits_Btn.onClick.RemoveAllListeners();
+            privacy_Btn.onClick.RemoveAllListeners();
+        }
 
-    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    // For SFX:
-    private void MenuClickSFX()
-    {
-        OnUIClick_Menu_SFX?.Invoke();
-    }
+        private void BackButtonsArrayAddListeners()
+        {
+            foreach (var btn in back_Btns)
+                btn.onClick.AddListener(() =>
+                {
+                    Event_OnUIClick_PlayBackSFX();
+                    HideMainMenuWindowedUIs();
+                });
+        }
 
-    private void MenuBackSFX()
-    {
-        OnUIClick_Back_SFX?.Invoke();
-    }
+        private void BackButtonsArrayRemoveListeners()
+        {
+            foreach (var btn in back_Btns)
+                btn.onClick.RemoveAllListeners();
+        }
 
-    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    // For Animations:
-    public void DeactivateAllMenus()
-    {
-        play_UI.SetActive(false);
-        options_UI.SetActive(false);
-        credits_UI.SetActive(false);
+        #endregion
+
+
+        #region Button_OnClick_Functions:
+
+        private void GoToShopScene()
+        {
+            SceneManager.LoadScene(shopMenuIndex);
+        }
+
+        private void ShowPlayUI()
+        {
+            isPlayUI_On = true;
+            play_UI.SetActive(true);
+        }
+
+        private void ShowOptionsUI()
+        {
+            isOptionsUI_On = true;
+            options_UI.SetActive(true);
+        }
+
+        private void ShowCreditsUI()
+        {
+            isCreditsUI_On = true;
+            credits_UI.SetActive(true);
+        }
+
+        private void OpenPrivacyURLPage()
+        {
+            Application.OpenURL(urlAddress);
+        }
+
+        // Back button function. Close: PlayUI, OptionsUI, CreditsUI.
+        private void HideMainMenuWindowedUIs()
+        {
+            if (isPlayUI_On == true)
+            {
+                isPlayUI_On = false;
+                play_UI.SetActive(false);
+            }
+            else if (isOptionsUI_On == true)
+            {
+                isOptionsUI_On = false;
+                options_UI.SetActive(false);
+            }
+            else if (isCreditsUI_On == true)
+            {
+                isCreditsUI_On = false;
+                credits_UI.SetActive(false);
+            }
+        }
+
+        #endregion
+
+
+        #region Events:
+
+        private void Event_OnUIClick_PlayMenuSFX()
+        {
+            OnUIClick_PlayMenuSFX?.Invoke();
+        }
+
+        private void Event_OnUIClick_PlayBackSFX()
+        {
+            OnUIClick_PlayBackSFX?.Invoke();
+        }
+
+        #endregion
     }
 }
-
-//private int levelToLoad;
