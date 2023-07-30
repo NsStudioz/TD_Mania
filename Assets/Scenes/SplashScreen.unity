@@ -398,9 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db50230594191384197115fccabac271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayTime: 0
-  delayTimeThreshold: 8
-  mainMenuSceneIndex: 1
+  delayTime: 5
   animator: {fileID: 756041472}
   _FadeInAnim: Splash_FadeIn_Anim
   _FadeOutAnim: Splash_FadeOut_Anim

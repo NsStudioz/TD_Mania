@@ -1,42 +1,42 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelLoader_SplashScene : MonoBehaviour
+namespace TD_Mania_Splash
 {
-
-    [SerializeField] float delayTime;
-    [SerializeField] float delayTimeThreshold = 8f;
-    [SerializeField] int mainMenuSceneIndex = 1;
-    
-    [Header("Animations")]
-    [SerializeField] Animator animator;
-    [SerializeField] string _FadeInAnim;
-    [SerializeField] string _FadeOutAnim;
-
-    private void Awake()
+    public class LevelLoader_SplashScene : MonoBehaviour
     {
-        animator = GetComponent<Animator>();
+
+        [Header("Elements")]
+        [SerializeField] private float delayTime = 5f;
+        private readonly int mainMenuSceneIndex = 1;
+
+        [Header("Animations")]
+        [SerializeField] private Animator animator;
+        [SerializeField] private string _FadeInAnim;
+        [SerializeField] private string _FadeOutAnim;
+
+        private void Awake()
+        {
+            animator = GetComponent<Animator>();
+
+            StartCoroutine(SplashCountdownToSwitchScene());
+        }
+
+        private IEnumerator SplashCountdownToSwitchScene()
+        {
+            animator.Play(_FadeInAnim);
+            yield return new WaitForSeconds(delayTime);
+            animator.Play(_FadeOutAnim);
+        }
+
+        // Connected to an animation event.
+        public void Splash_GoToMainMenu()
+        {
+            SceneManager.LoadScene(mainMenuSceneIndex);
+        }
+
     }
-
-    void Start()
-    {
-        delayTime = delayTimeThreshold;
-
-        animator.Play(_FadeInAnim);
-    }
-
-    void Update()
-    {
-        delayTime -= Time.deltaTime;
-
-        if (delayTime <= 0f) { animator.Play(_FadeOutAnim); }
-    }
-
-    public void Splash_GoToMainMenu()
-    {
-        SceneManager.LoadScene(mainMenuSceneIndex);
-    }
-
 }
+
+
