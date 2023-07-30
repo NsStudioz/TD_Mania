@@ -8,7 +8,7 @@ namespace TD_Mania_MainMenu
     public class LevelSelection : MonoBehaviour
     {
 
-        [SerializeField] Animator animator;
+        [SerializeField] private Animator animator;
         [SerializeField] private Button[] lvlButtons;
         //
         private int levelToSelect;
