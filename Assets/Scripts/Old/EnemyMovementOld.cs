@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Enemy))] // our EnemyMovement component will not work without Enemy Component.
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovementOld : MonoBehaviour
 {
     private Enemy enemy;
 
@@ -20,14 +20,14 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         Vector3 dir = target.position - transform.position;
-        //transform.Translate(dir.normalized * enemy.movingSpeed * Time.deltaTime, Space.World);
+        transform.Translate(dir.normalized * enemy.movingSpeed * Time.deltaTime, Space.World);
 
         if (Vector3.Distance(transform.position, target.position) <= 0.1f)
         {
             MoveToNextWaypoint();
         }
 
-        //enemy.movingSpeed = enemy.GetStartSpeed();
+        enemy.movingSpeed = enemy.GetStartSpeed();
 
     }
 
