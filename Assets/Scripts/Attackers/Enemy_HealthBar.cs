@@ -7,8 +7,8 @@ public class Enemy_HealthBar : MonoBehaviour
 {
 
 
-    [SerializeField] Image _HealthBarSprite;
-    [SerializeField] Image _ShieldBarSprite;
+    [SerializeField] private Image _HealthBarSprite;
+    [SerializeField] private Image _ShieldBarSprite;
 
     public void UpdateEnemyHealthBar(float maxHealth, float currentHealth)
     {
