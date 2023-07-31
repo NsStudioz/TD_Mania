@@ -34,6 +34,21 @@ public class Enemy : MonoBehaviour
         return startSpeed;
     }
 
+    public float GetMovingSpeed()
+    {
+        return movingSpeed;
+    }
+
+    public void ResetEnemyMovementSpeed()
+    {
+        movingSpeed = startSpeed;
+    }
+
+    public void StopEnemyMovement()
+    {
+        movingSpeed = startSpeed * 0f;
+    }
+
     void Start()
     {
         movingSpeed = startSpeed;
