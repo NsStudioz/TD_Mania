@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Enemy))]
 public class EnemyBinded : MonoBehaviour
 {
     [SerializeField] bool isBinded = false;
@@ -36,13 +37,13 @@ public class EnemyBinded : MonoBehaviour
         if (isBinded)
         {
             bindDelay -= Time.deltaTime;
-            enemy.movingSpeed = enemy.startSpeed * 0f;
+            enemy.movingSpeed = enemy.GetStartSpeed() * 0f;
         }
 
         if (bindDelay <= 0f)
         {
             isBinded = false;
-            enemy.movingSpeed = enemy.startSpeed;
+            enemy.movingSpeed = enemy.GetStartSpeed();
         }
 
         if (!isBinded)

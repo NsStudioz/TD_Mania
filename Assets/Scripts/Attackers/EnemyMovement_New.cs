@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Enemy))]
 public class EnemyMovement_New : MonoBehaviour
 {
     Enemy enemy;
@@ -38,7 +39,7 @@ public class EnemyMovement_New : MonoBehaviour
             transform.LookAt(currentWaypoint);
         }
 
-        enemy.movingSpeed = enemy.startSpeed;
+        enemy.movingSpeed = enemy.GetStartSpeed();
     }
 
 

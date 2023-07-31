@@ -3,83 +3,98 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
-    public GameObject deathEFX;
-    public float startSpeed = 2f;
-    //
-    [HideInInspector]
-    public float movingSpeed;
-    //
-    [SerializeField] float enemyHealth = 100f;
-    [SerializeField] float currentEnemyHealth;
-    [SerializeField] int goldToEarn = 100;
-    // binding:
-    public bool isBinded = false;
-    public float bindDelay = 10f;
-    // Shields:
-    public bool hasShield;
-    public bool isProtected;
-    [SerializeField] float range = 1f;
-    //
     public static event Action OnEnemy_Death_SFX;
 
+    [HideInInspector]
+    public float movingSpeed; // actual enemy speed
+
+    [Header("Elements")]
+    [SerializeField] private GameObject deathEFX;
+    [SerializeField] private int goldToEarn = 100;
+    [SerializeField] private float startSpeed = 2f;
+
+    [Header("Elements")]
+    [SerializeField] private float enemyHealth = 100f;
+    [SerializeField] private float currentEnemyHealth;
+
+    [Header("Shields")]
+    public bool hasShield;
+    public bool isProtected;
+    [SerializeField] private float range = 1f;
+    //
     [Header("Health Bar")]
-    [SerializeField] Enemy_HealthBar _healthBar;
-    [SerializeField] GameObject _healthBar_Canvas_GO;
-    [SerializeField] float healthBarDelay_Threshold = 4f;
-    [SerializeField] float healthBarDelay;
-    [SerializeField] bool healthBar_Switch = false;
+    [SerializeField] private Enemy_HealthBar _healthBar;
+    [SerializeField] private GameObject _healthBar_Canvas_GO;
+    [SerializeField] private float healthBarDelay_Threshold = 4f;
+    [SerializeField] private float healthBarDelay;
+    [SerializeField] private bool showHealthBar = false;
+   
+    public float GetStartSpeed()
+    {
+        return startSpeed;
+    }
 
     void Start()
     {
         movingSpeed = startSpeed;
         currentEnemyHealth = enemyHealth;
 
-        UpdateHealthBar();
+        HealthBarVisibility(false);
+        CalculateHealthBarUI();
     }
 
-    private void Update()
-    {
-        HealthBarVisibility();
-        HealthBarTimer();
-    }
+    private void Update() => HealthBarTimer();
+
 
     public void TakeDamage(float amount)
     {
         currentEnemyHealth -= amount;
-        UpdateHealthBar();
-        healthBar_Switch = true;
 
         if (currentEnemyHealth <= 0f)
         {
             OnEnemy_Death_SFX?.Invoke();
             Die();
         }
+
+        UpdateHealthBarUI();
     }
 
-    #region Enemy_HealthBar
-    private void HealthBarVisibility()
+    #region Enemy_HealthBar:
+
+    private void UpdateHealthBarUI()
     {
-        if (healthBar_Switch) { _healthBar_Canvas_GO.SetActive(true); }
-        else                  { _healthBar_Canvas_GO.SetActive(false); }
+        HealthBarVisibility(true);
+        CalculateHealthBarUI();
+    }
+
+    private void HealthBarVisibility(bool state)
+    {
+        showHealthBar = state;
+
+        if (showHealthBar) 
+            _healthBar_Canvas_GO.SetActive(true);
+        else
+            _healthBar_Canvas_GO.SetActive(false);
     }
 
     private void HealthBarTimer()
     {
-        if (healthBar_Switch)
+        if (showHealthBar)
         {
             healthBarDelay -= Time.deltaTime;
 
-            if (healthBarDelay <= 0) { healthBar_Switch = false; }
+            if (healthBarDelay <= 0)
+                HealthBarVisibility(false);
         }
     }
 
-    private void UpdateHealthBar()
+    private void CalculateHealthBarUI()
     {
         _healthBar.UpdateEnemyHealthBar(enemyHealth, currentEnemyHealth);
 
         healthBarDelay = healthBarDelay_Threshold;
     }
+
     #endregion
 
     private void Die()
@@ -87,26 +102,14 @@ public class Enemy : MonoBehaviour
         PlayerStats.Gold += goldToEarn;
 
         GameObject deathEffects = Instantiate(deathEFX, transform.position, Quaternion.identity);
-        Destroy(deathEffects, 2f);
 
+        Destroy(deathEffects, 2f);
         Destroy(gameObject);
     }
 
-    internal void SlowEnemyOnLaserHit(float slowPct) // slow percantage on laser hit.
+    public void SlowEnemyOnLaserHit(float slowPct) // slow percantage on laser hit.
     {
         movingSpeed = startSpeed * (1f - slowPct); // percantages can be misleading since in unity the value is between 0 - 1 (and not 0% - 100%);
-    }
-
-    public void BindingEnemy(float bindValue)
-    {
-        isBinded = true;
-        if (isBinded)
-        {
-            bindDelay -= Time.deltaTime;
-            movingSpeed = startSpeed * bindValue;
-        }
-        
-        if(bindDelay <= 0f) { isBinded = false; }
     }
 
     private void OnDrawGizmosSelected()
@@ -118,82 +121,31 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("EnemyShields"))
-        {
             isProtected = true;
-        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("EnemyShields"))
-        {
             isProtected = false;
-        }
     }
-
-
 }
 
-/*    AudioManager audioManager;
 
-    private void Awake()
+/*    [Header("Binding")]
+    public bool isBinded = false;
+    public float bindDelay = 10f;*/
+
+/*    public void BindingEnemy(float bindValue)
     {
-        GameObject audioHubInstance = GameObject.Find("Audio_Manager");
-        audioManager = audioHubInstance.GetComponent<AudioManager>();
+        isBinded = true;
+        if (isBinded)
+        {
+            bindDelay -= Time.deltaTime;
+            movingSpeed = startSpeed * bindValue;
+        }
+        
+        if (bindDelay <= 0f) 
+            isBinded = false;
     }
 */
-//audioManager.PlayOneShot("Enemy_Boom");
-
-#region TrashCode:
-
-/*    public void BindEnemy(float bindValue)
-{
-movingSpeed = startSpeed * bindValue;
-}
-
-public void UnbindEnemy()
-{
-movingSpeed = startSpeed;
-}*/
-
-
-//[SerializeField] Enemy_Shield enemy_Shield;
-
-/*        start method:
- *        if (enemy_Shield != null)
-        {
-            if (enemy_Shield.isActiveAndEnabled)
-            {
-                hasShield = true;
-            }
-        }*/
-
-/*    private void OnTriggerStay(Collider shield)
-    {
-*//*        if (shield.CompareTag("EnemyShields"))
-        {
-            isProtected = true;
-        }*//*
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        *//*isProtected = false;*//*
-    }*/
-
-#endregion
-
-
-/*    private void FixedUpdate()
-    {
-        if (!hasShield)
-        {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, range);
-            foreach (Collider collider in colliders)
-            {
-                if (collider.CompareTag("EnemyShields") && collider.enabled) { isProtected = true; }
-
-                else if (!collider.CompareTag("EnemyShields")) { isProtected = false; }
-            }
-        }
-    }*/
