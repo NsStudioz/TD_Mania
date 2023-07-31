@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int goldToEarn = 100;
     [SerializeField] private float startSpeed = 2f;
 
-    [Header("Elements")]
+    [Header("Health")]
     [SerializeField] private float enemyHealth = 100f;
     [SerializeField] private float currentEnemyHealth;
 
