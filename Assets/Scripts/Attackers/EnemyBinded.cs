@@ -5,21 +5,17 @@ using UnityEngine;
 [RequireComponent(typeof(Enemy))]
 public class EnemyBinded : MonoBehaviour
 {
-    [SerializeField] bool isBinded = false;
-    public float bindDelay = 10f;
+    [SerializeField] private bool isBinded = false;
+    [SerializeField] private float bindDelay = 10f;
 
     Enemy enemy;
 
     private void Start()
     {
-        enemy = GetComponent<Enemy>();   
+        enemy = GetComponent<Enemy>();
     }
 
-    private void Update()
-    {
-        BindingEnemy();
-    }
-
+    private void Update() => BindingEnemy();
 
     private void OnTriggerEnter(Collider binder)
     {
@@ -28,40 +24,29 @@ public class EnemyBinded : MonoBehaviour
             D_Trap_Binder bindTrap = binder.GetComponent<D_Trap_Binder>();
             bindDelay = bindTrap.bindingDuration;
             //
-            isBinded = true;
+            SetEnemyBind();
         }
     }
 
-    public void BindingEnemy()
+    private void BindingEnemy()
     {
         if (isBinded)
         {
             bindDelay -= Time.deltaTime;
-            enemy.movingSpeed = enemy.GetStartSpeed() * 0f;
+            enemy.StopEnemyMovement();
         }
 
         if (bindDelay <= 0f)
         {
             isBinded = false;
-            enemy.movingSpeed = enemy.GetStartSpeed();
-        }
-
-        if (!isBinded)
-        {
-            bindDelay = 10f;
+            enemy.ResetEnemyMovementSpeed();
         }
     }
 
-/*    public void BindEnemyNewOLD()
+    private void SetEnemyBind()
     {
-        if (isBinded)
-        {
-            enemy.movingSpeed = enemy.startSpeed * 0;
-        }
-        else
-        {
-            enemy.movingSpeed = enemy.startSpeed;
-        }
-    }*/
+        isBinded = true;
+        bindDelay = 10f;
+    }
 
 }
