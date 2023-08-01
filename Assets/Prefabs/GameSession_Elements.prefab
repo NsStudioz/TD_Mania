@@ -710,18 +710,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3506503890953314239, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
-      propertyPath: turretButtons.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3506503890953314239, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
-      propertyPath: turretButtons.Array.data[9]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3506503890953314239, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
-      propertyPath: defendingTurretUnits.Array.size
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 4151569308054900626, guid: bea75594a7b5fc9419727255f35feda1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
