@@ -5,30 +5,31 @@ public class ConstructManager : MonoBehaviour
 {
 
     public static ConstructManager instance;
+
+    [Header("Elements")]
+    [SerializeField] NodeUI nodeUI;
     //
     private D_Unit_Blueprint defUnitToBuild;
     private Node turret_SelectedNode;
-    //
-    [SerializeField] NodeUI nodeUI;
-
     // Events:
     public static event Action OnUIClick_UnitSelect_SFX;
 
-    void Awake()
+    void Awake() => InitializeSingletonInstance();
+
+    private void InitializeSingletonInstance()
     {
         if (instance != null)
         {
             Debug.Log("Something went wrong. there are more than 1 buildmanagers in the game!");
             return;
         }
-
         instance = this;
     }
 
-    // called a property. we only allow it to actually get something from this variable, if its not equal to null, then the state is true and we can build.
-    public bool CanBuild { get { return defUnitToBuild != null; } } 
+    // getter only property. If not null then the state is true and we can build.
+    public bool CanBuild { get { return defUnitToBuild != null; } }
 
-    // called a property. we only allow it to actually get something from this variable, if we have enough money, then the state is true and we can build.
+    // getter only property. If we have enough money then the state is true and we can build.
     public bool HasGold { get { return PlayerStats.Gold >= defUnitToBuild.cost; } }
 
     public D_Unit_Blueprint GetDefUnitToBuild()
