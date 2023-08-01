@@ -18,6 +18,12 @@ public class ShopManager : MonoBehaviour
     [SerializeField] D_Unit_Blueprint d_Unit_Trap_GoldGenerator;
     [SerializeField] D_Unit_Blueprint d_Unit_Trap_AntiShieldMine;
 
+    [SerializeField] private D_Unit_Blueprint[] defendingUnits;
+
+    public void SelectTurret(int index)
+    {
+        ConstructManager.instance.SelectTurretToBuild(defendingUnits[index]);
+    }
 
     public void SelectTurretStandard()
     {
