@@ -33,17 +33,6 @@ public class NodeUI : MonoBehaviour
 
         ui.SetActive(true);
 
-/*        if (!target.isDefUnitUpgraded) // if not upgraded, set upgrade text. else set it to Maxed out.
-        {
-            upgradeCost.text = "$" + target.d_Unit_Blueprint.upgradeCost;
-            upgradeButton.interactable = true;
-        }
-        else
-        {
-            upgradeCost.text = "MAXED";
-            upgradeButton.interactable = false;
-        }*/
-
         sellingCost.text = "$" + target.d_Unit_Blueprint.GetSellAmount();
     }
 
@@ -51,12 +40,6 @@ public class NodeUI : MonoBehaviour
     {
         ui.SetActive(false);
     }
-
-/*    public void UpgradeDefUnit()
-    {
-        target.UpgradeTurretOrDefUnit();
-        ConstructManager.instance.DeselectNode();
-    }*/
 
     public void SellDefUnit() // for button
     {

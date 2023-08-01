@@ -37,9 +37,8 @@ public class LayoutVisibility : MonoBehaviour
         {
             panelIsUnfolded = true;
             shopPanelUI.Play("Anim_UnfoldPanel");
-            OnClick_UI_UnitsButton_Unfold_SFX?.Invoke();
             //
-            //NodeList.isUnitsPanelOpen = true;
+            OnClick_UI_UnitsButton_Unfold_SFX?.Invoke();
             OnUIClick_SetNodeEffectOn?.Invoke();
 
         }
@@ -47,9 +46,8 @@ public class LayoutVisibility : MonoBehaviour
         {
             panelIsUnfolded = false;
             shopPanelUI.Play("Anim_FoldPanel");
-            OnClick_UI_UnitsButton_Fold_SFX?.Invoke();
             //
-            //NodeList.isUnitsPanelOpen = false;
+            OnClick_UI_UnitsButton_Fold_SFX?.Invoke();
             OnUIClick_SetNodeEffectOff?.Invoke();
         }
     }
@@ -68,14 +66,3 @@ public class LayoutVisibility : MonoBehaviour
         OnUIClick_UnitSelect_SFX?.Invoke();
     }
 }
-
-/*    private void Awake()
-    {
-        GameObject forAudioManager = GameObject.Find("Audio_Manager");
-        audioManager = forAudioManager.GetComponent<AudioManager>();
-    }*/
-
-//audioManager.PlayOneShot("UI_UnitsButton_Unfold");
-//audioManager.PlayOneShot("UI_UnitsButton_Fold");
-//audioManager.PlayOneShot("UI_TurretSelect");
-//audioManager.PlayOneShot("UI_TurretSelect");
