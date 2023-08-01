@@ -7,7 +7,7 @@ public class Enemy_Shield : MonoBehaviour
 {
     [SerializeField] float shieldHealth;
     [SerializeField] float current_shieldHealth;
-    [SerializeField] bool shieldOn;
+    [SerializeField] bool shieldOn = true;
     public float range;
     [SerializeField] float rangeTimerDelay = 1f;
     private float sizeChangeDelay = 0.05f;
@@ -21,68 +21,65 @@ public class Enemy_Shield : MonoBehaviour
     [SerializeField] GameObject _ShieldBar_Canvas_GO;
     [SerializeField] float shieldBarDelay_Threshold = 4f;
     [SerializeField] float shieldBarDelay;
-    [SerializeField] bool shieldBar_Switch = false;
+    [SerializeField] bool showShieldBar = false;
 
     public bool GetShieldStatus()
     {
         return shieldOn;
     }
 
-    private void Start()
+    private void CacheComponents()
     {
-        current_shieldHealth = shieldHealth;
-
-        gameObject.SetActive(true);
-
         shield_renderer = GetComponent<MeshRenderer>();
         shieldCollider = GetComponent<SphereCollider>();
         enemy = GetComponentInParent<Enemy>();
-
-        shieldOn = true;
     }
 
-    private void Update()
+    private void Start()
     {
-        ShieldBarVisibility();
-        ShieldBarTimer();
+        current_shieldHealth = shieldHealth;
+        shieldOn = true;
 
-        RemoveEnemiesProtection();
-        DeactivateShieldBar();
-        CalculateRangeOnShieldOff();
+        CacheComponents();
+        UpdateShieldBarUI(false);
     }
+
+    private void Update() => ShieldBarTimer();
 
     public void TakeShieldDamage(float amount)
     {
         current_shieldHealth -= amount;
-        shieldBar_Switch = true;
-
-        UpdateShieldBar();
 
         if (current_shieldHealth <= 0f)
         {
+            DeactivateShield();
             DestroyShield();
-            shieldOn = false;
-            //_ShieldBar_Canvas_GO.SetActive(false);
+            RemoveEnemiesShieldProtection();
+            //
+            SetShieldRangeToZero();
+            //
+            UpdateShieldBarUI(false);
+            return;
         }
+
+        UpdateShieldBarUI(true);
     }
 
     private void DestroyShield()
     {
-        shieldCollider.enabled = false;
-        shield_renderer.enabled = false;
-        enemy.hasShield = false;
-        //gameObject.SetActive(false);
+        if (!shieldOn)
+        {
+            shieldCollider.enabled = false;
+            shield_renderer.enabled = false;
+            enemy.hasShield = false;
+        }
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider bullet)
     {
-        if (collider.CompareTag("AS_Bullet") || collider.CompareTag("AS_Auto_Bullet") || collider.CompareTag("SD_Bullet"))
-        {
+        if (bullet.CompareTag("AS_Bullet") || bullet.CompareTag("AS_Auto_Bullet") || bullet.CompareTag("SD_Bullet"))
             if (shieldOn)
-            {
                 StartCoroutine(ShieldHitEffect());
-            }
-        }
     }
 
     private IEnumerator ShieldHitEffect()
@@ -92,66 +89,68 @@ public class Enemy_Shield : MonoBehaviour
         transform.localScale = new Vector3(10f, 10f, 10f);
     }
 
-    private void DeactivateShieldBar()
+    private void DeactivateShield()
     {
-        if (!shieldOn)
-        {
-            _ShieldBar_Canvas_GO.SetActive(false);
-        }
+        shieldOn = false;
+        showShieldBar = false;
     }
 
-    private void RemoveEnemiesProtection()
+    private void RemoveEnemiesShieldProtection()
     {
         if (!shieldOn)
         {
             Collider[] attackers = Physics.OverlapSphere(transform.position, range);
+
             foreach (Collider attacker in attackers)
-            {
                 if (attacker.tag == "Attackers")
                 {
                     Enemy noShield_enemy = attacker.GetComponent<Enemy>();
 
                     noShield_enemy.isProtected = false;
                 }
-            }
         }
     }
 
-    private void CalculateRangeOnShieldOff()
+    private void SetShieldRangeToZero()
     {
-        if (!shieldOn)
-        {
-            rangeTimerDelay -= Time.deltaTime;
-
-            if (rangeTimerDelay <= 0f)
-            {
-                range = 0f;
-            }
-        }
+        range = 0f;
     }
 
 
     #region Enemy_Shield_Bar
-    private void UpdateShieldBar()
+
+    private void UpdateShieldBarUI(bool state)
+    {
+        ShieldBarVisibility(state);
+        CalculateShieldBarUI();
+    }
+
+
+    private void CalculateShieldBarUI()
     {
         _ShieldBar.UpdateEnemyShieldBar(shieldHealth, current_shieldHealth);
 
         shieldBarDelay = shieldBarDelay_Threshold;
     }
 
-    private void ShieldBarVisibility()
+    private void ShieldBarVisibility(bool state)
     {
-        if (shieldBar_Switch) { _ShieldBar_Canvas_GO.SetActive(true); }
-        else { _ShieldBar_Canvas_GO.SetActive(false); }
+        showShieldBar = state;
+
+        if (showShieldBar) 
+            _ShieldBar_Canvas_GO.SetActive(true);
+        else 
+            _ShieldBar_Canvas_GO.SetActive(false);
     }
 
     private void ShieldBarTimer()
     {
-        if (shieldBar_Switch)
+        if (showShieldBar)
         {
             shieldBarDelay -= Time.deltaTime;
 
-            if (shieldBarDelay <= 0) { shieldBar_Switch = false; }
+            if (shieldBarDelay <= 0) 
+                showShieldBar = false;
         }
     }
     #endregion

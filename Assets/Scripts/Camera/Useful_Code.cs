@@ -26,4 +26,20 @@ public class Useful_Code : MonoBehaviour
             }*/
 
     #endregion
+
+    #region Enemy_Shield
+
+    /*    private void CalculateRangeOfDeactivatedShield()
+{
+    if (!shieldOn)
+    {
+        rangeTimerDelay -= Time.deltaTime;
+
+        if (rangeTimerDelay <= 0f)
+            range = 0f;
+    }
+}*/
+
+    #endregion
+
 }
