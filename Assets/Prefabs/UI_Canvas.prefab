@@ -258,19 +258,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 117297551}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3506503890953314239}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretAntiShieldShieldDestroyer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &118340348
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,19 +517,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 118525016}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3506503890953314239}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretBuffer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &198818697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,19 +1048,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 523699843}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3506503890953314239}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretLaserBeamer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &551923386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,19 +1463,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 666308903}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3506503890953314239}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretAntiShieldStandard
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &668581884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,19 +1800,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 725403503}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3506503890953314239}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretStandardAuto
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &726721034
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,19 +2002,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 769306846}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3506503890953314239}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretAntiShieldStandardAuto
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1007767653
 GameObject:
   m_ObjectHideFlags: 0
@@ -6082,7 +6010,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTrapGoldGenerator
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6351,7 +6279,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTrapAntiShieldMine
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8058,19 +7986,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3506503890810796306}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3506503890953314239}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretStandard
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &3506503890953314234
 GameObject:
   m_ObjectHideFlags: 0
@@ -8167,44 +8083,99 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   d_Unit_Turret_Standard:
+    unitName: 
     prefab: {fileID: 747205943340696467, guid: 5be892e1f628c58479d6bdd7bc007c41, type: 3}
     cost: 250
   d_Unit_Turret_MissileLauncher:
+    unitName: 
     prefab: {fileID: 664215370524953652, guid: 78022eace9eb71d4d9b00c23ad7e5d8e, type: 3}
     cost: 500
   d_Unit_Turret_WideBeamer:
+    unitName: 
     prefab: {fileID: 8474896185252318068, guid: eb4d1c77e987c6847ab2451c6610bb5c, type: 3}
     cost: 400
   d_Unit_Turret_LaserBeamer:
+    unitName: 
     prefab: {fileID: 1189723678647334141, guid: 811168c3188497b408f7e2abd00d15ec, type: 3}
     cost: 400
   d_Unit_Turret_StandardAuto:
+    unitName: 
     prefab: {fileID: 2658647531683468651, guid: 3e3a03d6c1cea9040a19cb523261c3f5, type: 3}
     cost: 200
   d_Unit_Turret_AntiShield_Standard:
+    unitName: 
     prefab: {fileID: 7469493915699138264, guid: 2768ced0349dd2e4cb61473635d10d10, type: 3}
     cost: 750
   d_Unit_Turret_AntiShield_StandardAuto:
+    unitName: 
     prefab: {fileID: 7728694432787217956, guid: 5b48b0c6daab6a243a638d0fa777a99c, type: 3}
     cost: 500
   d_Unit_Turret_AntiShield_ShieldDestroyer:
+    unitName: 
     prefab: {fileID: 5235268833271272827, guid: 5e31da637fb56e1449830285b2b74228, type: 3}
     cost: 1000
   d_Unit_Turret_Buffer:
+    unitName: 
     prefab: {fileID: 3029260933156180478, guid: c797b593baa5758409db6d7bf949d5ae, type: 3}
     cost: 300
   d_Unit_Trap_Mine:
+    unitName: 
     prefab: {fileID: 3907736701174324265, guid: e006c7351367dc64a8363aace34c3693, type: 3}
     cost: 200
   d_Unit_Trap_Binder:
+    unitName: 
     prefab: {fileID: 7961459518185122619, guid: 70cef2c56f3a7a147bc4b4e2258fc029, type: 3}
     cost: 100
   d_Unit_Trap_GoldGenerator:
+    unitName: 
     prefab: {fileID: 7672538353692473529, guid: 599b0faf3c771a14cbb8f184dd99855a, type: 3}
     cost: 250
   d_Unit_Trap_AntiShieldMine:
+    unitName: 
     prefab: {fileID: 701948649849538045, guid: dc263acdeef318c43bd42d4737fed59e, type: 3}
     cost: 300
+  turretButtons:
+  - {fileID: 3506503890810796305}
+  - {fileID: 3506503891066067982}
+  - {fileID: 3506503891168701612}
+  - {fileID: 523699842}
+  - {fileID: 725403502}
+  - {fileID: 666308902}
+  - {fileID: 769306845}
+  - {fileID: 117297550}
+  - {fileID: 118525015}
+  - {fileID: 118525015}
+  defendingTurretUnits:
+  - unitName: Turret_Standard
+    prefab: {fileID: 747205943340696467, guid: 5be892e1f628c58479d6bdd7bc007c41, type: 3}
+    cost: 250
+  - unitName: Turret_MissileLauncher
+    prefab: {fileID: 664215370524953652, guid: 78022eace9eb71d4d9b00c23ad7e5d8e, type: 3}
+    cost: 500
+  - unitName: Turret_Plasma
+    prefab: {fileID: 8474896185252318068, guid: eb4d1c77e987c6847ab2451c6610bb5c, type: 3}
+    cost: 400
+  - unitName: Turret_LaserBeamer
+    prefab: {fileID: 1189723678647334141, guid: 811168c3188497b408f7e2abd00d15ec, type: 3}
+    cost: 400
+  - unitName: Turret_StandardAuto
+    prefab: {fileID: 2658647531683468651, guid: 3e3a03d6c1cea9040a19cb523261c3f5, type: 3}
+    cost: 200
+  - unitName: Turret_AntiShield_Standard
+    prefab: {fileID: 7469493915699138264, guid: 2768ced0349dd2e4cb61473635d10d10, type: 3}
+    cost: 750
+  - unitName: Turret_AntiShield_StandardAuto
+    prefab: {fileID: 7728694432787217956, guid: 5b48b0c6daab6a243a638d0fa777a99c, type: 3}
+    cost: 500
+  - unitName: Turret_AntiShield_ShieldDestroyer
+    prefab: {fileID: 5235268833271272827, guid: 5e31da637fb56e1449830285b2b74228, type: 3}
+    cost: 1000
+  - unitName: Turret_Buffer
+    prefab: {fileID: 3029260933156180478, guid: c797b593baa5758409db6d7bf949d5ae, type: 3}
+    cost: 300
+  - unitName: Turret_Buffer
+    prefab: {fileID: 3029260933156180478, guid: c797b593baa5758409db6d7bf949d5ae, type: 3}
+    cost: 100
 --- !u!114 &2009539925018545153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8368,19 +8339,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3506503891066067983}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3506503890953314239}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretMissileLauncher
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &3506503891103331001
 GameObject:
   m_ObjectHideFlags: 0
@@ -8639,19 +8598,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3506503891168701613}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3506503890953314239}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretWideBeamer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &3517342726045177624
 GameObject:
   m_ObjectHideFlags: 0
@@ -8930,7 +8877,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTrapBinder
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11621,7 +11568,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTrapMine
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

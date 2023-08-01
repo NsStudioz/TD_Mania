@@ -16,6 +16,17 @@ public class ConstructManager : MonoBehaviour
 
     void Awake() => InitializeSingletonInstance();
 
+    private void OnEnable()
+    {
+        ShopManager.OnTurretSelectedToBuild += SelectTurretToBuild;
+    }
+
+    private void OnDisable()
+    {
+        ShopManager.OnTurretSelectedToBuild -= SelectTurretToBuild;
+
+    }
+
     private void InitializeSingletonInstance()
     {
         if (instance != null)
