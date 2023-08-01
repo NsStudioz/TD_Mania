@@ -5,23 +5,25 @@ using UnityEngine;
 
 public class Enemy_Shield : MonoBehaviour
 {
-    [SerializeField] float shieldHealth;
-    [SerializeField] float current_shieldHealth;
-    [SerializeField] bool shieldOn = true;
-    public float range;
-    [SerializeField] float rangeTimerDelay = 1f;
-    private float sizeChangeDelay = 0.05f;
+    [Header("Objects")]
+    private Enemy enemy;
+    private SphereCollider shieldCollider;
+    private MeshRenderer shield_renderer;
 
-    Enemy enemy;
-    SphereCollider shieldCollider;
-    MeshRenderer shield_renderer;
+    [Header("Shield Elements")]
+    [SerializeField] private float shieldHealth;
+    [SerializeField] private float current_shieldHealth;
+    [SerializeField] private bool shieldOn = true;
+    [SerializeField] private float range;
+    [SerializeField] private float rangeTimerDelay = 1f;
+    private readonly float sizeChangeDelay = 0.05f;
 
-    [Header("Shield Bar")]
-    [SerializeField] Enemy_HealthBar _ShieldBar;
-    [SerializeField] GameObject _ShieldBar_Canvas_GO;
-    [SerializeField] float shieldBarDelay_Threshold = 4f;
-    [SerializeField] float shieldBarDelay;
-    [SerializeField] bool showShieldBar = false;
+    [Header("Shield Bar UI")]
+    [SerializeField] private Enemy_HealthBar _ShieldBar;
+    [SerializeField] private GameObject _ShieldBar_Canvas_GO;
+    [SerializeField] private float shieldBarDelay_Threshold = 4f;
+    [SerializeField] private float shieldBarDelay;
+    [SerializeField] private bool showShieldBar = false;
 
     public bool GetShieldStatus()
     {
