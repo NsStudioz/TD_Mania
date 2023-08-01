@@ -261,12 +261,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretAntiShieldShieldDestroyer
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -532,12 +532,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretBuffer
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1075,12 +1075,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretLaserBeamer
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1502,12 +1502,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretAntiShieldStandard
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1851,12 +1851,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretStandardAuto
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2065,12 +2065,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretAntiShieldStandardAuto
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6082,12 +6082,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTrapGoldGenerator
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 11
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6351,12 +6351,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTrapAntiShieldMine
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 12
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8061,8 +8061,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretStandard
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8398,12 +8398,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretMissileLauncher
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8669,12 +8669,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTurretWideBeamer
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8957,12 +8957,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTrapBinder
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -11648,12 +11648,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3506503890953314239}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectTrapMine
-        m_Mode: 1
+        m_MethodName: SelectTurret
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
