@@ -42,4 +42,13 @@ public class Useful_Code : MonoBehaviour
 
     #endregion
 
+    #region WaveSpawner:
+
+    /*countDown -= Time.deltaTime;
+
+    countDown = Mathf.Clamp(countDown, 0f, Mathf.Infinity);*/
+
+    //waveCountDownText.text = string.Format("{0:00.00}", countDown); // convert to actual watch like, real world time format.
+    #endregion
+
 }
